@@ -1,0 +1,189 @@
+{% macro header(args) %}
+    {% set args = {
+        navigation: null,
+        size: 'small',
+        transparent: false
+    } | merge(args) %}
+
+    {% from '_macros/button.twig' import button, link %}
+    {% from '_macros/icon.twig' import icon %}
+
+    <header class="{{ html_classes(
+        'header',
+        'header--' ~ args.size,
+        'header--scroll-top',
+        {
+            'header--transparent': args.transparent
+        }
+    ) }}">
+        <div class="header__inner">
+            <a class="header__logo" href="{{ siteUrl }}">
+                <h1>{{ siteName }}</h1>
+                {{ svg(include('_svgs/logo.svg')) }}
+            </a>
+
+            <nav class="header__navigation-top">
+                {{ link({
+                    href: url('artikel'),
+                    label: 'Neuste Artikel',
+                    responsive: true,
+                    style: 'bright'
+                }) }}
+                {{ link({
+                    href: url('suche'),
+                    icon: 'search',
+                    label: 'Suche',
+                    responsive: true,
+                    style: 'bright'
+                }) }}
+                {{ button({
+                    icon: 'menu',
+                    label: 'Menü',
+                    onclick: 'ZS.Navigation.Main.open();',
+                    responsive: true,
+                    style: 'bright'
+                }) }}
+            </nav>
+        </div>
+
+        <div class="header__rule">
+            <div class="header__rule__progress progress"></div>
+        </div>
+
+        <nav id="header__navigation-main" class="header__navigation-main">
+            {{ button({
+                icon: 'x',
+                label: 'Schliessen',
+                onclick: 'ZS.Navigation.Main.close();',
+                style: 'dark'
+            }) }}
+
+            <div class="header__navigation-main__component">
+                {{ _self.navigation({
+                    navigation: args.navigation,
+                    responsive: false
+                }) }}
+            </div>
+
+            <div class="header__socials">
+                <span>Folge uns:</span>
+                {{ _self.socials({
+                    orientation: 'vertical'
+                }) }}
+            </div>
+        </nav>
+
+        <div id="header__navigation-main__overlay" class="header__navigation-main__overlay" onclick="ZS.Navigation.Main.close();"></div>
+    </header>
+{% endmacro %}
+
+{% macro footer(args) %}
+    {% set args = {
+        navigation: null
+    } | merge(args) %}
+
+    {% from '_macros/button.twig' import link %}
+
+    <footer class="footer">
+        <nav class="footer__navigation">
+            {{ _self.navigation({
+                navigation: args.navigation,
+                responsive: true
+            }) }}
+        </nav>
+
+        <div class="footer__about">
+            <div class="footer__logo">
+                {{ svg(include('_svgs/logo.svg')) }}
+            </div>
+
+            <b>Zürcher Studierendenzeitung</b><br>
+            <span>Die unabhängige Zeitung für Universität Zürich und ETH Zürich. Seit 1923.</span>
+        </div>
+
+        {{ _self.socials({
+            orientation: 'horizontal'
+        }) }}
+
+        <div class="footer__credits">
+            <span>
+                Quellcode:
+                {{ link({
+                    href: 'https://github.com/zsonline',
+                    label: 'Github',
+                    target: '_blank'
+                }) }}
+            </span>
+        </div>
+    </footer>
+{% endmacro %}
+
+{% macro navigation(args) %}
+    {% set args = {
+        navigation: null,
+        responsive: false
+    } | merge(args) %}
+
+    {% from '_macros/icon.twig' import icon %}
+
+    <ul class="{{ html_classes('navigation', { 'navigation--responsive': args.responsive }) }}">
+        {% for node in args.navigation %}
+            <li class="navigation__section">
+                <div class="navigation__item navigation__item--primary">
+                    {{ node.link }}
+                    {% if node.children|length > 0 %}
+                        <button onclick="ZS.Navigation.toggleSection(this)">{{ icon({ name: 'chevron-down' }) }}</button>
+                    {% endif %}
+                </div>
+
+                {% if node.children|length > 0 %}
+                    <ul class="navigation__subsection">
+                        {% for subnode in node.children %}
+                            <li>
+                                <div class="navigation__item navigation__item--secondary">
+                                    {{ subnode.link }}
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro socials(args) %}
+    {% set args = {
+        class: '',
+        orientation: 'horizontal'
+    } | merge(args) %}
+
+    {% from '_macros/button.twig' import link %}
+
+    <ul class="{{ html_classes('socials', 'socials--' ~ args.orientation, args.class) }}">
+        <li>
+            {{ link({
+                href: 'https://www.instagram.com/zs__online/',
+                icon: 'instagram',
+                label: 'Instagram',
+                target: '_blank'
+            }) }}
+        </li>
+        <li>
+            {{ link({
+                href: 'https://twitter.com/zsonline/',
+                icon: 'twitter',
+                label: 'Twitter',
+                target: '_blank'
+            }) }}
+        </li>
+        <li>
+            {{ link({
+                href: 'https://www.facebook.com/medienvereinZS/',
+                icon: 'facebook',
+                label: 'Facebook',
+                target: '_blank'
+            }) }}
+        </li>
+    </ul>
+{% endmacro %}

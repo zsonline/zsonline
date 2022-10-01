@@ -1,0 +1,14 @@
+columnSuffix: lzeedpap
+contentColumnType: boolean
+fieldGroup: 8f1ae8ad-81ae-4975-a0b7-2f89e06f6ec2 # Article
+handle: articleAd
+instructions: null
+name: Ad
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

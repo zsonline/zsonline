@@ -1,0 +1,225 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-block {
+  &:not(:first-child) {
+    padding-top: 1.75rem;
+
+    &.home-block--colored-prev {
+      padding-top: 2.75rem;
+    }
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 1.75rem;
+
+    &.home-block--colored-next {
+      padding-bottom: 2.75rem;
+    }
+  }
+
+  &--colored {
+    --color-fg: var(--color-home-block-fg);
+    --color-fg-alt: var(--color-home-block-fg-alt);
+    --color-border-bright: var(--color-home-block-border-bright);
+    --color-border-dark: var(--color-home-block-border-dark);
+
+    color: var(--color-home-block-fg);
+    background-color: var(--color-home-block-bg);
+
+    &:first-child {
+      padding-top: 80px;
+    }
+
+    a {
+      &:hover,
+      &:focus,
+      &:active {
+        .article-preview__text {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+
+  &__label {
+    padding-top: 0.5em;
+    margin: 0 0 1.25em;
+  }
+
+  &:not(:first-child) {
+    .home-block__label {
+      border-top: solid 2px var(--color-border-dark);
+    }
+  }
+}
+
+.home-articles {
+  padding: 0 $layout-padding;
+
+  &__row {
+    border-bottom: solid 1px var(--color-border-bright);
+  }
+
+  &.home-block--labeled {
+    .home-articles__row {
+      &:first-of-type {
+        border-top: solid 1px var(--color-border-bright);
+      }
+    }
+  }
+
+  &:not(:first-child) {
+    &:not(.home-block--labeled) {
+      .home-articles__row {
+        &:first-of-type {
+          border-top: solid 2px var(--color-border-dark);
+        }
+      }
+    }
+  }
+
+  &__column {
+    padding: 1.25rem 0;
+
+    &:not(:last-of-type) {
+      border-bottom: solid 1px var(--color-border-bright);
+    }
+
+    &__row:not(:last-of-type) {
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.25rem;
+      border-bottom: solid 1px var(--color-border-bright);
+    }
+  }
+}
+
+.home-more {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .home-block {
+    &:not(:first-child) {
+      padding-top: 2rem;
+
+      &.home-block--colored-prev {
+        padding-top: 3rem;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 2rem;
+
+      &.home-block--colored-next {
+        padding-bottom: 3rem;
+      }
+    }
+
+    &--colored {
+      &:first-child {
+        padding-top: 85px;
+      }
+    }
+
+    &__label {
+      padding-top: 0.75em;
+      margin: 0 0 1.75em;
+    }
+  }
+
+  .home-articles {
+    padding: 0 $layout-padding-tablet;
+
+    &__row {
+      display: flex;
+      padding: 1.5rem 0;
+    }
+
+    &__column {
+      flex: 1;
+      padding: 0;
+      overflow: hidden;
+
+      &:not(:last-of-type) {
+        padding-right: 1.5rem;
+        margin-right: 1.5rem;
+        border: none;
+        border-right: solid 1px var(--color-border-bright);
+      }
+
+      &__row {
+        &:not(:last-of-type) {
+          padding-bottom: 1.5rem;
+          margin-bottom: 1.5rem;
+          border-bottom: solid 1px var(--color-border-bright);
+        }
+      }
+    }
+  }
+
+  .home-more {
+    margin-top: 4rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .home-block {
+    &:not(:first-child) {
+      padding-top: 3rem;
+
+      &.home-block--colored-prev {
+        padding-top: 4.5rem;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 3rem;
+
+      &.home-block--colored-next {
+        padding-bottom: 4.5rem;
+      }
+    }
+
+    &--colored {
+      &:first-child {
+        padding-top: 150px;
+      }
+    }
+  }
+
+  .home-articles {
+    padding: 0 $layout-padding-desktop;
+
+    &__row {
+      padding: 2rem 0;
+    }
+
+    &__column {
+      &:not(:last-of-type) {
+        padding-right: 2rem;
+        margin-right: 2rem;
+      }
+
+      &__row {
+        &:not(:last-of-type) {
+          padding-bottom: 2rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  .home-more {
+    margin-top: 6rem;
+  }
+}

@@ -1,0 +1,75 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/feed.twig' import issues %}
+{% from '_macros/hero.twig' import hero %}
+{% from '_macros/pagination.twig' import pagination %}
+
+{% set headerSize = 'small' %}
+{% set layoutSize = 'medium' %}
+
+{# Redirect to newst issue year if the year parameter is not defined #}
+{% if year is not defined %}
+    {% set newestYear = craft.entries()
+        .section('issues')
+        .max('field_issueYear_womevpsh') %}
+
+    {% redirect url('print/' ~ newestYear) %}
+{% endif %}
+
+{# Fetch issues for requested year #}
+{% set data = craft.entries()
+    .section('issues')
+    .issueYear(year)
+    .with([
+        'issueFile',
+        ['issueImage', {
+            withTransforms: [
+                { width: 250, height: 340, mode: 'crop' }
+            ]
+        }],
+    ])
+    .orderBy('issueYear DESC, issueNumber DESC')
+    .collect() %}
+
+{# If no matching issues exist, return a 404 error #}
+{% if not data %}
+    {% exit 404 %}
+{% endif %}
+
+{# Fetch all issue years for pagination #}
+{% set years = craft.entries()
+    .section('issues')
+    .select('field_issueYear_womevpsh')
+    .distinct()
+    .orderBy('issueYear DESC')
+    .column() %}
+
+{# Determine pagination values #}
+{% set nextLabel = years|filter(y => y < year)|first %}
+{% set prevLabel = years|filter(y => y > year)|last %}
+{% set nextUrl = nextLabel ? url('print/' ~ nextLabel) : '' %}
+{% set prevUrl = prevLabel ? url('print/' ~ prevLabel) : '' %}
+
+{% block main %}
+    {{ hero({
+        title: 'Print-Archiv'
+    }) }}
+
+    {{ issues({
+        issues: data
+    }) }}
+
+    {{ pagination({
+        prevLabel: prevLabel,
+        prevUrl: prevUrl,
+        nextLabel: nextLabel,
+        nextUrl: nextUrl
+    }) }}
+{% endblock %}
+
+{% set meta = {
+    title: 'Print-Archiv ' ~ year,
+    url: url('print/' ~ year),
+    urlPrev: prevUrl,
+    urlNext: nextUrl
+} %}

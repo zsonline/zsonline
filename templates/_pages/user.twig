@@ -1,0 +1,67 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/feed.twig' import articles %}
+{% from '_macros/hero.twig' import hero %}
+{% from '_macros/pagination.twig' import pagination %}
+
+{% set headerSize = 'small' %}
+{% set layoutSize = 'medium' %}
+
+{% set entry = craft.users()
+    .username(slug)
+    .one() %}
+
+{% if not entry %}
+    {% exit 404 %}
+{% endif %}
+
+{% set query = craft.entries()
+    .section('articles')
+    .contributors(
+        craft.matrixBlocks()
+            .field('contributors')
+            .type('user')
+            .user(entry)
+            .all()
+    )
+    .with([
+        'articleFormat',
+        ['contentImage', {
+            withTransforms: [
+                { width: 250, height: 150 }
+            ]
+        }],
+        'contributors.other',
+        'contributors.user:user'
+    ])
+    .orderBy('postDate DESC')
+    .limit(25) %}
+
+{% paginate query as pageInfo, pageEntries %}
+
+{% block main %}
+    {{ hero({
+        description: entry.description,
+        taxonomy: 'Autor*in',
+        taxonomyUrl: url('autor-innen'),
+        title: entry.fullName
+    }) }}
+
+    {{ articles({
+        articles: collect(pageEntries),
+        granularity: 'year'
+    }) }}
+
+    {{ pagination({
+        prevUrl: pageInfo.prevUrl,
+        nextUrl: pageInfo.nextUrl
+    }) }}
+{% endblock %}
+
+{% set meta = {
+    description: entry.description,
+    title: entry.fullName,
+    url: url('autor-innen/' ~ entry.username),
+    urlPrev: pageInfo.prevUrl,
+    urlNext: pageInfo.nextUrl
+} %}

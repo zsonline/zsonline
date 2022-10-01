@@ -1,0 +1,78 @@
+.content-footer {
+  @include layout("small");
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 4.5rem;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    > h4 {
+      width: 100%;
+      padding-top: 1em;
+      margin: 0;
+      font-size: 0.9em;
+      color: var(--color-fg);
+      border-top: solid 1px var(--color-border-bright);
+    }
+  }
+
+  .content-footer__note {
+    font-size: 0.8em;
+    color: var(--color-fg-subdued);
+
+    a {
+      color: var(--color-fg-subdued);
+      text-decoration: underline;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--color-fg-subdued-alt);
+      }
+    }
+  }
+
+  .content-footer__share {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em 1.5em;
+
+    #content-footer__share__copy {
+      &:active {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  .content-footer__related {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .content-footer__topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em 1.25em;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .content-footer {
+    gap: 3.5rem;
+    margin-top: 5.25rem;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .content-footer {
+    gap: 4rem;
+    margin-top: 6rem;
+  }
+}

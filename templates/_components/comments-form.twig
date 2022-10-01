@@ -1,0 +1,75 @@
+{% from '_macros/button.twig' import button %}
+{% from '_macros/message.twig' import message %}
+{% from '_macros/icon.twig' import icon %}
+
+{% set entryId = entryId ?? '' %}
+{% set siteId = siteId ?? '' %}
+{% set parentId = parentId ?? '' %}
+
+<form class="comment-form form" sprig s-method="post" s-action="comments/comments/save">
+    <input type="hidden" name="elementId" value="{{ entryId }}">
+    <input type="hidden" name="siteId" value="{{ siteId }}">
+    {% if currentUser %}
+        <input type="hidden" name="userId" value="{{ currentUser.id ?? '' }}">
+    {% endif %}
+    {% if parentId %}
+        <input type="hidden" name="newParentId" value="{{ parentId }}">
+    {% endif %}
+    {{ craft.comments.protect() }}
+
+    {% if not currentUser %}
+        <fieldset class="form__fields">
+            <div class="form__field">
+                <label for="comment-form__name">Name:</label>
+                <input id="comment-form__name" name="fields[name]" type="text" value="{{ comment.name ?? '' }}" />
+            </div>
+        </fieldset>
+
+        <fieldset class="form__fields">
+            <div class="form__field">
+                <label for="comment-form__email">E-Mail-Adresse:</label>
+                <input id="comment-form__email" name="fields[email]" type="text" value="{{ comment.email ?? '' }}" />
+                <small>Deine E-Mail-Adresse wird nicht veröffentlicht.</small>
+            </div>
+        </fieldset>
+    {% endif %}
+
+    <fieldset class="form__fields">
+        <div class="form__field">
+            <label for="comment-form__comment">Kommentar:</label>
+            <textarea id="comment-form__comment" name="fields[comment]">{{ comment.comment ?? '' }}</textarea>
+        </div>
+    </fieldset>
+
+    {% if errors is defined and errors|length > 0 %}
+        <fieldset>
+            <ul class="form__errors">
+                {% for error in errors %}
+                    <li>{{ error|first }}</li>
+                {% endfor %}
+            </ul>
+        </fieldset>
+    {% endif %}
+
+    {% if success is defined and success %}
+        <fieldset>
+            <span class="form__success">Danke für deinen Kommentar. Es kann einige Tage dauern, bis er freigeschaltet wird.</span>
+        </fieldset>
+    {% endif %}
+
+    <fieldset class="form__controls">
+        {{ button({
+            disabled: success is defined and success,
+            icon: success is defined and success ? 'check' : '',
+            label: 'Abschicken',
+            style: 'accent',
+            type: 'submit'
+        }) }}
+
+        {% if currentUser %}
+            <span class="comment-form__user">
+                Angemeldet als {{ currentUser.fullname }}
+            </span>
+        {% endif %}
+    </fieldset>
+</form>

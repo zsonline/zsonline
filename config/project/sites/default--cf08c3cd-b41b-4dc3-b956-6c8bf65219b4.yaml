@@ -1,0 +1,9 @@
+baseUrl: $SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: de-CH
+name: 'Zürcher Studierendenzeitung'
+primary: true
+siteGroup: d29e8b36-a8aa-4b2f-9033-2c5e9113427c # Zürcher Studierendenzeitung
+sortOrder: 1

@@ -1,0 +1,20 @@
+columnSuffix: womevpsh
+contentColumnType: integer(10)
+fieldGroup: c02d5119-8f14-4b30-acf1-29e22375aef5 # Issue
+handle: issueYear
+instructions: null
+name: Year
+searchable: true
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: 1923
+  prefix: null
+  previewCurrency: null
+  previewFormat: none
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

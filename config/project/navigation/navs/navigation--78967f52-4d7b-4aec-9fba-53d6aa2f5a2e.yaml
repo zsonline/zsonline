@@ -1,0 +1,75 @@
+defaultPlacement: end
+fieldLayouts:
+  f03d4c54-aa8c-46de-bfee-37141626d839:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 26dbcf66-ab39-4897-b47a-11e81de7426e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: verbb\navigation\fieldlayoutelements\NodeTypeElements
+            uid: a91d80d3-65e3-482f-adc6-5e6d96c35bd1
+            userCondition: null
+            warning: null
+        name: Node
+        uid: ff76e65b-3848-41a0-85cb-d0f1adaf3f99
+        userCondition: null
+handle: navigation
+instructions: null
+maxNodes: null
+name: Navigation
+permissions:
+  craft\elements\Asset:
+    enabled: ''
+    permissions: '*'
+  craft\elements\Category:
+    enabled: ''
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  verbb\navigation\nodetypes\CustomType:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: ''
+propagationMethod: all
+siteSettings:
+  cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: # Zürcher Studierendenzeitung
+    enabled: true
+sortOrder: 1
+structure:
+  maxLevels: 2
+  uid: 2ac92fe7-75aa-4862-8068-8ed7467a82cf

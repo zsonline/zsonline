@@ -1,0 +1,226 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/article.twig' import preview %}
+{% from '_macros/button.twig' import button, link %}
+{% from '_macros/content.twig' import header %}
+{% from '_macros/issue.twig' import tag %}
+{% from '_macros/lightbox.twig' import lightbox %}
+
+{% set headerSize = 'small' %}
+{% set headerTransparent = entry.contentImageSize.value == 'large' and entry.contentImagePosition.value == 'top' and entry.contentImage|length > 0 %}
+{% set layoutSize = 'large' %}
+
+{% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
+    'articleFormat',
+    ['contentImage', {
+        withTransforms: [
+            { width: 400 },
+            { width: 650 },
+            { width: 1024 },
+            { width: 1440 },
+
+            {
+                mode: 'fit',
+                height: 400,
+                width: 400
+            },
+            {
+                mode: 'fit',
+                height: 650,
+                width: 650
+            },
+            {
+                mode: 'fit',
+                height: 1024,
+                width: 1024
+            },
+            {
+                mode: 'fit',
+                height: 1440,
+                width: 1440
+            },
+
+            {
+                height: 628,
+                width: 1200,
+                format: 'jpeg'
+            }
+        ]
+    }],
+    'contentImage.contributors.other',
+    'contentImage.contributors.user:user',
+    'contributors.other',
+    'contributors.user:user',
+    'articleRelated',
+    'articleRelated.articleFormat',
+    ['articleRelated.contentImage', {
+        withTransforms: [
+            { width: 250, height: 150 }
+        ]
+    }],
+    'articleRelated.contributors.other',
+    'articleRelated.contributors.user:user'
+]) %}
+
+{% set entry = collect([entry]).first() %}
+
+{% block main %}
+    {{ header({
+        ad: entry.articleAd,
+        contributors: entry.contributors.all(),
+        datePublished: entry.postDate,
+        dateUpdated: entry.dateUpdated,
+        description: entry.contentDescription,
+        format: entry.articleFormat.first(),
+        image: entry.contentImage.first(),
+        imagePosition: entry.contentImagePosition.value,
+        imageSize: entry.contentImageSize.value,
+        title: entry.title
+    }) }}
+
+    <div class="content progress-target">
+        {{ entry.contentContent }}
+    </div>
+    {{ lightbox() }}
+
+    <div class="content-footer">
+        {% set blockQuery = craft.matrixBlocks().field('issueArticles').type('group').articles(entry).all() %}
+        {% set articleIssue = craft.entries().section('issues').issueArticles(blockQuery).one() %}
+        {% if articleIssue %}
+            <p class="content-footer__note">
+                Dieser Artikel erschien erstmals in der <a href="{{ articleIssue.url }}">Print-Ausgabe {{ tag({
+                    number: articleIssue.issueNumber,
+                    year: articleIssue.issueYear
+                }) }}</a>.
+            </p>
+        {% endif %}
+
+        <div>
+            <h4>Artikel teilen</h4>
+
+            {% set title = entry.title|url_encode %}
+            {% set url = entry.url|url_encode %}
+
+            <div class="content-footer__share">
+                {{ link({
+                    href: 'https://api.whatsapp.com/send?text=' ~ title ~ '%20' ~ url,
+                    icon: 'message-circle',
+                    label: 'Whatsapp',
+                    target: '_blank'
+                }) }}
+                {{ link({
+                    href: 'https://twitter.com/intent/tweet?text=' ~ title ~ '&url=' ~ url ~ '&via=zsonline',
+                    icon: 'twitter',
+                    label: 'Twitter',
+                    target: '_blank'
+                }) }}
+                {{ link({
+                    href: 'mailto:?subject=' ~ title ~ '&body=' ~ url,
+                    icon: 'mail',
+                    label: 'E-Mail',
+                    target: '_blank'
+                }) }}
+                {{ button({
+                    icon: 'clipboard',
+                    id: 'content-footer__share__copy',
+                    label: 'Link kopieren',
+                    onclick: 'navigator.clipboard.writeText("' ~ entry.url ~ '")'
+                }) }}
+            </div>
+        </div>
+
+        {% set articleRelated = entry.articleRelated.all() %}
+        {% if articleRelated|length > 0 %}
+            <div>
+                <h4>Ähnliche Artikel</h4>
+
+                <div class="content-footer__related">
+                    {% for article in articleRelated %}
+                        {{ preview({
+                            article: article,
+                            orientation: 'horizontal',
+                            size: 'small'
+                        }) }}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        <div>
+            <h4>Kommentare</h4>
+
+            {{ sprig(
+                '_components/comments.twig',
+                {
+                    entryId: entry.id,
+                    siteId: entry.siteId,
+                },
+                {
+                    's-trigger': 'load',
+                }
+            ) }}
+        </div>
+
+        {% set articleTopics = entry.articleTopics.all() %}
+        {% if articleTopics|length > 0 %}
+            <div>
+                <h4>Themen</h4>
+
+                <div class="content-footer__topics">
+                    {% for topic in articleTopics %}
+                        {{ link({
+                            href: topic.url,
+                            label: topic.title,
+                            style: 'dark'
+                        }) }}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% set meta = {
+    description: entry.contentDescription,
+    image: entry.contentImage.first(),
+    title: entry.title,
+    type: 'article',
+    url: entry.url
+} %}
+
+{% block meta %}
+    <meta property="article:published_time" content="{{ entry.postDate|date('c') }}" />
+    <meta property="article:modified_time" content="{{ entry.dateUpdated|date('c') }}" />
+
+    {% set authors = [] %}
+    {% for contributor in entry.contributors %}
+        {% if contributor.type == 'user' %}
+            {% set user = contributor.user.first() %}
+
+            {% set authors = authors|merge({
+                "@type": "Person",
+                "name": user.fullName,
+                "url": url('autor-innen/' ~ user.username)
+            }) %}
+
+            <meta property="article:author" content="{{ url('autor-innen/' ~ user.username) }}" />
+            <meta property="profile:first_name" content="{{ user.firstName }}" />
+            <meta property="profile:last_name" content="{{ user.lastName }}" />
+        {% endif %}
+    {% endfor %}
+
+    {# Structured content (Google) #}
+    <script type="application/ld+json">
+        {{ {
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "dateModified": entry.dateUpdated|date('c'),
+            "datePublished": entry.postDate|date('c'),
+            "author": authors,
+            "headline": entry.title,
+            "image": entry.contentImage
+                ? [ entry.contentImage.first().getUrl({ height: 628, width: 1200, format: 'jpeg' }) ]
+                : []
+        }|json_encode(constant('JSON_PRETTY_PRINT') b-or constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES'))|raw }}
+    </script>
+{% endblock %}

@@ -1,0 +1,23 @@
+.content-caption {
+  margin-top: 0.25em;
+  font-family: $font-sans-serif;
+  font-size: 0.8em;
+  line-height: 1.4;
+
+  small {
+    margin-left: 0.25em;
+    font-size: 0.75em;
+    color: var(--color-fg-subdued);
+
+    a {
+      color: var(--color-fg-subdued);
+      text-decoration: underline;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--color-fg-subdued-alt);
+      }
+    }
+  }
+}

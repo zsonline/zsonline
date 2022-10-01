@@ -1,0 +1,10 @@
+{% from '_macros/content.twig' import image %}
+
+{% if image %}
+    <div class="content-block content-block--{{ size }}">
+        {{ image({
+            image: image,
+            size: size
+        }) }}
+    </div>
+{% endif %}

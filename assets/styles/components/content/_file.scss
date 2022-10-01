@@ -1,0 +1,22 @@
+.content-file {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 90%;
+  padding: 1.5rem;
+  margin: 0 auto;
+  font-family: $font-sans-serif;
+  background-color: var(--color-bg-subdued);
+  border-radius: 7px;
+
+  &__filename {
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--color-fg-subdued);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

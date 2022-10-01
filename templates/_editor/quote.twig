@@ -1,0 +1,10 @@
+{% if quote %}
+    <div class="content-block content-block--small">
+        <figure class="content-quote">
+            <blockquote>{{ quote|raw }}</blockquote>
+            {% if caption %}
+                <figcaption class="content-caption">{{ caption|raw }}</figcaption>
+            {% endif %}
+        </figure>
+    </div>
+{% endif %}

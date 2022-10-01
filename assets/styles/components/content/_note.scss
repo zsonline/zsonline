@@ -1,0 +1,39 @@
+.content-note {
+  max-width: 90%;
+  padding: 25px 20px;
+  margin: 0 auto;
+  font-family: $font-sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-bg-subdued);
+  border-radius: 7px;
+
+  h5 {
+    margin: 0 0 0.5em;
+    font-size: 1em;
+    color: var(--color-accent);
+  }
+
+  p,
+  ul,
+  ol {
+    width: initial !important;
+    margin: 0.75em 0 !important;
+
+    &:first-child {
+      margin-top: 0 !important;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  ul,
+  ol {
+    padding-inline-start: 25px;
+
+    p {
+      margin: 0.25em 0 !important;
+    }
+  }
+}

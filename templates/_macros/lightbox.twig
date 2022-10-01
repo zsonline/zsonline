@@ -1,0 +1,60 @@
+{% macro lightbox() %}
+    {% from '_macros/icon.twig' import icon %}
+    {% from '_macros/button.twig' import button %}
+
+    <figure class="lightbox swiper">
+        <div class="lightbox__header">
+            {{ button({
+                icon: 'x',
+                label: 'Schliessen',
+                responsive: true,
+                style: 'dark'
+            }) }}
+        </div>
+
+        <div class="swiper-wrapper"></div>
+
+        <div class="lightbox__footer">
+            <figcaption class="content-caption"></figcaption>
+
+            <div class="gallery-controls">
+                <button class="swiper-prev">
+                    {{ icon({ name: 'chevron-left' }) }}
+                </button>
+                <span class="swiper-pagination"></span>
+                <button class="swiper-next">
+                    {{ icon({ name: 'chevron-right' }) }}
+                </button>
+            </div>
+        </div>
+    </figure>
+{% endmacro %}
+
+{% macro lightboxImage(args) %}
+    {% set args = {
+        image: null
+    } | merge(args) %}
+
+    {% set transform = {
+        mode: 'fit',
+        height: 1440,
+        width: 1440
+    } %}
+
+    {% set srcset = [] %}
+    {% for size in [400, 650, 1024, 1440] %}
+        {% set srcset = srcset|merge([args.image.getUrl({
+            mode: 'fit',
+            height: size,
+            width: size
+        }) ~ ' ' ~ size ~ 'w']) %}
+    {% endfor %}
+
+    {{ tag('img', {
+        height: args.image.getHeight(transform),
+        loading: 'lazy',
+        sizes: '100vw',
+        srcset: srcset|join(', '),
+        width: args.image.getWidth(transform)
+    }) }}
+{% endmacro %}

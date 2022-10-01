@@ -1,0 +1,39 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/button.twig' import link %}
+{% from '_macros/hero.twig' import hero %}
+{% from '_macros/message.twig' import message %}
+
+{% switch statusCode %}
+    {% case 404 %}
+        {% set message = 'Die Seite wurde nicht gefunden.' %}
+    {% case 503 %}
+        {% set message = 'Die Seite ist vorübergehend nicht erreichbar. Bitte versuche es später erneut.' %}
+    {% default %}
+        {% set message = 'Es ist ein Fehler aufgetreten.' %}
+{% endswitch %}
+
+{% block main %}
+    {{ hero({
+        title: 'Fehler ' ~ statusCode
+    }) }}
+
+    {{ message({
+        message: message,
+        style: 'dark'
+    }) }}
+
+    {% if statusCode != 503 %}
+        {{ link({
+            href: url(),
+            icon: 'frown',
+            iconPosition: 'right',
+            label: 'Zurück zur Startseite',
+            style: 'accent'
+        }) }}
+    {% endif %}
+{% endblock %}
+
+{% set meta = {
+    title: 'Fehler ' ~ statusCode
+} %}

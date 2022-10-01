@@ -1,0 +1,217 @@
+.content-header {
+  display: flex;
+  flex-direction: column;
+
+  &.content-header--has-image {
+    &.content-header--small {
+      gap: 25px;
+      margin-top: 10px;
+      margin-bottom: 35px;
+
+      &.content-header--bottom {
+        gap: 35px;
+        margin-top: 20px;
+        margin-bottom: 35px;
+      }
+
+      .content-image {
+        @include layout("small");
+      }
+    }
+
+    &.content-header--medium {
+      gap: 25px;
+      margin-top: 10px;
+      margin-bottom: 35px;
+
+      &.content-header--bottom {
+        gap: 35px;
+        margin-top: 20px;
+        margin-bottom: 35px;
+      }
+
+      .content-image {
+        @include layout("medium");
+      }
+    }
+
+    &.content-header--large {
+      gap: 25px;
+      margin-top: 0;
+      margin-bottom: 35px;
+
+      &.content-header--bottom {
+        gap: 35px;
+        margin-top: 20px;
+        margin-bottom: 35px;
+      }
+
+      .content-image {
+        @include layout("large", false);
+      }
+    }
+  }
+
+  &:not(.content-header--has-image) {
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .content-header__text {
+    @include layout("small");
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+
+    h2 {
+      margin: 0;
+      font-family: $font-title;
+      font-size: 1.75em;
+      font-weight: 600;
+    }
+
+    .content-header__description {
+      margin: 0;
+      font-family: $font-sans-serif;
+
+      .content-header__format {
+        font-weight: 700;
+      }
+    }
+
+    .meta {
+      font-size: 0.8em;
+      color: var(--color-fg-subdued);
+
+      a {
+        color: var(--color-fg-subdued);
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--color-fg-subdued-alt);
+        }
+      }
+    }
+  }
+
+  &.content-header--page {
+    h2 {
+      font-family: $font-sans-serif;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .content-header {
+    &.content-header--has-image {
+      &.content-header--small {
+        gap: 40px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+
+        &.content-header--bottom {
+          gap: 60px;
+          margin-top: 50px;
+          margin-bottom: 60px;
+        }
+      }
+
+      &.content-header--medium {
+        gap: 50px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+
+        &.content-header--bottom {
+          gap: 60px;
+          margin-top: 50px;
+          margin-bottom: 60px;
+        }
+      }
+
+      &.content-header--large {
+        gap: 50px;
+        margin-top: 0;
+        margin-bottom: 60px;
+
+        &.content-header--bottom {
+          gap: 60px;
+          margin-top: 50px;
+          margin-bottom: 70px;
+        }
+      }
+    }
+
+    &:not(.content-header--has-image) {
+      margin-top: 50px;
+      margin-bottom: 60px;
+    }
+
+    .content-header__text {
+      gap: 1.25rem;
+
+      h2 {
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .content-header {
+    &.content-header--has-image {
+      &.content-header--small {
+        gap: 40px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+
+        &.content-header--bottom {
+          gap: 70px;
+          margin-top: 60px;
+          margin-bottom: 70px;
+        }
+      }
+
+      &.content-header--medium {
+        gap: 60px;
+        margin-top: 20px;
+        margin-bottom: 70px;
+
+        &.content-header--bottom {
+          gap: 70px;
+          margin-top: 70px;
+          margin-bottom: 70px;
+        }
+      }
+
+      &.content-header--large {
+        gap: 60px;
+        margin-top: 0;
+        margin-bottom: 70px;
+
+        &.content-header--bottom {
+          gap: 70px;
+          margin-top: 70px;
+          margin-bottom: 70px;
+        }
+      }
+    }
+
+    &:not(.content-header--has-image) {
+      margin-top: 60px;
+      margin-bottom: 70px;
+    }
+
+    .content-header__text {
+      h2 {
+        font-size: 2.5em;
+      }
+    }
+  }
+}

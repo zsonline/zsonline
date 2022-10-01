@@ -1,0 +1,67 @@
+fieldLayouts:
+  e1a89989-986d-4c34-b871-cb4cc81df548:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 733d7ccc-ba41-4a0c-b98e-950a3c38f3a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 420d0b54-9f18-41a9-b095-de7adfde688d # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31eb0b50-e549-481b-a398-4bfb083f3fdc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bcb6d13b-de66-4331-8d15-bb23ef7a9736 # Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f2b6a242-e008-409a-bcaf-306607cf0ec3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3a24a74e-f8f0-420c-9d92-bb34a59f7a80
+        userCondition: null
+handle: default
+hasTitleField: false
+name: Default
+section: 4ce497c4-83db-4505-966c-25ac2477e7fb # Ads
+sortOrder: 1
+titleFormat: '{adLink}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

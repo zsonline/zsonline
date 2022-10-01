@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 86f8655a-9378-4130-8cf0-c80e876968e0 # Common
+handle: contributors
+instructions: null
+name: Contributors
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_contributors}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

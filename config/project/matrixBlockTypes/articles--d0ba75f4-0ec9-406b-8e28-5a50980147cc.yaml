@@ -1,0 +1,121 @@
+field: 33d4c786-8ab6-42cf-9aaa-e48f7d18b820 # Blocks
+fieldLayouts:
+  535655a2-dff1-40a4-8a66-8b7da7bfa034:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d6607152-35ab-435a-9c88-53f1e9ab6f5c # Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b46a056b-2500-429d-9df8-cd226dc7d188
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 024d03f4-9614-497a-9274-7340a22f343c # Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba797703-d96c-47fa-9048-694a788cdd76
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 3458cf19-d496-4a9e-808d-47e0b2323224 # Layouts
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ad893672-8209-42b8-96de-2b94cb515356
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d54c706c-05c5-43eb-92be-91e0a4e37f8f
+        userCondition: null
+fields:
+  024d03f4-9614-497a-9274-7340a22f343c: # Color
+    columnSuffix: irbejnhs
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: null
+    name: Color
+    searchable: false
+    settings:
+      defaultColor: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  3458cf19-d496-4a9e-808d-47e0b2323224: # Layouts
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: layouts
+    instructions: null
+    name: Layouts
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 59889464
+      columns:
+        __assoc__:
+          -
+            - 0cf2962b-f593-4e6b-9ac2-9544710d8aad # Appearance
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - f197e112-2648-4604-852c-cf4171abc6c2 # Articles
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_4_layouts}}'
+      fieldLayout: row
+      maxRows: null
+      minRows: 1
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\supertable\fields\SuperTableField
+  d6607152-35ab-435a-9c88-53f1e9ab6f5c: # Title
+    columnSuffix: nvmvpjle
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: null
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: articles
+name: Articles
+sortOrder: 1

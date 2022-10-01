@@ -1,0 +1,47 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "modern-normalize": "^1.1.0",
+    "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "sass": "^1.58.3",
+    "stylelint": "^14.16.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "vite": "^4.1.4",
+    "vite-plugin-restart": "^0.3.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard-scss",
+      "stylelint-config-recess-order"
+    ],
+    "rules": {
+      "no-descending-specificity": null,
+      "selector-class-pattern": null,
+      "selector-id-pattern": null
+    }
+  }
+}

@@ -1,0 +1,242 @@
+.header {
+  @include layout("large", false);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg);
+  transition: all 200ms ease-in-out;
+
+  &__inner {
+    @include layout("large", true);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px $layout-padding;
+  }
+
+  &__rule {
+    height: 2px;
+    margin: 0 $layout-padding;
+    background-color: var(--color-border-dark);
+    transition: all 200ms ease-in-out;
+
+    &--bright {
+      background-color: var(--color-border-bright);
+    }
+
+    &__progress {
+      width: 0;
+      height: 100%;
+      background-color: var(--color-border-dark);
+      transition: all 200ms ease-in-out;
+    }
+  }
+
+  &--scroll-within {
+    .header__rule {
+      margin: 0;
+    }
+  }
+
+  &--transparent {
+    position: fixed;
+
+    &.header--scroll-top {
+      --color-button-bright-fg: var(--color-header-transparent-fg);
+      --color-button-bright-fg-alt: var(--color-header-transparent-fg-alt);
+      --color-button-bright-bg: var(--color-header-transparent-bg);
+      --color-button-bright-bg-alt: var(--color-header-transparent-bg-alt);
+
+      background:
+        linear-gradient(
+          180deg,
+          hsl(0deg 0% 0% / 30%) 0%,
+          hsl(0deg 0% 0% / 15%) 75%,
+          hsl(0deg 0% 0% / 0%) 100%
+        );
+
+      .header__rule {
+        background-color: var(--color-header-transparent-bg);
+      }
+
+      .header__logo svg {
+        fill: var(--color-header-transparent-bg);
+      }
+    }
+  }
+
+  &__logo {
+    font-size: 0;
+
+    h1 {
+      display: none;
+    }
+
+    svg {
+      height: 55px;
+      font-size: 0;
+      fill: var(--color-fg);
+      transition: all 200ms ease-in-out;
+    }
+  }
+
+  &__navigation-top {
+    display: flex;
+    gap: 0.25rem;
+
+    a,
+    button {
+      font-weight: 500;
+    }
+  }
+
+  &__navigation-main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: flex-start;
+    align-items: flex-end;
+    width: min(400px + 2 * $layout-padding, 90vw);
+    height: 100vh;
+    padding: 20px $layout-padding 2em;
+    overflow-y: auto;
+    color: var(--color-fg);
+    visibility: hidden;
+    background-color: var(--color-bg);
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+
+    &--open {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &__component {
+      width: 100%;
+    }
+
+    &__overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      background-color: #000;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+
+      &--open {
+        visibility: visible;
+        opacity: 0.65;
+      }
+    }
+
+    .navigation__item--primary {
+      a,
+      button {
+        color: var(--color-accent);
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--color-accent-alt);
+        }
+      }
+    }
+  }
+
+  .header__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    color: var(--color-accent);
+
+    .socials {
+      font-size: 0.9em;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .header {
+    &__inner {
+      padding: 12px $layout-padding-tablet;
+    }
+
+    &__logo {
+      svg {
+        height: 60px;
+      }
+    }
+
+    &__rule {
+      margin: 0 $layout-padding-tablet;
+    }
+
+    &__navigation-top {
+      gap: 1rem;
+    }
+
+    &__navigation-main {
+      gap: 3rem;
+      width: min(400px + 2 * $layout-padding-tablet, 90vw);
+      padding: 20px $layout-padding-tablet 2em;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .header {
+    &__inner {
+      padding: 13px $layout-padding-desktop;
+    }
+
+    &__logo {
+      svg {
+        height: 65px;
+      }
+    }
+
+    &__rule {
+      margin: 0 $layout-padding-desktop;
+    }
+
+    &--large {
+      .header__inner {
+        padding: 25px $layout-padding-desktop;
+      }
+
+      .header__logo svg {
+        height: 100px;
+      }
+
+      &.header--scroll-within {
+        .header__inner {
+          padding: 13px $layout-padding-desktop;
+        }
+
+        .header__logo svg {
+          height: 65px;
+        }
+      }
+    }
+
+    &__navigation-top {
+      gap: 2rem;
+    }
+
+    &__navigation-main {
+      width: min(400px + 2 * $layout-padding-desktop, 90vw);
+      padding: 20px $layout-padding-desktop 2em;
+    }
+  }
+}

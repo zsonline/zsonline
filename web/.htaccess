@@ -1,0 +1,28 @@
+# Enable rewrite module
+RewriteEngine On
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R,NE]
+
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R]
+
+# Cache rewrite
+RewriteCond %{DOCUMENT_ROOT}/cache/blitz/%{HTTP_HOST}/%{REQUEST_URI}/%{QUERY_STRING}/index.html -s
+RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{QUERY_STRING} !token= [NC]
+RewriteRule .* /cache/blitz/%{HTTP_HOST}/%{REQUEST_URI}/%{QUERY_STRING}/index.html [L]
+# Set custom content-type headers for cached pages
+Header set Content-Type application/atom+xml "expr=%{REQUEST_URI} =~ m#/feed\.atom$#"
+Header set Content-Type text/xml "expr=%{REQUEST_URI} =~ m#/sitemap\.xml$#"
+
+# Set PHP version to PHP 8.0
+AddHandler application/x-httpd-php80 .php
+
+# Send requests to Craft
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.+) index.php?p=$1 [QSA,L]

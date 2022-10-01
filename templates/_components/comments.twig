@@ -1,0 +1,72 @@
+{% if sprig.isRequest %}
+    {% from '_macros/button.twig' import button %}
+    {% from '_macros/comments.twig' import comment %}
+
+    {% set entryId = entryId ?? '' %}
+    {% set siteId = siteId ?? '' %}
+
+    {% set comments = craft.comments.fetch()
+        .ownerId(entryId)
+        .level(1)
+        .with([
+            'children'
+        ])
+        .collect() %}
+
+    <ul class="comments">
+        <li>
+            <div class="comment">
+                {{ sprig('_components/comments-form.twig', {
+                    entryId: entryId,
+                    siteId: siteId
+                }) }}
+            </div>
+        </li>
+
+        {% for comment in comments %}
+            <li>
+                {{ comment({
+                    comment: comment
+                }) }}
+
+                {% if comment.children|length > 0 %}
+                    <ul class="comments__replies comments__replies--indent">
+                        {% for reply in comment.children %}
+                            <li>
+                                {{ comment({
+                                    comment: reply,
+                                    showArrow: true
+                                }) }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+                <div class="{{ html_classes('comments__reply', {
+                    'comments__reply--replies': comment.children|length > 0,
+                    'comments__replies--indent': comment.children|length > 0
+                }) }}">
+                    {{ button({
+                        label: 'Antworten',
+                        icon: 'corner-up-left',
+                        onclick: 'ZS.Comments.toggleReplyForm(this);'
+                    }) }}
+                    <div class="comment comment--has-arrow comments__reply__form">
+                        {{ sprig('_components/comments-form.twig', {
+                            entryId: entryId,
+                            siteId: siteId,
+                            parentId: comment.id
+                        }) }}
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    {% from '_macros/message.twig' import message %}
+
+    {{ message({
+        message: 'Kommentare werden geladen.',
+        style: 'dark'
+    }) }}
+{% endif %}

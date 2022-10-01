@@ -1,0 +1,56 @@
+{%- header "Content-Type: text/xml" -%}
+
+{%- set routes = [
+    'artikel',
+    'autor-innen',
+    'rubriken',
+    'themen'
+] -%}
+
+{%- set entries = craft.entries()
+    .all() -%}
+
+{%- set users = craft.users()
+    .group('contributors')
+    .all() -%}
+
+{%- set issueYears = craft.entries()
+    .section('issues')
+    .select('field_issueYear_womevpsh')
+    .distinct()
+    .orderBy('issueYear DESC')
+    .column() -%}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{{ url('')|slice(0, -1) }}</loc>
+    </url>
+
+    {% for route in routes %}
+        <url>
+            <loc>{{ url(route) }}</loc>
+        </url>
+    {% endfor %}
+
+    {% for entry in entries %}
+        <url>
+            {% if entry.url is defined %}
+                <loc>{{ entry.url }}</loc>
+                <lastmod>{{ entry.dateUpdated|date('c') }}</lastmod>
+            {% endif %}
+        </url>
+    {% endfor %}
+
+    {% for user in users %}
+        <url>
+            <loc>{{ url('autor-innen/' ~ user.username) }}</loc>
+        </url>
+    {% endfor %}
+
+    {% for issueYear in issueYears %}
+        <url>
+            <loc>{{ url('print/' ~ issueYear) }}</loc>
+        </url>
+    {% endfor %}
+</urlset>

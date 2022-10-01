@@ -1,0 +1,12 @@
+{% macro message(args) %}
+    {% set args = {
+        message: '',
+        style: 'bright'
+    } | merge(args) %}
+
+    <p class="{{ html_classes('message', {
+        ('message--' ~ args.style): args.style
+    }) }}">
+        {{ args.message }}
+    </p>
+{% endmacro %}

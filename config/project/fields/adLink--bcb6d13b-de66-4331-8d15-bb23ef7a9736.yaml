@@ -1,0 +1,14 @@
+columnSuffix: lmealsfp
+contentColumnType: string(255)
+fieldGroup: 6ad72fa7-45c2-46f6-9e8a-fbb1db6e7e3f # Ad
+handle: adLink
+instructions: null
+name: Link
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

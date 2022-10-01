@@ -1,0 +1,49 @@
+{% macro preview(args) %}
+    {% set args = {
+        issue: null,
+        link: true
+    } | merge(args) %}
+
+    {% set image = args.issue.issueImage.first() %}
+    {% set transform = { width: 250, height: 340, mode: 'crop' } %}
+
+    {% set html %}
+        {% if image %}
+            {{ tag('img', {
+                height: image.getHeight(transform),
+                loading: 'lazy',
+                sizes: '100vw',
+                srcset: image.getUrl(transform) ~ ' 250w',
+                width: image.getWidth(transform)
+            }) }}
+        {% endif %}
+        <span>
+            Ausgabe {{ _self.tag({
+                number: args.issue.issueNumber,
+                year: args.issue.issueYear
+            }) }}
+        </span>
+    {% endset %}
+
+    {% if args.link %}
+        {{ tag('a', {
+            class: html_classes('issue', 'issue--link'),
+            href: args.issue.url,
+            html: html,
+        }) }}
+    {% else %}
+        {{ tag('div', {
+            class: 'issue',
+            html: html,
+        }) }}
+    {% endif %}
+{% endmacro %}
+
+{%- macro tag(args) -%}
+    {%- set args = {
+        number: null,
+        year: null
+    } | merge(args) -%}
+
+    #{{ args.number }}/{{ '%02d'|format(args.year % 100) }}
+{%- endmacro -%}

@@ -1,0 +1,59 @@
+.ad-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 0 $layout-padding;
+  background-color: var(--color-bg-alt);
+
+  &--article {
+    padding: 2rem 0;
+  }
+
+  a {
+    font-size: 0;
+  }
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+.ad-declaration {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  font-family: $font-sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-ad-fg);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  vertical-align: 0.2em;
+  background-color: var(--color-ad-bg);
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .ad-block {
+    gap: 1.5rem;
+
+    &--article {
+      padding: 3rem 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .ad-block {
+    gap: 2rem;
+
+    &--article {
+      padding: 4rem 0;
+    }
+
+    img {
+      max-width: 600px;
+    }
+  }
+}

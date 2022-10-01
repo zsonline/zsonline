@@ -1,0 +1,12 @@
+.pagination {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .pagination {
+    margin-top: 4rem;
+  }
+}

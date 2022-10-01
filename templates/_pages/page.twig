@@ -1,0 +1,73 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/content.twig' import header %}
+{% from '_macros/lightbox.twig' import lightbox %}
+
+{% set headerSize = 'small' %}
+{% set headerTransparent = entry.contentImageSize.value == 'large' and entry.contentImagePosition.value == 'top' and entry.contentImage|length > 0 %}
+{% set layoutSize = 'large' %}
+
+{% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
+    ['contentImage', {
+        withTransforms: [
+            { width: 400 },
+            { width: 650 },
+            { width: 1024 },
+            { width: 1440 },
+
+            {
+                mode: 'fit',
+                height: 400,
+                width: 400
+            },
+            {
+                mode: 'fit',
+                height: 650,
+                width: 650
+            },
+            {
+                mode: 'fit',
+                height: 1024,
+                width: 1024
+            },
+            {
+                mode: 'fit',
+                height: 1440,
+                width: 1440
+            },
+
+            {
+                height: 628,
+                width: 1200,
+                format: 'jpeg'
+            }
+        ]
+    }],
+    'contentImage.contributors.other',
+    'contentImage.contributors.user:user',
+]) %}
+
+{% set entry = collect([entry]).first() %}
+
+{% block main %}
+    {{ header({
+        class: 'content-header--page',
+        description: entry.contentDescription,
+        image: entry.contentImage.first(),
+        imagePosition: entry.contentImagePosition.value,
+        imageSize: entry.contentImageSize.value,
+        title: entry.title
+    }) }}
+
+    <div class="content">
+        {{ entry.contentContent }}
+        {{ lightbox() }}
+    </div>
+{% endblock %}
+
+{% set meta = {
+    description: entry.contentDescription,
+    image: entry.contentImage.first(),
+    title: entry.title,
+    url: entry.url
+} %}

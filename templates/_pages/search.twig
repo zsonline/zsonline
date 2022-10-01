@@ -1,0 +1,76 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/button.twig' import button %}
+{% from '_macros/feed.twig' import feed %}
+{% from '_macros/hero.twig' import hero %}
+{% from '_macros/pagination.twig' import pagination %}
+
+{% set layoutSize = 'small' %}
+
+{% set searchQuery = craft.app.request.getParam('suche') %}
+
+{% block main %}
+    {{ hero({
+        title: 'Suche'
+    }) }}
+
+    <form class="form search" action="{{ url('suche') }}">
+        <fieldset class="form__fields">
+            <div class="form__field">
+                <label for="search__field">Suchbegriff:</label>
+                <input id="search__field" class="search__field" name="suche" type="search" value="{{ searchQuery }}">
+            </div>
+        </fieldset>
+
+        <fieldset class="form__controls">
+            {{ button({
+                class: 'search__button',
+                label: 'Suchen',
+                style: 'accent',
+                type: 'submit'
+            }) }}
+        </fieldset>
+    </form>
+
+    {% if searchQuery %}
+        {% set query = craft.entries()
+            .section('articles')
+            .search(searchQuery)
+            .with([
+                'articleFormat',
+                ['contentImage', {
+                    withTransforms: [
+                        { width: 250, height: 150 }
+                    ]
+                }],
+                'contributors.other',
+                'contributors.user:user'
+            ])
+            .orderBy('score')
+            .limit(10) %}
+
+        {% paginate query as pageInfo, pageEntries %}
+
+        {% set data = [] %}
+        {% if pageEntries|length > 0 %}
+            {% set data = [{
+                entries: pageEntries
+            }] %}
+        {% endif %}
+
+        {{ feed({
+            data: collect(data),
+            type: 'article'
+        }) }}
+
+        {{ pagination({
+            prevUrl: pageInfo.prevUrl,
+            nextUrl: pageInfo.nextUrl
+        }) }}
+    {% endif %}
+{% endblock %}
+
+{% set meta = {
+    title: 'Suche',
+    url: url('suche')
+} %}

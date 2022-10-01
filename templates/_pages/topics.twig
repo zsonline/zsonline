@@ -1,0 +1,61 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/feed.twig' import feed %}
+{% from '_macros/hero.twig' import hero %}
+
+{% set headerSize = 'small' %}
+{% set layoutSize = 'medium' %}
+
+{# Query most recent articles that have topics set #}
+{% set articles = craft.entries()
+    .section('articles')
+    .after(now|date_modify("-6 months")|atom)
+    .articleTopics(':notempty:')
+    .with([
+        'articleFormat',
+        'articleTopics',
+        ['contentImage', {
+            withTransforms: [
+                { width: 250, height: 150 }
+            ]
+        }],
+        'contributors.other',
+        'contributors.user:user'
+    ])
+    .orderBy('postDate DESC')
+    .collect() %}
+
+{# Find the matching topics #}
+{% set topics = craft.entries()
+    .section('topics')
+    .relatedTo({
+        sourceElement: articles,
+        field: 'articleTopics'
+    })
+    .collect() %}
+
+{# Transform the fetched data into the feed format #}
+{% set data = [] %}
+{% for topic in topics %}
+    {% set data = data|merge([{
+        entries: articles|filter(a => a.articleTopics|filter(t => t.title == topic.title)|length > 0)|slice(0, 2),
+        link: topic.url,
+        title: topic.title
+    }]) %}
+{% endfor %}
+
+{% block main %}
+    {{ hero({
+        title: 'Alle Themen'
+    }) }}
+
+    {{ feed({
+        data: collect(data),
+        type: 'article'
+    }) }}
+{% endblock %}
+
+{% set meta = {
+    title: 'Themen',
+    url: url('themen')
+} %}

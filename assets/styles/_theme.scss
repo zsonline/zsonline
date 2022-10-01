@@ -1,0 +1,109 @@
+:root {
+  // Page
+  --color-fg: hsl(0deg 0% 3%);
+  --color-fg-alt: hsl(0deg 0% 35%);
+  --color-bg: hsl(0deg 0% 100%);  // Page
+  --color-bg-alt: hsl(0deg 0% 96%);  // Body
+  --color-fg-subdued: hsl(0deg 0% 35%);
+  --color-fg-subdued-alt: hsl(0deg 0% 50%);
+  --color-bg-subdued: hsl(0deg 0% 95%);  // Boxes
+  --color-border-dark: var(--color-fg);
+  --color-border-bright: hsl(0deg 0% 90%);
+
+  // Accent
+  --color-accent: hsl(0deg 70% 50%);
+  --color-accent-alt: hsl(0deg 70% 65%);
+
+  // Button bright
+  --color-button-bright-fg: var(--color-fg);
+  --color-button-bright-fg-alt: hsl(0deg 0% 25%);
+  --color-button-bright-bg: var(--color-bg);
+  --color-button-bright-bg-alt: hsl(0deg 0% 95%);
+
+  // Button dark
+  --color-button-dark-fg: var(--color-fg);
+  --color-button-dark-fg-alt: hsl(0deg 0% 25%);
+  --color-button-dark-bg: hsl(0deg 0% 95%);
+  --color-button-dark-bg-alt: hsl(0deg 0% 90%);
+
+  // Button accent
+  --color-button-accent-fg: hsl(0deg 0% 99%);
+  --color-button-accent-fg-alt: hsl(0deg 0% 99%);
+  --color-button-accent-bg: var(--color-accent);
+  --color-button-accent-bg-alt: var(--color-accent-alt);
+
+  // Header
+  --color-header-transparent-fg: hsl(0deg 0% 3%);
+  --color-header-transparent-fg-alt: hsl(0deg 0% 25%);
+  --color-header-transparent-bg: hsl(0deg 0% 100%);
+  --color-header-transparent-bg-alt: hsl(0deg 0% 95%);
+
+  // Home
+  --color-home-block-fg: hsl(0deg 0% 99%);
+  --color-home-block-fg-alt: hsl(0deg 0% 90%);
+  --color-home-block-border-bright: hsl(0deg 0% 100% / 25%);
+  --color-home-block-border-dark: var(--color-home-block-fg);
+
+  // Ad
+  --color-ad-fg: var(--color-fg);
+  --color-ad-bg: #fe5;
+
+  // Input
+  --color-input-fg: var(--color-fg);
+  --color-input-bg: hsl(0deg 0% 100%);
+  --color-input-border: var(--color-border-bright);
+  --color-input-border-alt: var(--color-border-dark);
+  --color-input-hint: var(--color-fg-subdued);
+  --color-input-success: hsl(120deg 75% 25%);
+  --color-input-error: var(--color-accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Page
+    --color-fg: hsl(0deg 0% 99%);
+    --color-fg-alt: hsl(0deg 0% 70%);
+    --color-bg: hsl(0deg 0% 15%);  // Page
+    --color-bg-alt: hsl(0deg 0% 20%);  // Body
+    --color-fg-subdued: hsl(0deg 0% 70%);
+    --color-fg-subdued-alt: hsl(0deg 0% 55%);
+    --color-bg-subdued: hsl(0deg 0% 20%);  // Boxes
+    --color-border-dark: hsl(0deg 0% 85%);
+    --color-border-bright: hsl(0deg 0% 25%);
+
+    // Accent
+    --color-accent: hsl(0deg 90% 65%);
+    --color-accent-alt: hsl(0deg 90% 70%);
+
+    // Button bright
+    --color-button-bright-fg: var(--color-fg);
+    --color-button-bright-fg-alt: hsl(0deg 0% 80%);
+    --color-button-bright-bg: var(--color-bg);
+    --color-button-bright-bg-alt: hsl(0deg 0% 25%);
+
+    // Button dark
+    --color-button-dark-fg: var(--color-fg);
+    --color-button-dark-fg-alt: hsl(0deg 0% 80%);
+    --color-button-dark-bg: hsl(0deg 0% 25%);
+    --color-button-dark-bg-alt: hsl(0deg 0% 35%);
+
+    // Button accent
+    --color-button-accent-fg: var(--color-fg);
+    --color-button-accent-fg-alt: var(--color-fg);
+    --color-button-accent-bg: var(--color-accent);
+    --color-button-accent-bg-alt: var(--color-accent-alt);
+
+    // Ad
+    --color-ad-fg: var(--color-bg-alt);
+    --color-ad-bg: #fe5;
+
+    // Input
+    --color-input-fg: var(--color-fg);
+    --color-input-bg: hsl(0deg 0% 25%);
+    --color-input-border: var(--color-border-bright);
+    --color-input-border-alt: var(--color-border-dark);
+    --color-input-hint: var(--color-fg-subdued);
+    --color-input-success: hsl(120deg 75% 75%);
+    --color-input-error: hsl(0deg 100% 75%);
+  }
+}

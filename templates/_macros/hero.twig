@@ -1,0 +1,50 @@
+{% macro hero(args) %}
+    {% set args = {
+        description: '',
+        fileName: '',
+        filePreview: null,
+        fileUrl: '',
+        issue: null,
+        taxonomy: '',
+        taxonomyUrl: '',
+        title: ''
+    } | merge(args) %}
+
+    {% from "_macros/button.twig" import link %}
+
+    <section class="hero">
+        {% if args.taxonomy and args.taxonomyUrl %}
+            <a class="hero__taxonomy hero__taxonomy--link" href="{{ args.taxonomyUrl }}">{{ args.taxonomy }}</a>
+        {% elseif args.taxonomy %}
+            <span class="hero__taxonomy">{{ args.taxonomy }}</span>
+        {% endif %}
+
+        <h2 class="hero__title">{{ args.title }}</h2>
+
+        {% if args.description or args.fileUrl %}
+            <div class="hero__body">
+                {% if args.fileUrl %}
+                    <div class="hero__file">
+                        {% if args.filePreview %}
+                            <div class="hero__file__preview">
+                                {{ args.filePreview }}
+                            </div>
+                        {% endif %}
+                        {{ link({
+                            class: 'hero__file__download',
+                            download: args.fileName ?: true,
+                            href: args.fileUrl,
+                            icon: 'download',
+                            label: 'Herunterladen',
+                            style: 'accent'
+                        }) }}
+                    </div>
+                {% endif %}
+
+                {% if args.description %}
+                    <p class="hero__description">{{ args.description }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </section>
+{% endmacro %}

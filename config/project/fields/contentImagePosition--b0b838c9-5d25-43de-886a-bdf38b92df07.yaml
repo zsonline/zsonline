@@ -1,0 +1,34 @@
+columnSuffix: heaktlji
+contentColumnType: string
+fieldGroup: 7dfb08df-424c-4e9d-9c11-954351b37ef6 # Content
+handle: contentImagePosition
+instructions: null
+name: 'Image Position'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Top
+        -
+          - value
+          - top
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Bottom
+        -
+          - value
+          - bottom
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

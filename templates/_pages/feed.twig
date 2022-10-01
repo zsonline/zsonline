@@ -1,0 +1,58 @@
+{%- header 'Content-Type: application/atom+xml' -%}
+
+{%- set articles = craft.entries()
+    .section('articles')
+    .with([
+        'contributors.other',
+        'contributors.user:user'
+    ])
+    .collect() -%}
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>{{ url('') }}</id>
+
+    <title>Zürcher Studierendenzeitung</title>
+    <subtitle>Die Zürcher Studierendenzeitung (ZS) ist die unabhängige Zeitung für die Universität Zürich und die ETH Zürich.</subtitle>
+
+    <link href="{{ url('feed') }}" rel="self" type="application/atom+xml" />
+    <link href="{{ url('') }}" rel="alternate" type="html" />
+
+    {% if articles|length > 0 %}
+        <updated>{{ articles.first().postDate|date('c') }}</updated>
+    {% endif %}
+
+    <author>
+        <name>Zürcher Studierendenzeitung</name>
+        <uri>{{ url('') }}</uri>
+    </author>
+
+    {% for article in articles %}
+        <entry>
+            <id>{{ article.url }}</id>
+
+            <title>{{ article.title }}</title>
+            {% if article.contentDescription %}
+                <summary>{{ article.contentDescription }}</summary>
+            {% endif %}
+
+            <link href="{{ article.url }}" rel="alternate" type="html" />
+
+            <published>{{ article.postDate|date('c') }}</published>
+            <updated>{{ article.dateUpdated|date('c') }}</updated>
+
+            {% for contributor in article.contributors %}
+                <author>
+                    {% if contributor.type == 'user' %}
+                        {% set user = contributor.user.first() %}
+
+                        <name>{{ user.fullName }}</name>
+                        <uri>{{ url('autor-innen/' ~ user.username) }}</uri>
+                    {% elseif contributor.type == 'other' %}
+                        <name>{{ contributor.label }}</name>
+                    {% endif %}
+                </author>
+            {% endfor %}
+        </entry>
+    {% endfor %}
+</feed>

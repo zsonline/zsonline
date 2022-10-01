@@ -1,0 +1,30 @@
+.content-block {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+
+  &--small {
+    @include layout("small");
+  }
+
+  &--medium {
+    @include layout("medium");
+  }
+
+  &--large {
+    @include layout("large", false);
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .content-block {
+    margin-top: 3.5rem !important;
+    margin-bottom: 3.5rem !important;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .content-block {
+    margin-top: 4rem !important;
+    margin-bottom: 4rem !important;
+  }
+}

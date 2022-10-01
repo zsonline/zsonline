@@ -1,0 +1,48 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/feed.twig' import articles %}
+{% from '_macros/hero.twig' import hero %}
+{% from '_macros/pagination.twig' import pagination %}
+
+{% set headerSize = 'small' %}
+{% set layoutSize = 'medium' %}
+
+{% set query = craft.entries()
+    .section('articles')
+    .with([
+        'articleFormat',
+        ['contentImage', {
+            withTransforms: [
+                { width: 250, height: 150 }
+            ]
+        }],
+        'contributors.other',
+        'contributors.user:user'
+    ])
+    .orderBy('postDate DESC')
+    .limit(25) %}
+
+{% paginate query as pageInfo, pageEntries %}
+
+{% block main %}
+    {{ hero({
+        title: 'Neuste Artikel'
+    }) }}
+
+    {{ articles({
+        articles: collect(pageEntries),
+        granularity: 'month'
+    }) }}
+
+    {{ pagination({
+        prevUrl: pageInfo.prevUrl,
+        nextUrl: pageInfo.nextUrl
+    }) }}
+{% endblock %}
+
+{% set meta = {
+    title: 'Neuste Artikel',
+    url: url('artikel'),
+    urlPrev: pageInfo.prevUrl,
+    urlNext: pageInfo.nextUrl
+} %}

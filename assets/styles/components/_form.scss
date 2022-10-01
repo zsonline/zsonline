@@ -1,0 +1,70 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  fieldset {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 16px;
+    color: var(--color-input-fg);
+    background-color: var(--color-input-bg);
+    border: solid 1px var(--color-input-border);
+    border-radius: 3px;
+    outline: none;
+    appearance: none;
+
+    &:focus,
+    &:active {
+      border-color: var(--color-input-border-alt);
+    }
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    small {
+      color: var(--color-input-hint);
+    }
+  }
+
+  &__success {
+    color: var(--color-input-success);
+  }
+
+  &__errors {
+    padding: 0;
+    padding-inline-start: 25px;
+    margin: 0;
+    color: var(--color-input-error);
+    list-style: none;
+
+    li::before {
+      position: absolute;
+      margin-left: -20px;
+      content: "\2012";
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    align-items: center;
+  }
+}

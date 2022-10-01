@@ -1,0 +1,29 @@
+.issue {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  img {
+    border: solid 1px var(--color-border-bright);
+    transition: opacity 200ms ease-in-out;
+    object-fit: cover;
+  }
+
+  span {
+    display: block;
+  }
+
+  &--link {
+    &:hover,
+    &:focus,
+    &:active {
+      h4 {
+        text-decoration: underline;
+      }
+
+      img {
+        opacity: 0.75;
+      }
+    }
+  }
+}

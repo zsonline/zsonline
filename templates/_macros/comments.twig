@@ -1,0 +1,27 @@
+{% macro comment(args) %}
+    {% set args = {
+        comment: null,
+        showArrow: false
+    } | merge(args) %}
+
+    {% from '_macros/icon.twig' import icon %}
+
+    <div class="{{ html_classes('comment', {
+        'comment--has-arrow': args.showArrow
+    }) }}">
+        <div class="comment__meta">
+            {% if args.comment.isGuest() %}
+                <span class="comment__name">{{ args.comment.author.fullName }}</span>
+            {% else %}
+                <span class="comment__name comment__name--verified">
+                    {{ args.comment.author.fullName }}
+                    {{ icon({
+                        name: 'check'
+                    }) }}
+                </span>
+            {% endif %}
+            <span class="comment__date">{{ args.comment.commentDate|date('j. F Y') }}</span>
+        </div>
+        <p class="comment__comment">{{ args.comment.comment }}</p>
+    </div>
+{% endmacro %}

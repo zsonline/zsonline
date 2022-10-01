@@ -1,0 +1,25 @@
+description: null
+handle: sales
+name: Sales
+permissions:
+  - accesscp
+  - 'createentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'deleteassets:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'deleteentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'deletepeerassets:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'deletepeerentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'deletepeerentrydrafts:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'editimages:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'editpeerimages:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'replacefiles:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'replacepeerfiles:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'saveassets:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'saveentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'savepeerassets:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'savepeerentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'savepeerentrydrafts:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'viewassets:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'viewentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'viewpeerassets:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
+  - 'viewpeerentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'viewpeerentrydrafts:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads

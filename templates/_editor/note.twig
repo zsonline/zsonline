@@ -1,0 +1,11 @@
+{% if title or body %}
+    <div class="content-block content-block--small">
+        <figure class="content-note">
+            {% if title %}
+                <h5>{{ title|raw }}</h5>
+            {% endif %}
+
+            {{ body|raw }}
+        </figure>
+    </div>
+{% endif %}

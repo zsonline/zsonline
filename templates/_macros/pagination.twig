@@ -1,0 +1,32 @@
+{% macro pagination(args) %}
+    {% set args = {
+        nextLabel: 'Weiter',
+        nextUrl: '',
+        prevLabel: 'Zurück',
+        prevUrl: ''
+    } | merge(args) %}
+
+    {% from '_macros/button.twig' import link %}
+
+    <nav class="pagination">
+        {% if args.prevUrl and args.prevLabel %}
+            {{ link({
+                href: args.prevUrl,
+                icon: 'arrow-left',
+                label: args.prevLabel,
+                responsive: true,
+                style: 'dark'
+            }) }}
+        {% endif %}
+        {% if args.nextUrl and args.nextLabel %}
+            {{ link({
+                href: args.nextUrl,
+                icon: 'arrow-right',
+                iconPosition: 'right',
+                label: args.nextLabel,
+                responsive: true,
+                style: 'dark'
+            }) }}
+        {% endif %}
+    </nav>
+{% endmacro %}

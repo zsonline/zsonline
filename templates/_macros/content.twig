@@ -1,0 +1,218 @@
+{% macro header(args) %}
+    {% set args = {
+        ad: false,
+        contributors: [],
+        class: '',
+        datePublished: null,
+        dateUpdated: null,
+        description: '',
+        format: null,
+        image: null,
+        imagePosition: 'top',
+        imageSize: 'medium',
+        title: ''
+    } | merge(args) %}
+
+    <div class="{{ html_classes('content-header', 'content-header--' ~ args.imagePosition, 'content-header--' ~ args.imageSize, args.class, {
+        'content-header--has-image': args.image
+    }) }}">
+        {% if args.image and args.imagePosition == 'top' %}
+            {{ _self.image({
+                image: args.image,
+                loading: 'eager',
+                size: args.imageSize
+            }) }}
+        {% endif %}
+
+        <div class="content-header__text">
+            <h2>{{ args.title }}</h2>
+
+            {% if args.description or args.format %}
+                <p class="content-header__description">
+                    {%- if args.format -%}
+                        <a class="content-header__format" href="{{ args.format.url }}">
+                            {{- args.format.title -}}
+                        </a>
+                        {%- if args.description -%}
+                            &ensp;&mdash;&ensp;
+                        {%- endif -%}
+                    {%- endif -%}
+
+                    {{ args.description }}
+                </p>
+            {% endif %}
+
+            {% if args.ad %}
+                <span class="ad-declaration content-header__ad-declaration">Werbung</span>
+            {% endif %}
+
+            {{ _self.meta({
+                contributors: args.contributors,
+                datePublished: args.datePublished,
+                dateUpdated: args.dateUpdated
+            }) }}
+        </div>
+
+        {% if args.image and args.imagePosition == 'bottom' %}
+            {{ _self.image({
+                image: args.image,
+                loading: 'eager',
+                size: args.imageSize
+            }) }}
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro meta(args) %}
+    {% set args = {
+        contributors: [],
+        datePublished: null,
+        dateUpdated: null,
+        showLinks: true
+    } | merge(args) %}
+
+    {% if args.contributors|length > 0 or args.datePublished or args.dateUpdated and args.dateUpdated > args.datePublished|date_modify("+1 hour") and args.datePublished > date("2023-03-01") %}
+        <div class="meta">
+            {% if args.contributors|length > 0 %}
+                <div>Von {{ _self.contributors({ contributors: args.contributors, showLinks: args.showLinks }) }}</div>
+            {% endif %}
+
+            {% if args.datePublished %}
+                <div>Publiziert am {{ args.datePublished|date('j. F Y') }}</div>
+            {% endif %}
+
+            {% if args.dateUpdated and args.dateUpdated > args.datePublished|date_modify("+1 hour") and args.datePublished > date("2023-03-01") %}
+                <div>Aktualisiert am {{ args.dateUpdated|date('j. F Y, G.H') }} Uhr</div>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro contributors(args) %}
+    {%- set args = {
+        contributors: [],
+        showLinks: true
+    } | merge(args) -%}
+
+    {%- for contributor in args.contributors -%}
+        {%- if contributor.type == 'user' -%}
+            {%- set user = contributor.user.first() -%}
+
+            {%- if args.showLinks -%}
+                <a href="{{ url('autor-innen/' ~ user.username) }}">{{ user.fullName }}</a>
+            {%- else -%}
+                {{ user.fullName }}
+            {%- endif -%}
+        {%- elseif contributor.type == 'other' -%}
+            {{ contributor.label }}
+        {%- endif -%}
+
+        {%- if contributor.contribution and (loop.last or contributor.contribution != args.contributors[loop.index0 + 1].contribution) -%}
+            {{ ' (' ~ contributor.contribution ~ ')' }}
+        {%- endif -%}
+
+        {%- if not loop.last -%}
+            {{ ', ' }}
+        {%- endif -%}
+    {%- endfor -%}
+{% endmacro %}
+
+{% macro image(args) %}
+    {% set args = {
+        image: null,
+        loading: 'lazy',
+        size: 'medium'
+    } | merge(args) %}
+
+    {% from '_macros/lightbox.twig' import lightboxImage %}
+
+    {% switch args.size %}
+        {% case 'small' %}
+            {% set srcset = [400, 650] %}
+        {% case 'medium' %}
+            {% set srcset = [400, 650, 1024] %}
+        {% case 'large' %}
+            {% set srcset = [400, 650, 1024, 1440] %}
+    {% endswitch %}
+
+    {% set transform = { width: srcset|last } %}
+
+    <figure class="{{ html_classes('content-image', args.size) }}">
+        {{ tag('img', {
+            'data-lightbox': lightboxImage({ image: args.image }) | escape,
+            height: args.image.getHeight(transform),
+            loading: args.loading,
+            sizes: '100vw',
+            srcset: args.image.getSrcset(srcset),
+            width: args.image.getWidth(transform)
+        }) }}
+
+        {{ _self.caption({
+            caption: args.image.caption,
+            contributors: args.image.contributors.all()
+        }) }}
+    </figure>
+{% endmacro %}
+
+{% macro gallery(args) %}
+    {% set args = {
+        images: null
+    } | merge(args) %}
+
+    {% from '_macros/icon.twig' import icon %}
+    {% from '_macros/lightbox.twig' import lightboxImage %}
+
+    {% set transform = { height: 500 } %}
+
+    <figure class="content-gallery swiper">
+        <div class="swiper-wrapper">
+            {% for image in args.images %}
+                <div class="swiper-slide">
+                    {{ tag('img', {
+                        'data-lightbox': lightboxImage({ image: image }) | escape,
+                        height: image.getHeight(transform),
+                        loading: 'lazy',
+                        sizes: '100vw',
+                        srcset: image.getUrl({ height: 300 }) ~ ' 650w, ' ~ image.getUrl({ height: 400 }) ~ ' 1024w, ' ~ image.getUrl({ height: 500 }) ~ ' 1440w',
+                        width: image.getWidth(transform)
+                    }) }}
+
+                    {{ _self.caption({
+                        caption: image.caption,
+                        contributors: image.contributors.all()
+                    }) }}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="content-gallery__meta">
+            <figcaption class="content-caption"></figcaption>
+
+            <div class="gallery-controls">
+                <button class="swiper-prev">
+                    {{ icon({ name: 'chevron-left' }) }}
+                </button>
+                <span class="swiper-pagination"></span>
+                <button class="swiper-next">
+                    {{ icon({ name: 'chevron-right' }) }}
+                </button>
+            </div>
+        </div>
+    </figure>
+{% endmacro %}
+
+{% macro caption(args) %}
+    {% set args = {
+        caption: '',
+        contributors: null
+    } | merge(args) %}
+
+    {% if args.caption or args.contributors %}
+        <figcaption class="content-caption">
+            {{ args.caption }}
+            {% if args.contributors %}
+                <small>{{ _self.contributors({ contributors: args.contributors }) }}</small>
+            {% endif %}
+        </figcaption>
+    {% endif %}
+{% endmacro %}

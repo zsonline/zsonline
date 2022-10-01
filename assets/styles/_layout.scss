@@ -1,0 +1,79 @@
+@use "sass:map";
+
+@mixin layout(
+  $size: "medium",
+  $padding: true
+) {
+  $width: map.get(
+    (
+      "small" : $layout-width-small,
+      "medium" : $layout-width-medium,
+      "large" : $layout-width-large,
+    ),
+    $size
+  );
+
+  width: 100%;
+  margin: 0 auto;
+
+  @if $padding {
+    max-width: $width + 2 * $layout-padding;
+    padding: 0 $layout-padding;
+  } @else {
+    max-width: $width;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    @if $padding {
+      max-width: $width + 2 * $layout-padding-tablet;
+      padding: 0 $layout-padding-tablet;
+    } @else {
+      max-width: $width;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    @if $padding {
+      max-width: $width + 2 * $layout-padding-desktop;
+      padding: 0 $layout-padding-desktop;
+    } @else {
+      max-width: $width;
+    }
+  }
+}
+
+body {
+  background-color: var(--color-bg-alt);
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  max-width: $layout-width-large;
+  padding: 0;
+  margin: 0 auto;
+  background-color: var(--color-bg);
+}
+
+.layout {
+  margin: 0 auto;
+
+  &.small,
+  &.medium {
+    padding: 0 $layout-padding;
+  }
+
+  &.small {
+    @include layout("small");
+  }
+
+  &.medium {
+    @include layout("medium");
+  }
+
+  &.large {
+    @include layout("large", false);
+  }
+}

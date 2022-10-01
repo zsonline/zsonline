@@ -1,0 +1,159 @@
+{% macro feed(args) %}
+    {% set args = {
+        data: [],
+        type: ''
+    } | merge(args) %}
+
+    {% from '_macros/button.twig' import link %}
+    {% from '_macros/message.twig' import message %}
+
+    {% from '_macros/article.twig' import preview as articlePreview %}
+    {% from '_macros/issue.twig' import preview as issuePreview %}
+
+    {% if args.data|length > 0 %}
+        <div class="{{ html_classes('feed', 'feed--' ~ args.type) }}">
+            {% for section in args.data %}
+                {% if section.entries is defined and section.entries|length > 0 %}
+                    <section class="feed__section">
+                        {% if section.title is defined %}
+                            <h3 class="feed__section__title">
+                                {% if section.link is defined %}
+                                    <a href="{{ section.link }}">{{ section.title }}</a>
+                                {% else %}
+                                    {{ section.title }}
+                                {% endif %}
+                            </h3>
+                        {% endif %}
+
+                        <div class="{{ html_classes('feed__section__entries', 'feed__section__entries--' ~ args.type) }}">
+                            {% switch args.type %}
+                                {% case 'article' %}
+                                    {% for entry in section.entries %}
+                                        {{ articlePreview({
+                                            article: entry,
+                                            orientation: 'horizontal',
+                                            size: 'small'
+                                        }) }}
+                                    {% endfor %}
+                                {% case 'issue' %}
+                                    {% for entry in section.entries %}
+                                        {{ issuePreview({ issue: entry }) }}
+                                    {% endfor %}
+                            {% endswitch %}
+
+                            {% if section.title is defined and section.link is defined %}
+                                {{ link({
+                                    class: 'feed__section__link',
+                                    icon: 'arrow-right',
+                                    iconPosition: 'right',
+                                    label: section.title,
+                                    href: section.link,
+                                    style: 'dark'
+                                }) }}
+                            {% endif %}
+                        </div>
+                    </section>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% else %}
+        {% switch args.type %}
+            {% case 'article' %}
+                {% set type = 'Artikel' %}
+            {% case 'issue' %}
+                {% set type = 'Ausgaben' %}
+        {% endswitch %}
+
+        {{ message({
+            message: 'Es konnten keine ' ~ type ~ ' gefunden werden.',
+            style: 'dark'
+        }) }}
+    {% endif %}
+{% endmacro %}
+
+{% macro articles(args) %}
+    {% set args = {
+        articles: [],
+        granularity: 'month'
+    } | merge(args) %}
+
+    {% set dateFormat = '' %}
+    {% switch args.granularity %}
+        {% case 'day' %}
+            {% set dateFormat = 'j. F Y' %}
+        {% case 'month' %}
+            {% set dateFormat = 'F Y' %}
+        {% case 'year' %}
+            {% set dateFormat = 'Y' %}
+    {% endswitch %}
+
+    {% set data = [] %}
+
+    {% set sectionTitle = args.articles|length > 0 ? args.articles[0].postDate|date(dateFormat) : '' %}
+    {% set sectionEntries = {} %}
+
+    {% for article in args.articles %}
+        {% set articleDate = article.postDate|date(dateFormat) %}
+
+        {% if sectionTitle != articleDate %}
+            {% set data = data|merge([{
+                entries: sectionEntries,
+                title: sectionTitle
+            }]) %}
+
+            {% set sectionTitle = articleDate %}
+            {% set sectionEntries = [] %}
+        {% endif %}
+
+        {% set sectionEntries = sectionEntries|merge([ article ]) %}
+    {% endfor %}
+
+    {% if sectionEntries|length > 0 %}
+        {% set data = data|merge([{
+            entries: sectionEntries,
+            title: sectionTitle
+        }]) %}
+    {% endif %}
+
+    {{ _self.feed({
+        data: data,
+        type: 'article'
+    }) }}
+{% endmacro %}
+
+{% macro issues(args) %}
+    {% set args = {
+        issues: []
+    } | merge(args) %}
+
+    {% set data = [] %}
+
+    {% set sectionTitle = args.issues|length > 0 ? args.issues[0].issueYear : '' %}
+    {% set sectionEntries = {} %}
+
+    {% for issue in args.issues %}
+        {% if sectionTitle != issue.issueYear %}
+            {% set data = data|merge([{
+                entries: sectionEntries,
+                title: sectionTitle
+            }]) %}
+
+            {% set sectionTitle = issue.issueYear %}
+            {% set sectionEntries = [] %}
+        {% endif %}
+
+        {% set sectionEntries = sectionEntries|merge([ issue ]) %}
+    {% endfor %}
+
+    {% if sectionEntries|length > 0 %}
+        {% set data = data|merge([{
+            entries: sectionEntries,
+            title: sectionTitle
+        }]) %}
+    {% endif %}
+
+    {{ _self.feed({
+        data: data,
+        type: 'issue'
+    }) }}
+{% endmacro %}

@@ -1,0 +1,35 @@
+{
+  "require": {
+    "craftcms/cms": "4.3.10",
+    "nystudio107/craft-plugin-vite": "^4.0",
+    "nystudio107/craft-vite": "4.0.5",
+    "putyourlightson/craft-blitz": "4.4.0",
+    "putyourlightson/craft-sprig": "2.5.1",
+    "spicyweb/craft-embedded-assets": "3.1.1",
+    "twig/html-extra": "^3.4",
+    "verbb/comments": "dev-craft-4 as 2.0.5",
+    "verbb/navigation": "2.0.16",
+    "verbb/super-table": "3.0.7",
+    "vlucas/phpdotenv": "^5.4.0"
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "editor\\": "modules/editor/src/",
+      "site\\": "modules/site/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "craftcms/plugin-installer": true,
+      "yiisoft/yii2-composer": true
+    },
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.0.2"
+    }
+  }
+}

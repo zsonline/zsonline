@@ -1,0 +1,89 @@
+{% macro button(args) %}
+    {% set args = {
+        class: '',
+        disabled: false,
+        icon: false,
+        id: '',
+        label: '',
+        onclick: false,
+        responsive: false,
+        style: '',
+        type: 'button',
+    } | merge(args) %}
+
+    {% set html %}
+        {% if args.icon %}
+            {% from '_macros/icon.twig' import icon %}
+
+            {{ icon({
+                class: 'button__icon',
+                name: args.icon,
+            }) }}
+        {% endif %}
+        <span class="button__label">{{ args.label | escape }}</span>
+    {% endset %}
+
+    {{ tag('button', {
+        class: html_classes('button', 'button--' ~ args.style, args.class, {
+            'button--has-icon': args.icon,
+            'button--responsive': args.responsive,
+        }),
+        disabled: args.disabled,
+        html: html,
+        id: args.id,
+        onclick: args.onclick,
+        type: args.type,
+    }) }}
+{% endmacro %}
+
+{% macro link(args) %}
+    {% set args = {
+        class: '',
+        disabled: false,
+        download: false,
+        href: false,
+        icon: false,
+        iconPosition: 'left',
+        id: '',
+        label: '',
+        responsive: false,
+        style: '',
+        target: '_self'
+    } | merge(args) %}
+
+    {% set html %}
+        {% if args.icon and args.iconPosition == 'left' %}
+            {% from '_macros/icon.twig' import icon %}
+
+            {{ icon({
+                class: 'button__icon',
+                name: args.icon,
+            }) }}
+        {% endif %}
+
+        <span class="button__label">{{ args.label | escape }}</span>
+
+        {% if args.icon and args.iconPosition == 'right' %}
+            {% from '_macros/icon.twig' import icon %}
+
+            {{ icon({
+                class: 'button__icon',
+                name: args.icon,
+            }) }}
+        {% endif %}
+    {% endset %}
+
+    {{ tag('a', {
+        class: html_classes('button', 'button--' ~ args.style, args.class, {
+            'button--disabled': args.disabled,
+            'button--has-icon': args.icon,
+            'button--responsive': args.responsive,
+        }),
+        download: args.download,
+        href: args.href,
+        html: html,
+        id: args.id,
+        target: args.target
+    }) }}
+{% endmacro %}
+

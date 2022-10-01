@@ -1,0 +1,38 @@
+@mixin message(
+  $color-fg,
+  $color-bg,
+) {
+  color: $color-fg;
+  background-color: $color-bg;
+}
+
+.message {
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+
+  @include message(
+    var(--color-fg),
+    transparent,
+  );
+
+  &--bright {
+    @include message(
+      var(--color-button-bright-fg),
+      var(--color-button-bright-bg),
+    );
+  }
+
+  &--dark {
+    @include message(
+      var(--color-button-dark-fg),
+      var(--color-button-dark-bg),
+    );
+  }
+
+  &--accent {
+    @include message(
+      var(--color-button-accent-fg),
+      var(--color-button-accent-bg),
+    );
+  }
+}

@@ -1,0 +1,367 @@
+dateModified: 1678451308
+email:
+  fromEmail: verlag@zsonline.ch
+  fromName: 'Zürcher Studierendenzeitung'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  ads:
+    hasUrls: true
+    name: Ads
+    settings:
+      path: '@webroot/assets/ads'
+    type: craft\fs\Local
+    url: '@web/assets/ads'
+  embeds:
+    hasUrls: false
+    name: Embeds
+    settings:
+      path: '@storage/assets/embeds'
+    type: craft\fs\Local
+    url: null
+  files:
+    hasUrls: true
+    name: Files
+    settings:
+      path: '@webroot/assets/files'
+    type: craft\fs\Local
+    url: '@web/assets/files'
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/assets/images'
+    type: craft\fs\Local
+    url: '@web/assets/images'
+meta:
+  __names__:
+    0cf2962b-f593-4e6b-9ac2-9544710d8aad: Appearance # Appearance
+    1bf3a5c8-628e-4b3c-b18b-aa384eec608e: Format # Format
+    2ef3f3d8-ae1c-480e-a51b-db580170d832: Formats # Formats
+    3cc8b7a7-5c00-4889-b691-ca2edc74df61: Default # Default
+    03f96b8c-ce9b-420f-af21-636587a4c8c0: Home # Home
+    4a5cdf1b-642d-4a37-854f-c3b1168bea2d: Editors # Editors
+    4ce497c4-83db-4505-966c-25ac2477e7fb: Ads # Ads
+    5a09781f-aab3-4633-b3ed-6bd0bda1ad48: Content # Content
+    5fa65803-cc01-4718-967f-17c1fac740ab: Files # Files
+    6aab4182-8fbc-4f80-b6e3-504f5f487ecc: Image # Image
+    6ad72fa7-45c2-46f6-9e8a-fbb1db6e7e3f: Ad # Ad
+    6cdd6eb7-76e7-4ae1-949a-513b1ede029c: Number # Number
+    7dac239d-784f-4ec9-80fc-46b2c4362060: Articles # Articles
+    7dfb08df-424c-4e9d-9c11-954351b37ef6: Content # Content
+    8b097a87-a2ec-4270-8431-a0e733b3fdb3: Articles # Articles
+    8f1ae8ad-81ae-4975-a0b7-2f89e06f6ec2: Article # Article
+    9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed: Ad # Ad
+    9f01ed5b-f89c-478b-a859-71fd331c8d93: Label # Label
+    09f3e7d3-dd38-4d06-ac5c-fbff3a017d92: Issues # Issues
+    18ae8f32-e01d-480d-b9b7-9b166fcdceda: Home # Home
+    024d03f4-9614-497a-9274-7340a22f343c: Color # Color
+    28f5783a-9790-439d-b079-1bc2b0cc58f9: Related # Related
+    33d4c786-8ab6-42cf-9aaa-e48f7d18b820: Blocks # Blocks
+    36ea09ec-8867-4d74-96ee-d55c21e44104: Other # Other
+    86f8655a-9378-4130-8cf0-c80e876968e0: Common # Common
+    92be950a-0880-49a1-bd9a-dcfdb0745a8a: Contribution # Contribution
+    241d2e87-c08f-4847-90e8-4ad1d718f876: Default # Default
+    274b5d00-df3a-4b76-861b-ca591e2af249: User # User
+    420d0b54-9f18-41a9-b095-de7adfde688d: Image # Image
+    429e38b0-5490-4b1b-be5e-99adcf0d6c47: Sales # Sales
+    438d977b-985e-4c1f-9051-8e8e9b279e22: Topics # Topics
+    785ebd4b-4b47-46f7-a0a2-cd889b31058e: Default # Default
+    3458cf19-d496-4a9e-808d-47e0b2323224: Layouts # Layouts
+    9549d5ad-d6e4-45a6-8376-edfc95d27e18: Embeds # Embeds
+    9695de25-bf17-41a7-b295-68ad5cccc6c8: Pages # Pages
+    14624af3-66ba-4513-af18-0cf411fbaf74: Default # Default
+    78967f52-4d7b-4aec-9fba-53d6aa2f5a2e: Navigation # Navigation
+    732552e1-9a9c-4c59-b08a-f0b293aaf7d1: Topics # Topics
+    2604525a-d068-477f-9621-13db45b69206: Default # Default
+    37773290-a8f4-4562-bc4f-fb8c41a63584: Label # Label
+    48772033-da04-47e7-ad3b-4d3905ac7a65: Images # Images
+    a3b06153-7a2e-425b-a7f7-61e925da17b9: User # User
+    a46d69bc-dad9-44b6-9ca0-9ce75f501b7b: Contribution # Contribution
+    a71cf75d-44bb-4489-ad90-93f218828cd1: Description # Description
+    ab58e9ac-d8c0-428f-a72a-2132a4976859: Home # Home
+    adf21248-5e45-44f0-a3d9-b2ece6004c5e: Contributors # Contributors
+    ae3e2976-5a2f-441c-a712-71c849fe2a40: Articles # Articles
+    afb6c2da-6684-4057-9dd7-efb701f99159: Description # Description
+    b0b838c9-5d25-43de-886a-bdf38b92df07: 'Image Position' # Image Position
+    b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: Default # Default
+    b2237231-890f-4253-ab7f-251f41d3598c: Group # Group
+    bcb6d13b-de66-4331-8d15-bb23ef7a9736: Link # Link
+    c02d5119-8f14-4b30-acf1-29e22375aef5: Issue # Issue
+    cb91d72b-d6d9-439e-8e7b-f3f871694967: Contributors # Contributors
+    cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
+    d0ba75f4-0ec9-406b-8e28-5a50980147cc: Articles # Articles
+    d5eceb6a-47a0-4c63-aff2-48afcdcf05bc: 'Image Size' # Image Size
+    d29e8b36-a8aa-4b2f-9033-2c5e9113427c: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
+    d6607152-35ab-435a-9c88-53f1e9ab6f5c: Title # Title
+    e60b1147-c0d1-4999-99e3-8bbc556e4fa5: Ads # Ads
+    e173ad9a-9850-43b4-a574-1029011919ef: File # File
+    ef819456-45fb-4c34-a4e6-e32ab105c6a3: Caption # Caption
+    f4cde807-f639-4b1d-bebe-8aa3cd4de160: Year # Year
+    f197e112-2648-4604-852c-cf4171abc6c2: Articles # Articles
+    ff39e44a-c59b-40f1-9eae-5080bf251c2d: Cover # Cover
+plugins:
+  blitz:
+    edition: standard
+    enabled: true
+    licenseKey: $PLUGIN_BLITZ_LICENSE
+    schemaVersion: 4.4.0
+    settings:
+      apiKey: ''
+      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
+      cacheDuration: null
+      cacheElementQueries: true
+      cacheElements: true
+      cacheGeneratorSettings:
+        __assoc__:
+          -
+            - concurrency
+            - '3'
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      cacheNonHtmlResponses: false
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
+      cacheStorageSettings:
+        __assoc__:
+          -
+            - folderPath
+            - '@webroot/cache/blitz'
+          -
+            - createGzipFiles
+            - ''
+          -
+            - createBrotliFiles
+            - ''
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cachingEnabled: true
+      debug: false
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      driverJobPriority: 100
+      esiEnabled: false
+      excludedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - queryStringParam
+              - gclid
+        -
+          __assoc__:
+            -
+              - queryStringParam
+              - fbclid
+      generatePagesWithQueryStringParams: true
+      hintsEnabled: true
+      includedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - queryStringParam
+              - '.*'
+      includedUriPatterns:
+        1:
+          __assoc__:
+            -
+              - uriPattern
+              - '.*'
+      injectScriptEvent: DOMContentLoaded
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\CommerceIntegration
+        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      maxRetryAttempts: 10
+      mutexTimeout: 1
+      outputComments: true
+      purgeAssetImagesWhenChanged: true
+      queryStringCaching: 1
+      queueJobTtr: 300
+      refreshCacheAutomaticallyForGlobals: true
+      refreshCacheJobPriority: 10
+      refreshCacheWhenElementMovedInStructure: true
+      refreshCacheWhenElementSavedNotLive: false
+      refreshCacheWhenElementSavedUnchanged: false
+      refreshMode: 3
+      sendPoweredByHeader: true
+      ssiEnabled: true
+      trackElementQueries: true
+      trackElements: true
+  comments:
+    edition: standard
+    enabled: true
+    licenseKey: $PLUGIN_COMMENTS_LICENSE
+    schemaVersion: 1.1.7
+    settings:
+      allowFlagging: false
+      allowGuest: true
+      allowGuestFlagging: false
+      allowGuestVoting: false
+      allowVoting: false
+      autoCloseDays: null
+      closed: false
+      defaultQueryStatus:
+        - approved
+      downvoteCommentLimit: 5
+      enableGravatar: false
+      enableSpamChecks: true
+      flaggedCommentLimit: 5
+      guestNotice: null
+      guestRequireEmailName: true
+      guestShowEmailName: true
+      hideVotingForThreshold: false
+      indexSidebarGroup: true
+      indexSidebarIndividualElements: false
+      indexSidebarLimit: 25
+      maxReplyDepth: '2'
+      maxUserComments: null
+      moderatorUserGroup: 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
+      notificationAdminEnabled: false
+      notificationAuthorEnabled: false
+      notificationFlaggedEnabled: false
+      notificationModeratorApprovedEnabled: false
+      notificationModeratorEnabled: false
+      notificationReplyEnabled: true
+      notificationSubscribeAuto: false
+      notificationSubscribeCommentEnabled: false
+      notificationSubscribeDefault: false
+      notificationSubscribeEnabled: false
+      outputDefaultCss: true
+      outputDefaultJs: true
+      permissions:
+        __assoc__:
+          -
+            - craft\elements\Asset
+            - ''
+          -
+            - craft\elements\Category
+            - ''
+          -
+            - craft\elements\Entry
+            -
+              - 7dac239d-784f-4ec9-80fc-46b2c4362060 # Articles
+          -
+            - craft\elements\User
+            - ''
+      placeholderAvatar: null
+      recaptchaEnabled: false
+      recaptchaKey: null
+      recaptchaMinScore: 0.5
+      recaptchaSecret: null
+      requireModeration: true
+      securityBanned: null
+      securityFlooding: null
+      securityMatchExact: false
+      securityMaxLength: '500'
+      securityModeration: null
+      securitySpamlist: null
+      showAvatar: true
+      showCustomFieldInstructions: false
+      showCustomFieldNames: false
+      showTimeAgo: true
+      sortDefaultDirection: asc
+      sortDefaultKey: structure
+      structureUid: f486528b-59df-4701-b1fe-60e57aba4126
+      templateEmail: null
+      templateFolderOverride: null
+      useQueueForNotifications: true
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      cacheDuration: 300
+      disableVimeoTracking: false
+      embedlyKey: ''
+      enableAutoRefresh: true
+      facebookKey: ''
+      googleKey: ''
+      iframelyKey: ''
+      maxAssetNameLength: 50
+      maxFileNameLength: 50
+      minImageSize: 16
+      parameters:
+        -
+          __assoc__:
+            -
+              - param
+              - maxwidth
+            -
+              - value
+              - '650'
+        -
+          __assoc__:
+            -
+              - param
+              - maxheight
+            -
+              - value
+              - '650'
+      preventNonWhitelistedUploads: false
+      referer: ''
+      showThumbnailsInCp: true
+      soundcloudKey: ''
+      useYouTubeNoCookie: false
+      whitelist:
+        - 'amazon.*'
+        - 'amazon.co.*'
+        - amcharts.com
+        - baidu.com
+        - collegehumor.com
+        - dailymotion.com
+        - deviantart.com
+        - embed.ly
+        - 'facebook.*'
+        - 'facebook.co.*'
+        - 'facebook.com.*'
+        - fb.com
+        - 'google.*'
+        - 'google.co.*'
+        - 'google.com.*'
+        - hulu.com
+        - iframely.com
+        - imgur.com
+        - instagr.am
+        - instagram.com
+        - kickstarter.com
+        - meetup.com
+        - meetupstatic.com
+        - netflix.com
+        - pbs.org
+        - nhpbs.org
+        - reddit.com
+        - soundcloud.com
+        - tiktok.com
+        - t.co
+        - 'twitter.*'
+        - 'twitter.co.*'
+        - 'twitter.com.*'
+        - twimg.com
+        - vimeo.com
+        - vine.co
+        - wikipedia.org
+        - wikimedia.org
+        - wordpress.com
+        - yahoo.com
+        - youtu.be
+        - youtube.com
+        - youtube-nocookie.com
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: $PLUGIN_NAVIGATION_LICENSE
+    schemaVersion: 2.0.7
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: 'Zürcher Studierendenzeitung'
+  retryDuration: null
+  schemaVersion: 4.0.0.9
+  timeZone: Europe/Zurich

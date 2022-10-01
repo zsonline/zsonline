@@ -1,0 +1,61 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/button.twig' import button %}
+{% from '_macros/feed.twig' import feed %}
+{% from '_macros/hero.twig' import hero %}
+
+{% set headerSize = 'small' %}
+{% set layoutSize = 'medium' %}
+
+{# Query most recent articles that have a format set #}
+{% set articles = craft.entries()
+    .section('articles')
+    .after(now|date_modify("-6 months")|atom)
+    .articleFormat(':notempty:')
+    .with([
+        'articleFormat',
+        ['contentImage', {
+            withTransforms: [
+                { width: 250, height: 150 }
+            ]
+        }],
+        'contributors.other',
+        'contributors.user:user'
+    ])
+    .orderBy('postDate DESC')
+    .collect() %}
+
+{# Find the matching format entries #}
+{% set formats = craft.entries()
+    .section('formats')
+    .relatedTo({
+        sourceElement: articles,
+        field: 'articleFormat'
+    })
+    .collect() %}
+
+{# Transform the fetched data into the feed format #}
+{% set data = [] %}
+{% for format in formats %}
+    {% set data = data|merge([{
+        entries: articles|filter(a => a.articleFormat|filter(f => f.title == format.title)|length > 0)|slice(0, 2),
+        link: format.url,
+        title: format.title
+    }]) %}
+{% endfor %}
+
+{% block main %}
+    {{ hero({
+        title: 'Alle Rubriken'
+    }) }}
+
+    {{ feed({
+        data: collect(data),
+        type: 'article'
+    }) }}
+{% endblock %}
+
+{% set meta = {
+    title: 'Rubriken',
+    url: url('rubriken')
+} %}

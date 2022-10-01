@@ -1,0 +1,125 @@
+@mixin button(
+  $color-fg,
+  $color-fg-alt,
+  $color-bg,
+  $color-bg-alt
+) {
+  color: $color-fg;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
+  background-color: $color-bg;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-fg-alt;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.2em;
+    background-color: $color-bg-alt;
+  }
+
+  &:disabled,
+  &.button__disabled {
+    color: $color-fg;
+    text-decoration: none;
+    cursor: default;
+    background-color: $color-bg;
+    opacity: 0.5;
+  }
+}
+
+.button {
+  display: inline-flex;
+  gap: 0.75em;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 100px;
+  transition: all 100ms ease-in-out;
+
+  &.button--responsive {
+    &.button--bright,
+    &.button--dark,
+    &.button--accent {
+      padding: 0.5em;
+    }
+
+    &:not(.button--has-icon) {
+      display: none;
+    }
+
+    .button__label {
+      display: none;
+    }
+  }
+
+  @include button(
+    var(--color-fg),
+    var(--color-fg-alt),
+    transparent,
+    transparent
+  );
+
+  &.button--bright,
+  &.button--dark,
+  &.button--accent {
+    padding: 0.5em 1em;
+  }
+
+  &.button--bright {
+    @include button(
+      var(--color-button-bright-fg),
+      var(--color-button-bright-fg-alt),
+      var(--color-button-bright-bg),
+      var(--color-button-bright-bg-alt)
+    );
+  }
+
+  &.button--dark {
+    @include button(
+      var(--color-button-dark-fg),
+      var(--color-button-dark-fg-alt),
+      var(--color-button-dark-bg),
+      var(--color-button-dark-bg-alt)
+    );
+  }
+
+  &.button--accent {
+    @include button(
+      var(--color-button-accent-fg),
+      var(--color-button-accent-fg-alt),
+      var(--color-button-accent-bg),
+      var(--color-button-accent-bg-alt)
+    );
+  }
+
+  .button__icon {
+    width: 1.25em;
+    height: 1.25em;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .button {
+    &.button--responsive {
+      &.button--bright,
+      &.button--dark,
+      &.button--accent {
+        padding: 0.5em 1em;
+      }
+
+      &:not(.button--has-icon) {
+        display: inline-flex;
+      }
+
+      .button__label {
+        display: inline-block;
+      }
+    }
+  }
+}

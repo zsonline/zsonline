@@ -1,0 +1,65 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/feed.twig' import feed %}
+{% from '_macros/hero.twig' import hero %}
+
+{% set headerSize = 'small' %}
+{% set layoutSize = 'medium' %}
+
+{# Query most recent articles that have contributors set #}
+{% set articles = craft.entries()
+    .section('articles')
+    .after(now|date_modify("-6 months")|atom)
+    .contributors(
+        craft.matrixBlocks()
+            .field('contributors')
+            .type('user')
+            .all()
+    )
+    .with([
+        'articleFormat',
+        ['contentImage', {
+            withTransforms: [
+                { width: 250, height: 150 }
+            ]
+        }],
+        'contributors.other',
+        'contributors.user:user'
+    ])
+    .orderBy('postDate DESC')
+    .collect() %}
+
+{# Find the matching users #}
+{% set users = craft.users()
+    .group('contributors')
+    .relatedTo({
+        sourceElement: articles,
+        field: 'contributors.user'
+    })
+    .collect() %}
+
+{# Transform the fetched data into the feed format #}
+{% set data = {} %}
+{% for user in users %}
+    {% set data = data|merge([{
+        entries: articles|filter(a => a.contributors|filter(m => m.type == 'user' and m.user|filter(u => u.fullname == user.fullname)|length > 0)|length > 0)|slice(0, 2),
+        link: url('autor-innen/' ~ user.username),
+        title: user.fullname
+    }]) %}
+{% endfor %}
+
+{% block main %}
+    {{ hero({
+        title: 'Alle Autor*innen'
+    }) }}
+
+    {{ feed({
+        data: collect(data),
+        type: 'article'
+    }) }}
+{% endblock %}
+
+{% set meta = {
+    title: 'Autor*innen',
+    url: url('autor-innen')
+} %}

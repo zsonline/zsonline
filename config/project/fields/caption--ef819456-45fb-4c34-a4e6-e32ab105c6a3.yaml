@@ -1,0 +1,19 @@
+columnSuffix: fdqyjrqg
+contentColumnType: text
+fieldGroup: 86f8655a-9378-4130-8cf0-c80e876968e0 # Common
+handle: caption
+instructions: null
+name: Caption
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

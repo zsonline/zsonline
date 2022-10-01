@@ -1,0 +1,19 @@
+columnSuffix: enhcyavm
+contentColumnType: text
+fieldGroup: 7dfb08df-424c-4e9d-9c11-954351b37ef6 # Content
+handle: contentDescription
+instructions: null
+name: Description
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

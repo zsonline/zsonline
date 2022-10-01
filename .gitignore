@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.idea
+cache/
+license.key
+node_modules/
+vendor/
+web/assets/

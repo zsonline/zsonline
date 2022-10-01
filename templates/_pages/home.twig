@@ -1,0 +1,108 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/article.twig' import preview %}
+{% from '_macros/button.twig' import link %}
+
+{% set home = craft.entries()
+    .section('home')
+    .with([
+        'homeBlocks.articles',
+        'homeBlocks.articles:layouts.articles.articleFormat',
+        ['homeBlocks.articles:layouts.articles.contentImage', {
+            withTransforms: [
+                { height: 250, width: 400 },
+                { height: 406, width: 650 },
+                { height: 640, width: 1024 },
+                { height: 900, width: 1440 }
+            ]
+        }],
+        'homeBlocks.articles:layouts.articles.contributors.other',
+        'homeBlocks.articles:layouts.articles.contributors.user:user'
+    ])
+    .limit(1)
+    .collect() %}
+
+{% set headerSize = 'large' %}
+{% set headerTransparent = home.first().homeBlocks.first().backgroundColor ?? false %}
+{% set layoutSize = 'large' %}
+
+{% block main %}
+    <div class="home">
+        {% for block in home.first().homeBlocks %}
+            {% switch block.type %}
+                {% case 'articles' %}
+                    <div class="{{ html_classes('home-block', 'home-articles', {
+                        'home-block--colored': block.backgroundColor,
+                        'home-block--colored-prev': loop.index0 - 1 >= 0 and home.first().homeBlocks[loop.index0 - 1].backgroundColor,
+                        'home-block--colored-next': loop.index0 + 1 < loop.length and home.first().homeBlocks[loop.index0 + 1].backgroundColor,
+                        'home-block--labeled': block.label
+                    }) }}" style="--color-home-block-bg: {{ block.backgroundColor }};">
+                        {% if block.label %}
+                            <h3 class="home-block__label">{{ block.label }}</h3>
+                        {% endif %}
+
+                        {% for layout in block.layouts %}
+                            <div class="{{ html_classes('home-articles__row', 'home-articles__row--' ~ layout.appearance) }}">
+                                {% switch layout.appearance %}
+                                    {% case 'h' or 'v' %}
+                                        {% if layout.articles|length >= 1 %}
+                                            <div class="home-articles__column">
+                                                {{ preview({
+                                                    article: layout.articles.first(),
+                                                    orientation: (layout.appearance == 'h') ? 'horizontal' : 'vertical',
+                                                    size: 'large'
+                                                }) }}
+                                            </div>
+                                        {% endif %}
+                                    {% case 'hh' or 'vv' %}
+                                        {% for article in layout.articles.slice(0, 2) %}
+                                            <div class="home-articles__column">
+                                                {{ preview({
+                                                    article: article,
+                                                    orientation: (layout.appearance == 'hh') ? 'horizontal' : 'vertical',
+                                                    size: (layout.appearance == 'hh') ? 'small' : 'medium'
+                                                }) }}
+                                            </div>
+                                        {% endfor %}
+                                    {% case 'vh' %}
+                                        {% if layout.articles|length > 0 %}
+                                            <div class="home-articles__column">
+                                                {{ preview({
+                                                    article: layout.articles.first(),
+                                                    orientation: 'vertical',
+                                                    size: 'medium'
+                                                }) }}
+                                            </div>
+                                        {% endif %}
+                                        {% if layout.articles|length > 1 %}
+                                            <div class="home-articles__column">
+                                                {% for article in layout.articles.slice(1, 3) %}
+                                                    <div class="home-articles__column__row">
+                                                        {{ preview({
+                                                            article: article,
+                                                            orientation: 'horizontal',
+                                                            size: 'small'
+                                                        }) }}
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                {% endswitch %}
+                            </div>
+                        {% endfor %}
+                    </div>
+            {% endswitch %}
+        {% endfor %}
+    </div>
+
+    <div class="home-more">
+        <span>Nicht gefunden, wonach du suchst?</span>
+        {{ link({
+            href: url('artikel'),
+            label: 'Alle Artikel anzeigen',
+            style: 'accent'
+        }) }}
+    </div>
+{% endblock %}
+
+{% set meta = {} %}

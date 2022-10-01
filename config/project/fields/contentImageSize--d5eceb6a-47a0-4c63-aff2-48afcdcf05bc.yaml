@@ -1,0 +1,45 @@
+columnSuffix: nqywdzxe
+contentColumnType: string
+fieldGroup: 7dfb08df-424c-4e9d-9c11-954351b37ef6 # Content
+handle: contentImageSize
+instructions: null
+name: 'Image Size'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Small
+        -
+          - value
+          - small
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Medium
+        -
+          - value
+          - medium
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Large
+        -
+          - value
+          - large
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons
