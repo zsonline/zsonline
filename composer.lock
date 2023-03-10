@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ce9a1d99a6f753f6dd4baa87a305ec0",
+    "content-hash": "26605f9fefb23feac24848cab9be73ef",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1148,11 +1148,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.3.10",
+            "version": "4.3.11",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/af40a2d6e0557f6a600a22f29f1660639cd11b81",
-                "reference": "af40a2d6e0557f6a600a22f29f1660639cd11b81",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d619527239b83f1802bfe60e36cc5cffb1700fc3",
+                "reference": "d619527239b83f1802bfe60e36cc5cffb1700fc3",
                 "shasum": ""
             },
             "require": {
@@ -1243,7 +1243,7 @@
                 "docs": "https://docs.craftcms.com/v3/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2023-02-17T22:32:58+00:00"
+            "time": "2023-03-07T21:06:28+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1866,24 +1866,24 @@
         },
         {
             "name": "graham-campbell/result-type",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Result-Type.git",
-                "reference": "a878d45c1914464426dc94da61c9e1d36ae262a8"
+                "reference": "672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/a878d45c1914464426dc94da61c9e1d36ae262a8",
-                "reference": "a878d45c1914464426dc94da61c9e1d36ae262a8",
+                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831",
+                "reference": "672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0",
-                "phpoption/phpoption": "^1.9"
+                "phpoption/phpoption": "^1.9.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5.28 || ^9.5.21"
+                "phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
             },
             "type": "library",
             "autoload": {
@@ -1912,7 +1912,7 @@
             ],
             "support": {
                 "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
-                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.0"
+                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.1"
             },
             "funding": [
                 {
@@ -1924,7 +1924,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-30T15:56:11+00:00"
+            "time": "2023-02-25T20:23:15+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2082,11 +2082,11 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.4.3",
+            "version": "2.4.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/67c26b443f348a51926030c83481b85718457d3d",
-                "reference": "67c26b443f348a51926030c83481b85718457d3d",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf",
+                "reference": "3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf",
                 "shasum": ""
             },
             "require": {
@@ -2168,7 +2168,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2022-10-26T14:07:24+00:00"
+            "time": "2023-03-09T13:19:02+00:00"
         },
         {
             "name": "illuminate/collections",
@@ -3580,11 +3580,11 @@
         },
         {
             "name": "putyourlightson/craft-blitz",
-            "version": "4.4.0",
+            "version": "4.4.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/ace12a5fd7d56a2029f7275a768b7bab4522cef9",
-                "reference": "ace12a5fd7d56a2029f7275a768b7bab4522cef9",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/37342ebf468e851903e9d12e0347c760267f4b3f",
+                "reference": "37342ebf468e851903e9d12e0347c760267f4b3f",
                 "shasum": ""
             },
             "require": {
@@ -3627,7 +3627,7 @@
                 "source": "https://github.com/putyourlightson/craft-blitz",
                 "issues": "https://github.com/putyourlightson/craft-blitz/issues"
             },
-            "time": "2023-03-01T14:14:42+00:00"
+            "time": "2023-03-09T14:00:41+00:00"
         },
         {
             "name": "putyourlightson/craft-blitz-hints",
@@ -3714,16 +3714,16 @@
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/putyourlightson/craft-sprig-core.git",
-                "reference": "94636aad74a9824f23f0adffd76772186e040d50"
+                "reference": "a95ba6fa3793814cd0f7b86da9f83566ef015f59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/94636aad74a9824f23f0adffd76772186e040d50",
-                "reference": "94636aad74a9824f23f0adffd76772186e040d50",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/a95ba6fa3793814cd0f7b86da9f83566ef015f59",
+                "reference": "a95ba6fa3793814cd0f7b86da9f83566ef015f59",
                 "shasum": ""
             },
             "require": {
@@ -3752,7 +3752,7 @@
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues",
                 "source": "https://github.com/putyourlightson/craft-sprig-core"
             },
-            "time": "2023-01-18T16:55:57+00:00"
+            "time": "2023-03-04T00:47:49+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5507,11 +5507,6 @@
         {
             "name": "verbb/base",
             "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/verbb/verbb-base.git",
-                "reference": "3a7c0b9c36d446d2765e467161c7d40aa41f1ae4"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/verbb/verbb-base/zipball/3a7c0b9c36d446d2765e467161c7d40aa41f1ae4",
@@ -5528,7 +5523,6 @@
                     "verbb\\base\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5539,27 +5533,15 @@
                 }
             ],
             "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
-            "support": {
-                "docs": "https://github.com/verbb/verbb-base",
-                "email": "support@verbb.io",
-                "issues": "https://github.com/verbb/verbb-base/issues?state=open",
-                "rss": "https://github.com/verbb/verbb-base/commits/v2.atom",
-                "source": "https://github.com/verbb/verbb-base"
-            },
             "time": "2022-09-30T11:02:57+00:00"
         },
         {
             "name": "verbb/comments",
-            "version": "dev-craft-4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/verbb/comments.git",
-                "reference": "e64b38b4d45f79823d6d41b37616c13fbb889c4e"
-            },
+            "version": "2.0.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/comments/zipball/e64b38b4d45f79823d6d41b37616c13fbb889c4e",
-                "reference": "e64b38b4d45f79823d6d41b37616c13fbb889c4e",
+                "url": "https://api.github.com/repos/verbb/comments/zipball/2008c6c777b6bc7710d20687d087cf3f8a4e7efc",
+                "reference": "2008c6c777b6bc7710d20687d087cf3f8a4e7efc",
                 "shasum": ""
             },
             "require": {
@@ -5568,7 +5550,6 @@
                 "theiconic/name-parser": "^1.0",
                 "verbb/base": "^2.0.0"
             },
-            "default-branch": true,
             "type": "craft-plugin",
             "extra": {
                 "name": "Comments",
@@ -5581,7 +5562,6 @@
                     "verbb\\comments\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -5593,20 +5573,20 @@
             ],
             "description": "Add comments to your site.",
             "keywords": [
-                "Craft",
                 "cms",
                 "comments",
+                "craft",
                 "craft-plugin",
                 "craftcms"
             ],
             "support": {
-                "docs": "https://github.com/verbb/comments",
                 "email": "support@verbb.io",
                 "issues": "https://github.com/verbb/comments/issues?state=open",
-                "rss": "https://github.com/verbb/comments/commits/v2.atom",
-                "source": "https://github.com/verbb/comments"
+                "source": "https://github.com/verbb/comments",
+                "docs": "https://github.com/verbb/comments",
+                "rss": "https://github.com/verbb/comments/commits/v2.atom"
             },
-            "time": "2023-02-10T22:57:26+00:00"
+            "time": "2023-03-08T23:59:05+00:00"
         },
         {
             "name": "verbb/navigation",
@@ -5997,11 +5977,11 @@
         },
         {
             "name": "voku/portable-utf8",
-            "version": "6.0.12",
+            "version": "6.0.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/db0583727bb17666bbd2ba238c85babb973fd165",
-                "reference": "db0583727bb17666bbd2ba238c85babb973fd165",
+                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/b8ce36bf26593e5c2e81b1850ef0ffb299d2043f",
+                "reference": "b8ce36bf26593e5c2e81b1850ef0ffb299d2043f",
                 "shasum": ""
             },
             "require": {
@@ -6057,7 +6037,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2023-01-11T12:26:16+00:00"
+            "time": "2023-03-08T08:35:38+00:00"
         },
         {
             "name": "voku/stop-words",
@@ -6603,16 +6583,16 @@
     "packages-dev": [
         {
             "name": "nikic/php-parser",
-            "version": "v4.15.3",
+            "version": "v4.15.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "570e980a201d8ed0236b0a62ddf2c9cbb2034039"
+                "reference": "6bb5176bc4af8bcb7d926f88718db9b96a2d4290"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/570e980a201d8ed0236b0a62ddf2c9cbb2034039",
-                "reference": "570e980a201d8ed0236b0a62ddf2c9cbb2034039",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/6bb5176bc4af8bcb7d926f88718db9b96a2d4290",
+                "reference": "6bb5176bc4af8bcb7d926f88718db9b96a2d4290",
                 "shasum": ""
             },
             "require": {
@@ -6653,9 +6633,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.3"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.4"
             },
-            "time": "2023-01-16T22:05:37+00:00"
+            "time": "2023-03-05T19:49:14+00:00"
         },
         {
             "name": "psy/psysh",
@@ -6799,18 +6779,9 @@
             "time": "2022-09-04T10:37:52+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "verbb/comments",
-            "version": "dev-craft-4",
-            "alias": "2.0.5",
-            "alias_normalized": "2.0.5.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "verbb/comments": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
