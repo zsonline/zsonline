@@ -1,0 +1,116 @@
+{% from '_macros/button.twig' import button %}
+{% from '_macros/message.twig' import message %}
+
+{% set plan = plan ?? null %}
+{% set subscription = subscription ?? create('site\\models\\Subscription') %}
+
+{% macro errorList(errors) %}
+    {% if errors %}
+        {{ ul(errors, { class: 'form__errors' }) }}
+    {% endif %}
+{% endmacro %}
+
+<form class="form" sprig s-method="post" s-action="site/subscriptions/create">
+    {{ csrfInput() }}
+
+    <fieldset class="form__fields">
+        <div class="form__field">
+            <input id="subscription__plan--regular" class="subscription__plan__input" name="plan" type="radio" value="regular" sprig {% if plan == 'regular' %}checked{% endif %}>
+            <label class="subscription__plan__label" for="subscription__plan--regular">
+                <b>Reguläres Abo</b>
+                <span>CHF 50 / Jahr</span>
+            </label>
+
+            <input id="subscription__plan--student" class="subscription__plan__input" name="plan" type="radio" value="student" sprig {% if plan == 'student' %}checked{% endif %}>
+            <label class="subscription__plan__label" for="subscription__plan--student">
+                <b>Studentisches Abo</b>
+                <span>Gratis</span>
+                <p>ETH-Studierende lesen die ZS gratis.</p>
+            </label>
+            {{ _self.errorList(subscription.getErrors('plan')) }}
+        </div>
+    </fieldset>
+
+    {% if plan %}
+        <fieldset class="form__fields">
+            <div class="form__field">
+                <label for="subscription__email">E-Mail-Adresse:</label>
+                {{ _self.errorList(subscription.getErrors('email')) }}
+                <input id="subscription__email" name="email" type="email" value="{{ subscription.email }}">
+                {% if plan == 'student' %}
+                    <small>Registriere dich mit deiner ETH-E-Mail-Adresse.</small>
+                {% endif %}
+            </div>
+            {% if plan == 'student' %}
+                <div class="form__field">
+                    <label for="subscription__end-date">Voraussichtlicher Studienabschluss:</label>
+                    {{ _self.errorList(subscription.getErrors('endDate')) }}
+                    <input id="subscription__end-date" name="endDate" type="date" value="{{ subscription.endDate }}">
+                </div>
+            {% endif %}
+        </fieldset>
+
+        <fieldset class="form__fields">
+            <div class="form__field">
+                <label for="subscription__name">Name:</label>
+                {{ _self.errorList(subscription.getErrors('name')) }}
+                <input id="subscription__name" name="name" type="text" value="{{ subscription.name }}">
+            </div>
+            <div class="form__field">
+                <label for="subscription__address-line-1">Adresszeile:</label>
+                {{ _self.errorList(subscription.getErrors('addressLine1')) }}
+                <input id="subscription__address-line-1" name="addressLine1" type="text" value="{{ subscription.addressLine1 }}">
+            </div>
+            <div class="form__field">
+                <label for="subscription__address-line-2">Zusätzliche Adresszeile:</label>
+                {{ _self.errorList(subscription.getErrors('addressLine2')) }}
+                <input id="subscription__address-line-2" name="addressLine2" type="text" value="{{ subscription.addressLine2 }}">
+            </div>
+            <div class="form__field">
+                <label for="subscription__postal-code">Postleitzahl:</label>
+                {{ _self.errorList(subscription.getErrors('postalCode')) }}
+                <input id="subscription__postal-code" name="postalCode" type="number" value="{{ subscription.postalCode }}">
+            </div>
+            <div class="form__field">
+                <label for="subscription__locality">Ort:</label>
+                {{ _self.errorList(subscription.getErrors('locality')) }}
+                <input id="subscription__locality" name="locality" type="text" value="{{ subscription.locality }}">
+            </div>
+            <div class="form__field">
+                <label for="subscription__country">Land:</label>
+                {{ _self.errorList(subscription.getErrors('country')) }}
+                <input id="subscription__country" name="country" type="text" value="Schweiz" disabled>
+            </div>
+        </fieldset>
+    {% endif %}
+
+    {% if abort is defined %}
+        <fieldset>
+            <ul class="form__errors">
+                <li>Leider ist ein Fehler aufgetreten. Bitte <a href="{{ url('kontakt') }}">kontaktiere</a> uns, damit wir deine Bestellung abschliessen können.</li>
+            </ul>
+        </fieldset>
+    {% endif %}
+
+    {% if success is defined and success %}
+        <fieldset>
+            {% if plan == 'regular' %}
+                <span class="form__success">
+                    Vielen Dank für deine Bestellung. Es kann eine Weile dauern, bis du eine Rechnung erhältst.
+                    Du musst nichts unternehmen. Die ZS schicken wir dir ab sofort zu.
+                </span>
+            {% else %}
+                <span class="form__success">Vielen Dank für deine Bestellung. Wir stellen dir die ZS fortan zu.</span>
+            {% endif %}
+        </fieldset>
+    {% endif %}
+
+    <fieldset class="form__controls">
+        {{ button({
+            disabled: not plan,
+            label: 'Bestellen',
+            style: 'accent',
+            type: 'submit'
+        }) }}
+    </fieldset>
+</form>

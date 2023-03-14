@@ -1,11 +1,14 @@
-description: null
+description: ''
 handle: editors
 name: Editors
 permissions:
   - accesscp
   - accessplugin-comments
   - accessplugin-navigation
+  - administrateusers
+  - 'assignusergroup:429e38b0-5490-4b1b-be5e-99adcf0d6c47' # Sales
   - 'assignusergroup:4a5cdf1b-642d-4a37-854f-c3b1168bea2d' # Editors
+  - 'assignusergroup:7ef5f597-7ee8-473c-9647-ba485d262e5a' # Subscriber
   - 'assignusergroup:adf21248-5e45-44f0-a3d9-b2ece6004c5e' # Contributors
   - comments-edit
   - comments-trash
@@ -42,6 +45,7 @@ permissions:
   - 'deletepeerentrydrafts:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
   - 'deletepeerentrydrafts:9695de25-bf17-41a7-b295-68ad5cccc6c8' # Pages
   - 'deletepeerentrydrafts:ab58e9ac-d8c0-428f-a72a-2132a4976859' # Home
+  - deleteusers
   - 'editimages:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   - 'editimages:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   - 'editimages:9549d5ad-d6e4-45a6-8376-edfc95d27e18' # Embeds

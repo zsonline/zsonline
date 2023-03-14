@@ -1,4 +1,152 @@
-dateModified: 1678451308
+dateModified: 1678740046
+elementSources:
+  craft\elements\User:
+    -
+      key: '*'
+      type: native
+    -
+      key: admins
+      type: native
+    -
+      heading: 'Account Type'
+      type: heading
+    -
+      key: credentialed
+      type: native
+    -
+      key: inactive
+      type: native
+    -
+      heading: Groups
+      type: heading
+    -
+      defaultSort:
+        - username
+        - asc
+      disabled: false
+      key: 'group:adf21248-5e45-44f0-a3d9-b2ece6004c5e' # Contributors
+      tableAttributes:
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
+      type: native
+    -
+      key: 'group:4a5cdf1b-642d-4a37-854f-c3b1168bea2d' # Editors
+      type: native
+    -
+      key: 'group:429e38b0-5490-4b1b-be5e-99adcf0d6c47' # Sales
+      type: native
+    -
+      defaultSort:
+        - username
+        - asc
+      disabled: false
+      key: 'group:7ef5f597-7ee8-473c-9647-ba485d262e5a' # Subscriber
+      tableAttributes:
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
+      type: native
+    -
+      heading: Subscribers
+      type: heading
+    -
+      condition:
+        class: craft\elements\conditions\users\UserCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\users\GroupConditionRule
+            operator: in
+            uid: eab66ea2-e6b8-4196-9824-79352af7daa0
+            values:
+              - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
+          -
+            class: craft\fields\conditions\OptionsFieldConditionRule
+            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Plan
+            operator: in
+            uid: b3f09856-6988-443b-b9dc-b929e4a623aa
+            values:
+              - regular
+        elementType: craft\elements\User
+        fieldContext: global
+      defaultSort:
+        - username
+        - asc
+      key: 'custom:fc585b69-a1d7-4a9e-a3b5-42baaac9fad8'
+      label: Regular
+      tableAttributes:
+        - email
+        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
+        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End date
+      type: custom
+      userGroups:
+        - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
+    -
+      condition:
+        class: craft\elements\conditions\users\UserCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\users\GroupConditionRule
+            operator: in
+            uid: 4478e6b4-9672-4061-9515-124133f91735
+            values:
+              - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
+          -
+            class: craft\fields\conditions\OptionsFieldConditionRule
+            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Plan
+            operator: in
+            uid: faf1ed3f-aeaf-4346-9473-dbd05b18a806
+            values:
+              - student
+        elementType: craft\elements\User
+        fieldContext: global
+      defaultSort:
+        - username
+        - asc
+      key: 'custom:c9764f5a-b696-4ee4-99d2-c4b4f44469c5'
+      label: Student
+      tableAttributes:
+        - email
+        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
+        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End date
+      type: custom
+      userGroups:
+        - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
+    -
+      condition:
+        class: craft\elements\conditions\users\UserCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\users\GroupConditionRule
+            operator: in
+            uid: 2c3ad3eb-0474-42e9-8484-8c75f7acc9b0
+            values:
+              - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
+          -
+            class: craft\fields\conditions\DateFieldConditionRule
+            endDate: null
+            fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # End date
+            periodType: minutesFromNow
+            periodValue: 1.0
+            rangeType: after
+            startDate: null
+            uid: ef962cc3-4481-4e71-8010-9e4a163c12c9
+        elementType: craft\elements\User
+        fieldContext: global
+      defaultSort:
+        - username
+        - asc
+      key: 'custom:688a1a87-de6f-4342-ab33-110ed85e1d7f'
+      label: Active
+      tableAttributes:
+        - email
+        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
+        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End date
+      type: custom
+      userGroups:
+        - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
 email:
   fromEmail: verlag@zsonline.ch
   fromName: 'Zürcher Studierendenzeitung'
@@ -34,6 +182,7 @@ fs:
     url: '@web/assets/images'
 meta:
   __names__:
+    0beef319-d887-4ce4-9f37-8ef9d9c7cea5: Subscription # Subscription
     0cf2962b-f593-4e6b-9ac2-9544710d8aad: Appearance # Appearance
     1bf3a5c8-628e-4b3c-b18b-aa384eec608e: Format # Format
     2ef3f3d8-ae1c-480e-a51b-db580170d832: Formats # Formats
@@ -48,12 +197,14 @@ meta:
     6cdd6eb7-76e7-4ae1-949a-513b1ede029c: Number # Number
     7dac239d-784f-4ec9-80fc-46b2c4362060: Articles # Articles
     7dfb08df-424c-4e9d-9c11-954351b37ef6: Content # Content
+    7ef5f597-7ee8-473c-9647-ba485d262e5a: Subscriber # Subscriber
     8b097a87-a2ec-4270-8431-a0e733b3fdb3: Articles # Articles
     8f1ae8ad-81ae-4975-a0b7-2f89e06f6ec2: Article # Article
     9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed: Ad # Ad
     9f01ed5b-f89c-478b-a859-71fd331c8d93: Label # Label
     09f3e7d3-dd38-4d06-ac5c-fbff3a017d92: Issues # Issues
     18ae8f32-e01d-480d-b9b7-9b166fcdceda: Home # Home
+    20bb750f-abb8-42b0-9ba8-adf65d1ee624: 'End date' # End date
     024d03f4-9614-497a-9274-7340a22f343c: Color # Color
     28f5783a-9790-439d-b079-1bc2b0cc58f9: Related # Related
     33d4c786-8ab6-42cf-9aaa-e48f7d18b820: Blocks # Blocks
@@ -66,6 +217,7 @@ meta:
     429e38b0-5490-4b1b-be5e-99adcf0d6c47: Sales # Sales
     438d977b-985e-4c1f-9051-8e8e9b279e22: Topics # Topics
     785ebd4b-4b47-46f7-a0a2-cd889b31058e: Default # Default
+    944c11ef-571f-4e08-a4bb-db2540e4b404: Plan # Plan
     3458cf19-d496-4a9e-808d-47e0b2323224: Layouts # Layouts
     9549d5ad-d6e4-45a6-8376-edfc95d27e18: Embeds # Embeds
     9695de25-bf17-41a7-b295-68ad5cccc6c8: Pages # Pages

@@ -1,0 +1,17 @@
+{% extends '_layouts/default.twig' %}
+
+{% from '_macros/hero.twig' import hero %}
+
+{% block main %}
+    {{ hero({
+        title: 'Abonnieren',
+        description: 'Die ZS versorgt dich sechs Mal jährlich mit den wichtigsten Neuigkeiten rund um die Uni Zürich und ETH Zürich. Abonniere ein Jahr Zusatzwissen für dich und deine WG. '
+    }) }}
+
+    {{ sprig('_sprig/subscription-form.twig') }}
+{% endblock %}
+
+{% set meta = {
+    title: 'Abonnieren',
+    description: 'Abonniere die Zürcher Studierendenzeitung und erhalte die wichtigsten Neuigkeiten rund um die Uni Zürich und ETH Zürich.'
+} %}

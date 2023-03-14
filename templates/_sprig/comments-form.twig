@@ -5,6 +5,13 @@
 {% set entryId = entryId ?? '' %}
 {% set siteId = siteId ?? '' %}
 {% set parentId = parentId ?? '' %}
+{% set comment = comment ?? create('verbb\\comments\\elements\\Comment') %}
+
+{% macro errorList(errors) %}
+    {% if errors %}
+        {{ ul(errors, { class: 'form__errors' }) }}
+    {% endif %}
+{% endmacro %}
 
 <form class="comment-form form" sprig s-method="post" s-action="comments/comments/save">
     <input type="hidden" name="elementId" value="{{ entryId }}">
@@ -17,39 +24,28 @@
     {% endif %}
     {{ craft.comments.protect() }}
 
-    {% if not currentUser %}
-        <fieldset class="form__fields">
+    <fieldset class="form__fields">
+        {% if not currentUser %}
             <div class="form__field">
                 <label for="comment-form__name">Name:</label>
+                {{ _self.errorList(comment.getErrors('name')) }}
                 <input id="comment-form__name" name="fields[name]" type="text" value="{{ comment.name ?? '' }}" />
             </div>
-        </fieldset>
 
-        <fieldset class="form__fields">
             <div class="form__field">
                 <label for="comment-form__email">E-Mail-Adresse:</label>
+                {{ _self.errorList(comment.getErrors('email')) }}
                 <input id="comment-form__email" name="fields[email]" type="text" value="{{ comment.email ?? '' }}" />
                 <small>Deine E-Mail-Adresse wird nicht veröffentlicht.</small>
             </div>
-        </fieldset>
-    {% endif %}
+        {% endif %}
 
-    <fieldset class="form__fields">
         <div class="form__field">
             <label for="comment-form__comment">Kommentar:</label>
+            {{ _self.errorList(comment.getErrors('comment')) }}
             <textarea id="comment-form__comment" name="fields[comment]">{{ comment.comment ?? '' }}</textarea>
         </div>
     </fieldset>
-
-    {% if errors is defined and errors|length > 0 %}
-        <fieldset>
-            <ul class="form__errors">
-                {% for error in errors %}
-                    <li>{{ error|first }}</li>
-                {% endfor %}
-            </ul>
-        </fieldset>
-    {% endif %}
 
     {% if success is defined and success %}
         <fieldset>
@@ -59,8 +55,6 @@
 
     <fieldset class="form__controls">
         {{ button({
-            disabled: success is defined and success,
-            icon: success is defined and success ? 'check' : '',
             label: 'Abschicken',
             style: 'accent',
             type: 'submit'

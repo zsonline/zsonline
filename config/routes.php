@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'abo'                       => ['template' => '_pages/subscription.twig'],
     'artikel'                   => ['template' => '_pages/articles.twig'],
     'autor-innen'               => ['template' => '_pages/users.twig'],
     'autor-innen/<slug:{slug}>' => ['template' => '_pages/user.twig'],

@@ -1,0 +1,79 @@
+tabs:
+  -
+    elementCondition: null
+    elements:
+      -
+        elementCondition: null
+        fieldUid: afb6c2da-6684-4057-9dd7-efb701f99159 # Description
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 522d2749-4727-4602-969b-fb67f8bb3518
+        userCondition: null
+        warning: null
+        width: 100
+    name: Profile
+    uid: 750a39ce-dd7c-4d2f-b5b4-2b7d461cb87e
+    userCondition: null
+  -
+    elementCondition:
+      class: craft\elements\conditions\users\UserCondition
+      conditionRules:
+        -
+          class: craft\elements\conditions\users\GroupConditionRule
+          operator: in
+          uid: 65cbad6d-9151-4b83-8fd7-e15c2793a9ce
+          values:
+            - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
+      elementType: craft\elements\User
+      fieldContext: global
+    elements:
+      -
+        attribute: addresses
+        elementCondition: null
+        id: null
+        instructions: null
+        label: null
+        orientation: null
+        requirable: false
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\users\AddressesField
+        uid: 9fa384ed-1700-4725-9da7-9cc519aabfa3
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        type: craft\fieldlayoutelements\HorizontalRule
+        uid: 67f44ab5-2a2e-4bb6-a54e-9483f28832b7
+        userCondition: null
+      -
+        elementCondition: null
+        fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Plan
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: dc8874c7-aed8-4ec9-b37d-3d6640b4118c
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # End date
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 514a2caf-95d9-4909-84ff-e9d06d30a47d
+        userCondition: null
+        warning: null
+        width: 100
+    name: Subscription
+    uid: 18abe30a-9fa3-4c2d-9ba9-a9a7c8a326dc
+    userCondition: null

@@ -1,0 +1,49 @@
+.subscription__plan__input {
+  display: none;
+}
+
+.subscription__plan__input:checked + .subscription__plan__label {
+  color: var(--color-button-accent-fg);
+  background-color: var(--color-button-accent-bg);
+  border-color: var(--color-button-accent-bg);
+
+  b::after {
+    float: right;
+    padding: 0.25em 0.5em;
+    font-size: 0.75em;
+    font-weight: normal;
+    color: var(--color-button-accent-bg);
+    content: "Ausgewählt";
+    background-color: var(--color-button-accent-fg);
+    border-radius: 3px;
+  }
+}
+
+.subscription__plan__label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  color: var(--color-input-fg);
+  cursor: pointer;
+  border: solid 1px var(--color-input-border);
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: var(--color-button-dark-bg-alt);
+    border-color: var(--color-button-dark-bg-alt);
+  }
+
+  &:first-of-type {
+    margin-bottom: 0.5rem;
+  }
+
+  b {
+    font-size: 1.2em;
+  }
+
+  p {
+    margin: 0.5em 0 0;
+  }
+}

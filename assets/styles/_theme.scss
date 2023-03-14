@@ -50,7 +50,9 @@
 
   // Input
   --color-input-fg: var(--color-fg);
-  --color-input-bg: hsl(0deg 0% 100%);
+  --color-input-bg: var(--color-bg);
+  --color-input-fg-disabled: hsl(0deg 0% 25%);
+  --color-input-bg-disabled: hsl(0deg 0% 95%);
   --color-input-border: var(--color-border-bright);
   --color-input-border-alt: var(--color-border-dark);
   --color-input-hint: var(--color-fg-subdued);
@@ -99,7 +101,9 @@
 
     // Input
     --color-input-fg: var(--color-fg);
-    --color-input-bg: hsl(0deg 0% 25%);
+    --color-input-bg: var(--color-bg);
+    --color-input-fg-disabled: hsl(0deg 0% 80%);
+    --color-input-bg-disabled: hsl(0deg 0% 25%);
     --color-input-border: var(--color-border-bright);
     --color-input-border-alt: var(--color-border-dark);
     --color-input-hint: var(--color-fg-subdued);

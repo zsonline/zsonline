@@ -1,0 +1,34 @@
+columnSuffix: rxwbrkqb
+contentColumnType: string
+fieldGroup: 0beef319-d887-4ce4-9f37-8ef9d9c7cea5 # Subscription
+handle: subscriptionPlan
+instructions: null
+name: Plan
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Regular
+        -
+          - value
+          - regular
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Student
+        -
+          - value
+          - student
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

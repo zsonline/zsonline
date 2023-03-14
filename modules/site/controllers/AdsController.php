@@ -9,7 +9,7 @@ use yii\web\Response;
 
 class AdsController extends Controller
 {
-    protected int|bool|array $allowAnonymous = true;
+    protected int|bool|array $allowAnonymous = Controller::ALLOW_ANONYMOUS_LIVE;
 
     /**
      * Returns the urls of two active ads in random order.
