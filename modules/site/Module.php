@@ -18,7 +18,9 @@ class Module extends BaseModule
     {
         Craft::setAlias('@site', __DIR__);
 
-        if (!Craft::$app->getRequest()->getIsConsoleRequest()) {
+        if (Craft::$app->getRequest()->getIsConsoleRequest()) {
+            $this->controllerNamespace = 'site\\console';
+        } else {
             $this->controllerNamespace = 'site\\controllers';
         }
 
