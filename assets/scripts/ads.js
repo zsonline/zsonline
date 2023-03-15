@@ -68,7 +68,13 @@ async function insertAdsIntoHome(ads, home) {
 
     // Create DOM node
     const block = document.createElement("div");
-    block.classList.add("home-block", "home-block--colored-next", "home-block--colored-prev", "ad-block", "ad-block--home");
+    block.classList.add(
+      "home-block",
+      "home-block--colored-next",
+      "home-block--colored-prev",
+      "ad-block",
+      "ad-block--home"
+    );
     block.appendChild(ad);
 
     // Insert ad node
@@ -78,13 +84,13 @@ async function insertAdsIntoHome(ads, home) {
       homeBlocks[index].nextSibling
     );
 
-    // Increase margins of the previous and next home blocks
+    // Remove margins of the previous and next home blocks
     if (block.previousElementSibling.classList.contains("home-block")) {
-      block.previousElementSibling.classList.add("home-block--colored-next");
+      block.previousElementSibling.classList.remove("home-block--colored-next");
     }
 
     if (block.nextElementSibling.classList.contains("home-block")) {
-      block.nextElementSibling.classList.add("home-block--colored-prev");
+      block.nextElementSibling.classList.remove("home-block--colored-prev");
     }
   }
 }
