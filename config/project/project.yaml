@@ -1,4 +1,4 @@
-dateModified: 1678740046
+dateModified: 1678977932
 elementSources:
   craft\elements\User:
     -
@@ -72,14 +72,15 @@ elementSources:
         elementType: craft\elements\User
         fieldContext: global
       defaultSort:
-        - username
-        - asc
+        - dateCreated
+        - desc
       key: 'custom:fc585b69-a1d7-4a9e-a3b5-42baaac9fad8'
       label: Regular
       tableAttributes:
         - email
         - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
         - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End date
+        - dateCreated
       type: custom
       userGroups:
         - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
@@ -104,13 +105,14 @@ elementSources:
         fieldContext: global
       defaultSort:
         - username
-        - asc
+        - desc
       key: 'custom:c9764f5a-b696-4ee4-99d2-c4b4f44469c5'
       label: Student
       tableAttributes:
         - email
         - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
         - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End date
+        - dateCreated
       type: custom
       userGroups:
         - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
@@ -137,13 +139,14 @@ elementSources:
         fieldContext: global
       defaultSort:
         - username
-        - asc
+        - desc
       key: 'custom:688a1a87-de6f-4342-ab33-110ed85e1d7f'
       label: Active
       tableAttributes:
         - email
         - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
         - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End date
+        - dateCreated
       type: custom
       userGroups:
         - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors

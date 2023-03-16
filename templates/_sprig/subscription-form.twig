@@ -25,10 +25,15 @@
             <label class="subscription__plan__label" for="subscription__plan--student">
                 <b>Studentisches Abo</b>
                 <span>Gratis</span>
-                <p>ETH-Studierende lesen die ZS gratis.</p>
+                <p>ETH-Studierende sowie Studierende anderer Schweizer Hochschulen lesen die ZS gratis.</p>
+                {{ message({
+                    message: 'Studierende der Universität Zürich erhalten die ZS automatisch.',
+                    style: 'dark'
+                }) }}
             </label>
             {{ _self.errorList(subscription.getErrors('plan')) }}
         </div>
+
     </fieldset>
 
     {% if plan %}
@@ -36,16 +41,16 @@
             <div class="form__field">
                 <label for="subscription__email">E-Mail-Adresse:</label>
                 {{ _self.errorList(subscription.getErrors('email')) }}
-                <input id="subscription__email" name="email" type="email" value="{{ subscription.email }}">
+                <input id="subscription__email" name="email" type="email" required value="{{ subscription.email }}">
                 {% if plan == 'student' %}
-                    <small>Registriere dich mit deiner ETH-E-Mail-Adresse.</small>
+                    <small>Registriere dich mit der E-Mail-Adresse deiner Hochschule.</small>
                 {% endif %}
             </div>
             {% if plan == 'student' %}
                 <div class="form__field">
                     <label for="subscription__end-date">Voraussichtlicher Studienabschluss:</label>
                     {{ _self.errorList(subscription.getErrors('endDate')) }}
-                    <input id="subscription__end-date" name="endDate" type="date" value="{{ subscription.endDate }}">
+                    <input id="subscription__end-date" name="endDate" type="number" min="{{ now|date('Y') }}" max="{{ now|date('Y') + 9 }}" step="1" required value="{{ subscription.endDate ?? (now|date('Y') + 5) }}">
                 </div>
             {% endif %}
         </fieldset>
@@ -54,27 +59,27 @@
             <div class="form__field">
                 <label for="subscription__name">Name:</label>
                 {{ _self.errorList(subscription.getErrors('name')) }}
-                <input id="subscription__name" name="name" type="text" value="{{ subscription.name }}">
+                <input id="subscription__name" name="name" type="text" required value="{{ subscription.name }}">
             </div>
             <div class="form__field">
-                <label for="subscription__address-line-1">Adresszeile:</label>
+                <label for="subscription__address-line-1">Strasse und Hausnummer:</label>
                 {{ _self.errorList(subscription.getErrors('addressLine1')) }}
-                <input id="subscription__address-line-1" name="addressLine1" type="text" value="{{ subscription.addressLine1 }}">
+                <input id="subscription__address-line-1" name="addressLine1" type="text" required value="{{ subscription.addressLine1 }}">
             </div>
             <div class="form__field">
-                <label for="subscription__address-line-2">Zusätzliche Adresszeile:</label>
+                <label for="subscription__address-line-2">Adresszusatz:</label>
                 {{ _self.errorList(subscription.getErrors('addressLine2')) }}
                 <input id="subscription__address-line-2" name="addressLine2" type="text" value="{{ subscription.addressLine2 }}">
             </div>
             <div class="form__field">
                 <label for="subscription__postal-code">Postleitzahl:</label>
                 {{ _self.errorList(subscription.getErrors('postalCode')) }}
-                <input id="subscription__postal-code" name="postalCode" type="number" value="{{ subscription.postalCode }}">
+                <input id="subscription__postal-code" name="postalCode" type="number" min="1000" max="9999" step="1" required value="{{ subscription.postalCode }}">
             </div>
             <div class="form__field">
                 <label for="subscription__locality">Ort:</label>
                 {{ _self.errorList(subscription.getErrors('locality')) }}
-                <input id="subscription__locality" name="locality" type="text" value="{{ subscription.locality }}">
+                <input id="subscription__locality" name="locality" type="text" required value="{{ subscription.locality }}">
             </div>
             <div class="form__field">
                 <label for="subscription__country">Land:</label>

@@ -2,13 +2,12 @@
 
 return [
     'Plan' => 'Abo-Typ',
-    'Graduation date' => 'Abschlussdatum',
+    'Graduation date' => 'Abschlussjahr',
     'Email address' => 'E-Mail-Adresse',
     'Name' => 'Name',
-    'Address line' => 'Adresszeile',
-    'Additional address line' => 'Zusätzliche Adressezeile',
+    'Address line' => 'Adresse',
+    'Additional address line' => 'Adresszusatz',
     'Postal code' => 'Postleitzahl',
     'Locality' => 'Ort',
-    'Print' => 'Druck',
-    'Your email address must end with ethz.ch.' => 'Deine E-Mail-Adresse muss mit ethz.ch enden.'
+    'Print' => 'Druck'
 ];

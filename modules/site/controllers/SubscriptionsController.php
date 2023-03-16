@@ -28,16 +28,16 @@ class SubscriptionsController extends Controller
         // Populate model
         $subscription = new Subscription();
         $subscription->plan = Craft::$app->getRequest()->getParam('plan');
-        $subscription->endDate = Craft::$app->getRequest()->getParam('endDate');
+        $subscription->endDate = (int)Craft::$app->getRequest()->getParam('endDate') ?: null;
         if($subscription->plan == 'regular') {
             // Set endDate to a date 'infinitely' far in the future
-            $subscription->endDate = date('Y-m-d', strtotime('2123-01-01'));
+            $subscription->endDate = 2122;
         }
         $subscription->email = Craft::$app->getRequest()->getParam('email');
         $subscription->name = Craft::$app->getRequest()->getParam('name');
         $subscription->addressLine1 = Craft::$app->getRequest()->getParam('addressLine1');
         $subscription->addressLine2 = Craft::$app->getRequest()->getParam('addressLine2');
-        $subscription->postalCode = Craft::$app->getRequest()->getParam('postalCode');
+        $subscription->postalCode = (int)Craft::$app->getRequest()->getParam('postalCode') ?: null;
         $subscription->locality = Craft::$app->getRequest()->getParam('locality');
 
         // Validate form data
@@ -54,7 +54,7 @@ class SubscriptionsController extends Controller
         $user->fullName = $subscription->name;
         $user->email = $subscription->email;
         $user->subscriptionPlan = $subscription->plan;
-        $user->subscriptionEndDate = $subscription->endDate;
+        $user->subscriptionEndDate = ($subscription->endDate + 1) . '-01-01';
         try {
             $success = Craft::$app->getElements()->saveElement($user);
         } catch (Throwable $e) {

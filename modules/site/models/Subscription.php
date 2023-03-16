@@ -7,13 +7,13 @@ use craft\base\Model;
 class Subscription extends Model
 {
     public ?string $plan = null;
-    public ?string $endDate = null;
+    public ?int $endDate = null;
 
     public ?string $email = null;
     public ?string $name = null;
     public ?string $addressLine1 = null;
     public ?string $addressLine2 = null;
-    public ?string $postalCode = null;
+    public ?int $postalCode = null;
     public ?string $locality = null;
 
     public function attributeLabels()
@@ -35,31 +35,25 @@ class Subscription extends Model
         return [
             [['plan'], 'in', 'range' => ['regular', 'student']],
 
-            [['endDate'], 'date',
-                'format' => 'Y-m-d',
-                'min'  => date('Y-m-d', strtotime('+1 year')),
+            [['email'], 'email'],
+            [['endDate'], 'integer',
+                'min'  => date('Y'),
                 'when' => fn($model) => $model->plan == 'regular'
             ],
-            [['endDate'], 'date',
-                'format' => 'Y-m-d',
-                'min'  => date('Y-m-d'),
-                'max'  => date('Y-m-d', strtotime('+6 year')),
+            [['endDate'], 'integer',
+                'min'  => date('Y'),
+                'max'  => date('Y', strtotime('+9 year')),
                 'when' => fn($model) => $model->plan == 'student'
             ],
 
-            [['email'], 'email'],
-            [['email'], 'match',
-                'pattern' => '/ethz\.ch$/',
-                'message' => Craft::t('site', 'Your email address must end with ethz.ch.'),
-                'when' => fn($model) => $model->plan == 'student'
-            ],
 
-            [['name', 'addressLine1', 'addressLine2', 'postalCode', 'locality'], 'string',
+            [['name', 'addressLine1', 'addressLine2', 'locality'], 'string',
                 'length' => [1]
             ],
-            [['name', 'addressLine1', 'addressLine2', 'postalCode', 'locality'], 'trim'],
-            [['postalCode'], 'match',
-                'pattern' => '/^\d+$/',
+            [['name', 'addressLine1', 'addressLine2', 'locality'], 'trim'],
+            [['postalCode'], 'integer',
+                'min' => 1000,
+                'max' => 9999
             ],
 
             [['plan', 'endDate', 'email', 'name', 'addressLine1', 'postalCode', 'locality'], 'required'],
