@@ -16,10 +16,6 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-
-      small {
-        color: var(--color-input-hint);
-      }
     }
 
     &.form__controls {
@@ -58,6 +54,13 @@
   textarea {
     min-height: 100px;
     resize: vertical;
+  }
+
+  &__small {
+    margin: 0.1rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.25;
+    color: var(--color-input-hint);
   }
 
   &__success {

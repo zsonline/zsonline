@@ -43,7 +43,7 @@
                 {{ _self.errorList(subscription.getErrors('email')) }}
                 <input id="subscription__email" name="email" type="email" required value="{{ subscription.email }}">
                 {% if plan == 'student' %}
-                    <small>Registriere dich mit der E-Mail-Adresse deiner Hochschule.</small>
+                    <p class="form__small">Registriere dich mit der E-Mail-Adresse deiner Hochschule.</p>
                 {% endif %}
             </div>
             {% if plan == 'student' %}
