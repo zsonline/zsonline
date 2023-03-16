@@ -40,6 +40,7 @@
     }
   }
 
+  &--gradient,
   &--transparent {
     position: fixed;
 
@@ -49,13 +50,7 @@
       --color-button-bright-bg: var(--color-header-transparent-bg);
       --color-button-bright-bg-alt: var(--color-header-transparent-bg-alt);
 
-      background:
-        linear-gradient(
-          180deg,
-          hsl(0deg 0% 0% / 30%) 0%,
-          hsl(0deg 0% 0% / 15%) 75%,
-          hsl(0deg 0% 0% / 0%) 100%
-        );
+      background: none;
 
       .header__rule {
         background-color: var(--color-header-transparent-bg);
@@ -64,6 +59,18 @@
       .header__logo svg {
         fill: var(--color-header-transparent-bg);
       }
+    }
+  }
+
+  &--gradient {
+    &.header--scroll-top {
+      background:
+        linear-gradient(
+          180deg,
+          hsl(0deg 0% 0% / 30%) 0%,
+          hsl(0deg 0% 0% / 15%) 75%,
+          hsl(0deg 0% 0% / 0%) 100%
+        );
     }
   }
 

@@ -1,5 +1,5 @@
 {% set headerSize = headerSize ?? 'small' %}
-{% set headerTransparent = headerTransparent ?? false %}
+{% set headerStyle = headerStyle ?? 'solid' %}
 {% set layoutSize = layoutSize ?? 'small' %}
 
 {% from '_macros/layout.twig' import header, footer %}
@@ -89,7 +89,7 @@
         {{ header({
             navigation: navigation,
             size: headerSize,
-            transparent: headerTransparent
+            style: headerStyle
         }) }}
 
         <main class="{{ html_classes('layout', layoutSize) }}">

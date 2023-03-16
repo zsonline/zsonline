@@ -23,7 +23,7 @@
     .collect() %}
 
 {% set headerSize = 'large' %}
-{% set headerTransparent = home.first().homeBlocks.first().backgroundColor ?? false %}
+{% set headerStyle = home.first().homeBlocks.first().backgroundColor ? 'transparent' %}
 {% set layoutSize = 'large' %}
 
 {% block main %}

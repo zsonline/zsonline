@@ -2,7 +2,7 @@
     {% set args = {
         navigation: null,
         size: 'small',
-        transparent: false
+        style: 'solid'
     } | merge(args) %}
 
     {% from '_macros/button.twig' import button, link %}
@@ -13,7 +13,8 @@
         'header--' ~ args.size,
         'header--scroll-top',
         {
-            'header--transparent': args.transparent
+            'header--gradient': args.style == 'gradient',
+            'header--transparent': args.style == 'transparent'
         }
     ) }}">
         <div class="header__inner">
