@@ -54,6 +54,8 @@
     <meta name="twitter:title" content="{{ meta.title ?: 'Zürcher Studierendenzeitung' }}" />
     <meta name="twitter:url" content="{{ meta.url }}" />
 
+    <base href="{{ url() }}" />
+
     {% block meta %}{% endblock %}
 
     <link rel="canonical" href="{{ meta.url }}" />
