@@ -358,8 +358,10 @@ class EditorContent extends Markup
         // Get eager-loaded image elements
         $imageIds = array_map(static fn($item) => $item['attrs']['id'], $node['content']);
 
-        $assets = $this->assets->filter(fn($item) => in_array($item->id, $imageIds, true) && $item->kind == 'image')->all();
-        if(!$assets) {
+        $assets = collect(array_map(fn($id) => $this->assets->filter(fn($asset) => $asset->id == $id && $asset->kind == 'image')->first(), $imageIds));
+        $assets = $assets->filter();  // Remove null items
+
+        if($assets->count() == 0) {
             return '';
         }
 
