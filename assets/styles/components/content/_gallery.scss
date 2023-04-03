@@ -11,6 +11,8 @@
 
   img {
     display: block;
+    width: auto;
+    object-fit: cover;
     height: 300px;
   }
 
@@ -19,8 +21,7 @@
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    max-width: calc($layout-width-small + 2 * $layout-padding);
-    padding: 0 $layout-padding;
+    max-width: $layout-width-small;
     margin: 0.25em auto 0;
   }
 }

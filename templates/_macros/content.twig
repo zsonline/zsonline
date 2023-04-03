@@ -162,15 +162,19 @@
     {% from '_macros/icon.twig' import icon %}
     {% from '_macros/lightbox.twig' import lightboxImage %}
 
+    {% set transform = { height: 500 } %}
+
     <figure class="content-gallery swiper">
         <div class="swiper-wrapper">
             {% for image in args.images %}
                 <div class="swiper-slide">
                     {{ tag('img', {
                         'data-lightbox': lightboxImage({ image: image }) | escape,
+                        height: image.getHeight(transform),
                         loading: 'lazy',
                         sizes: '100vw',
-                        srcset: image.getUrl({ height: 300 }) ~ ' 650w, ' ~ image.getUrl({ height: 400 }) ~ ' 1024w, ' ~ image.getUrl({ height: 500 }) ~ ' 1440w'
+                        srcset: image.getUrl({ height: 300 }) ~ ' 650w, ' ~ image.getUrl({ height: 400 }) ~ ' 1024w, ' ~ image.getUrl({ height: 500 }) ~ ' 1440w',
+                        width: image.getWidth(transform)
                     }) }}
 
                     {{ _self.caption({
