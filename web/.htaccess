@@ -4,7 +4,11 @@ RewriteEngine On
 # Redirect HTTP to HTTPS
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} off
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R,NE]
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,NE,R=301]
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,NE,R=301]
 
 # Remove trailing slash
 RewriteCond %{REQUEST_FILENAME} !-d
