@@ -52,7 +52,7 @@
                         onclick: 'ZS.Comments.toggleReplyForm(this);'
                     }) }}
                     <div class="comment comment--has-arrow comments__reply__form">
-                        {{ sprig('_components/comments-form.twig', {
+                        {{ sprig('_sprig/comments-form.twig', {
                             entryId: entryId,
                             siteId: siteId,
                             parentId: comment.id
