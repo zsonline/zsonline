@@ -82,7 +82,7 @@
             {% endif %}
 
             {% if args.dateUpdated and args.dateUpdated > args.datePublished|date_modify("+1 hour") and args.datePublished > date("2023-03-01") %}
-                <div>Aktualisiert am {{ args.dateUpdated|date('j. F Y, G.H') }} Uhr</div>
+                <div>Aktualisiert am {{ args.dateUpdated|date('j. F Y, H.i') }} Uhr</div>
             {% endif %}
         </div>
     {% endif %}
