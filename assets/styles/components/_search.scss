@@ -1,0 +1,9 @@
+.search {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .search {
+        margin-bottom: 3rem;
+    }
+}
