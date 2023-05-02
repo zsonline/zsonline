@@ -87,7 +87,10 @@
     </script>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="{{ html_classes('wrapper', {
+        'wrapper--header-small': headerSize == 'small' and headerStyle == 'solid',
+        'wrapper--header-large': headerSize == 'large' and headerStyle == 'solid'
+    }) }}">
         {{ header({
             navigation: navigation,
             size: headerSize,

@@ -48,6 +48,10 @@ body {
   &.overflow-hidden {
     overflow: hidden;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 0 calc(2 * $layout-padding-desktop);
+  }
 }
 
 .wrapper {
@@ -55,6 +59,28 @@ body {
   padding: 0;
   margin: 0 auto;
   background-color: var(--color-bg);
+
+  &--header-small,
+  &--header-large {
+    padding-top: 77px;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    &--header-small,
+    &--header-large {
+      padding-top: 86px;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    &--header-small {
+      padding-top: 93px;
+    }
+
+    &--header-large {
+      padding-top: 142px;
+    }
+  }
 }
 
 .layout {

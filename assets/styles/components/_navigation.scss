@@ -73,10 +73,10 @@
   button {
     padding: 0 0 0 1em;
     margin: 0;
+    color: var(--color-fg);
     cursor: pointer;
     background-color: transparent;
     border: none;
-    color: var(--color-fg);
 
     &:hover,
     &:focus,

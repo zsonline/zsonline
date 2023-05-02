@@ -1,11 +1,11 @@
 .header {
   @include layout("large", false);
 
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
   background-color: var(--color-bg);
-  transition: all 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 
   &__inner {
     @include layout("large", true);
@@ -42,8 +42,6 @@
 
   &--gradient,
   &--transparent {
-    position: fixed;
-
     &.header--scroll-top {
       --color-button-bright-fg: var(--color-header-transparent-fg);
       --color-button-bright-fg-alt: var(--color-header-transparent-fg-alt);
@@ -203,6 +201,8 @@
 
 @media (min-width: $breakpoint-desktop) {
   .header {
+    width: min(100vw - calc(4 * $layout-padding-desktop + $layout-padding), $layout-width-large);
+
     &__inner {
       padding: 13px $layout-padding-desktop;
     }
@@ -219,7 +219,7 @@
 
     &--large {
       .header__inner {
-        padding: 25px $layout-padding-desktop;
+        padding: 20px $layout-padding-desktop;
       }
 
       .header__logo svg {
@@ -238,7 +238,7 @@
     }
 
     &__navigation-top {
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     &__navigation-main {

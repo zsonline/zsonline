@@ -4,7 +4,7 @@
 {% from '_macros/lightbox.twig' import lightbox %}
 
 {% set headerSize = 'small' %}
-{% set headerStyle = entry.contentImageSize.value == 'large' and entry.contentImagePosition.value == 'top' and entry.contentImage|length > 0 ? 'gradient' %}
+{% set headerStyle = entry.contentImageSize.value == 'large' and entry.contentImagePosition.value == 'top' and entry.contentImage|length > 0 ? 'gradient' : 'solid' %}
 {% set layoutSize = 'large' %}
 
 {% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
