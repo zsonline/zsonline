@@ -67,11 +67,10 @@
     {% set args = {
         contributors: [],
         datePublished: null,
-        dateUpdated: null,
         showLinks: true
     } | merge(args) %}
 
-    {% if args.contributors|length > 0 or args.datePublished or args.dateUpdated and args.dateUpdated > args.datePublished|date_modify("+1 hour") and args.datePublished > date("2023-03-01") %}
+    {% if args.contributors|length > 0 or args.datePublished %}
         <div class="meta">
             {% if args.contributors|length > 0 %}
                 <div>Von {{ _self.contributors({ contributors: args.contributors, showLinks: args.showLinks }) }}</div>
@@ -79,10 +78,6 @@
 
             {% if args.datePublished %}
                 <div>Publiziert am {{ args.datePublished|date('j. F Y') }}</div>
-            {% endif %}
-
-            {% if args.dateUpdated and args.dateUpdated > args.datePublished|date_modify("+1 hour") and args.datePublished > date("2023-03-01") %}
-                <div>Aktualisiert am {{ args.dateUpdated|date('j. F Y, H.i') }} Uhr</div>
             {% endif %}
         </div>
     {% endif %}
