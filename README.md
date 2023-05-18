@@ -114,10 +114,10 @@ git pull
 Next, install any new PHP dependencies.
 
 ```
-ddev composer install
+composer install
 ```
 
-Apply any new database migrations and the project config changes.
+Further, apply any new database migrations and project config changes.
 
 ```
 php craft migrate/all
