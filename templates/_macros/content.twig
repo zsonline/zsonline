@@ -114,7 +114,9 @@
 
 {% macro image(args) %}
     {% set args = {
+        caption: true,
         image: null,
+        lightbox: true,
         loading: 'lazy',
         size: 'medium'
     } | merge(args) %}
@@ -134,7 +136,7 @@
 
     <figure class="{{ html_classes('content-image', args.size) }}">
         {{ tag('img', {
-            'data-lightbox': lightboxImage({ image: args.image }) | escape,
+            'data-lightbox': args.lightbox ? lightboxImage({ image: args.image }) | escape : false,
             height: args.image.getHeight(transform),
             loading: args.loading,
             sizes: '100vw',
@@ -142,10 +144,12 @@
             width: args.image.getWidth(transform)
         }) }}
 
-        {{ _self.caption({
-            caption: args.image.caption,
-            contributors: args.image.contributors.all()
-        }) }}
+        {% if args.caption %}
+            {{ _self.caption({
+                caption: args.image.caption,
+                contributors: args.image.contributors.all() ?? null
+            }) }}
+        {% endif %}
     </figure>
 {% endmacro %}
 

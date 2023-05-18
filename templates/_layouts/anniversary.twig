@@ -1,18 +1,31 @@
 {% extends '_layouts/base.twig' %}
 
+{% set colorScheme = 'dark' %}
 {% set layoutSize = layoutSize ?? 'small' %}   {# small, medium, large #}
 
 {% from '_macros/layout.twig' import header, footer %}
 
 {% set navigation = craft.navigation.nodes()
-    .handle('navigation')
+    .handle('anniversary')
     .level(1)
     .with(['children'])
     .all() %}
 
+{% set secondaryNavigation = [
+    {
+        link: tag('a', {
+            href: url(),
+            text: 'Zurück zur Startseite'
+        }),
+        children: null
+    }
+] %}
+
 {% block content %}
     {{ header({
-        navigations: [ navigation ],
+        navigations: [ navigation, secondaryNavigation ],
+        showTopNavigation: false,
+        siteUrl: url('100'),
         size: headerSize,
         style: headerStyle
     }) }}
@@ -22,6 +35,6 @@
     </main>
 
     {{ footer({
-        navigation: navigation
+        navigation: null
     }) }}
 {% endblock %}

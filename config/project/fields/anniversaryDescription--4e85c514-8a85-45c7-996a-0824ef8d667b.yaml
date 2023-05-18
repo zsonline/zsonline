@@ -1,0 +1,23 @@
+columnSuffix: tdjzmndj
+contentColumnType: text
+fieldGroup: 3d811369-1bfd-4b73-a933-fa5cf4ae0a6a # Anniversary
+handle: anniversaryDescription
+instructions: null
+name: Description
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Anniversary Minimal
+  columnType: text
+  defaultTransform: ''
+  purifierConfig: null
+  purifyHtml: true
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

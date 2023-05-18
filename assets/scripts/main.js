@@ -1,3 +1,4 @@
+import "@scripts/anniversary";
 import { insertAds } from "@scripts/ads";
 import { Gallery } from "@scripts/gallery";
 import { Lightbox } from "@scripts/lightbox";
@@ -71,6 +72,7 @@ window.addEventListener("scroll", () => {
 
 // Initialize global object once the HTML document is parsed
 window.ZS = {
+  ...window.ZS,
   Comments: {
     toggleReplyForm: (element) => {
       const reply = element?.closest(".comments__reply");

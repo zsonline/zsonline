@@ -207,12 +207,6 @@
       padding: 13px $layout-padding-desktop;
     }
 
-    &__logo {
-      svg {
-        height: 65px;
-      }
-    }
-
     &__rule {
       margin: 0 $layout-padding-desktop;
     }
@@ -232,7 +226,7 @@
         }
 
         .header__logo svg {
-          height: 65px;
+          height: 60px;
         }
       }
     }

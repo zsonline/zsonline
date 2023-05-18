@@ -1,0 +1,305 @@
+field: 950c0af3-396d-40b2-a1ca-bd4f80e037b6 # Timeline
+fieldLayouts:
+  a9e15408-a77a-45c2-8483-59eb94987ade:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 683cb842-2907-43f6-a6be-a4a3833c5eb5 # Year
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eacda5ea-3957-4b93-85e3-a1622b3a1b1a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127 # Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8cb24d1c-617b-42f6-a106-01805acd6261
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 6aee99fe-72b2-4d7d-a791-a8b6b15b3118 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 295d0f07-cc98-4a1e-9346-b44049b47f30
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b231772f-f289-459a-98aa-4307862a26f1 # Publication
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: feaa9774-73b3-449f-80ad-d924f84d4a44
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8c68bef4-fce4-4168-aa13-3ca1947567fb # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9703d91-4b69-4773-8abd-193116e73726
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c529f035-1e02-4af8-a7f0-afe4e24e634c # Byline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb9edcf0-b7a5-49d1-9b82-c4487889e212
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57422757-be01-4bc8-905f-08b22acee68c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8fc13160-607f-43ed-9ae7-e5b572317317 # Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46eccbcb-62fa-4973-9745-17dc3505b238
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d0000bc8-9493-4559-bc28-18b88f5a9ba3
+        userCondition: null
+fields:
+  1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826: # Description
+    columnSuffix: ivoorgte
+    contentColumnType: text
+    fieldGroup: null
+    handle: nodeEmbedDescription
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Anniversary Minimal
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  6aee99fe-72b2-4d7d-a791-a8b6b15b3118: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: nodeEmbedImage
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  8c68bef4-fce4-4168-aa13-3ca1947567fb: # Title
+    columnSuffix: dztklvll
+    contentColumnType: text
+    fieldGroup: null
+    handle: nodeEmbedTitle
+    instructions: null
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8fc13160-607f-43ed-9ae7-e5b572317317: # Content
+    columnSuffix: zzgrvlns
+    contentColumnType: text
+    fieldGroup: null
+    handle: nodeEmbedContent
+    instructions: null
+    name: Content
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      ckeConfig: b4fa2985-51d4-428c-a10e-130fd6687f7b # Anniversary Content
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  683cb842-2907-43f6-a6be-a4a3833c5eb5: # Year
+    columnSuffix: edeoeqze
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: nodeYear
+    instructions: null
+    name: Year
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: 1923
+      prefix: null
+      previewCurrency: null
+      previewFormat: none
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  b231772f-f289-459a-98aa-4307862a26f1: # Publication
+    columnSuffix: qvnjmrys
+    contentColumnType: text
+    fieldGroup: null
+    handle: nodeEmbedPublication
+    instructions: null
+    name: Publication
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c529f035-1e02-4af8-a7f0-afe4e24e634c: # Byline
+    columnSuffix: rbdqutal
+    contentColumnType: text
+    fieldGroup: null
+    handle: nodeEmbedByline
+    instructions: null
+    name: Byline
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127: # Label
+    columnSuffix: ugkqpmrc
+    contentColumnType: text
+    fieldGroup: null
+    handle: nodeLabel
+    instructions: null
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: nodeEmbed
+name: Embed
+sortOrder: 2

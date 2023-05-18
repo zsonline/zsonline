@@ -1,4 +1,4 @@
-:root {
+@mixin bright {
   // Page
   --color-fg: hsl(0deg 0% 3%);
   --color-fg-alt: hsl(0deg 0% 35%);
@@ -60,54 +60,67 @@
   --color-input-error: var(--color-accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    // Page
-    --color-fg: hsl(0deg 0% 99%);
-    --color-fg-alt: hsl(0deg 0% 70%);
-    --color-bg: hsl(0deg 0% 15%);  // Page
-    --color-bg-alt: hsl(0deg 0% 20%);  // Body
-    --color-fg-subdued: hsl(0deg 0% 70%);
-    --color-fg-subdued-alt: hsl(0deg 0% 55%);
-    --color-bg-subdued: hsl(0deg 0% 20%);  // Boxes
-    --color-border-dark: hsl(0deg 0% 85%);
-    --color-border-bright: hsl(0deg 0% 25%);
+@mixin dark {
+  // Page
+  --color-fg: hsl(0deg 0% 99%);
+  --color-fg-alt: hsl(0deg 0% 70%);
+  --color-bg: hsl(0deg 0% 15%);  // Page
+  --color-bg-alt: hsl(0deg 0% 20%);  // Body
+  --color-fg-subdued: hsl(0deg 0% 70%);
+  --color-fg-subdued-alt: hsl(0deg 0% 55%);
+  --color-bg-subdued: hsl(0deg 0% 20%);  // Boxes
+  --color-border-dark: hsl(0deg 0% 85%);
+  --color-border-bright: hsl(0deg 0% 25%);
 
-    // Accent
-    --color-accent: hsl(0deg 90% 65%);
-    --color-accent-alt: hsl(0deg 90% 70%);
+  // Accent
+  --color-accent: hsl(0deg 90% 65%);
+  --color-accent-alt: hsl(0deg 90% 70%);
 
-    // Button bright
-    --color-button-bright-fg: var(--color-fg);
-    --color-button-bright-fg-alt: hsl(0deg 0% 80%);
-    --color-button-bright-bg: var(--color-bg);
-    --color-button-bright-bg-alt: hsl(0deg 0% 25%);
+  // Button bright
+  --color-button-bright-fg: var(--color-fg);
+  --color-button-bright-fg-alt: hsl(0deg 0% 80%);
+  --color-button-bright-bg: var(--color-bg);
+  --color-button-bright-bg-alt: hsl(0deg 0% 25%);
 
-    // Button dark
-    --color-button-dark-fg: var(--color-fg);
-    --color-button-dark-fg-alt: hsl(0deg 0% 80%);
-    --color-button-dark-bg: hsl(0deg 0% 25%);
-    --color-button-dark-bg-alt: hsl(0deg 0% 35%);
+  // Button dark
+  --color-button-dark-fg: var(--color-fg);
+  --color-button-dark-fg-alt: hsl(0deg 0% 80%);
+  --color-button-dark-bg: hsl(0deg 0% 25%);
+  --color-button-dark-bg-alt: hsl(0deg 0% 35%);
 
-    // Button accent
-    --color-button-accent-fg: var(--color-fg);
-    --color-button-accent-fg-alt: var(--color-fg);
-    --color-button-accent-bg: var(--color-accent);
-    --color-button-accent-bg-alt: var(--color-accent-alt);
+  // Button accent
+  --color-button-accent-fg: var(--color-fg);
+  --color-button-accent-fg-alt: var(--color-fg);
+  --color-button-accent-bg: var(--color-accent);
+  --color-button-accent-bg-alt: var(--color-accent-alt);
 
-    // Ad
-    --color-ad-fg: var(--color-bg-alt);
-    --color-ad-bg: #fe5;
+  // Ad
+  --color-ad-fg: var(--color-bg-alt);
+  --color-ad-bg: #fe5;
 
-    // Input
-    --color-input-fg: var(--color-fg);
-    --color-input-bg: var(--color-bg);
-    --color-input-fg-disabled: hsl(0deg 0% 80%);
-    --color-input-bg-disabled: hsl(0deg 0% 25%);
-    --color-input-border: var(--color-border-bright);
-    --color-input-border-alt: var(--color-border-dark);
-    --color-input-hint: var(--color-fg-subdued);
-    --color-input-success: hsl(120deg 75% 75%);
-    --color-input-error: hsl(0deg 100% 75%);
+  // Input
+  --color-input-fg: var(--color-fg);
+  --color-input-bg: var(--color-bg);
+  --color-input-fg-disabled: hsl(0deg 0% 80%);
+  --color-input-bg-disabled: hsl(0deg 0% 25%);
+  --color-input-border: var(--color-border-bright);
+  --color-input-border-alt: var(--color-border-dark);
+  --color-input-hint: var(--color-fg-subdued);
+  --color-input-success: hsl(120deg 75% 75%);
+  --color-input-error: hsl(0deg 100% 75%);
+}
+
+body {
+  &,
+  &.bright {
+    @include bright;
+  }
+
+  &.dark {
+    @include dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include dark;
   }
 }

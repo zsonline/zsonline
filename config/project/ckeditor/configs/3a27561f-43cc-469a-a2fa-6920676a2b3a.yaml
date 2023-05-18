@@ -1,0 +1,6 @@
+headingLevels: false
+name: 'Anniversary Minimal'
+toolbar:
+  - bold
+  - italic
+  - link

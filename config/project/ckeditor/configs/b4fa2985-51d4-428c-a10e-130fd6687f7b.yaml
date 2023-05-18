@@ -1,0 +1,9 @@
+headingLevels:
+  - 4
+name: 'Anniversary Content'
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - link

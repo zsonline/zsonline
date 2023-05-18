@@ -1,0 +1,251 @@
+field: caec063b-c904-460c-9cea-06d5d524f59c # Events
+fieldLayouts:
+  da5e0c92-887b-4f71-8bfc-fb9172e2d44b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b8d85e5e-2ffb-48be-a20b-60aef4673e44 # Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f0aba382-880f-4749-b77f-eabaa643fb92
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 96156723-e405-47de-89de-4123c0f79bd1 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16dcf4ce-c557-485b-8e8b-fc4759506fca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4bd0949b-6dab-4189-92e0-79a9317143a8 # Date
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 202b2d64-ee77-4a7c-a812-4005dc8fb2a4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4fa3aa15-c921-4a8a-9ff1-46ed3d565b3d # Start Time
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 24a3591a-17a6-4536-9866-547422c2e319
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b890b3f8-865a-43de-947a-5193946a01ce # End Time
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6f9c6a1-822e-4aee-8257-4dce06aea569
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 20aa69c3-d647-44cb-84be-5da820edbee1 # Location
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 862853ec-6c2a-4e32-aa49-72a530b14aaa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e87b9581-5a1b-4ff7-90d2-0273452cc17e # Location Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b43a9503-f68d-4d4a-b635-a79f1c943a08
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fda46218-1826-4313-96b5-753b2471e9f3 # Event Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 074f7470-d8e8-4f95-a2f3-078d2636dc10
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 52c8e87e-ebb9-452c-b70d-ee3463319094
+        userCondition: null
+fields:
+  4bd0949b-6dab-4189-92e0-79a9317143a8: # Date
+    columnSuffix: xxshfhpa
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: date
+    instructions: null
+    name: Date
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: 60
+      showDate: true
+      showTime: false
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  4fa3aa15-c921-4a8a-9ff1-46ed3d565b3d: # Start Time
+    columnSuffix: panytlca
+    contentColumnType: time
+    fieldGroup: null
+    handle: timeStart
+    instructions: null
+    name: 'Start Time'
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: 30
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Time
+  20aa69c3-d647-44cb-84be-5da820edbee1: # Location
+    columnSuffix: hnyxikhr
+    contentColumnType: text
+    fieldGroup: null
+    handle: location
+    instructions: null
+    name: Location
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  96156723-e405-47de-89de-4123c0f79bd1: # Description
+    columnSuffix: eafxbzbb
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Anniversary Minimal
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  b8d85e5e-2ffb-48be-a20b-60aef4673e44: # Label
+    columnSuffix: xnufness
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: null
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b890b3f8-865a-43de-947a-5193946a01ce: # End Time
+    columnSuffix: maapitis
+    contentColumnType: time
+    fieldGroup: null
+    handle: timeEnd
+    instructions: null
+    name: 'End Time'
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: 30
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Time
+  e87b9581-5a1b-4ff7-90d2-0273452cc17e: # Location Link
+    columnSuffix: cdnetgvn
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: locationLink
+    instructions: null
+    name: 'Location Link'
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  fda46218-1826-4313-96b5-753b2471e9f3: # Event Link
+    columnSuffix: xkrcykrq
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: eventLink
+    instructions: null
+    name: 'Event Link'
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: event
+name: Event
+sortOrder: 1

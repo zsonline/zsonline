@@ -5,10 +5,11 @@
   padding: 50px $layout-padding 30px;
   font-size: 0.8rem;
 
-  &__navigation {
-    margin-bottom: 20px;
+  &__inner {
     border-top: solid 2px var(--color-border-dark);
+  }
 
+  &__navigation {
     .navigation__section {
       &:first-child {
         border-top: none;
@@ -16,15 +17,21 @@
     }
   }
 
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 25px;
+  }
+
   &__logo {
+    display: block;
     width: 225px;
+    margin-bottom: 0.25rem;
     fill: var(--color-fg);
   }
 
-  &__credits {
-    display: flex;
-    flex-direction: column;
-
+  &__source {
     a {
       text-decoration: underline;
     }
@@ -34,17 +41,16 @@
 @media (min-width: $breakpoint-tablet) {
   .footer {
     gap: 15px;
-    padding: 75px $layout-padding-tablet 30px;
+    padding: 75px $layout-padding-tablet 35px;
 
     &__navigation {
       padding: 2.5rem 0;
-      border-top: solid 2px var(--color-border-dark);
       border-bottom: solid 1px var(--color-border-bright);
     }
 
-    &__credits {
-      flex-direction: row;
-      gap: 1em;
+    &__bottom {
+      gap: 0.75rem;
+      margin-top: 35px;
     }
   }
 }
@@ -54,8 +60,9 @@
     gap: 15px;
     padding: 125px $layout-padding-desktop 40px;
 
-    &__navigation {
-      margin-bottom: 30px;
+    &__bottom {
+      gap: 1rem;
+      margin-top: 40px;
     }
 
     &__logo {

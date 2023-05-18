@@ -1,0 +1,79 @@
+fieldLayouts:
+  ec9a191a-debc-4c55-8b36-87c2bab92afc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9855f19a-f404-42f3-bcaf-812adfeb4f62
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15dca033-1e00-43b6-bcd3-05ca3c07b14f # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 08d0634d-80e9-46b0-96ec-86e6da2d88a3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4e85c514-8a85-45c7-996a-0824ef8d667b # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 37523dae-9028-45d8-a12b-25692b9c499f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0d4265aa-68d0-414f-b465-3b1cdc6ad878 # Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9884b1c-2844-448f-9d7e-4b7dadf52365
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1b333757-6dff-4036-b15e-8cbfddb1ca36
+        userCondition: null
+handle: anniversaryBook
+hasTitleField: true
+name: 'Anniversary: Book'
+section: 60fc5899-402f-4eda-a5cf-fe05a10b4f05 # Anniversary: Book
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -2,6 +2,7 @@
 
 {% from '_macros/article.twig' import preview %}
 {% from '_macros/button.twig' import link %}
+{% from '_macros/icon.twig' import icon %}
 
 {% set home = craft.entries()
     .section('home')
@@ -17,7 +18,15 @@
             ]
         }],
         'homeBlocks.articles:layouts.articles.contributors.other',
-        'homeBlocks.articles:layouts.articles.contributors.user:user'
+        'homeBlocks.articles:layouts.articles.contributors.user:user',
+        'homeBlocks.anniversary',
+        ['homeBlocks.anniversary:anniversaryImage', {
+            withTransforms: [
+                { height: 650, width: 650 },
+                { height: 400, width: 1024 },
+                { height: 500, width: 1440 }
+            ]
+        }],
     ])
     .limit(1)
     .collect() %}
@@ -29,18 +38,18 @@
 {% block main %}
     <div class="home">
         {% for block in home.first().homeBlocks %}
-            {% switch block.type %}
-                {% case 'articles' %}
-                    <div class="{{ html_classes('home-block', 'home-articles', {
-                        'home-block--colored': block.backgroundColor,
-                        'home-block--colored-prev': loop.index0 - 1 >= 0 and home.first().homeBlocks[loop.index0 - 1].backgroundColor,
-                        'home-block--colored-next': loop.index0 + 1 < loop.length and home.first().homeBlocks[loop.index0 + 1].backgroundColor,
-                        'home-block--labeled': block.label
-                    }) }}" style="--color-home-block-bg: {{ block.backgroundColor }};">
-                        {% if block.label %}
-                            <h3 class="home-block__label">{{ block.label }}</h3>
-                        {% endif %}
+            <div class="{{ html_classes('home-block', 'home-' ~ block.type, {
+                'home-block--colored': block.backgroundColor,
+                'home-block--colored-prev': loop.index0 - 1 >= 0 and home.first().homeBlocks[loop.index0 - 1].backgroundColor,
+                'home-block--colored-next': loop.index0 + 1 < loop.length and home.first().homeBlocks[loop.index0 + 1].backgroundColor,
+                'home-block--labeled': block.label
+            }) }}" style="--color-home-block-bg: {{ block.backgroundColor }};">
+                {% if block.label %}
+                    <h3 class="home-block__label">{{ block.label }}</h3>
+                {% endif %}
 
+                {% switch block.type %}
+                    {% case 'articles' %}
                         {% for layout in block.layouts %}
                             <div class="{{ html_classes('home-articles__row', 'home-articles__row--' ~ layout.appearance) }}">
                                 {% switch layout.appearance %}
@@ -90,8 +99,27 @@
                                 {% endswitch %}
                             </div>
                         {% endfor %}
-                    </div>
-            {% endswitch %}
+                    {% case 'anniversary' %}
+                        <a href="{{ url('100') }}" target="_blank" class="home-anniversary__preview">
+                            {% set image = block.anniversaryImage.first() %}
+                            {% set transform = { height: 500, width: 1440 } %}
+                            {% set srcset = image.getUrl({ height: 650, width: 650 }) ~ ' 650w, ' ~ image.getUrl({ height: 400, width: 1024 }) ~ ' 1024w, ' ~ image.getUrl({ height: 500, width: 1440 }) ~ ' 1440w' %}
+
+                            {{ tag('img', {
+                                height: image.getHeight(transform),
+                                sizes: '100vw',
+                                srcset: srcset,
+                                width: image.getWidth(transform)
+                            }) }}
+
+                            <div class="home-anniversary__preview__inner">
+                                <span class="home-anniversary__preview__label">{{ block.anniversaryLabel }}</span>
+                                <span class="home-anniversary__preview__description">{{ block.anniversaryDescription }}</span>
+                                <span class="home-anniversary__preview__link">Mehr erfahren {{ icon({ name: 'chevron-right' }) }}</span>
+                            </div>
+                        </a>
+                {% endswitch %}
+            </div>
         {% endfor %}
     </div>
 

@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: false
+handle: anniversaryEvents
+name: 'Anniversary: Events'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: # Zürcher Studierendenzeitung
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/anniversary/events.twig
+    uriFormat: 100/veranstaltungen
+type: single

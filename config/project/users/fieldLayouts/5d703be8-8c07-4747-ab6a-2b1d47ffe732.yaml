@@ -64,7 +64,7 @@ tabs:
         width: 100
       -
         elementCondition: null
-        fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # End date
+        fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # End Date
         instructions: null
         label: null
         required: false

@@ -3,6 +3,7 @@
         class: '',
         disabled: false,
         icon: false,
+        iconPosition: 'left',
         id: '',
         label: '',
         onclick: false,
@@ -12,7 +13,7 @@
     } | merge(args) %}
 
     {% set html %}
-        {% if args.icon %}
+        {% if args.icon and args.iconPosition == 'left' %}
             {% from '_macros/icon.twig' import icon %}
 
             {{ icon({
@@ -20,7 +21,17 @@
                 name: args.icon,
             }) }}
         {% endif %}
+
         <span class="button__label">{{ args.label | escape }}</span>
+
+        {% if args.icon and args.iconPosition == 'right' %}
+            {% from '_macros/icon.twig' import icon %}
+
+            {{ icon({
+                class: 'button__icon',
+                name: args.icon,
+            }) }}
+        {% endif %}
     {% endset %}
 
     {{ tag('button', {
@@ -86,4 +97,3 @@
         target: args.target
     }) }}
 {% endmacro %}
-

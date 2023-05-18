@@ -1,4 +1,4 @@
-dateModified: 1684178794
+dateModified: 1684408242
 elementSources:
   craft\elements\User:
     -
@@ -79,7 +79,7 @@ elementSources:
       tableAttributes:
         - email
         - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
-        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End date
+        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End Date
         - dateCreated
       type: custom
       userGroups:
@@ -111,7 +111,7 @@ elementSources:
       tableAttributes:
         - email
         - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
-        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End date
+        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End Date
         - dateCreated
       type: custom
       userGroups:
@@ -129,7 +129,7 @@ elementSources:
           -
             class: craft\fields\conditions\DateFieldConditionRule
             endDate: null
-            fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # End date
+            fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # End Date
             periodType: minutesFromNow
             periodValue: 1.0
             rangeType: after
@@ -145,7 +145,7 @@ elementSources:
       tableAttributes:
         - email
         - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
-        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End date
+        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End Date
         - dateCreated
       type: custom
       userGroups:
@@ -187,50 +187,92 @@ meta:
   __names__:
     0beef319-d887-4ce4-9f37-8ef9d9c7cea5: Subscription # Subscription
     0cf2962b-f593-4e6b-9ac2-9544710d8aad: Appearance # Appearance
+    0d4265aa-68d0-414f-b465-3b1cdc6ad878: Links # Links
     1bf3a5c8-628e-4b3c-b18b-aa384eec608e: Format # Format
+    1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826: Description # Description
     2ef3f3d8-ae1c-480e-a51b-db580170d832: Formats # Formats
+    3a27561f-43cc-469a-a2fa-6920676a2b3a: 'Anniversary Minimal' # Anniversary Minimal
     3cc8b7a7-5c00-4889-b691-ca2edc74df61: Default # Default
+    3d811369-1bfd-4b73-a933-fa5cf4ae0a6a: Anniversary # Anniversary
     03f96b8c-ce9b-420f-af21-636587a4c8c0: Home # Home
     4a5cdf1b-642d-4a37-854f-c3b1168bea2d: Editors # Editors
+    4bacc350-5543-44ef-b96a-8b93bab7ce04: Title # Title
+    4bd0949b-6dab-4189-92e0-79a9317143a8: Date # Date
     4ce497c4-83db-4505-966c-25ac2477e7fb: Ads # Ads
+    4e85c514-8a85-45c7-996a-0824ef8d667b: Description # Description
+    4fa3aa15-c921-4a8a-9ff1-46ed3d565b3d: 'Start Time' # Start Time
     5a09781f-aab3-4633-b3ed-6bd0bda1ad48: Content # Content
     5fa65803-cc01-4718-967f-17c1fac740ab: Files # Files
+    6a4b325d-b443-4b35-85ed-bd5b9d092f11: Anniversary # Anniversary
     6aab4182-8fbc-4f80-b6e3-504f5f487ecc: Image # Image
     6ad72fa7-45c2-46f6-9e8a-fbb1db6e7e3f: Ad # Ad
+    6aee99fe-72b2-4d7d-a791-a8b6b15b3118: Image # Image
+    6c7e7503-494c-4a2c-84c8-fbfb56dcbe67: Image # Image
     6cdd6eb7-76e7-4ae1-949a-513b1ede029c: Number # Number
     7dac239d-784f-4ec9-80fc-46b2c4362060: Articles # Articles
     7dfb08df-424c-4e9d-9c11-954351b37ef6: Content # Content
     7ef5f597-7ee8-473c-9647-ba485d262e5a: Subscriber # Subscriber
     8b097a87-a2ec-4270-8431-a0e733b3fdb3: Articles # Articles
+    8bf7e76a-4365-4da0-a4c8-a545c79488c3: Label # Label
+    8c68bef4-fce4-4168-aa13-3ca1947567fb: Title # Title
     8f1ae8ad-81ae-4975-a0b7-2f89e06f6ec2: Article # Article
+    8fc13160-607f-43ed-9ae7-e5b572317317: Content # Content
+    9c4c8063-ca7a-411d-ab4e-cb9498df24c8: Description # Description
     9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed: Ad # Ad
+    9d3883d3-f157-4a96-a03e-5b86dbac381d: 'Print Link' # Print Link
     9f01ed5b-f89c-478b-a859-71fd331c8d93: Label # Label
     09f3e7d3-dd38-4d06-ac5c-fbff3a017d92: Issues # Issues
+    12e4a861-c5db-4387-a9e0-d57d914f7103: 'Anniversary: Events' # Anniversary: Events
+    13c1314c-8e18-452c-99b9-40ddcf9ba5f2: Year # Year
+    15dca033-1e00-43b6-bcd3-05ca3c07b14f: Image # Image
     18ae8f32-e01d-480d-b9b7-9b166fcdceda: Home # Home
-    20bb750f-abb8-42b0-9ba8-adf65d1ee624: 'End date' # End date
+    20aa69c3-d647-44cb-84be-5da820edbee1: Location # Location
+    20bb750f-abb8-42b0-9ba8-adf65d1ee624: 'End Date' # End Date
     024d03f4-9614-497a-9274-7340a22f343c: Color # Color
     28f5783a-9790-439d-b079-1bc2b0cc58f9: Related # Related
     33d4c786-8ab6-42cf-9aaa-e48f7d18b820: Blocks # Blocks
     36ea09ec-8867-4d74-96ee-d55c21e44104: Other # Other
+    56cae964-ce72-4c6e-b458-56410bf5a0de: Title # Title
+    60fc5899-402f-4eda-a5cf-fe05a10b4f05: 'Anniversary: Book' # Anniversary: Book
+    71fa5017-3913-4b22-a53c-b3b20e26f8da: Event # Event
+    74e21a53-79cd-4aa7-85b3-bff442e02c68: Regular # Regular
     86f8655a-9378-4130-8cf0-c80e876968e0: Common # Common
     92be950a-0880-49a1-bd9a-dcfdb0745a8a: Contribution # Contribution
+    166c4d66-1a40-4e4b-9134-94fd09c8af81: Description # Description
     241d2e87-c08f-4847-90e8-4ad1d718f876: Default # Default
     274b5d00-df3a-4b76-861b-ca591e2af249: User # User
     420d0b54-9f18-41a9-b095-de7adfde688d: Image # Image
     429e38b0-5490-4b1b-be5e-99adcf0d6c47: Sales # Sales
     438d977b-985e-4c1f-9051-8e8e9b279e22: Topics # Topics
+    683c8764-91e2-4a9e-b0cf-d7bed17d1d5d: Embed # Embed
+    683cb842-2907-43f6-a6be-a4a3833c5eb5: Year # Year
     785ebd4b-4b47-46f7-a0a2-cd889b31058e: Default # Default
     944c11ef-571f-4e08-a4bb-db2540e4b404: Plan # Plan
+    950c0af3-396d-40b2-a1ca-bd4f80e037b6: Timeline # Timeline
+    1285a5ca-2942-4a8d-b303-352bb6885151: 'Image Size' # Image Size
     3458cf19-d496-4a9e-808d-47e0b2323224: Layouts # Layouts
+    3581bd1c-2c0a-43ba-bb16-ca6221b1410c: Page # Page
+    3762f5dc-328d-4ca9-bc2e-4326fdba710e: Anniversary # Anniversary
+    8978c1e7-e3a5-4224-a951-1e6ac73f07f4: Image # Image
     9549d5ad-d6e4-45a6-8376-edfc95d27e18: Embeds # Embeds
     9695de25-bf17-41a7-b295-68ad5cccc6c8: Pages # Pages
     14624af3-66ba-4513-af18-0cf411fbaf74: Default # Default
+    16584f6b-678a-4bfa-a9a3-84a7a00b360a: Label # Label
+    29112f01-afc1-469b-93b1-8f4e55a8215f: Link # Link
+    76542e11-45e2-40c9-adfa-23d2ae8406d5: 'End Date' # End Date
     78967f52-4d7b-4aec-9fba-53d6aa2f5a2e: Navigation # Navigation
+    727301f0-9809-4e7d-88e1-651765c5cfbc: 'Anniversary: Events' # Anniversary: Events
     732552e1-9a9c-4c59-b08a-f0b293aaf7d1: Topics # Topics
     2604525a-d068-477f-9621-13db45b69206: Default # Default
+    16177049-d6eb-49f0-b31f-5e25c9fca05e: 'Anniversary: Book' # Anniversary: Book
     37773290-a8f4-4562-bc4f-fb8c41a63584: Label # Label
     48772033-da04-47e7-ad3b-4d3905ac7a65: Images # Images
+    58707577-3441-49f2-bccc-3cb8c462f1e9: Article # Article
+    77682833-175e-4825-998b-7af43363b40d: Link # Link
+    96156723-e405-47de-89de-4123c0f79bd1: Description # Description
     a3b06153-7a2e-425b-a7f7-61e925da17b9: User # User
+    a5f90846-e207-4034-ac8f-ae2a1d0f9186: 'Print Image' # Print Image
+    a10ce228-96c0-4d8d-8423-9ab5086b325f: 'Date Published' # Date Published
     a46d69bc-dad9-44b6-9ca0-9ce75f501b7b: Contribution # Contribution
     a71cf75d-44bb-4489-ad90-93f218828cd1: Description # Description
     ab58e9ac-d8c0-428f-a72a-2132a4976859: Home # Home
@@ -239,20 +281,33 @@ meta:
     afb6c2da-6684-4057-9dd7-efb701f99159: Description # Description
     b0b838c9-5d25-43de-886a-bdf38b92df07: 'Image Position' # Image Position
     b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: Default # Default
+    b4fa2985-51d4-428c-a10e-130fd6687f7b: 'Anniversary Content' # Anniversary Content
+    b8d85e5e-2ffb-48be-a20b-60aef4673e44: Label # Label
+    b890b3f8-865a-43de-947a-5193946a01ce: 'End Time' # End Time
+    b231772f-f289-459a-98aa-4307862a26f1: Publication # Publication
     b2237231-890f-4253-ab7f-251f41d3598c: Group # Group
+    b6909423-4a75-4b31-8af2-4ec0935f6bcb: Title # Title
     bcb6d13b-de66-4331-8d15-bb23ef7a9736: Link # Link
+    bd3e37bc-785f-4f35-a3ba-42a801ec0e80: 'Anniversary: Timeline' # Anniversary: Timeline
+    c0bb28d1-7842-4f9d-9748-b4624f719990: Description # Description
     c02d5119-8f14-4b30-acf1-29e22375aef5: Issue # Issue
+    c529f035-1e02-4af8-a7f0-afe4e24e634c: Byline # Byline
+    caec063b-c904-460c-9cea-06d5d524f59c: Events # Events
     cb91d72b-d6d9-439e-8e7b-f3f871694967: Contributors # Contributors
     cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
     d0ba75f4-0ec9-406b-8e28-5a50980147cc: Articles # Articles
     d5eceb6a-47a0-4c63-aff2-48afcdcf05bc: 'Image Size' # Image Size
     d29e8b36-a8aa-4b2f-9033-2c5e9113427c: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
+    d64265d4-5a86-41a5-a68e-c73f8c90123e: 'Anniversary: Timeline' # Anniversary: Timeline
     d6607152-35ab-435a-9c88-53f1e9ab6f5c: Title # Title
     e60b1147-c0d1-4999-99e3-8bbc556e4fa5: Ads # Ads
+    e87b9581-5a1b-4ff7-90d2-0273452cc17e: 'Location Link' # Location Link
     e173ad9a-9850-43b4-a574-1029011919ef: File # File
     ef819456-45fb-4c34-a4e6-e32ab105c6a3: Caption # Caption
+    f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127: Label # Label
     f4cde807-f639-4b1d-bebe-8aa3cd4de160: Year # Year
     f197e112-2648-4604-852c-cf4171abc6c2: Articles # Articles
+    fda46218-1826-4313-96b5-753b2471e9f3: 'Event Link' # Event Link
     ff39e44a-c59b-40f1-9eae-5080bf251c2d: Cover # Cover
 plugins:
   blitz:
@@ -337,6 +392,10 @@ plugins:
       ssiEnabled: true
       trackElementQueries: true
       trackElements: true
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
   comments:
     edition: standard
     enabled: true

@@ -1,4 +1,4 @@
-changedFieldIndicator: 691610109
+changedFieldIndicator: 473743310
 field: 3458cf19-d496-4a9e-808d-47e0b2323224 # Layouts
 fieldLayouts:
   23ab6e66-b5e4-4bc2-8ca4-96798abadd88:
@@ -112,7 +112,9 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
+      branchLimit: null
       localizeRelations: false
+      maintainHierarchy: false
       maxRelations: null
       minRelations: 1
       selectionCondition:
@@ -128,7 +130,6 @@ fields:
             - craft\elements\conditions\entries\EntryCondition
       selectionLabel: null
       showSiteMenu: true
-      source: null
       sources:
         - 'section:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
       targetSiteId: null
