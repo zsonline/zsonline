@@ -35,18 +35,22 @@
         title: entry.title
     }) }}
 
-    <div class="anniversary-book__image">
-        {{ image({
-            image: entry.anniversaryImage.first(),
-            lightbox: false,
-            loading: 'eager',
-            size: 'small'
-        }) }}
-    </div>
+    {% if entry.anniversaryImage.first() %}
+        <div class="anniversary-book__image">
+            {{ image({
+                image: entry.anniversaryImage.first(),
+                lightbox: false,
+                loading: 'eager',
+                size: 'small'
+            }) }}
+        </div>
+    {% endif %}
 
-    <div class="anniversary-book__description">
-        {{ entry.anniversaryDescription }}
-    </div>
+    {% if entry.anniversaryDescription %}
+        <div class="anniversary-book__description">
+            {{ entry.anniversaryDescription }}
+        </div>
+    {% endif %}
 
     {% if entry.anniversaryLinks|length > 0 %}
         <div class="anniversary-book__links">

@@ -52,41 +52,45 @@
     .first() %}
 
 {% block main %}
-    <div class="anniversary-timeline__intro">
-        {% set image = entry.anniversaryImage.first() %}
-        {% set srcset = [1024, 1440] %}
-        {% set transform = { width: srcset|last } %}
+    {% set image = entry.anniversaryImage.first() %}
+    {% if image %}
+        <div class="anniversary-timeline__intro">
+            {% set srcset = [1024, 1440] %}
+            {% set transform = { width: srcset|last } %}
 
-        {{ tag('img', {
-            height: image.getHeight(transform),
-            sizes: '100vw',
-            srcset: image.getSrcset(srcset),
-            width: image.getWidth(transform)
-        }) }}
+            {{ tag('img', {
+                height: image.getHeight(transform),
+                sizes: '100vw',
+                srcset: image.getSrcset(srcset),
+                width: image.getWidth(transform)
+            }) }}
 
-        <div class="anniversary-timeline__intro__title">
-            <span>Jubiläum</span>
-            <h2>100 Jahre Zoff</h2>
-        </div>
-    </div>
-
-    <div class="anniversary-timeline__intro__description">
-        {{ entry.anniversaryDescription }}
-
-        {% if entry.anniversaryLinks|length > 0 %}
-            <div class="anniversary-timeline__intro__links">
-                {% for link in entry.anniversaryLinks %}
-                    {{ link({
-                        href: link.url,
-                        icon: false,
-                        label: link.label,
-                        style: 'bright',
-                        target: link.blank ? '_blank' : '_self'
-                    }) }}
-                {% endfor %}
+            <div class="anniversary-timeline__intro__title">
+                <span>Jubiläum</span>
+                <h2>100 Jahre Zoff</h2>
             </div>
-        {% endif %}
-    </div>
+        </div>
+    {% endif %}
+
+    {% if entry.anniversaryDescription %}
+        <div class="anniversary-timeline__intro__description">
+            {{ entry.anniversaryDescription }}
+
+            {% if entry.anniversaryLinks|length > 0 %}
+                <div class="anniversary-timeline__intro__links">
+                    {% for link in entry.anniversaryLinks %}
+                        {{ link({
+                            href: link.url,
+                            icon: false,
+                            label: link.label,
+                            style: 'bright',
+                            target: link.blank ? '_blank' : '_self'
+                        }) }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
 
     {% if entry.anniversaryTimeline|length > 0 %}
         <div class="anniversary-timeline__timeline">

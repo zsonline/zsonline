@@ -65,12 +65,14 @@
             }) }}
 
             {% for navigation in args.navigations %}
-                <div class="header__navigation-main__component">
-                    {{ _self.navigation({
-                        navigation: navigation,
-                        responsive: false
-                    }) }}
-                </div>
+                {% if navigation %}
+                    <div class="header__navigation-main__component">
+                        {{ _self.navigation({
+                            navigation: navigation,
+                            responsive: false
+                        }) }}
+                    </div>
+                {% endif %}
             {% endfor %}
 
             <div class="header__socials">

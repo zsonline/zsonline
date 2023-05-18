@@ -134,23 +134,25 @@
 
     {% set transform = { width: srcset|last } %}
 
-    <figure class="{{ html_classes('content-image', args.size) }}">
-        {{ tag('img', {
-            'data-lightbox': args.lightbox ? lightboxImage({ image: args.image }) | escape : false,
-            height: args.image.getHeight(transform),
-            loading: args.loading,
-            sizes: '100vw',
-            srcset: args.image.getSrcset(srcset),
-            width: args.image.getWidth(transform)
-        }) }}
-
-        {% if args.caption %}
-            {{ _self.caption({
-                caption: args.image.caption,
-                contributors: args.image.contributors.all() ?? null
+    {% if args.image %}
+        <figure class="{{ html_classes('content-image', args.size) }}">
+            {{ tag('img', {
+                'data-lightbox': args.lightbox ? lightboxImage({ image: args.image }) | escape : false,
+                height: args.image.getHeight(transform),
+                loading: args.loading,
+                sizes: '100vw',
+                srcset: args.image.getSrcset(srcset),
+                width: args.image.getWidth(transform)
             }) }}
-        {% endif %}
-    </figure>
+
+            {% if args.caption %}
+                {{ _self.caption({
+                    caption: args.image.caption,
+                    contributors: args.image.contributors.all() ?? null
+                }) }}
+            {% endif %}
+        </figure>
+    {% endif %}
 {% endmacro %}
 
 {% macro gallery(args) %}
