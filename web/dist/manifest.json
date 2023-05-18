@@ -264,12 +264,12 @@
     "src": "assets/fonts/recoleta/Recoleta-Thin.woff2"
   },
   "assets/scripts/main.js": {
-    "file": "assets/scripts-1d0265e3.js",
+    "file": "assets/scripts-9c791149.js",
     "isEntry": true,
     "src": "assets/scripts/main.js"
   },
   "assets/styles/main.scss": {
-    "file": "assets/main-dc1fc26a.css",
+    "file": "assets/main-68096d95.css",
     "isEntry": true,
     "src": "assets/styles/main.scss"
   }
