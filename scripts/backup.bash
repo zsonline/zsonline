@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Determine the project directory
-DIR=$(cd "$(dirname "$(dirname "${BASH_SOURCE[0]}")")"; pwd -P)
+DIR="$(dirname "$(dirname -- "$(readlink -f "${BASH_SOURCE}")")")"
 
 # Backup the database
 php "$DIR/craft" db/backup
