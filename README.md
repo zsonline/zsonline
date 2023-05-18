@@ -111,7 +111,13 @@ the production host.
 git pull
 ```
 
-Next, apply any new database migrations and the project config changes.
+Next, install any new PHP dependencies.
+
+```
+ddev composer install
+```
+
+Apply any new database migrations and the project config changes.
 
 ```
 php craft migrate/all
