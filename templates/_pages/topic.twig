@@ -27,7 +27,6 @@
 
 {% block main %}
     {{ hero({
-        description: entry.description,
         taxonomy: 'Thema',
         taxonomyUrl: url('themen'),
         title: entry.title
@@ -45,7 +44,6 @@
 {% endblock %}
 
 {% set meta = {
-    description: entry.description,
     title: entry.title,
     url: entry.url,
     urlPrev: pageInfo.prevUrl,

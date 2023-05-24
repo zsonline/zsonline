@@ -32,7 +32,6 @@
 
 {% block main %}
     {{ hero({
-        description: entry.description,
         fileName: 'ZS-' ~ entry.issueYear ~ '-' ~ entry.issueNumber ~ '.pdf',
         filePreview: preview({
             issue: entry,
@@ -51,7 +50,6 @@
 {% endblock %}
 
 {% set meta = {
-    description: entry.description,
     title: entry.title,
     url: entry.url
 } %}

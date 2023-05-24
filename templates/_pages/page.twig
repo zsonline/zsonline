@@ -52,7 +52,6 @@
 {% block main %}
     {{ header({
         class: 'content-header--page',
-        description: entry.contentDescription,
         image: entry.contentImage.first(),
         imagePosition: entry.contentImagePosition.value,
         imageSize: entry.contentImageSize.value,
@@ -66,7 +65,6 @@
 {% endblock %}
 
 {% set meta = {
-    description: entry.contentDescription,
     image: entry.contentImage.first(),
     title: entry.title,
     url: entry.url
