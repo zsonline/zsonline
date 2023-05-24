@@ -88,7 +88,7 @@ class Lightbox {
     this.caption.innerHTML = caption.innerHTML;
   }
 
-  // Open the lightbox and slide to the selected image.
+  // Open the lightbox and slide to the selected image
   open(index = 0) {
     this.swiper.slideTo(index, 0);
 
@@ -96,11 +96,11 @@ class Lightbox {
     this.body.classList.add("overflow-hidden");
   }
 
-  // Close the lightbox.
+  // Close the lightbox
   close() {
     this.body.classList.remove("overflow-hidden");
     this.lightbox.classList.remove("open");
   }
 }
 
-export { Lightbox };
+new Lightbox();

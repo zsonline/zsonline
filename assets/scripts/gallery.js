@@ -31,7 +31,7 @@ class Gallery {
     this.updateCaption(0);
   }
 
-  // Copy the caption of the current index into the gallery caption node.
+  // Copy the caption of the current index into the gallery caption node
   updateCaption(index) {
     const slide = this.swiper.slides[index];
     const caption = slide.querySelector("figcaption");
@@ -45,4 +45,8 @@ class Gallery {
   }
 }
 
-export { Gallery };
+// Initialise all galleries
+const galleries = document.getElementsByClassName("content-gallery");
+for (const gallery of galleries) {
+  new Gallery(gallery);
+}

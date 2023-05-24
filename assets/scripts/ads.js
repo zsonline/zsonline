@@ -58,7 +58,7 @@ async function insertAdsIntoHome(ads, home) {
   }
 
   // Calculate the ad placement: The first ad is positioned after the first home
-  // block and the second ad halfway down the page.
+  // block and the second ad halfway down the page
   const indices = [0, Math.ceil(homeBlocks.length / 2) - 1];
 
   for (const ad of ads) {
@@ -114,7 +114,7 @@ async function insertAdsIntoArticle(ads, article) {
   let indices = potentialIndices;
   if (potentialIndices.length > 2) {
     // Choose the best ad placement: The first ad is positioned near the top and
-    // the second ad halfway down the page.
+    // the second ad halfway down the page
     indices = [
       potentialIndices[Math.floor(potentialIndices.length / 6)],
       potentialIndices[Math.floor((2 * potentialIndices.length) / 3)],
@@ -155,4 +155,4 @@ async function insertAds() {
   }
 }
 
-export { insertAds };
+insertAds();
