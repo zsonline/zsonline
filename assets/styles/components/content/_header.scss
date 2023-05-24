@@ -2,59 +2,42 @@
   display: flex;
   flex-direction: column;
 
+  &:not(.content-header--has-image) {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
   &.content-header--has-image {
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    &.content-header--bottom,
+    &.content-header--bottom.content-header--large {
+      gap: 40px;
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+
     &.content-header--small {
-      gap: 25px;
-      margin-top: 10px;
-      margin-bottom: 35px;
-
-      &.content-header--bottom {
-        gap: 35px;
-        margin-top: 20px;
-        margin-bottom: 35px;
-      }
-
       .content-image {
         @include layout("small");
       }
     }
 
     &.content-header--medium {
-      gap: 25px;
-      margin-top: 10px;
-      margin-bottom: 35px;
-
-      &.content-header--bottom {
-        gap: 35px;
-        margin-top: 20px;
-        margin-bottom: 35px;
-      }
-
       .content-image {
         @include layout("medium");
       }
     }
 
     &.content-header--large {
-      gap: 25px;
       margin-top: 0;
-      margin-bottom: 35px;
-
-      &.content-header--bottom {
-        gap: 35px;
-        margin-top: 20px;
-        margin-bottom: 35px;
-      }
 
       .content-image {
         @include layout("large", false);
       }
     }
-  }
-
-  &:not(.content-header--has-image) {
-    margin-top: 20px;
-    margin-bottom: 35px;
   }
 
   a {
@@ -72,16 +55,17 @@
     h2 {
       margin: 0;
       font-family: $font-title;
-      font-size: 1.75em;
-      font-weight: 600;
+      font-size: 1.6rem;
+      font-weight: 500;
     }
 
     .content-header__description {
       margin: 0;
       font-family: $font-sans-serif;
+      line-height: 1.6;
 
       .content-header__format {
-        font-weight: 700;
+        font-weight: 600;
       }
     }
 
@@ -111,55 +95,29 @@
 
 @media (min-width: $breakpoint-tablet) {
   .content-header {
-    &.content-header--has-image {
-      &.content-header--small {
-        gap: 40px;
-        margin-top: 30px;
-        margin-bottom: 60px;
-
-        &.content-header--bottom {
-          gap: 60px;
-          margin-top: 50px;
-          margin-bottom: 60px;
-        }
-      }
-
-      &.content-header--medium {
-        gap: 50px;
-        margin-top: 20px;
-        margin-bottom: 60px;
-
-        &.content-header--bottom {
-          gap: 60px;
-          margin-top: 50px;
-          margin-bottom: 60px;
-        }
-      }
-
-      &.content-header--large {
-        gap: 50px;
-        margin-top: 0;
-        margin-bottom: 60px;
-
-        &.content-header--bottom {
-          gap: 60px;
-          margin-top: 50px;
-          margin-bottom: 70px;
-        }
-      }
+    &:not(.content-header--has-image) {
+      margin-top: 60px;
+      margin-bottom: 70px;
     }
 
-    &:not(.content-header--has-image) {
-      margin-top: 50px;
+    &.content-header--has-image {
+      gap: 50px;
+      margin-top: 20px;
       margin-bottom: 60px;
+
+      &.content-header--bottom,
+      &.content-header--bottom.content-header--large {
+        gap: 60px;
+        margin-top: 60px;
+        margin-bottom: 70px;
+      }
     }
 
     .content-header__text {
       gap: 1.25rem;
 
       h2 {
-        font-size: 2em;
-        line-height: 1.2;
+        font-size: 2rem;
       }
     }
   }
@@ -167,52 +125,29 @@
 
 @media (min-width: $breakpoint-desktop) {
   .content-header {
-    &.content-header--has-image {
-      &.content-header--small {
-        gap: 40px;
-        margin-top: 40px;
-        margin-bottom: 60px;
-
-        &.content-header--bottom {
-          gap: 70px;
-          margin-top: 60px;
-          margin-bottom: 70px;
-        }
-      }
-
-      &.content-header--medium {
-        gap: 60px;
-        margin-top: 20px;
-        margin-bottom: 70px;
-
-        &.content-header--bottom {
-          gap: 70px;
-          margin-top: 70px;
-          margin-bottom: 70px;
-        }
-      }
-
-      &.content-header--large {
-        gap: 60px;
-        margin-top: 0;
-        margin-bottom: 70px;
-
-        &.content-header--bottom {
-          gap: 70px;
-          margin-top: 70px;
-          margin-bottom: 70px;
-        }
-      }
+    &:not(.content-header--has-image) {
+      margin-top: 70px;
+      margin-bottom: 80px;
     }
 
-    &:not(.content-header--has-image) {
-      margin-top: 60px;
+    &.content-header--has-image {
+      gap: 60px;
+      margin-top: 20px;
       margin-bottom: 70px;
+
+      &.content-header--bottom,
+      &.content-header--bottom.content-header--large {
+        gap: 70px;
+        margin-top: 70px;
+        margin-bottom: 90px;
+      }
     }
 
     .content-header__text {
+      gap: 1.5rem;
+
       h2 {
-        font-size: 2.5em;
+        font-size: 2.1rem;
       }
     }
   }
