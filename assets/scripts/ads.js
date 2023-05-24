@@ -138,18 +138,23 @@ async function insertAdsIntoArticle(ads, article) {
 }
 
 async function insertAds() {
+  const home = document.querySelector(".home");
+  const article = document.querySelector(".content.progress-target");
+
+  // Check that we are on the article or home page
+  if (!home && !article) {
+    return;
+  }
+
+  // Load ads
   const ads = await loadAds();
 
   // Insert ads into the home page
-  const home = document.querySelector(".home");
-  // Check if we are on the home page
   if (home) {
     await insertAdsIntoHome(ads, home);
   }
 
   // Insert ads into the article pages
-  const article = document.querySelector(".content.progress-target");
-  // Check if we are on an article page
   if (article) {
     await insertAdsIntoArticle(ads, article.children);
   }
