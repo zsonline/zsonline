@@ -73,11 +73,11 @@
     {% if args.contributors|length > 0 or args.datePublished %}
         <div class="meta">
             {% if args.contributors|length > 0 %}
-                <div>Von {{ _self.contributors({ contributors: args.contributors, showLinks: args.showLinks }) }}</div>
+                <div>{{ _self.contributors({ conjunction: 'und', contributors: args.contributors, showLinks: args.showLinks }) }}</div>
             {% endif %}
 
             {% if args.datePublished %}
-                <div>Publiziert am {{ args.datePublished|date('j. F Y') }}</div>
+                <div>{{ args.datePublished|date('j. F Y') }}</div>
             {% endif %}
         </div>
     {% endif %}
@@ -85,6 +85,7 @@
 
 {% macro contributors(args) %}
     {%- set args = {
+        conjunction: '',
         contributors: [],
         showLinks: true
     } | merge(args) -%}
@@ -106,8 +107,10 @@
             {{ ' (' ~ contributor.contribution ~ ')' }}
         {%- endif -%}
 
-        {%- if not loop.last -%}
+        {%- if loop.revindex > 2 or (loop.revindex == 2 and not args.conjunction) -%}
             {{ ', ' }}
+        {%- elseif loop.revindex == 2 -%}
+            {{ ' ' ~ args.conjunction ~ ' ' }}
         {%- endif -%}
     {%- endfor -%}
 {% endmacro %}
