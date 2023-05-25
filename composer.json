@@ -4,7 +4,7 @@
     "craftcms/cms": "4.4.13",
     "nystudio107/craft-plugin-vite": "^4.0",
     "nystudio107/craft-vite": "4.0.5",
-    "putyourlightson/craft-blitz": "4.4.4",
+    "putyourlightson/craft-blitz": "4.4.5",
     "putyourlightson/craft-sprig": "2.6.2",
     "spicyweb/craft-embedded-assets": "3.1.5",
     "twig/html-extra": "^3.4",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6439ae31b261440378dcb02c6a60e60",
+    "content-hash": "04abd33591451eabaa504ef524141617",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3546,11 +3546,11 @@
         },
         {
             "name": "putyourlightson/craft-blitz",
-            "version": "4.4.4",
+            "version": "4.4.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/fe3f97ae67fa982b8b65f486ee6c4d1f79b1d81d",
-                "reference": "fe3f97ae67fa982b8b65f486ee6c4d1f79b1d81d",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/5d0f47d29a6e36c479d1589535e0c5ad53174217",
+                "reference": "5d0f47d29a6e36c479d1589535e0c5ad53174217",
                 "shasum": ""
             },
             "require": {
@@ -3593,7 +3593,7 @@
                 "source": "https://github.com/putyourlightson/craft-blitz",
                 "issues": "https://github.com/putyourlightson/craft-blitz/issues"
             },
-            "time": "2023-03-28T02:46:49+00:00"
+            "time": "2023-05-25T08:57:35+00:00"
         },
         {
             "name": "putyourlightson/craft-blitz-hints",
