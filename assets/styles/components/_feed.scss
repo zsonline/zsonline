@@ -10,12 +10,10 @@
 
     &__title {
       position: sticky;
-      top: 75px;
       z-index: 9;
       padding: 0.25rem 0;
       margin: 0;
       color: var(--color-accent);
-      background-color: var(--color-bg);
       border-top: solid 2px var(--color-accent);
 
       a {
@@ -51,8 +49,8 @@
         gap: 2rem 1rem;
 
         img {
-          height: auto;
           max-width: min(175px, 100%) !important;
+          height: auto;
         }
       }
     }
@@ -75,8 +73,8 @@
       align-items: flex-start;
 
       &__title {
-        width: 175px;
         top: 110px;
+        width: 175px;
       }
 
       &__entries {
@@ -107,8 +105,8 @@
       gap: 3rem;
 
       &__title {
-        width: 250px;
         top: 125px;
+        width: 250px;
       }
     }
   }
