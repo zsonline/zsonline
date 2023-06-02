@@ -24,7 +24,7 @@ Header set Content-Type application/atom+xml "expr=%{REQUEST_URI} =~ m#/feed\.at
 Header set Content-Type text/xml "expr=%{REQUEST_URI} =~ m#/sitemap\.xml$#"
 
 # Set PHP version to PHP 8.0
-AddHandler application/x-httpd-php80 .php
+AddHandler application/x-httpd-php82 .php
 
 # Send requests to Craft
 RewriteCond %{REQUEST_FILENAME} !-f
