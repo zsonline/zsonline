@@ -64,13 +64,13 @@
   // Page
   --color-fg: hsl(0deg 0% 99%);
   --color-fg-alt: hsl(0deg 0% 70%);
-  --color-bg: hsl(0deg 0% 15%);  // Page
-  --color-bg-alt: hsl(0deg 0% 20%);  // Body
+  --color-bg: hsl(0deg 0% 5%);  // Page
+  --color-bg-alt: hsl(0deg 0% 7%);  // Body
   --color-fg-subdued: hsl(0deg 0% 70%);
   --color-fg-subdued-alt: hsl(0deg 0% 55%);
-  --color-bg-subdued: hsl(0deg 0% 20%);  // Boxes
+  --color-bg-subdued: hsl(0deg 0% 10%);  // Boxes
   --color-border-dark: hsl(0deg 0% 85%);
-  --color-border-bright: hsl(0deg 0% 25%);
+  --color-border-bright: hsl(0deg 0% 15%);
 
   // Accent
   --color-accent: hsl(0deg 90% 65%);
@@ -80,13 +80,13 @@
   --color-button-bright-fg: var(--color-fg);
   --color-button-bright-fg-alt: hsl(0deg 0% 80%);
   --color-button-bright-bg: var(--color-bg);
-  --color-button-bright-bg-alt: hsl(0deg 0% 25%);
+  --color-button-bright-bg-alt: hsl(0deg 0% 10%);
 
   // Button dark
   --color-button-dark-fg: var(--color-fg);
   --color-button-dark-fg-alt: hsl(0deg 0% 80%);
-  --color-button-dark-bg: hsl(0deg 0% 25%);
-  --color-button-dark-bg-alt: hsl(0deg 0% 35%);
+  --color-button-dark-bg: hsl(0deg 0% 10%);
+  --color-button-dark-bg-alt: hsl(0deg 0% 15%);
 
   // Button accent
   --color-button-accent-fg: var(--color-fg);
@@ -102,7 +102,7 @@
   --color-input-fg: var(--color-fg);
   --color-input-bg: var(--color-bg);
   --color-input-fg-disabled: hsl(0deg 0% 80%);
-  --color-input-bg-disabled: hsl(0deg 0% 25%);
+  --color-input-bg-disabled: hsl(0deg 0% 15%);
   --color-input-border: var(--color-border-bright);
   --color-input-border-alt: var(--color-border-dark);
   --color-input-hint: var(--color-fg-subdued);
