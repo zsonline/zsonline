@@ -12,5 +12,5 @@ else
 fi
 
 # Backup all assets
-rsync -a "$DIR/storage/assets" "$DIR/storage/backups"
-rsync -a "$DIR/web/assets" "$DIR/storage/backups"
+rsync -av "$DIR/storage/assets" "$DIR/storage/backups"
+rsync -av "$DIR/web/assets" "$DIR/storage/backups"
