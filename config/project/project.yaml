@@ -1,4 +1,4 @@
-dateModified: 1684957106
+dateModified: 1689887591
 elementSources:
   craft\elements\User:
     -
@@ -314,7 +314,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_BLITZ_LICENSE
-    schemaVersion: 4.4.0
+    schemaVersion: 4.5.0
     settings:
       apiKey: ''
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'

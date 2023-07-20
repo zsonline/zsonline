@@ -1,10 +1,10 @@
 {
   "require": {
     "craftcms/ckeditor": "3.4.0",
-    "craftcms/cms": "4.4.15",
+    "craftcms/cms": "4.4.16.1",
     "nystudio107/craft-plugin-vite": "^4.0",
     "nystudio107/craft-vite": "4.0.6",
-    "putyourlightson/craft-blitz": "4.4.6",
+    "putyourlightson/craft-blitz": "4.5.0",
     "putyourlightson/craft-sprig": "2.6.2",
     "spicyweb/craft-embedded-assets": "3.1.5",
     "twig/html-extra": "^3.4",
