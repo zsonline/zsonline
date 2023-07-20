@@ -58,7 +58,7 @@ fieldLayouts:
             fieldUid: b890b3f8-865a-43de-947a-5193946a01ce # End Time
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: d6f9c6a1-822e-4aee-8257-4dce06aea569
