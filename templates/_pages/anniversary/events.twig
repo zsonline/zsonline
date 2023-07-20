@@ -44,7 +44,11 @@
                             {{ icon({
                                 name: 'clock'
                             }) }}
-                            {{ event.timeStart|date('H.i') }} – {{ event.timeEnd|date('G.i') ~ ' Uhr' }}
+                            {% if event.timeEnd %}
+                                {{ event.timeStart|date('H.i') }} – {{ event.timeEnd|date('G.i') ~ ' Uhr' }}
+                            {% else %}
+                                {{ event.timeStart|date('H.i') ~ ' Uhr' }}
+                            {% endif %}
                         </div>
 
                         <div class="anniversary-event__location">
