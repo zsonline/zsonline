@@ -73,8 +73,10 @@
     {% endif %}
 
     {% if entry.anniversaryDescription %}
-        <div class="anniversary-timeline__intro__description">
-            {{ entry.anniversaryDescription }}
+        <div class="anniversary-timeline__intro__box">
+            <div class="anniversary-timeline__intro__description">
+                {{ entry.anniversaryDescription }}
+            </div>
 
             {% if entry.anniversaryLinks|length > 0 %}
                 <div class="anniversary-timeline__intro__links">

@@ -31,16 +31,22 @@
             }
         }
 
-        &__description {
+        &__box {
             position: relative; // Move in front of image
             width: min(500px, 95%);
             padding: 1.25rem 1.5rem 1.5rem $layout-padding;
             margin-top: -50px;
             background-color: hsl(0deg 0% 15%);
             border-radius: 0 7px 7px 0;
+        }
 
+        &__description {
             p:first-of-type {
                 margin-top: 0;
+            }
+
+            a {
+                text-decoration: underline;
             }
         }
 
@@ -58,6 +64,10 @@
 
     &__timeline {
         position: relative;
+
+        a {
+            text-decoration: underline;
+        }
     }
 
     &__line {
@@ -428,6 +438,12 @@
         margin-bottom: 30px;
     }
 
+    &__description {
+        a {
+            text-decoration: underline;
+        }
+    }
+
     &__links {
         display: flex;
         gap: 1rem;
@@ -447,7 +463,7 @@
                 }
             }
 
-            &__description {
+            &__box {
                 width: 650px;
                 padding: 1.5rem 1.75rem 1.75rem $layout-padding-tablet;
             }
@@ -565,7 +581,7 @@
                 }
             }
 
-            &__description {
+            &__box {
                 width: 50%;
                 padding: 1.75rem 2rem 2rem $layout-padding-desktop;
             }
