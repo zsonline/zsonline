@@ -4,9 +4,6 @@
 {% from '_macros/content.twig' import image %}
 {% from '_macros/icon.twig' import icon %}
 
-{% set headerStyle = 'gradient' %}
-{% set layoutSize = 'large' %}
-
 {% set entry = craft.entries()
     .section('anniversaryTimeline')
     .with([
@@ -51,10 +48,15 @@
     .collect()
     .first() %}
 
+{% set image = entry.anniversaryImage.first() %}
+{% set headerStyle = image ? 'gradient' : 'solid' %}
+{% set layoutSize = 'large' %}
+
 {% block main %}
-    {% set image = entry.anniversaryImage.first() %}
-    {% if image %}
-        <div class="anniversary-timeline__intro">
+    <div class="{{ html_classes('anniversary-timeline__header', {
+        'anniversary-timeline__header--has-image': image
+    }) }}">
+        {% if image %}
             {% set srcset = [1024, 1440] %}
             {% set transform = { width: srcset|last } %}
 
@@ -64,16 +66,21 @@
                 srcset: image.getSrcset(srcset),
                 width: image.getWidth(transform)
             }) }}
+        {% endif %}
 
-            <div class="anniversary-timeline__intro__title">
-                <span>Jubiläum</span>
-                <h2>100 Jahre Zoff</h2>
-            </div>
+        <div class="anniversary-timeline__header__title">
+            <span>Jubiläum</span>
+            <h2>
+                100 Jahre ZS,<br>
+                100 Jahre Zeitgeschichte
+            </h2>
         </div>
-    {% endif %}
+    </div>
 
     {% if entry.anniversaryDescription %}
-        <div class="anniversary-timeline__intro__box">
+        <div class="{{ html_classes('anniversary-timeline__intro', {
+            'anniversary-timeline__intro--has-image': image
+        }) }}">
             <div class="anniversary-timeline__intro__description">
                 {{ entry.anniversaryDescription }}
             </div>
