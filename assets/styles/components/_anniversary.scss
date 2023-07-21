@@ -22,7 +22,6 @@
                 margin: 0;
                 font-size: 35px;
                 font-weight: 900;
-                line-height: 1.3;
                 color: var(--color-accent);
                 letter-spacing: 0.05em;
             }
@@ -109,7 +108,7 @@
     &__nodes {
         display: flex;
         flex-direction: column;
-        gap: 2.5rem;
+        gap: 3rem;
 
         > *:first-child {
             padding-top: 3rem;
@@ -152,8 +151,18 @@
         }
 
         &__title {
-            margin: 0.25rem 0 0;
+            margin: 0.1rem 0 0.5em;
             font-size: 1.5rem;
+        }
+
+        &__description {
+            p:first-child {
+                margin-top: 0;
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
         }
 
         > .content-image {
@@ -163,7 +172,6 @@
                 margin-top: 0.25em;
             }
         }
-
 
         &__print {
             margin-top: 1.5rem;
@@ -295,11 +303,12 @@
 
         .anniversary-timeline__embed__title {
             margin: 0 0 0.6em;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
 
         &__read-more.button {
             margin-top: 1.25em;
+            text-decoration: underline;
         }
     }
 
@@ -497,7 +506,7 @@
             gap: 3.5rem;
 
             > *:first-child {
-                padding-top: 4rem;
+                padding-top: 3.5rem;
             }
         }
 
@@ -517,10 +526,6 @@
             > .content-image > .content-caption,
             &__container {
                 padding: 0 $layout-padding 0 40px !important;
-            }
-
-            &__title {
-                font-size: 1.75rem;
             }
 
             &__print {
@@ -548,10 +553,6 @@
         &__embed-teaser {
             &__text {
                 padding: 30px;
-            }
-
-            .anniversary-timeline__embed__title {
-                font-size: 1.6rem;
             }
         }
 
@@ -601,6 +602,14 @@
         &__embed-overlay {
             &__close {
                 padding: $layout-padding 0;
+            }
+        }
+
+        &__nodes {
+            gap: 4rem;
+
+            > *:first-child {
+                padding-top: 4rem;
             }
         }
     }
