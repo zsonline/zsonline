@@ -250,6 +250,7 @@
         &__title {
             margin: 0 0 0.5em;
             font-size: 1.5rem;
+            line-height: 1.35;
         }
 
         &__content,
@@ -298,12 +299,18 @@
         }
 
         &__text {
-            padding: 20px;
+            padding: 17px;
         }
 
         .anniversary-timeline__embed__title {
             margin: 0 0 0.6em;
-            font-size: 1.4rem;
+            font-size: 1.45rem;
+        }
+
+        .anniversary-timeline__embed__description {
+            font-size: 0.95rem;
+            line-height: 1.55;
+
         }
 
         &__read-more.button {
@@ -552,7 +559,7 @@
 
         &__embed-teaser {
             &__text {
-                padding: 30px;
+                padding: 25px;
             }
         }
 
