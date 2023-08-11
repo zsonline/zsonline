@@ -10,7 +10,8 @@
 
             img {
                 width: 100%;
-                height: min(1000px, 90vh);
+                height: min(1000px, 90vh);  // Fallback
+                height: min(1000px, 90svh);
                 object-fit: cover;
             }
         }
@@ -30,6 +31,7 @@
                 display: block;
                 margin-bottom: 0.25em;
                 font-weight: 600;
+                text-shadow: 0 0 5px var(--color-fg-alt);
                 letter-spacing: 0.05em;
             }
         }
