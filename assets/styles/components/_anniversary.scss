@@ -400,6 +400,25 @@
             margin: 2rem auto;
         }
     }
+
+    &__credits {
+        @include layout("small");
+
+        margin-top: 4rem;
+        font-size: 0.8rem;
+        color: var(--color-fg-subdued);
+        border-spacing: 0;
+        border: none;
+
+        td {
+            vertical-align: top;
+
+            &:first-child {
+                width: 0;
+                padding-right: 0.75rem;
+            }
+        }
+    }
 }
 
 .anniversary-events {
@@ -574,6 +593,10 @@
                 margin: 3rem auto;
             }
         }
+
+        &__credits {
+            margin-top: 5rem;
+        }
     }
 
     .anniversary-events {
@@ -620,6 +643,10 @@
             > *:first-child {
                 padding-top: 4rem;
             }
+        }
+
+        &__credits {
+            margin-top: 7rem;
         }
     }
 
