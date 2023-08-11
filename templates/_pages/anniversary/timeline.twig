@@ -1,7 +1,7 @@
 {% extends '_layouts/anniversary.twig' %}
 
 {% from '_macros/button.twig' import button, link %}
-{% from '_macros/content.twig' import image %}
+{% from '_macros/content.twig' import caption, image %}
 {% from '_macros/icon.twig' import icon %}
 
 {% set entry = craft.entries()
@@ -19,6 +19,8 @@
                 }
             ]
         }],
+        'anniversaryImage.contributors.other',
+        'anniversaryImage.contributors.user:user',
         'anniversaryTimeline',
         ['anniversaryTimeline.nodeRegular:nodeImage', {
             withTransforms: [
@@ -98,6 +100,11 @@
                     {% endfor %}
                 </div>
             {% endif %}
+
+            {{ caption({
+                caption: image.caption,
+                contributors: image.contributors.all()
+            }) }}
         </div>
     {% endif %}
 
