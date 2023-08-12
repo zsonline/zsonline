@@ -36,6 +36,7 @@
         sourceElement: articles,
         field: 'contributors.user'
     })
+    .orderBy('fullName')
     .collect() %}
 
 {# Transform the fetched data into the feed format #}

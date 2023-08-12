@@ -32,6 +32,7 @@
         sourceElement: articles,
         field: 'articleFormat'
     })
+    .orderBy('title')
     .collect() %}
 
 {# Transform the fetched data into the feed format #}
