@@ -3,6 +3,5 @@ Sitemap: https://www.zsonline.ch/sitemap.xml
 User-agent: *
 Disallow: /actions/
 Disallow: /admin/
-Disallow: /cache/
 Disallow: /cpresources/
 Disallow: /index.php/actions/

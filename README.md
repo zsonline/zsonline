@@ -117,15 +117,9 @@ Next, install any new PHP dependencies.
 composer install
 ```
 
-Further, apply any new database migrations and project config changes.
+Finally, apply any new database migrations and project config changes.
 
 ```
 php craft migrate/all
 php craft project-config/apply
-```
-
-Finally, refresh the cache.
-
-```
-php craft blitz/cache/refresh
 ```
