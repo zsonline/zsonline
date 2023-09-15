@@ -6,7 +6,7 @@ window.ZS = {
         this.body = document.querySelector("body");
         this.menu = document.querySelector("#header__navigation-main");
         this.overlay = document.querySelector(
-          "#header__navigation-main__overlay"
+          "#header__navigation-main__overlay",
         );
 
         this.menu.style.right = `-${this.menu.clientWidth}px`;
@@ -51,7 +51,7 @@ window.ZS = {
 
       section.classList.toggle("navigation__section--open");
       const isOpen = subsection.classList.toggle(
-        "navigation__subsection--open"
+        "navigation__subsection--open",
       );
 
       // Required for opening animation

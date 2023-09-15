@@ -4,7 +4,7 @@ window.ZS = {
     openEmbed: (element) => {
       const node = element?.closest(".anniversary-timeline__node");
       const overlay = node?.querySelector(
-        ".anniversary-timeline__embed-overlay"
+        ".anniversary-timeline__embed-overlay",
       );
 
       if (!overlay) {
@@ -12,7 +12,7 @@ window.ZS = {
       }
 
       const article = overlay.querySelector(
-        ".anniversary-timeline__embed-overlay__article"
+        ".anniversary-timeline__embed-overlay__article",
       );
       if (article) {
         article.scrollTop = 0;

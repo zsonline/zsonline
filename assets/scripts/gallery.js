@@ -1,4 +1,5 @@
-import Swiper, { Mousewheel, Navigation, Pagination } from "swiper";
+import Swiper from "swiper";
+import { Mousewheel, Navigation, Pagination } from "swiper/modules";
 
 class Gallery {
   constructor(element) {

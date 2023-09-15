@@ -6,7 +6,7 @@ window.ZS = {
       const replyForm = reply?.querySelector(".comments__reply__form");
 
       const isVisible = replyForm.classList.toggle(
-        "comments__reply__form--visible"
+        "comments__reply__form--visible",
       );
 
       if (isVisible) {

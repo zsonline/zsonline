@@ -73,7 +73,7 @@ async function insertAdsIntoHome(ads, home) {
       "home-block--colored-next",
       "home-block--colored-prev",
       "ad-block",
-      "ad-block--home"
+      "ad-block--home",
     );
     block.appendChild(ad);
 
@@ -81,7 +81,7 @@ async function insertAdsIntoHome(ads, home) {
     const index = indices.shift();
     homeBlocks[index].parentNode.insertBefore(
       block,
-      homeBlocks[index].nextSibling
+      homeBlocks[index].nextSibling,
     );
 
     // Remove margins of the previous and next home blocks

@@ -1,4 +1,5 @@
-import Swiper, { Keyboard, Mousewheel, Navigation, Pagination } from "swiper";
+import Swiper from "swiper";
+import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 
 class Lightbox {
   constructor() {
@@ -53,7 +54,7 @@ class Lightbox {
       slide.classList.add("swiper-slide");
       slide.innerHTML = new DOMParser().parseFromString(
         image.dataset.lightbox,
-        "text/html"
+        "text/html",
       ).documentElement.textContent;
 
       wrapper.appendChild(slide);

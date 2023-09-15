@@ -8,7 +8,7 @@ for (const image of images) {
     image.classList.remove("image--loading");
   } else {
     image.addEventListener("load", () =>
-      image.classList.remove("image--loading")
+      image.classList.remove("image--loading"),
     );
   }
 }

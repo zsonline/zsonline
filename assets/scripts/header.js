@@ -28,7 +28,7 @@ window.addEventListener("scroll", () => {
       const contentScrollPosition = scrollPosition - progressTarget.offsetTop;
       const contentProgress = Math.min(
         Math.round((100 * contentScrollPosition) / progressTarget.offsetHeight),
-        100
+        100,
       );
 
       progress.style.width = `${contentProgress}%`;
