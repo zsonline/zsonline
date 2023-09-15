@@ -1,4 +1,4 @@
-dateModified: 1693764705
+dateModified: 1694813379
 elementSources:
   craft\elements\User:
     -
@@ -278,7 +278,6 @@ meta:
     ab58e9ac-d8c0-428f-a72a-2132a4976859: Home # Home
     adf21248-5e45-44f0-a3d9-b2ece6004c5e: Contributors # Contributors
     ae3e2976-5a2f-441c-a712-71c849fe2a40: Articles # Articles
-    afb6c2da-6684-4057-9dd7-efb701f99159: Description # Description
     b0b838c9-5d25-43de-886a-bdf38b92df07: 'Image Position' # Image Position
     b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: Default # Default
     b4fa2985-51d4-428c-a10e-130fd6687f7b: 'Anniversary Content' # Anniversary Content
