@@ -29,12 +29,6 @@
             <nav class="header__navigation-top">
                 {% if args.showTopNavigation %}
                     {{ link({
-                        href: url('artikel'),
-                        label: 'Neuste Artikel',
-                        responsive: true,
-                        style: 'bright'
-                    }) }}
-                    {{ link({
                         href: url('suche'),
                         icon: 'search',
                         label: 'Suche',
