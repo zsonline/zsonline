@@ -62,19 +62,19 @@ body {
 
   &--header-small,
   &--header-large {
-    padding-top: 77px;
+    padding-top: 71px;
   }
 
   @media (min-width: $breakpoint-tablet) {
     &--header-small,
     &--header-large {
-      padding-top: 86px;
+      padding-top: 92px;
     }
   }
 
   @media (min-width: $breakpoint-desktop) {
     &--header-small {
-      padding-top: 93px;
+      padding-top: 92px;
     }
 
     &--header-large {

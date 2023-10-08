@@ -11,9 +11,10 @@
     @include layout("large", true);
 
     display: flex;
+    gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    padding: 10px $layout-padding;
+    padding: 12px $layout-padding;
   }
 
   &__rule {
@@ -81,7 +82,7 @@
     }
 
     svg {
-      height: 42px;
+      width: 250px;
       font-size: 0;
       fill: var(--color-fg);
       transition: all 200ms ease-in-out;
@@ -175,14 +176,14 @@
 @media (min-width: $breakpoint-tablet) {
   .header {
     &__inner {
-      padding: 10px $layout-padding-tablet;
+      padding: 12px $layout-padding-tablet;
     }
 
     &__logo {
-      padding-top: 5px;  // Compensate for vertical asymmetry
+      padding-top: 6px;  // Compensate for vertical asymmetry
 
       svg {
-        height: 60px;
+        width: 360px;
       }
     }
 
@@ -207,7 +208,15 @@
     width: min(100% - calc(2 * 2 * $layout-padding-desktop), $layout-width-large);
 
     &__inner {
-      padding: 10px $layout-padding-desktop;
+      padding: 12px $layout-padding-desktop;
+    }
+
+    &__logo {
+      padding-top: 6px;  // Compensate for vertical asymmetry
+
+      svg {
+        width: 360px;
+      }
     }
 
     &__rule {
@@ -223,20 +232,20 @@
         padding-top: 10px;  // Compensate for vertical asymmetry
 
         svg {
-          height: 100px;
+          width: 600px;
         }
       }
 
       &.header--scroll-within {
         .header__inner {
-          padding: 10px $layout-padding-desktop;
+          padding: 12px $layout-padding-desktop;
         }
 
         .header__logo {
-          padding-top: 5px;  // Compensate for vertical asymmetry
+          padding-top: 6px;  // Compensate for vertical asymmetry
 
           svg {
-            height: 60px;
+            width: 360px;
           }
         }
       }
