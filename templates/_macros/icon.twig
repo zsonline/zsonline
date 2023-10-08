@@ -5,6 +5,6 @@
     } | merge(args) %}
 
     {% if args.name %}
-        {{ svg(include('_svgs/icons/' ~ args.name ~ '.svg')) | attr({ class: args.class })}}
+        {{ svg('@templates/_svgs/icons/' ~ args.name ~ '.svg') | attr({ class: args.class })}}
     {% endif %}
 {% endmacro %}

@@ -74,7 +74,6 @@
   }
 
   &__logo {
-    padding-top: 3px;  // Compensate for vertical asymmetry
     font-size: 0;
 
     h1 {
@@ -82,10 +81,29 @@
     }
 
     svg {
-      width: 250px;
+      height: 45px;
       font-size: 0;
       fill: var(--color-fg);
       transition: all 200ms ease-in-out;
+
+      &.logo {
+        padding-top: 3px;  // Compensate for vertical asymmetry
+      }
+
+      &.icon {
+        display: none;
+        padding: 3px 0;
+      }
+
+      @media (width < 375px) {
+        &.logo {
+          display: none;
+        }
+
+        &.icon {
+          display: block;
+        }
+      }
     }
   }
 
@@ -180,10 +198,9 @@
     }
 
     &__logo {
-      padding-top: 6px;  // Compensate for vertical asymmetry
-
       svg {
-        width: 360px;
+        height: 60px;
+        padding-top: 6px;  // Compensate for vertical asymmetry
       }
     }
 
@@ -212,10 +229,9 @@
     }
 
     &__logo {
-      padding-top: 6px;  // Compensate for vertical asymmetry
-
       svg {
-        width: 360px;
+        height: 60px;
+        padding-top: 6px;  // Compensate for vertical asymmetry
       }
     }
 
@@ -229,10 +245,9 @@
       }
 
       .header__logo {
-        padding-top: 10px;  // Compensate for vertical asymmetry
-
         svg {
-          width: 600px;
+          height: 100px;
+          padding-top: 10px;  // Compensate for vertical asymmetry
         }
       }
 
@@ -242,10 +257,9 @@
         }
 
         .header__logo {
-          padding-top: 6px;  // Compensate for vertical asymmetry
-
           svg {
-            width: 360px;
+            height: 60px;
+            padding-top: 6px;  // Compensate for vertical asymmetry
           }
         }
       }

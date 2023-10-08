@@ -23,7 +23,8 @@
         <div class="header__inner">
             <a class="header__logo" href="{{ args.siteUrl }}">
                 <h1>{{ args.siteName }}</h1>
-                {{ svg(include('_svgs/logo.svg')) }}
+                {{ svg('@templates/_svgs/logo.svg') | attr({ 'class': 'logo' }) }}
+                {{ svg('@templates/_svgs/icon.svg') | attr({ 'class': 'icon' }) }}
             </a>
 
             <nav class="header__navigation-top">
@@ -101,7 +102,7 @@
 
             <div class="footer__bottom">
                 <div class="footer__about">
-                    {{ svg(include('_svgs/logo.svg')) | attr({ 'class': 'footer__logo' }) }}
+                    {{ svg('@templates/_svgs/logo.svg') | attr({ 'class': 'footer__logo' }) }}
 
                     <b>Zürcher Studierendenzeitung</b><br>
                     <span>Die unabhängige Zeitung für Universität Zürich und ETH Zürich. Seit 1923.</span>
