@@ -41,13 +41,13 @@ permissions:
   - 'deletepeerentrydrafts:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
   - 'deletepeerentrydrafts:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
   - 'deletepeerentrydrafts:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
-  - 'deletepeerentrydrafts:60fc5899-402f-4eda-a5cf-fe05a10b4f05' # Anniversary: Book
-  - 'deletepeerentrydrafts:727301f0-9809-4e7d-88e1-651765c5cfbc' # Anniversary: Events
+  - 'deletepeerentrydrafts:60fc5899-402f-4eda-a5cf-fe05a10b4f05'
+  - 'deletepeerentrydrafts:727301f0-9809-4e7d-88e1-651765c5cfbc'
   - 'deletepeerentrydrafts:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics
   - 'deletepeerentrydrafts:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
   - 'deletepeerentrydrafts:9695de25-bf17-41a7-b295-68ad5cccc6c8' # Pages
   - 'deletepeerentrydrafts:ab58e9ac-d8c0-428f-a72a-2132a4976859' # Home
-  - 'deletepeerentrydrafts:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Anniversary: Timeline
+  - 'deletepeerentrydrafts:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Timeline
   - deleteusers
   - 'editimages:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   - 'editimages:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
@@ -59,7 +59,7 @@ permissions:
   - 'editpeerimages:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
   - editusers
   - moderateusers
-  - 'navigation-managenav:3762f5dc-328d-4ca9-bc2e-4326fdba710e' # Anniversary
+  - 'navigation-managenav:3762f5dc-328d-4ca9-bc2e-4326fdba710e'
   - 'navigation-managenav:78967f52-4d7b-4aec-9fba-53d6aa2f5a2e' # Navigation
   - registerusers
   - 'replacefiles:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
@@ -77,13 +77,13 @@ permissions:
   - 'saveentries:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
   - 'saveentries:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
   - 'saveentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
-  - 'saveentries:60fc5899-402f-4eda-a5cf-fe05a10b4f05' # Anniversary: Book
-  - 'saveentries:727301f0-9809-4e7d-88e1-651765c5cfbc' # Anniversary: Events
+  - 'saveentries:60fc5899-402f-4eda-a5cf-fe05a10b4f05'
+  - 'saveentries:727301f0-9809-4e7d-88e1-651765c5cfbc'
   - 'saveentries:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics
   - 'saveentries:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
   - 'saveentries:9695de25-bf17-41a7-b295-68ad5cccc6c8' # Pages
   - 'saveentries:ab58e9ac-d8c0-428f-a72a-2132a4976859' # Home
-  - 'saveentries:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Anniversary: Timeline
+  - 'saveentries:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Timeline
   - 'savepeerassets:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   - 'savepeerassets:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   - 'savepeerassets:9549d5ad-d6e4-45a6-8376-edfc95d27e18' # Embeds
@@ -97,13 +97,13 @@ permissions:
   - 'savepeerentrydrafts:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
   - 'savepeerentrydrafts:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
   - 'savepeerentrydrafts:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
-  - 'savepeerentrydrafts:60fc5899-402f-4eda-a5cf-fe05a10b4f05' # Anniversary: Book
-  - 'savepeerentrydrafts:727301f0-9809-4e7d-88e1-651765c5cfbc' # Anniversary: Events
+  - 'savepeerentrydrafts:60fc5899-402f-4eda-a5cf-fe05a10b4f05'
+  - 'savepeerentrydrafts:727301f0-9809-4e7d-88e1-651765c5cfbc'
   - 'savepeerentrydrafts:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics
   - 'savepeerentrydrafts:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
   - 'savepeerentrydrafts:9695de25-bf17-41a7-b295-68ad5cccc6c8' # Pages
   - 'savepeerentrydrafts:ab58e9ac-d8c0-428f-a72a-2132a4976859' # Home
-  - 'savepeerentrydrafts:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Anniversary: Timeline
+  - 'savepeerentrydrafts:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Timeline
   - 'viewassets:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   - 'viewassets:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   - 'viewassets:9549d5ad-d6e4-45a6-8376-edfc95d27e18' # Embeds
@@ -111,13 +111,13 @@ permissions:
   - 'viewentries:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
   - 'viewentries:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
   - 'viewentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
-  - 'viewentries:60fc5899-402f-4eda-a5cf-fe05a10b4f05' # Anniversary: Book
-  - 'viewentries:727301f0-9809-4e7d-88e1-651765c5cfbc' # Anniversary: Events
+  - 'viewentries:60fc5899-402f-4eda-a5cf-fe05a10b4f05'
+  - 'viewentries:727301f0-9809-4e7d-88e1-651765c5cfbc'
   - 'viewentries:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics
   - 'viewentries:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
   - 'viewentries:9695de25-bf17-41a7-b295-68ad5cccc6c8' # Pages
   - 'viewentries:ab58e9ac-d8c0-428f-a72a-2132a4976859' # Home
-  - 'viewentries:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Anniversary: Timeline
+  - 'viewentries:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Timeline
   - 'viewpeerassets:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   - 'viewpeerassets:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   - 'viewpeerassets:9549d5ad-d6e4-45a6-8376-edfc95d27e18' # Embeds
@@ -131,10 +131,10 @@ permissions:
   - 'viewpeerentrydrafts:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
   - 'viewpeerentrydrafts:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
   - 'viewpeerentrydrafts:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
-  - 'viewpeerentrydrafts:60fc5899-402f-4eda-a5cf-fe05a10b4f05' # Anniversary: Book
-  - 'viewpeerentrydrafts:727301f0-9809-4e7d-88e1-651765c5cfbc' # Anniversary: Events
+  - 'viewpeerentrydrafts:60fc5899-402f-4eda-a5cf-fe05a10b4f05'
+  - 'viewpeerentrydrafts:727301f0-9809-4e7d-88e1-651765c5cfbc'
   - 'viewpeerentrydrafts:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics
   - 'viewpeerentrydrafts:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
   - 'viewpeerentrydrafts:9695de25-bf17-41a7-b295-68ad5cccc6c8' # Pages
   - 'viewpeerentrydrafts:ab58e9ac-d8c0-428f-a72a-2132a4976859' # Home
-  - 'viewpeerentrydrafts:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Anniversary: Timeline
+  - 'viewpeerentrydrafts:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Timeline

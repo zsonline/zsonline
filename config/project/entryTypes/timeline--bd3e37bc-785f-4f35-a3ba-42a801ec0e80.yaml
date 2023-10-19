@@ -86,10 +86,13 @@ fieldLayouts:
         name: Content
         uid: dede4f61-edee-4843-8ef1-048ddb2c9016
         userCondition: null
-handle: anniversaryTimeline
+handle: timeline
 hasTitleField: true
-name: 'Anniversary: Timeline'
-section: d64265d4-5a86-41a5-a68e-c73f8c90123e # Anniversary: Timeline
+name: Timeline
+section: d64265d4-5a86-41a5-a68e-c73f8c90123e # Timeline
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

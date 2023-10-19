@@ -1,5 +1,6 @@
 headingLevels: false
-name: 'Anniversary Minimal'
+listPlugin: List
+name: 'Timeline Minimal'
 toolbar:
   - bold
   - italic

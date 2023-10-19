@@ -173,7 +173,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: ''
-      ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Anniversary Minimal
+      ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Timeline Minimal
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: false
@@ -182,6 +182,7 @@ fields:
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       showWordCount: false
+      wordLimit: null
     translationKeyFormat: null
     translationMethod: none
     type: craft\ckeditor\Field

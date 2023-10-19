@@ -1,13 +1,15 @@
-{% extends '_layouts/anniversary.twig' %}
+{% extends '_layouts/default.twig' %}
 
 {% from '_macros/button.twig' import button, link %}
 {% from '_macros/content.twig' import caption, image %}
 {% from '_macros/icon.twig' import icon %}
 
+{% set colorScheme = 'dark' %}
+
 {% set entry = craft.entries()
-    .section('anniversaryTimeline')
+    .section('timeline')
     .with([
-        ['anniversaryImage', {
+        ['timelineImage', {
             withTransforms: [
                 { width: 1024 },
                 { width: 1440 },
@@ -19,10 +21,10 @@
                 }
             ]
         }],
-        'anniversaryImage.contributors.other',
-        'anniversaryImage.contributors.user:user',
-        'anniversaryTimeline',
-        ['anniversaryTimeline.nodeRegular:nodeImage', {
+        'timelineImage.contributors.other',
+        'timelineImage.contributors.user:user',
+        'timelineNodes',
+        ['timelineNodes.nodeRegular:nodeImage', {
             withTransforms: [
                 { width: 400 },
                 { width: 650 },
@@ -30,33 +32,33 @@
                 { width: 1440 }
             ]
         }],
-        'anniversaryTimeline.nodeRegular:nodeImage.contributors.other',
-        'anniversaryTimeline.nodeRegular:nodeImage.contributors.user:user',
-        ['anniversaryTimeline.nodeRegular:nodePrintImage', {
+        'timelineNodes.nodeRegular:nodeImage.contributors.other',
+        'timelineNodes.nodeRegular:nodeImage.contributors.user:user',
+        ['timelineNodes.nodeRegular:nodePrintImage', {
             withTransforms: [
                 { width: 250, height: 250, mode: 'fit' }
             ]
         }],
-        ['anniversaryTimeline.nodeEmbed:nodeEmbedImage', {
+        ['timelineNodes.nodeEmbed:nodeEmbedImage', {
             withTransforms: [
                 { width: 400 },
                 { width: 650 }
             ]
         }],
-        'anniversaryTimeline.nodeEmbed:nodeEmbedImage.contributors.other',
-        'anniversaryTimeline.nodeEmbed:nodeEmbedImage.contributors.user:user',
+        'timelineNodes.nodeEmbed:nodeEmbedImage.contributors.other',
+        'timelineNodes.nodeEmbed:nodeEmbedImage.contributors.user:user',
     ])
     .limit(1)
     .collect()
     .first() %}
 
-{% set image = entry.anniversaryImage.first() %}
+{% set image = entry.timelineImage.first() %}
 {% set headerStyle = image ? 'gradient' : 'solid' %}
 {% set layoutSize = 'large' %}
 
 {% block main %}
-    <div class="{{ html_classes('anniversary-timeline__header', {
-        'anniversary-timeline__header--has-image': image
+    <div class="{{ html_classes('timeline__header', {
+        'timeline__header--has-image': image
     }) }}">
         {% if image %}
             {% set srcset = [1024, 1440] %}
@@ -70,7 +72,7 @@
             }) }}
         {% endif %}
 
-        <div class="anniversary-timeline__header__title">
+        <div class="timeline__header__title">
             <span>Jubiläum</span>
             <h2>
                 100 Jahre ZS,<br>
@@ -79,17 +81,17 @@
         </div>
     </div>
 
-    {% if entry.anniversaryDescription %}
-        <div class="{{ html_classes('anniversary-timeline__intro', {
-            'anniversary-timeline__intro--has-image': image
+    {% if entry.timelineDescription %}
+        <div class="{{ html_classes('timeline__intro', {
+            'timeline__intro--has-image': image
         }) }}">
-            <div class="anniversary-timeline__intro__description">
-                {{ entry.anniversaryDescription }}
+            <div class="timeline__intro__description">
+                {{ entry.timelineDescription }}
             </div>
 
-            {% if entry.anniversaryLinks|length > 0 %}
-                <div class="anniversary-timeline__intro__links">
-                    {% for link in entry.anniversaryLinks %}
+            {% if entry.timelineLinks|length > 0 %}
+                <div class="timeline__intro__links">
+                    {% for link in entry.timelineLinks %}
                         {{ link({
                             href: link.url,
                             icon: false,
@@ -108,21 +110,21 @@
         </div>
     {% endif %}
 
-    {% if entry.anniversaryTimeline|length > 0 %}
-        <div class="anniversary-timeline__timeline">
-            <div class="anniversary-timeline__line__outer">
-                <div class="anniversary-timeline__line__inner"></div>
+    {% if entry.timelineNodes|length > 0 %}
+        <div class="timeline__timeline">
+            <div class="timeline__line__outer">
+                <div class="timeline__line__inner"></div>
             </div>
-            <div class="anniversary-timeline__nodes">
-                {% for node in entry.anniversaryTimeline %}
+            <div class="timeline__nodes">
+                {% for node in entry.timelineNodes %}
                     {% if node.type == 'nodeRegular' %}
-                        <div class="anniversary-timeline__node">
-                            <div class="anniversary-timeline__node__anchor">
-                                <span class="anniversary-timeline__node__year">{{ node.nodeYear }}</span>
-                                <span class="anniversary-timeline__node__label">{{ node.nodeLabel }}</span>
+                        <div class="timeline__node">
+                            <div class="timeline__node__anchor">
+                                <span class="timeline__node__year">{{ node.nodeYear }}</span>
+                                <span class="timeline__node__label">{{ node.nodeLabel }}</span>
                             </div>
-                            <div class="anniversary-timeline__node__container">
-                                <h3 class="anniversary-timeline__node__title">{{ node.nodeTitle }}</h3>
+                            <div class="timeline__node__container">
+                                <h3 class="timeline__node__title">{{ node.nodeTitle }}</h3>
                             </div>
 
                             {% if node.nodeImage.count() > 0 %}
@@ -133,8 +135,8 @@
                                 }) }}
                             {% endif %}
 
-                            <div class="anniversary-timeline__node__container">
-                                <div class="anniversary-timeline__node__description">
+                            <div class="timeline__node__container">
+                                <div class="timeline__node__description">
                                     {{ node.nodeDescription }}
                                 </div>
 
@@ -161,7 +163,7 @@
                                         {% endif %}
                                     {% endset %}
 
-                                    <div class="anniversary-timeline__node__print">
+                                    <div class="timeline__node__print">
                                         {% if node.nodePrintLink %}
                                             {{ tag('a', {
                                                 href: node.nodePrintLink,
@@ -176,14 +178,14 @@
                             </div>
                         </div>
                     {% elseif node.type == 'nodeEmbed' %}
-                        <div class="anniversary-timeline__node">
-                            <div class="anniversary-timeline__node__anchor">
-                                <span class="anniversary-timeline__node__year">{{ node.nodeYear }}</span>
-                                <span class="anniversary-timeline__node__label">{{ node.nodeLabel }}</span>
+                        <div class="timeline__node">
+                            <div class="timeline__node__anchor">
+                                <span class="timeline__node__year">{{ node.nodeYear }}</span>
+                                <span class="timeline__node__label">{{ node.nodeLabel }}</span>
                             </div>
 
-                            <div class="anniversary-timeline__node__container">
-                                <div class="anniversary-timeline__embed-teaser anniversary-timeline__embed" onclick="ZS.Anniversary.openEmbed(this)">
+                            <div class="timeline__node__container">
+                                <div class="timeline__embed-teaser timeline__embed" onclick="ZS.Timeline.openEmbed(this)">
                                     {% if node.nodeEmbedImage.count() > 0 %}
                                         {{ image({
                                             caption: false,
@@ -192,19 +194,19 @@
                                             size: 'small'
                                         }) }}
                                     {% endif %}
-                                    <div class="anniversary-timeline__embed-teaser__text">
+                                    <div class="timeline__embed-teaser__text">
                                         {% if node.nodeEmbedPublication %}
-                                            <span class="anniversary-timeline__embed__publication">{{ node.nodeEmbedPublication }}</span>
+                                            <span class="timeline__embed__publication">{{ node.nodeEmbedPublication }}</span>
                                         {% endif %}
 
-                                        <h3 class="anniversary-timeline__embed__title">{{ node.nodeEmbedTitle }}</h3>
+                                        <h3 class="timeline__embed__title">{{ node.nodeEmbedTitle }}</h3>
 
-                                        <div class="anniversary-timeline__embed__description">
+                                        <div class="timeline__embed__description">
                                             {{ node.nodeEmbedDescription }}
                                         </div>
 
                                         {{ button({
-                                            class: 'anniversary-timeline__embed-teaser__read-more',
+                                            class: 'timeline__embed-teaser__read-more',
                                             icon: 'chevron-right',
                                             iconPosition: 'right',
                                             label: 'Weiterlesen',
@@ -213,26 +215,26 @@
                                 </div>
                             </div>
 
-                            <div class="anniversary-timeline__embed-overlay anniversary-timeline__embed">
-                                <div class="anniversary-timeline__embed-overlay__inner">
-                                    <div class="anniversary-timeline__embed-overlay__close" onclick="ZS.Anniversary.closeEmbed(this)">
+                            <div class="timeline__embed-overlay timeline__embed">
+                                <div class="timeline__embed-overlay__inner">
+                                    <div class="timeline__embed-overlay__close" onclick="ZS.Timeline.closeEmbed(this)">
                                         {{ button({
                                             icon: 'x',
                                             label: 'Schliessen',
-                                            onclick: 'ZS.Anniversary.closeEmbed(this)',
+                                            onclick: 'ZS.Timeline.closeEmbed(this)',
                                             style: 'bright'
                                         }) }}
                                     </div>
-                                    <div class="anniversary-timeline__embed-overlay__article">
-                                        <div class="anniversary-timeline__embed-overlay__text">
+                                    <div class="timeline__embed-overlay__article">
+                                        <div class="timeline__embed-overlay__text">
                                             {% if node.nodeEmbedPublication %}
-                                                <span class="anniversary-timeline__embed__publication">{{ node.nodeEmbedPublication }}</span>
+                                                <span class="timeline__embed__publication">{{ node.nodeEmbedPublication }}</span>
                                             {% endif %}
 
-                                            <h3 class="anniversary-timeline__embed__title">{{ node.nodeEmbedTitle }}</h3>
+                                            <h3 class="timeline__embed__title">{{ node.nodeEmbedTitle }}</h3>
 
                                             {% if node.nodeEmbedByline %}
-                                                <span class="anniversary-timeline__embed__byline">{{ node.nodeEmbedByline }}</span>
+                                                <span class="timeline__embed__byline">{{ node.nodeEmbedByline }}</span>
                                             {% endif %}
                                         </div>
 
@@ -244,14 +246,14 @@
                                             }) }}
                                         {% endif %}
 
-                                        <div class="anniversary-timeline__embed-overlay__text">
-                                            <div class="anniversary-timeline__embed__content">
+                                        <div class="timeline__embed-overlay__text">
+                                            <div class="timeline__embed__content">
                                                 {{ node.nodeEmbedContent }}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="anniversary-timeline__embed-overlay__overlay" onclick="ZS.Anniversary.closeEmbed(this)"></div>
+                                <div class="timeline__embed-overlay__overlay" onclick="ZS.Timeline.closeEmbed(this)"></div>
                             </div>
                         </div>
                     {% endif %}
@@ -259,21 +261,10 @@
             </div>
         </div>
     {% endif %}
-
-    <table class="anniversary-timeline__credits">
-        <tr>
-            <td>Konzept:</td>
-            <td>Robin Bisping, Oliver Camenzind, Michael Kuratli</td>
-        </tr>
-        <tr>
-            <td>Programmierung:</td>
-            <td>Robin Bisping</td>
-        </tr>
-    </table>
 {% endblock %}
 
 {% set meta = {
-    image: entry.anniversaryImage.first(),
+    image: entry.timelineImage.first(),
     title: '100 Jahre ZS',
     url: url('100')
 } %}

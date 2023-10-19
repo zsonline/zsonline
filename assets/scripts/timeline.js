@@ -1,18 +1,16 @@
 window.ZS = {
   ...window.ZS,
-  Anniversary: {
+  Timeline: {
     openEmbed: (element) => {
-      const node = element?.closest(".anniversary-timeline__node");
-      const overlay = node?.querySelector(
-        ".anniversary-timeline__embed-overlay",
-      );
+      const node = element?.closest(".timeline__node");
+      const overlay = node?.querySelector(".timeline__embed-overlay");
 
       if (!overlay) {
         return;
       }
 
       const article = overlay.querySelector(
-        ".anniversary-timeline__embed-overlay__article",
+        ".timeline__embed-overlay__article",
       );
       if (article) {
         article.scrollTop = 0;
@@ -21,10 +19,10 @@ window.ZS = {
       const body = document.querySelector("body");
       body.classList.add("overflow-hidden");
 
-      overlay.classList.add("anniversary-timeline__embed-overlay--open");
+      overlay.classList.add("timeline__embed-overlay--open");
     },
     closeEmbed: (element) => {
-      const overlay = element?.closest(".anniversary-timeline__embed-overlay");
+      const overlay = element?.closest(".timeline__embed-overlay");
 
       if (!overlay) {
         return;
@@ -33,7 +31,7 @@ window.ZS = {
       const body = document.querySelector("body");
       body.classList.remove("overflow-hidden");
 
-      overlay.classList.remove("anniversary-timeline__embed-overlay--open");
+      overlay.classList.remove("timeline__embed-overlay--open");
     },
   },
 };

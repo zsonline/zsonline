@@ -1,8 +1,23 @@
-{% extends '_layouts/base.twig' %}
-
+{% set colorScheme = colorScheme ?? 'auto' %}  {# auto, bright, dark #}
+{% set headerSize = headerSize ?? 'small' %}   {# small, large #}
+{% set headerStyle = headerStyle ?? 'solid' %} {# solid, gradient, transparent #}
 {% set layoutSize = layoutSize ?? 'small' %}   {# small, medium, large #}
 
 {% from '_macros/layout.twig' import header, footer %}
+
+{% set meta = {
+    description: 'Die Zürcher Studierendenzeitung (ZS) ist die unabhängige Zeitung für die Universität Zürich und die ETH Zürich.',
+    image: null,
+    title: '',
+    type: 'website',
+    url: siteUrl,
+    urlPrev: '',
+    urlNext: ''
+}|merge(meta) %}
+
+{% set metaImage = meta.image
+    ? meta.image.getUrl({ height: 628, width: 1200, format: 'jpeg' })
+    : url("social.jpg") %}
 
 {% set navigation = craft.navigation.nodes()
     .handle('navigation')
@@ -10,16 +25,90 @@
     .with(['children'])
     .all() %}
 
-{% block content %}
-    {{ header({
-        navigations: [ navigation ],
-        size: headerSize,
-        style: headerStyle
-    }) }}
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <title>{{ meta.title ? meta.title ~ ' – ' : '' }}Zürcher Studierendenzeitung</title>
 
-    <main class="{{ html_classes('layout', layoutSize) }}">
-        {% block main %}{% endblock %}
-    </main>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {{ footer() }}
-{% endblock %}
+    <meta name="description" content="{{ meta.description }}" />
+
+    {# Open graph (Facebook) #}
+    <meta property="og:description" content="{{ meta.description }}" />
+    <meta property="og:image" content="{{ metaImage }}" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="de_CH" />
+    <meta property="og:site_name" content="Zürcher Studierendenzeitung" />
+    <meta property="og:title" content="{{ meta.title ?: 'Zürcher Studierendenzeitung' }}" />
+    <meta property="og:type" content="{{ meta.type }}" />
+    <meta property="og:url" content="{{ meta.url }}" />
+
+    {# Twitter #}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="{{ meta.description }}" />
+    <meta name="twitter:image" content="{{ metaImage }}" />
+    <meta name="twitter:site" content="@zsonline" />
+    <meta name="twitter:title" content="{{ meta.title ?: 'Zürcher Studierendenzeitung' }}" />
+    <meta name="twitter:url" content="{{ meta.url }}" />
+
+    <base href="{{ url() }}" />
+
+    {% block meta %}{% endblock %}
+
+    <link rel="canonical" href="{{ meta.url }}" />
+
+    {% if meta.urlPrev %}
+        <link rel="prev" href="{{ meta.urlPrev }}" />
+    {% endif %}
+    {% if meta.urlNext %}
+        <link rel="next" href="{{ meta.urlNext }}" />
+    {% endif %}
+
+    <link rel="sitemap" type="application/xml" href="{{ url('sitemap.xml') }}" >
+    <link rel="alternate" type="application/atom+xml" title="Zürcher Studierendenzeitung" href="{{ url('feed.atom') }}" />
+
+    <link rel="icon" sizes="16x16" type="image/png" href="{{ url("favicon-16x16.png") }}" />
+    <link rel="icon" sizes="32x32" type="image/png" href="{{ url("favicon-32x32.png") }}" />
+
+    <link href="{{ craft.vite.asset("assets/styles/main.scss") }}" rel="stylesheet">
+
+    {{ craft.vite.script("assets/scripts/main.js") }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ getenv('GOOGLE_ANALYTICS_TRACKING_ID') }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ getenv('GOOGLE_ANALYTICS_TRACKING_ID') }}');
+    </script>
+</head>
+<body class={{
+    html_classes({
+        'bright': colorScheme == 'bright',
+        'dark': colorScheme == 'dark'
+    })
+}}>
+    <div class="{{ html_classes('wrapper', {
+        'wrapper--header-small': headerSize == 'small' and headerStyle == 'solid',
+        'wrapper--header-large': headerSize == 'large' and headerStyle == 'solid'
+    }) }}">
+        {% block content %}
+            {{ header({
+                navigations: [ navigation ],
+                size: headerSize,
+                style: headerStyle
+            }) }}
+
+            <main class="{{ html_classes('layout', layoutSize) }}">
+                {% block main %}{% endblock %}
+            </main>
+
+            {{ footer() }}
+        {% endblock %}
+    </div>
+</body>
+</html>

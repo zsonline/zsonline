@@ -1,6 +1,7 @@
 headingLevels:
   - 4
-name: 'Anniversary Content'
+listPlugin: List
+name: 'Timeline Content'
 toolbar:
   - heading
   - '|'

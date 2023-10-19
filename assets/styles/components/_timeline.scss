@@ -1,9 +1,9 @@
-.anniversary-timeline {
+.timeline {
     &__header {
         position: relative;
 
         &--has-image {
-            .anniversary-timeline__header__title {
+            .timeline__header__title {
                 position: absolute;
                 bottom: 50px;
             }
@@ -305,7 +305,7 @@
                 opacity: 0.9;
             }
 
-            .anniversary-timeline__embed-teaser__read-more {
+            .timeline__embed-teaser__read-more {
                 text-decoration: underline;
             }
         }
@@ -314,12 +314,12 @@
             padding: 17px;
         }
 
-        .anniversary-timeline__embed__title {
+        .timeline__embed__title {
             margin: 0 0 0.6em;
             font-size: 1.45rem;
         }
 
-        .anniversary-timeline__embed__description {
+        .timeline__embed__description {
             font-size: 0.95rem;
             line-height: 1.55;
 
@@ -342,11 +342,11 @@
         &--open {
             visibility: visible;
 
-            .anniversary-timeline__embed-overlay__overlay {
+            .timeline__embed-overlay__overlay {
                 opacity: 0.65;
             }
 
-            .anniversary-timeline__embed-overlay__inner {
+            .timeline__embed-overlay__inner {
                 bottom: 0;
                 opacity: 1;
             }
@@ -402,113 +402,10 @@
             margin: 2rem auto;
         }
     }
-
-    &__credits {
-        @include layout("small");
-
-        margin-top: 4rem;
-        font-size: 0.8rem;
-        color: var(--color-fg-subdued);
-        border-spacing: 0;
-        border: none;
-
-        td {
-            vertical-align: top;
-
-            &:first-child {
-                width: 0;
-                padding-right: 0.75rem;
-            }
-        }
-    }
-}
-
-.anniversary-events {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.anniversary-event {
-    padding: 0.75rem 0 1.25rem;
-    border-top: solid 2px var(--color-accent);
-    border-bottom: solid 1px var(--color-border-bright);
-
-    a {
-        text-decoration: underline;
-    }
-
-    &__label {
-        margin: 0;
-        font-size: 1.25rem;
-        color: var(--color-accent);
-    }
-
-    &__meta {
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-        padding-top: 1.25rem;
-        margin-top: 1.5rem;
-        color: var(--color-fg-subdued);
-        border-top: solid 1px var(--color-border-bright);
-
-        a {
-            color: var(--color-fg-subdued);
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: var(--color-fg-subdued-alt);
-            }
-        }
-    }
-
-    &__date,
-    &__time,
-    &__location,
-    &__link {
-        display: flex;
-        gap: 1em;
-        align-items: center;
-        font-size: 0.9rem;
-
-        svg {
-            width: 1.25em;
-            height: 1.25em;
-        }
-    }
-
-    &__link {
-        padding-top: 1.25rem;
-        margin-top: 1.25rem;
-        border-top: solid 1px var(--color-border-bright);
-    }
-}
-
-.anniversary-book {
-    &__image {
-        margin-bottom: 30px;
-    }
-
-    &__description {
-        a {
-            text-decoration: underline;
-        }
-    }
-
-    &__links {
-        display: flex;
-        gap: 1rem;
-        margin-top: 30px;
-    }
 }
 
 @media (min-width: $breakpoint-tablet) {
-    .anniversary-timeline {
+    .timeline {
         &__header {
             &__title {
                 margin: 75px $layout-padding-tablet 50px;
@@ -595,29 +492,11 @@
                 margin: 3rem auto;
             }
         }
-
-        &__credits {
-            margin-top: 5rem;
-        }
-    }
-
-    .anniversary-events {
-        gap: 4rem;
-    }
-
-    .anniversary-book {
-        &__image {
-            margin-bottom: 60px;
-        }
-
-        &__links {
-            margin-top: 60px;
-        }
     }
 }
 
 @media (min-width: $breakpoint-desktop) {
-    .anniversary-timeline {
+    .timeline {
         &__header {
             &__title {
                 margin: 100px $layout-padding-desktop 75px;
@@ -646,13 +525,5 @@
                 padding-top: 4rem;
             }
         }
-
-        &__credits {
-            margin-top: 7rem;
-        }
-    }
-
-    .anniversary-events {
-        gap: 4.5rem;
     }
 }

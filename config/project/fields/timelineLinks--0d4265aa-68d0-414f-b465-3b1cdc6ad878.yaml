@@ -1,7 +1,7 @@
 columnSuffix: kzslxkie
 contentColumnType: text
-fieldGroup: 3d811369-1bfd-4b73-a933-fa5cf4ae0a6a # Anniversary
-handle: anniversaryLinks
+fieldGroup: 3d811369-1bfd-4b73-a933-fa5cf4ae0a6a # Timeline
+handle: timelineLinks
 instructions: null
 name: Links
 searchable: false
@@ -72,6 +72,7 @@ settings:
           - ''
   maxRows: null
   minRows: null
+  staticRows: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Table
