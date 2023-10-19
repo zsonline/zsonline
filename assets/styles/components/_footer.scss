@@ -9,14 +9,6 @@
     border-top: solid 2px var(--color-border-dark);
   }
 
-  &__navigation {
-    .navigation__section {
-      &:first-child {
-        border-top: none;
-      }
-    }
-  }
-
   &__bottom {
     display: flex;
     flex-direction: column;
@@ -54,11 +46,6 @@
   .footer {
     gap: 15px;
     padding: 125px $layout-padding-desktop 40px;
-
-    &__navigation {
-      padding: 2.5rem 0;
-      border-bottom: solid 1px var(--color-border-bright);
-    }
 
     &__bottom {
       gap: 1rem;

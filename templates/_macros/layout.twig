@@ -82,24 +82,11 @@
     </header>
 {% endmacro %}
 
-{% macro footer(args) %}
-    {% set args = {
-        navigation: null
-    } | merge(args) %}
-
+{% macro footer() %}
     {% from '_macros/button.twig' import link %}
 
     <footer class="footer">
         <div class="footer__inner">
-            {% if args.navigation %}
-                <nav class="footer__navigation">
-                    {{ _self.navigation({
-                        navigation: args.navigation,
-                        responsive: true
-                    }) }}
-                </nav>
-            {% endif %}
-
             <div class="footer__bottom">
                 <div class="footer__about">
                     {{ svg('@templates/_svgs/logo.svg') | attr({ 'class': 'footer__logo' }) }}
