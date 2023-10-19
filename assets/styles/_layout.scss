@@ -50,7 +50,7 @@ body {
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding: 0 calc(2 * $layout-padding-desktop);
+    padding: 0 calc($layout-padding-desktop);
   }
 }
 

@@ -219,7 +219,7 @@
 
 @media (min-width: $breakpoint-desktop) {
   .header {
-    width: min(100% - calc(2 * 2 * $layout-padding-desktop), $layout-width-large);
+    width: min(100% - calc(2 * $layout-padding-desktop), $layout-width-large);
 
     &__inner {
       padding: 12px $layout-padding-desktop;
