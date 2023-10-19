@@ -15,3 +15,4 @@ nodejs_version: "18"
 upload_dirs:
   - "assets"
   - "../storage/assets"
+  - "../storage/backups"
