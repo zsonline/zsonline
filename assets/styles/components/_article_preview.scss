@@ -56,8 +56,7 @@
 
   &__title {
     margin: 0;
-    font-family: $font-title;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   &__ad-declaration {
@@ -70,12 +69,12 @@
   }
 
   &__format {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .meta {
     margin-top: 1em;
-    font-size: 0.7em;
+    font-size: 0.75em;
     opacity: 0.5;
   }
 }

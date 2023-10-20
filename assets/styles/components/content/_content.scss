@@ -1,6 +1,7 @@
 .content {
   font-family: $font-serif;
-  line-height: 1.8;
+  font-weight: 300;
+  line-height: 1.7;
 
   > h3,
   > h4,
@@ -14,7 +15,7 @@
   }
 
   strong {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   a {

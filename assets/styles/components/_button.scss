@@ -20,7 +20,7 @@
   }
 
   &:disabled,
-  &.button__disabled {
+  &.button--disabled {
     color: $color-fg;
     text-decoration: none;
     cursor: default;

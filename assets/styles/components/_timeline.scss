@@ -22,7 +22,7 @@
             h2 {
                 margin: 0;
                 font-size: 35px;
-                font-weight: 900;
+                font-weight: 700;
                 color: var(--color-accent);
                 letter-spacing: 0.05em;
             }
@@ -30,7 +30,7 @@
             span {
                 display: block;
                 margin-bottom: 0.25em;
-                font-weight: 600;
+                font-weight: 700;
                 text-shadow: 0 0 5px var(--color-fg-alt);
                 letter-spacing: 0.05em;
             }
@@ -277,7 +277,8 @@
         }
 
         &__content {
-            line-height: 1.6;
+            font-weight: 300;
+            line-height: 1.7;
 
             h4 {
                 margin: 1.5em 0 0.75em;

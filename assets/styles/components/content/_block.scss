@@ -1,6 +1,7 @@
 .content-block {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
+  font-weight: 400;
 
   &--small {
     @include layout("small");
