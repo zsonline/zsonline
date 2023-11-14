@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ba17a5e7f4d6ffdf86e14491c65f012",
+    "content-hash": "cf911981d88111353b5e94cff3eacdb8",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -543,11 +543,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.5.7",
+            "version": "4.5.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/c1f066ce4b0632ccf532255bc3dfd75ceca8691d",
-                "reference": "c1f066ce4b0632ccf532255bc3dfd75ceca8691d",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/dac4844088c56a44880f4b3b35c86c58641a7c1c",
+                "reference": "dac4844088c56a44880f4b3b35c86c58641a7c1c",
                 "shasum": ""
             },
             "require": {
@@ -635,7 +635,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2023-10-17T18:42:03+00:00"
+            "time": "2023-11-07T18:32:05+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -1757,11 +1757,11 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.9.1",
+            "version": "2.9.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f259e2b15fb95494c83f52d3caad003bbf5ffaa1",
-                "reference": "f259e2b15fb95494c83f52d3caad003bbf5ffaa1",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/437cb3628f4cf6042cc10ae97fc2b8472e48ca1f",
+                "reference": "437cb3628f4cf6042cc10ae97fc2b8472e48ca1f",
                 "shasum": ""
             },
             "require": {
@@ -1815,7 +1815,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2023-02-06T13:44:46+00:00"
+            "time": "2023-10-27T15:25:26+00:00"
         },
         {
             "name": "nystudio107/craft-code-editor",
@@ -2948,11 +2948,11 @@
         },
         {
             "name": "symfony/console",
-            "version": "v6.3.4",
+            "version": "v6.3.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/eca495f2ee845130855ddf1cf18460c38966c8b6",
-                "reference": "eca495f2ee845130855ddf1cf18460c38966c8b6",
+                "url": "https://api.github.com/repos/symfony/console/zipball/0d14a9f6d04d4ac38a8cea1171f4554e325dae92",
+                "reference": "0d14a9f6d04d4ac38a8cea1171f4554e325dae92",
                 "shasum": ""
             },
             "require": {
@@ -3002,7 +3002,7 @@
                 "console",
                 "terminal"
             ],
-            "time": "2023-08-16T10:10:12+00:00"
+            "time": "2023-10-31T08:09:35+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3228,11 +3228,11 @@
         },
         {
             "name": "symfony/http-client",
-            "version": "v6.3.5",
+            "version": "v6.3.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/213e564da4cbf61acc9728d97e666bcdb868c10d",
-                "reference": "213e564da4cbf61acc9728d97e666bcdb868c10d",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/0314e2d49939a9831929d6fc81c01c6df137fd0a",
+                "reference": "0314e2d49939a9831929d6fc81c01c6df137fd0a",
                 "shasum": ""
             },
             "require": {
@@ -3279,7 +3279,7 @@
             "keywords": [
                 "http"
             ],
-            "time": "2023-09-29T15:57:12+00:00"
+            "time": "2023-11-06T18:31:59+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -4125,11 +4125,11 @@
         },
         {
             "name": "symfony/string",
-            "version": "v6.3.5",
+            "version": "v6.3.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/13d76d0fb049051ed12a04bef4f9de8715bea339",
-                "reference": "13d76d0fb049051ed12a04bef4f9de8715bea339",
+                "url": "https://api.github.com/repos/symfony/string/zipball/13880a87790c76ef994c91e87efb96134522577a",
+                "reference": "13880a87790c76ef994c91e87efb96134522577a",
                 "shasum": ""
             },
             "require": {
@@ -4177,7 +4177,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2023-09-18T10:38:32+00:00"
+            "time": "2023-11-09T08:28:21+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -4239,11 +4239,11 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.4.23",
+            "version": "v5.4.31",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/4cd2e3ea301aadd76a4172756296fe552fb45b0b",
-                "reference": "4cd2e3ea301aadd76a4172756296fe552fb45b0b",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/f387675d7f5fc4231f7554baa70681f222f73563",
+                "reference": "f387675d7f5fc4231f7554baa70681f222f73563",
                 "shasum": ""
             },
             "require": {
@@ -4284,7 +4284,7 @@
             ],
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
-            "time": "2023-04-23T19:33:36+00:00"
+            "time": "2023-11-03T14:41:28+00:00"
         },
         {
             "name": "theiconic/name-parser",
@@ -4468,16 +4468,11 @@
         },
         {
             "name": "verbb/comments",
-            "version": "2.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/verbb/comments.git",
-                "reference": "2008c6c777b6bc7710d20687d087cf3f8a4e7efc"
-            },
+            "version": "2.0.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/comments/zipball/2008c6c777b6bc7710d20687d087cf3f8a4e7efc",
-                "reference": "2008c6c777b6bc7710d20687d087cf3f8a4e7efc",
+                "url": "https://api.github.com/repos/verbb/comments/zipball/0db685458d635fdf1cf70c3b4f2e42b07f3083d5",
+                "reference": "0db685458d635fdf1cf70c3b4f2e42b07f3083d5",
                 "shasum": ""
             },
             "require": {
@@ -4498,7 +4493,6 @@
                     "verbb\\comments\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -4510,28 +4504,28 @@
             ],
             "description": "Add comments to your site.",
             "keywords": [
-                "Craft",
                 "cms",
                 "comments",
+                "craft",
                 "craft-plugin",
                 "craftcms"
             ],
             "support": {
-                "docs": "https://github.com/verbb/comments",
                 "email": "support@verbb.io",
                 "issues": "https://github.com/verbb/comments/issues?state=open",
-                "rss": "https://github.com/verbb/comments/commits/v2.atom",
-                "source": "https://github.com/verbb/comments"
+                "source": "https://github.com/verbb/comments",
+                "docs": "https://github.com/verbb/comments",
+                "rss": "https://github.com/verbb/comments/commits/v2.atom"
             },
-            "time": "2023-03-08T23:59:05+00:00"
+            "time": "2023-10-25T00:23:45+00:00"
         },
         {
             "name": "verbb/navigation",
-            "version": "2.0.21",
+            "version": "2.0.22",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/navigation/zipball/469b1f1f320a769861ba69ec0d1fc6f83696ee4e",
-                "reference": "469b1f1f320a769861ba69ec0d1fc6f83696ee4e",
+                "url": "https://api.github.com/repos/verbb/navigation/zipball/9375bc90c74b005a86a16b7c34cacb6d446115d7",
+                "reference": "9375bc90c74b005a86a16b7c34cacb6d446115d7",
                 "shasum": ""
             },
             "require": {
@@ -4576,7 +4570,7 @@
                 "docs": "https://github.com/verbb/navigation",
                 "rss": "https://github.com/verbb/navigation/commits/v2.atom"
             },
-            "time": "2023-09-08T06:36:30+00:00"
+            "time": "2023-10-25T00:36:49+00:00"
         },
         {
             "name": "verbb/super-table",

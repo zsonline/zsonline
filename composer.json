@@ -1,14 +1,14 @@
 {
   "require": {
     "craftcms/ckeditor": "3.6.0",
-    "craftcms/cms": "4.5.7",
+    "craftcms/cms": "4.5.10",
     "nystudio107/craft-plugin-vite": "^4.0",
     "nystudio107/craft-vite": "4.0.6",
     "putyourlightson/craft-sprig": "2.7.2",
     "spicyweb/craft-embedded-assets": "3.1.8",
     "twig/html-extra": "^3.4",
-    "verbb/comments": "2.0.7",
-    "verbb/navigation": "2.0.21",
+    "verbb/comments": "2.0.8",
+    "verbb/navigation": "2.0.22",
     "verbb/super-table": "3.0.12",
     "vlucas/phpdotenv": "^5.4.0"
   },
