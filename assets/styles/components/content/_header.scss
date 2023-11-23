@@ -61,12 +61,9 @@
 
     .content-header__description {
       margin: 0;
-      font-family: $font-sans-serif;
+      font-family: $font-serif;
+      font-weight: 500;
       line-height: 1.6;
-
-      .content-header__format {
-        font-weight: 700;
-      }
     }
 
     .meta {

@@ -65,11 +65,13 @@
 
   &__description {
     margin: 0.75em 0 0;
+    font-family: $font-serif;
     font-size: 0.9em;
+    font-weight: 300;
   }
 
   &__format {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .meta {
