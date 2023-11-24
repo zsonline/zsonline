@@ -5,7 +5,7 @@ return [
     'artikel'                   => ['template' => '_pages/articles.twig'],
     'autor-innen'               => ['template' => '_pages/users.twig'],
     'autor-innen/<slug:{slug}>' => ['template' => '_pages/user.twig'],
-    'feed.atom'                 => ['template' => '_pages/feed.twig'],
+    'atom.xml'                  => ['template' => '_pages/feed.twig'],
     'print'                     => ['template' => '_pages/issues.twig'],
     'print/<year:\d+>'          => ['template' => '_pages/issues.twig'],
     'rubriken'                  => ['template' => '_pages/formats.twig'],
