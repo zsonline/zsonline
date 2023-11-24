@@ -89,20 +89,6 @@
                 {{ entry.timelineDescription }}
             </div>
 
-            {% if entry.timelineLinks|length > 0 %}
-                <div class="timeline__intro__links">
-                    {% for link in entry.timelineLinks %}
-                        {{ link({
-                            href: link.url,
-                            icon: false,
-                            label: link.label,
-                            style: 'bright',
-                            target: link.blank ? '_blank' : '_self'
-                        }) }}
-                    {% endfor %}
-                </div>
-            {% endif %}
-
             {{ caption({
                 caption: image.caption,
                 contributors: image.contributors.all()

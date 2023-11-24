@@ -41,7 +41,6 @@ return [
     'Large: Vertical' => 'Gross: Vertikal',
     'Layouts' => 'Layouts',
     'Link' => 'Link',
-    'Links' => 'Links',
     'Location' => 'Ort',
     'Location Link' => 'Ort-Link',
     'Medium' => 'Mittel',

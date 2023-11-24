@@ -58,17 +58,6 @@
             }
         }
 
-        &__links {
-            --color-button-bright-fg: hsl(0deg 0% 3%);
-            --color-button-bright-fg-alt: hsl(0deg 0% 25%);
-            --color-button-bright-bg: hsl(0deg 0% 100%);
-            --color-button-bright-bg-alt: hsl(0deg 0% 95%);
-
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5em;
-        }
-
         .content-caption {
             padding-top: 1.5em;
             margin-top: 2.5em;
