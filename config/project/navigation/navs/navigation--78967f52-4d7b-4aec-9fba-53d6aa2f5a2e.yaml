@@ -41,11 +41,28 @@ fieldLayouts:
             uid: a91d80d3-65e3-482f-adc6-5e6d96c35bd1
             userCondition: null
             warning: null
+          -
+            attribute: newWindow
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            mandatory: false
+            orientation: null
+            requirable: true
+            required: false
+            tip: null
+            translatable: false
+            type: verbb\navigation\fieldlayoutelements\NewWindowField
+            uid: 06695ef7-4ce3-437c-b1ed-5d73f0d3645f
+            userCondition: null
+            warning: null
+            width: 100
         name: Node
         uid: ff76e65b-3848-41a0-85cb-d0f1adaf3f99
         userCondition: null
 handle: navigation
-instructions: null
+instructions: ''
 maxNodes: null
 name: Navigation
 permissions:
