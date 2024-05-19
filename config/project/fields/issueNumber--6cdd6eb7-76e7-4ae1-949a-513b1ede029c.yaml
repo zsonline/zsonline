@@ -1,6 +1,5 @@
 columnSuffix: tcuhufco
 contentColumnType: integer(10)
-fieldGroup: c02d5119-8f14-4b30-acf1-29e22375aef5 # Issue
 handle: issueNumber
 instructions: null
 name: Number

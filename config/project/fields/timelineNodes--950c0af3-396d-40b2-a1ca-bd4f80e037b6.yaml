@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 3d811369-1bfd-4b73-a933-fa5cf4ae0a6a # Timeline
 handle: timelineNodes
 instructions: null
 name: Timeline
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_timelinenodes}}'
-  maxBlocks: null
-  minBlocks: null
+  entryTypes:
+    - 74e21a53-79cd-4aa7-85b3-bff442e02c68
+    - 683c8764-91e2-4a9e-b0cf-d7bed17d1d5d
+  maxEntries: null
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

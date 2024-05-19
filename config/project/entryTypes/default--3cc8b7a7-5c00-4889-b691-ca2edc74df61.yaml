@@ -60,7 +60,6 @@ fieldLayouts:
 handle: default
 hasTitleField: false
 name: Default
-section: 4ce497c4-83db-4505-966c-25ac2477e7fb # Ads
 sortOrder: 1
 titleFormat: '{adLink}'
 titleTranslationKeyFormat: null

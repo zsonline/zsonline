@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 03f96b8c-ce9b-420f-af21-636587a4c8c0 # Home
 handle: homeBlocks
 instructions: null
 name: Blocks
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_homeblocks}}'
-  maxBlocks: null
-  minBlocks: null
+  entryTypes:
+    - 6a4b325d-b443-4b35-85ed-bd5b9d092f11
+    - d0ba75f4-0ec9-406b-8e28-5a50980147cc
+  maxEntries: null
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

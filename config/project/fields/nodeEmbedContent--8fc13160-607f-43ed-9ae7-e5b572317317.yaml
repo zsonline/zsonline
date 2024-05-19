@@ -1,0 +1,21 @@
+columnSuffix: zzgrvlns
+handle: nodeEmbedContent
+instructions: null
+name: 'Timeline - Embed - Content'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  ckeConfig: b4fa2985-51d4-428c-a10e-130fd6687f7b # Timeline Content
+  createButtonLabel: null
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

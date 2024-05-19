@@ -1,0 +1,81 @@
+color: null
+fieldLayouts:
+  1de7038b-076a-4464-844c-1935a400ad9a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 56cae964-ce72-4c6e-b458-56410bf5a0de
+            handle: label
+            includeInCards: true
+            instructions: null
+            label: Title
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 119e1001-7b6b-4ffa-ab2f-97cad5abc401
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 16584f6b-678a-4bfa-a9a3-84a7a00b360a
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Label
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6816d36e-0011-438f-99a5-fa5200b3f4bb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c0bb28d1-7842-4f9d-9748-b4624f719990
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: afe58355-9e8c-44bd-a180-9fffcc079ca4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8978c1e7-e3a5-4224-a951-1e6ac73f07f4
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Image
+            providesThumbs: true
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7cab8e15-6d08-4385-bf0b-9ce0bb92efd1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f4664618-c91b-43f1-a62d-090854001551
+        userCondition: null
+handle: anniversary
+hasTitleField: false
+icon: null
+name: Anniversary
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

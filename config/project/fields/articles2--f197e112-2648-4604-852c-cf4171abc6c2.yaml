@@ -1,0 +1,23 @@
+columnSuffix: null
+handle: articles2
+instructions: null
+name: 'Blocks - Articles - Layouts - Articles'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: 1
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

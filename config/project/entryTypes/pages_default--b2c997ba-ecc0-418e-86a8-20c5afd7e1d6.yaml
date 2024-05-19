@@ -1,0 +1,96 @@
+fieldLayouts:
+  4ebe5674-2801-4c52-80b9-ee2eb273d299:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ec9300e8-ff4c-49d5-97ae-1a2689b9e777
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6aab4182-8fbc-4f80-b6e3-504f5f487ecc # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6dfa1734-c210-4537-aa1d-452a5a94e88b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 86101875-be61-4608-82e5-3f2e3d32f30c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c989164d-182f-451f-bc04-5ccde8838645
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b0b838c9-5d25-43de-886a-bdf38b92df07 # Image Position
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 26f83501-a129-4d02-873f-0835b8ae65ab
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d5eceb6a-47a0-4c63-aff2-48afcdcf05bc # Image Size
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a65faf5b-aa40-450b-ab97-e3fa26a0f5a8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Appearance
+        uid: 512bcd5c-ca24-4d38-8b09-18fce2108ace
+        userCondition: null
+handle: pages_default
+hasTitleField: true
+name: 'Pages - Default'
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

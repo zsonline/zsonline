@@ -48,7 +48,6 @@ fieldLayouts:
 handle: home
 hasTitleField: false
 name: Home
-section: ab58e9ac-d8c0-428f-a72a-2132a4976859 # Home
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

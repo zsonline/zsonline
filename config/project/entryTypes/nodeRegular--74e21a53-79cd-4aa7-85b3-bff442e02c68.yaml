@@ -1,0 +1,126 @@
+color: null
+fieldLayouts:
+  49bcb63d-cf11-4968-a29e-305441b9bdd6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 13c1314c-8e18-452c-99b9-40ddcf9ba5f2
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Year
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 612b5ac8-6133-4b3c-a394-2568feb47f7c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 8bf7e76a-4365-4da0-a4c8-a545c79488c3
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Label
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16725866-f873-4584-96d7-d0f469563c3f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: b6909423-4a75-4b31-8af2-4ec0935f6bcb
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Title
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcc0bfcb-aec6-434e-985d-bd3e7940bb36
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6c7e7503-494c-4a2c-84c8-fbfb56dcbe67
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Image
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d875e246-12cc-48bd-8674-d0fab8d9587b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9c4c8063-ca7a-411d-ab4e-cb9498df24c8
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d52de4f-f836-40c8-95df-b2b092845b86
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a5f90846-e207-4034-ac8f-ae2a1d0f9186
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Print Image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aa8115bc-d879-4c08-a194-e28db217ca28
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9d3883d3-f157-4a96-a03e-5b86dbac381d
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Print Link'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4a599d19-503a-4f42-8df2-56f837f30934
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 8c06c300-2013-4023-a861-b4409fb0e673
+        userCondition: null
+handle: nodeRegular
+hasTitleField: false
+icon: null
+name: Regular
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,10 @@
+columnSuffix: irbejnhs
+handle: backgroundColor
+instructions: null
+name: 'Blocks - Articles - Color'
+searchable: false
+settings:
+  defaultColor: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color

@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 785ebd4b-4b47-46f7-a0a2-cd889b31058e # Topics - Default
 handle: topics
 name: Topics
 previewTargets:

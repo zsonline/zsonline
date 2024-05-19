@@ -1,18 +1,19 @@
 {
   "require": {
-    "craftcms/ckeditor": "3.8.3",
-    "craftcms/cms": "4.9.4",
-    "nystudio107/craft-plugin-vite": "^4.0",
-    "nystudio107/craft-vite": "4.0.9",
-    "putyourlightson/craft-sprig": "2.8.1",
-    "spicyweb/craft-embedded-assets": "4.1.0",
-    "twig/html-extra": "^3.4",
-    "verbb/comments": "2.0.12",
-    "verbb/navigation": "2.0.27",
-    "verbb/super-table": "3.0.14",
+    "craftcms/ckeditor": "^4.0.0",
+    "craftcms/cms": "^5.0.0",
+    "nystudio107/craft-plugin-vite": "^5.0.0",
+    "nystudio107/craft-vite": "^5.0.0",
+    "putyourlightson/craft-sprig": "^3.0.0",
+    "spicyweb/craft-embedded-assets": "^5.0.0",
+    "twig/html-extra": "^3.0.0",
+    "verbb/comments": "^3.0.0",
+    "verbb/navigation": "^3.0.0",
+    "verbb/super-table": "^4.0.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
+    "craftcms/generator": "^2.0.0",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
@@ -29,7 +30,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.2.0"
+      "php": "8.2"
     }
   },
   "repositories": [

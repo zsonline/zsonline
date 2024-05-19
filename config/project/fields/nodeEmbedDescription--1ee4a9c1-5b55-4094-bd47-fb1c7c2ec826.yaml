@@ -1,0 +1,21 @@
+columnSuffix: ivoorgte
+handle: nodeEmbedDescription
+instructions: null
+name: 'Timeline - Embed - Description'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Timeline Minimal
+  createButtonLabel: null
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

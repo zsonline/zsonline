@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: false
+entryTypes:
+  - 18ae8f32-e01d-480d-b9b7-9b166fcdceda # Home
 handle: home
 name: Home
 previewTargets:

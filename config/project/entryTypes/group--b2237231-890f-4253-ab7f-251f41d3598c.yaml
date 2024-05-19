@@ -1,0 +1,51 @@
+color: null
+fieldLayouts:
+  a9096378-ccb8-4131-bb4d-2cf9c6f16615:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9f01ed5b-f89c-478b-a859-71fd331c8d93
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Label
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bae2936f-afd5-40bd-b9c4-60dc7a93aec7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ae3e2976-5a2f-441c-a712-71c849fe2a40
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Articles
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7b075b3a-7acb-4805-a8d8-a2cfcb296bc3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dc617b81-152e-4341-b008-7f8b7de6f0a4
+        userCondition: null
+handle: group
+hasTitleField: false
+icon: null
+name: Group
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

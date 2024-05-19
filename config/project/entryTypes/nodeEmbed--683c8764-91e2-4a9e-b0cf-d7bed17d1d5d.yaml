@@ -1,0 +1,141 @@
+color: null
+fieldLayouts:
+  a9e15408-a77a-45c2-8483-59eb94987ade:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 683cb842-2907-43f6-a6be-a4a3833c5eb5
+            handle: nodeYear
+            includeInCards: true
+            instructions: null
+            label: Year
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eacda5ea-3957-4b93-85e3-a1622b3a1b1a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127
+            handle: nodeLabel
+            includeInCards: false
+            instructions: null
+            label: Label
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8cb24d1c-617b-42f6-a106-01805acd6261
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 6aee99fe-72b2-4d7d-a791-a8b6b15b3118
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Image
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 295d0f07-cc98-4a1e-9346-b44049b47f30
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b231772f-f289-459a-98aa-4307862a26f1
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Publication
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: feaa9774-73b3-449f-80ad-d924f84d4a44
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8c68bef4-fce4-4168-aa13-3ca1947567fb
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Title
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9703d91-4b69-4773-8abd-193116e73726
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c529f035-1e02-4af8-a7f0-afe4e24e634c
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Byline
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb9edcf0-b7a5-49d1-9b82-c4487889e212
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57422757-be01-4bc8-905f-08b22acee68c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8fc13160-607f-43ed-9ae7-e5b572317317
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Content
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46eccbcb-62fa-4973-9745-17dc3505b238
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d0000bc8-9493-4559-bc28-18b88f5a9ba3
+        userCondition: null
+handle: nodeEmbed
+hasTitleField: false
+icon: null
+name: Embed
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,6 +1,5 @@
 columnSuffix: ziprywbg
 contentColumnType: datetime
-fieldGroup: 0beef319-d887-4ce4-9f37-8ef9d9c7cea5 # Subscription
 handle: subscriptionEndDate
 instructions: null
 name: 'End Date'

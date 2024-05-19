@@ -1,0 +1,65 @@
+columnSuffix: yslapbix
+handle: appearance
+instructions: null
+name: 'Blocks - Articles - Layouts - Appearance'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Medium: Vertical, Vertical'
+        -
+          - value
+          - vv
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Medium: Vertical, Horizontal'
+        -
+          - value
+          - vh
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Medium: Horizontal, Horizontal'
+        -
+          - value
+          - hh
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Large: Vertical'
+        -
+          - value
+          - v
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Large: Horizontal'
+        -
+          - value
+          - h
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

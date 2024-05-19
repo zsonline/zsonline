@@ -1,5 +1,7 @@
 defaultPlacement: end
 enableVersioning: false
+entryTypes:
+  - bd3e37bc-785f-4f35-a3ba-42a801ec0e80 # Timeline
 handle: timeline
 name: Timeline
 previewTargets:

@@ -1,0 +1,66 @@
+color: null
+fieldLayouts:
+  535655a2-dff1-40a4-8a66-8b7da7bfa034:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d6607152-35ab-435a-9c88-53f1e9ab6f5c
+            handle: label
+            includeInCards: true
+            instructions: null
+            label: Title
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b46a056b-2500-429d-9df8-cd226dc7d188
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 024d03f4-9614-497a-9274-7340a22f343c
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Color
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba797703-d96c-47fa-9048-694a788cdd76
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 3458cf19-d496-4a9e-808d-47e0b2323224 # Blocks - Articles - Layouts
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Layouts
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ad893672-8209-42b8-96de-2b94cb515356
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d54c706c-05c5-43eb-92be-91e0a4e37f8f
+        userCondition: null
+handle: articles
+hasTitleField: false
+icon: null
+name: Articles
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
