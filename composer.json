@@ -1,15 +1,15 @@
 {
   "require": {
-    "craftcms/ckeditor": "3.8.2",
-    "craftcms/cms": "4.8.6",
+    "craftcms/ckeditor": "3.8.3",
+    "craftcms/cms": "4.9.4",
     "nystudio107/craft-plugin-vite": "^4.0",
     "nystudio107/craft-vite": "4.0.9",
-    "putyourlightson/craft-sprig": "2.8.0",
-    "spicyweb/craft-embedded-assets": "4.0.1",
+    "putyourlightson/craft-sprig": "2.8.1",
+    "spicyweb/craft-embedded-assets": "4.1.0",
     "twig/html-extra": "^3.4",
-    "verbb/comments": "2.0.11",
+    "verbb/comments": "2.0.12",
     "verbb/navigation": "2.0.27",
-    "verbb/super-table": "3.0.12",
+    "verbb/super-table": "3.0.14",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
