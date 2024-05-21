@@ -151,7 +151,7 @@ elementSources:
       userGroups:
         - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
 email:
-  fromEmail: verlag@zsonline.ch
+  fromEmail: redaktion@zsonline.ch
   fromName: 'Zürcher Studierendenzeitung'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
