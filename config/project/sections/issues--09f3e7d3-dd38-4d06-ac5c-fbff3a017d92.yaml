@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 14624af3-66ba-4513-af18-0cf411fbaf74 # Issues - Default
+  - 14624af3-66ba-4513-af18-0cf411fbaf74 # Issue
 handle: issues
 name: Issues
 previewTargets:

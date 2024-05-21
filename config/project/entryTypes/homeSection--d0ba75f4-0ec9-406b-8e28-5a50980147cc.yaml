@@ -6,6 +6,35 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 860784de-4cd6-49b6-ae84-51a5620b0ef3
+            userCondition: null
+            warning: null
+            width: 100
+          -
             elementCondition: null
             fieldUid: d6607152-35ab-435a-9c88-53f1e9ab6f5c
             handle: label
@@ -53,14 +82,14 @@ fieldLayouts:
         name: Content
         uid: d54c706c-05c5-43eb-92be-91e0a4e37f8f
         userCondition: null
-handle: articles
+handle: homeSection
 hasTitleField: false
-icon: null
-name: Articles
-showSlugField: true
-showStatusField: true
+icon: ''
+name: 'Home Section'
+showSlugField: false
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

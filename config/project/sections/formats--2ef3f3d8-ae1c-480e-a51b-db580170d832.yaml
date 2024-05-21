@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 241d2e87-c08f-4847-90e8-4ad1d718f876 # Formats - Default
+  - 241d2e87-c08f-4847-90e8-4ad1d718f876 # Format
 handle: formats
 name: Formats
 previewTargets:

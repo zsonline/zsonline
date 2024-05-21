@@ -6,7 +6,7 @@ searchable: false
 settings:
   createButtonLabel: null
   entryTypes:
-    - 10492ed9-cbb8-423a-951b-8e0dd55b11f4 # Blocks - Articles - Layouts Block
+    - 10492ed9-cbb8-423a-951b-8e0dd55b11f4 # Home Section Layout
   includeTableView: false
   maxEntries: null
   minEntries: 1

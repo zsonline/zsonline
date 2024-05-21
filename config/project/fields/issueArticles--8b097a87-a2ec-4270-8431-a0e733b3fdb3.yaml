@@ -6,7 +6,7 @@ name: Articles
 searchable: true
 settings:
   entryTypes:
-    - b2237231-890f-4253-ab7f-251f41d3598c
+    - b2237231-890f-4253-ab7f-251f41d3598c # Group
   maxEntries: null
   minEntries: null
   propagationKeyFormat: null

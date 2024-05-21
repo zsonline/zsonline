@@ -1,3 +1,4 @@
+color: null
 fieldLayouts:
   43afb4bf-4c84-4db2-8014-42abd79351c0:
     tabs:
@@ -12,6 +13,8 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -19,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -33,8 +37,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 15dca033-1e00-43b6-bcd3-05ca3c07b14f # Image
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -45,8 +52,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 4e85c514-8a85-45c7-996a-0824ef8d667b # Description
+            handle: null
+            includeInCards: false
             instructions: null
             label: Introduction
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -62,8 +72,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 950c0af3-396d-40b2-a1ca-bd4f80e037b6 # Timeline
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -76,11 +89,12 @@ fieldLayouts:
         userCondition: null
 handle: timeline
 hasTitleField: true
+icon: ''
 name: Timeline
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

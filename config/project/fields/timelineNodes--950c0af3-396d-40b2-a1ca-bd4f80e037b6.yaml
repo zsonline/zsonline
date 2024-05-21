@@ -6,8 +6,8 @@ name: Timeline
 searchable: false
 settings:
   entryTypes:
-    - 74e21a53-79cd-4aa7-85b3-bff442e02c68
-    - 683c8764-91e2-4a9e-b0cf-d7bed17d1d5d
+    - 74e21a53-79cd-4aa7-85b3-bff442e02c68 # Timeline Event
+    - 683c8764-91e2-4a9e-b0cf-d7bed17d1d5d # Timeline Event (Article)
   maxEntries: null
   minEntries: null
   propagationKeyFormat: null

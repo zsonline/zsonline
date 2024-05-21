@@ -1,4 +1,4 @@
-dateModified: 1716136859
+dateModified: 1716319692
 elementSources:
   craft\elements\User:
     -
@@ -188,7 +188,7 @@ meta:
     1bf3a5c8-628e-4b3c-b18b-aa384eec608e: Format # Format
     2ef3f3d8-ae1c-480e-a51b-db580170d832: Formats # Formats
     3a27561f-43cc-469a-a2fa-6920676a2b3a: 'Timeline Minimal' # Timeline Minimal
-    3cc8b7a7-5c00-4889-b691-ca2edc74df61: Default # Default
+    3cc8b7a7-5c00-4889-b691-ca2edc74df61: Ad # Ad
     4a5cdf1b-642d-4a37-854f-c3b1168bea2d: Editors # Editors
     4bacc350-5543-44ef-b96a-8b93bab7ce04: Title # Title
     4ce497c4-83db-4505-966c-25ac2477e7fb: Ads # Ads
@@ -207,12 +207,16 @@ meta:
     20bb750f-abb8-42b0-9ba8-adf65d1ee624: 'End Date' # End Date
     28f5783a-9790-439d-b079-1bc2b0cc58f9: Related # Related
     33d4c786-8ab6-42cf-9aaa-e48f7d18b820: Blocks # Blocks
+    36ea09ec-8867-4d74-96ee-d55c21e44104: 'Contributor (External)' # Contributor (External)
+    74e21a53-79cd-4aa7-85b3-bff442e02c68: 'Timeline Event' # Timeline Event
+    92be950a-0880-49a1-bd9a-dcfdb0745a8a: 'Contributors - Other - Contribution' # Contributors - Other - Contribution
     166c4d66-1a40-4e4b-9134-94fd09c8af81: Description # Description
-    241d2e87-c08f-4847-90e8-4ad1d718f876: 'Formats - Default' # Formats - Default
+    241d2e87-c08f-4847-90e8-4ad1d718f876: Format # Format
     420d0b54-9f18-41a9-b095-de7adfde688d: Image # Image
     429e38b0-5490-4b1b-be5e-99adcf0d6c47: Sales # Sales
     438d977b-985e-4c1f-9051-8e8e9b279e22: Topics # Topics
-    785ebd4b-4b47-46f7-a0a2-cd889b31058e: 'Topics - Default' # Topics - Default
+    683c8764-91e2-4a9e-b0cf-d7bed17d1d5d: 'Timeline Event (Article)' # Timeline Event (Article)
+    785ebd4b-4b47-46f7-a0a2-cd889b31058e: Topic # Topic
     944c11ef-571f-4e08-a4bb-db2540e4b404: Plan # Plan
     950c0af3-396d-40b2-a1ca-bd4f80e037b6: Timeline # Timeline
     1285a5ca-2942-4a8d-b303-352bb6885151: 'Image Size' # Image Size
@@ -220,27 +224,31 @@ meta:
     3581bd1c-2c0a-43ba-bb16-ca6221b1410c: Page # Page
     9549d5ad-d6e4-45a6-8376-edfc95d27e18: Embeds # Embeds
     9695de25-bf17-41a7-b295-68ad5cccc6c8: Pages # Pages
-    10492ed9-cbb8-423a-951b-8e0dd55b11f4: 'Blocks - Articles - Layouts Block' # Blocks - Articles - Layouts Block
-    14624af3-66ba-4513-af18-0cf411fbaf74: 'Issues - Default' # Issues - Default
+    10492ed9-cbb8-423a-951b-8e0dd55b11f4: 'Home Section Layout' # Home Section Layout
+    14624af3-66ba-4513-af18-0cf411fbaf74: Issue # Issue
     29112f01-afc1-469b-93b1-8f4e55a8215f: Link # Link
     76542e11-45e2-40c9-adfa-23d2ae8406d5: 'End Date' # End Date
     78967f52-4d7b-4aec-9fba-53d6aa2f5a2e: Navigation # Navigation
     732552e1-9a9c-4c59-b08a-f0b293aaf7d1: Topics # Topics
-    2604525a-d068-477f-9621-13db45b69206: 'Articles - Default' # Articles - Default
+    2604525a-d068-477f-9621-13db45b69206: Article # Article
+    37773290-a8f4-4562-bc4f-fb8c41a63584: 'Contributors - Other - Label' # Contributors - Other - Label
     48772033-da04-47e7-ad3b-4d3905ac7a65: Images # Images
     58707577-3441-49f2-bccc-3cb8c462f1e9: Article # Article
     77682833-175e-4825-998b-7af43363b40d: Link # Link
+    a3b06153-7a2e-425b-a7f7-61e925da17b9: Contributor # Contributor
     a10ce228-96c0-4d8d-8423-9ab5086b325f: 'Date Published' # Date Published
     a71cf75d-44bb-4489-ad90-93f218828cd1: Description # Description
     ab58e9ac-d8c0-428f-a72a-2132a4976859: Home # Home
     adf21248-5e45-44f0-a3d9-b2ece6004c5e: Contributors # Contributors
     b0b838c9-5d25-43de-886a-bdf38b92df07: 'Image Position' # Image Position
-    b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: 'Pages - Default' # Pages - Default
+    b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: Page # Page
     b4fa2985-51d4-428c-a10e-130fd6687f7b: 'Timeline Content' # Timeline Content
+    b2237231-890f-4253-ab7f-251f41d3598c: Group # Group
     bcb6d13b-de66-4331-8d15-bb23ef7a9736: Link # Link
     bd3e37bc-785f-4f35-a3ba-42a801ec0e80: Timeline # Timeline
     cb91d72b-d6d9-439e-8e7b-f3f871694967: Contributors # Contributors
     cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
+    d0ba75f4-0ec9-406b-8e28-5a50980147cc: 'Home Section' # Home Section
     d5eceb6a-47a0-4c63-aff2-48afcdcf05bc: 'Image Size' # Image Size
     d29e8b36-a8aa-4b2f-9033-2c5e9113427c: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
     d64265d4-5a86-41a5-a68e-c73f8c90123e: Timeline # Timeline

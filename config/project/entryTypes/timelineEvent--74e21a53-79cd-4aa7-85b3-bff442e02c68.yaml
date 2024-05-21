@@ -6,6 +6,35 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 67f51644-3354-4c51-8b96-6acf3a9a33e7
+            userCondition: null
+            warning: null
+            width: 100
+          -
             elementCondition: null
             fieldUid: 13c1314c-8e18-452c-99b9-40ddcf9ba5f2
             handle: null
@@ -113,14 +142,14 @@ fieldLayouts:
         name: Content
         uid: 8c06c300-2013-4023-a861-b4409fb0e673
         userCondition: null
-handle: nodeRegular
+handle: timelineEvent
 hasTitleField: false
-icon: null
-name: Regular
-showSlugField: true
-showStatusField: true
+icon: ''
+name: 'Timeline Event'
+showSlugField: false
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

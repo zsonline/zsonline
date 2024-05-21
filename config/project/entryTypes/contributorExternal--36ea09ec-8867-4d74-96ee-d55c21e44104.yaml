@@ -6,8 +6,37 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
             elementCondition: null
-            fieldUid: 37773290-a8f4-4562-bc4f-fb8c41a63584
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c5f731a3-005b-4f54-9cd7-ee2d1cd40d49
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 37773290-a8f4-4562-bc4f-fb8c41a63584 # Contributors - Other - Label
             handle: label
             includeInCards: true
             instructions: null
@@ -22,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 92be950a-0880-49a1-bd9a-dcfdb0745a8a
+            fieldUid: 92be950a-0880-49a1-bd9a-dcfdb0745a8a # Contributors - Other - Contribution
             handle: null
             includeInCards: false
             instructions: null
@@ -38,14 +67,14 @@ fieldLayouts:
         name: Content
         uid: fcb5a079-6051-4d2f-8a98-fd0c7d162112
         userCondition: null
-handle: other
+handle: contributorExternal
 hasTitleField: false
-icon: null
-name: Other
-showSlugField: true
-showStatusField: true
+icon: ''
+name: 'Contributor (External)'
+showSlugField: false
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

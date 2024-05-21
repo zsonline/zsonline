@@ -1,5 +1,6 @@
+color: null
 fieldLayouts:
-  028a14bb-dcfa-4146-8aaf-b672b6fcdc26:
+  3e68d43c-e502-41d7-b3d2-c908b21ba8fe:
     tabs:
       -
         elementCondition: null
@@ -12,6 +13,8 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -19,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -26,17 +30,21 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 5fc20cdf-3717-4004-acfd-b18565f539da
+            uid: 1bea5afa-dee1-4417-af63-71713dae498d
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 10c3d8c4-2d12-4006-b47c-255ff872a9f5
+        uid: 571c1d5f-692d-44a9-86b7-9700a73993fc
         userCondition: null
-handle: topics_default
+handle: format
 hasTitleField: true
-name: 'Topics - Default'
-sortOrder: 1
-titleFormat: null
+icon: ''
+name: Format
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
