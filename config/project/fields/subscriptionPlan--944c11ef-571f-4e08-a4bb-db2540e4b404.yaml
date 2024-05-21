@@ -1,8 +1,7 @@
 columnSuffix: rxwbrkqb
-contentColumnType: string
 handle: subscriptionPlan
 instructions: null
-name: Plan
+name: 'Subscription Plan'
 searchable: false
 settings:
   options:

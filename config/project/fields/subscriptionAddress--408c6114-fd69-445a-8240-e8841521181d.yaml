@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: subscriptionAddress
+instructions: null
+name: 'Subscription Address'
+searchable: false
+settings:
+  maxAddresses: 1
+  minAddresses: 1
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Addresses

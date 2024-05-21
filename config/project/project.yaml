@@ -64,7 +64,7 @@ elementSources:
               - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
           -
             class: craft\fields\conditions\OptionsFieldConditionRule
-            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Plan
+            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription Plan
             operator: in
             uid: b3f09856-6988-443b-b9dc-b929e4a623aa
             values:
@@ -78,8 +78,8 @@ elementSources:
       label: Regular
       tableAttributes:
         - email
-        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
-        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End Date
+        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Subscription Plan
+        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # Subscription End Date
         - dateCreated
       type: custom
       userGroups:
@@ -96,7 +96,7 @@ elementSources:
               - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
           -
             class: craft\fields\conditions\OptionsFieldConditionRule
-            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Plan
+            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription Plan
             operator: in
             uid: faf1ed3f-aeaf-4346-9473-dbd05b18a806
             values:
@@ -110,8 +110,8 @@ elementSources:
       label: Student
       tableAttributes:
         - email
-        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
-        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End Date
+        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Subscription Plan
+        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # Subscription End Date
         - dateCreated
       type: custom
       userGroups:
@@ -129,7 +129,7 @@ elementSources:
           -
             class: craft\fields\conditions\DateFieldConditionRule
             endDate: null
-            fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # End Date
+            fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # Subscription End Date
             periodType: minutesFromNow
             periodValue: 1.0
             rangeType: after
@@ -144,8 +144,8 @@ elementSources:
       label: Active
       tableAttributes:
         - email
-        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Plan
-        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # End Date
+        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Subscription Plan
+        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # Subscription End Date
         - dateCreated
       type: custom
       userGroups:
@@ -204,24 +204,27 @@ meta:
     09f3e7d3-dd38-4d06-ac5c-fbff3a017d92: Issues # Issues
     15dca033-1e00-43b6-bcd3-05ca3c07b14f: Image # Image
     18ae8f32-e01d-480d-b9b7-9b166fcdceda: Home # Home
-    20bb750f-abb8-42b0-9ba8-adf65d1ee624: 'End Date' # End Date
+    20bb750f-abb8-42b0-9ba8-adf65d1ee624: 'Subscription End Date' # Subscription End Date
     28f5783a-9790-439d-b079-1bc2b0cc58f9: Related # Related
     33d4c786-8ab6-42cf-9aaa-e48f7d18b820: Blocks # Blocks
     36ea09ec-8867-4d74-96ee-d55c21e44104: 'Contributor (External)' # Contributor (External)
+    56c4202e-de36-4fe8-ba9a-97ccdb7d8bb6: 'Subscription Lastname' # Subscription Lastname
     74e21a53-79cd-4aa7-85b3-bff442e02c68: 'Timeline Event' # Timeline Event
     92be950a-0880-49a1-bd9a-dcfdb0745a8a: 'Contributors - Other - Contribution' # Contributors - Other - Contribution
     166c4d66-1a40-4e4b-9134-94fd09c8af81: Description # Description
     241d2e87-c08f-4847-90e8-4ad1d718f876: Format # Format
+    408c6114-fd69-445a-8240-e8841521181d: 'Subscription Address' # Subscription Address
     420d0b54-9f18-41a9-b095-de7adfde688d: Image # Image
     429e38b0-5490-4b1b-be5e-99adcf0d6c47: Sales # Sales
     438d977b-985e-4c1f-9051-8e8e9b279e22: Topics # Topics
     683c8764-91e2-4a9e-b0cf-d7bed17d1d5d: 'Timeline Event (Article)' # Timeline Event (Article)
     785ebd4b-4b47-46f7-a0a2-cd889b31058e: Topic # Topic
-    944c11ef-571f-4e08-a4bb-db2540e4b404: Plan # Plan
+    944c11ef-571f-4e08-a4bb-db2540e4b404: 'Subscription Plan' # Subscription Plan
     950c0af3-396d-40b2-a1ca-bd4f80e037b6: Timeline # Timeline
     1285a5ca-2942-4a8d-b303-352bb6885151: 'Image Size' # Image Size
     3458cf19-d496-4a9e-808d-47e0b2323224: 'Blocks - Articles - Layouts' # Blocks - Articles - Layouts
     3581bd1c-2c0a-43ba-bb16-ca6221b1410c: Page # Page
+    4225bf4b-ab10-4bf8-8408-2c2280a0a599: Subscription # Subscription
     9549d5ad-d6e4-45a6-8376-edfc95d27e18: Embeds # Embeds
     9695de25-bf17-41a7-b295-68ad5cccc6c8: Pages # Pages
     10492ed9-cbb8-423a-951b-8e0dd55b11f4: 'Home Section Layout' # Home Section Layout
@@ -244,8 +247,10 @@ meta:
     b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: Page # Page
     b4fa2985-51d4-428c-a10e-130fd6687f7b: 'Timeline Content' # Timeline Content
     b2237231-890f-4253-ab7f-251f41d3598c: Group # Group
+    b7794701-7ea0-40bb-8bba-27df38f94295: 'Subscription Email' # Subscription Email
     bcb6d13b-de66-4331-8d15-bb23ef7a9736: Link # Link
     bd3e37bc-785f-4f35-a3ba-42a801ec0e80: Timeline # Timeline
+    c6375497-b7f2-4761-b74b-96fd072a5a6f: Subscriptions # Subscriptions
     cb91d72b-d6d9-439e-8e7b-f3f871694967: Contributors # Contributors
     cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
     d0ba75f4-0ec9-406b-8e28-5a50980147cc: 'Home Section' # Home Section
@@ -256,6 +261,7 @@ meta:
     e173ad9a-9850-43b4-a574-1029011919ef: File # File
     ef819456-45fb-4c34-a4e6-e32ab105c6a3: Caption # Caption
     f4cde807-f639-4b1d-bebe-8aa3cd4de160: Year # Year
+    f502974c-3cc3-4526-bbf0-4320147a482d: 'Subscription Firstname' # Subscription Firstname
     ff39e44a-c59b-40f1-9eae-5080bf251c2d: Cover # Cover
 plugins:
   ckeditor:

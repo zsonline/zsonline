@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 4225bf4b-ab10-4bf8-8408-2c2280a0a599 # Subscription
+handle: subscriptions
+maxAuthors: 1
+name: Subscriptions
+propagationMethod: all
+siteSettings:
+  cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: # Zürcher Studierendenzeitung
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

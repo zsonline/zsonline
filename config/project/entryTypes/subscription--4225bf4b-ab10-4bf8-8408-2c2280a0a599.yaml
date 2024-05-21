@@ -1,0 +1,145 @@
+color: null
+fieldLayouts:
+  7d85c1a7-13d0-4bab-add9-cbbab124f4bd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a51db6c8-c6ff-4c50-959e-0827390f18fc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f502974c-3cc3-4526-bbf0-4320147a482d # Subscription Firstname
+            handle: subscriptionFirstname2
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 73f6906d-8de5-4f8b-b522-ba6aa548f1b5
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: f502974c-3cc3-4526-bbf0-4320147a482d # Subscription Firstname
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 26817320-374a-4e12-ac49-3c2399144f45
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 56c4202e-de36-4fe8-ba9a-97ccdb7d8bb6 # Subscription Lastname
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c990f766-d74a-465a-b764-f6ba96cfcc06
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 408c6114-fd69-445a-8240-e8841521181d # Subscription Address
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 170859e7-a47e-499f-9dfd-a51dfdd46225
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b7794701-7ea0-40bb-8bba-27df38f94295 # Subscription Email
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8340a38c-1da8-493e-ad4e-358296d10491
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 05e0aa7f-ad17-46bb-92fb-fde337d479b8
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription Plan
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2a0f1edf-e710-4a28-9b00-3d655d23f0de
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e2275e8b-2875-46a6-bada-461af233bab8
+        userCondition: null
+handle: subscription
+hasTitleField: false
+icon: ''
+name: Subscription
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{subscriptionFirstname} {subscriptionLastname}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

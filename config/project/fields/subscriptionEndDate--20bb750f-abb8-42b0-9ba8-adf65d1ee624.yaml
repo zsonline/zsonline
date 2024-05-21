@@ -1,8 +1,7 @@
 columnSuffix: ziprywbg
-contentColumnType: datetime
 handle: subscriptionEndDate
 instructions: null
-name: 'End Date'
+name: 'Subscription End Date'
 searchable: false
 settings:
   max: null
