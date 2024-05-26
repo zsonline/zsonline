@@ -1,0 +1,9 @@
+headingLevels: false
+name: 'Content Note - Content'
+toolbar:
+  - bulletedList
+  - numberedList
+  - '|'
+  - bold
+  - italic
+  - link

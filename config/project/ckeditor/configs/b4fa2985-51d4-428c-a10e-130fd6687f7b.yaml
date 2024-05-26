@@ -1,7 +1,6 @@
 headingLevels:
   - 4
-listPlugin: List
-name: 'Timeline Content'
+name: 'Timeline Event (Article) - Content'
 toolbar:
   - heading
   - '|'

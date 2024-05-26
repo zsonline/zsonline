@@ -1,0 +1,14 @@
+headingLevels:
+  - 3
+name: 'Article - Content'
+toolbar:
+  - createEntry
+  - heading
+  - bulletedList
+  - numberedList
+  - mediaEmbed
+  - '|'
+  - bold
+  - italic
+  - link
+  - removeFormat

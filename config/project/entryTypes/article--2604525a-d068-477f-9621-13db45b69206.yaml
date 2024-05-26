@@ -66,6 +66,21 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 50b7bb6c-00c3-462d-8d00-1ae343ce044a # Article - Content
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6194cdb9-ae01-4765-b58a-22fb99bbba09
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Legacy - Content
             handle: null
             includeInCards: false

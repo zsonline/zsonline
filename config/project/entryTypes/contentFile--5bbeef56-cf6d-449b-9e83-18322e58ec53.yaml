@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  4ebe5674-2801-4c52-80b9-ee2eb273d299:
+  6bf19c47-529b-409f-9459-24aa3459085c:
     tabs:
       -
         elementCondition: null
@@ -30,64 +30,34 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: ec9300e8-ff4c-49d5-97ae-1a2689b9e777
+            uid: 9507105e-7340-4a96-b242-ba9b1e640a18
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 9a7641a1-9aa0-423c-a776-c0422cf7f378 # Page - Image
+            fieldUid: 5e969c43-23fb-4bfc-a51a-e8e26b1b66ba # Content File - File
             handle: null
             includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a2bc2795-1d12-4df1-939e-261b1eb161d1
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 4866b939-c650-45b9-97eb-3fa0eeecea01 # Page - Content
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e987ed0c-08f9-45c2-92eb-bc61a855ae4e
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Legacy - Content
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 86101875-be61-4608-82e5-3f2e3d32f30c
+            uid: 3d1f118b-fd00-4700-914e-21a4bef3051b
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: c989164d-182f-451f-bc04-5ccde8838645
+        uid: c7371210-a30f-49a5-a49a-22f4f0a5988f
         userCondition: null
-handle: page
-hasTitleField: true
+handle: contentFile
+hasTitleField: false
 icon: null
-name: Page
-showSlugField: true
-showStatusField: true
+name: 'Content File'
+showSlugField: false
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
 titleFormat: null

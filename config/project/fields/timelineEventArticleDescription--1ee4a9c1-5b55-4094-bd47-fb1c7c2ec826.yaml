@@ -1,12 +1,12 @@
 columnSuffix: ivoorgte
-handle: timelineEventArticleLead
+handle: timelineEventArticleDescription
 instructions: null
-name: 'Timeline Event (Article) - Lead'
+name: 'Legacy - Description'
 searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: ''
-  ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Timeline Minimal
+  ckeConfig: c7ddc58d-ce45-4fdd-a7b2-d1318ae1afb1 # Timeline Event - Description
   createButtonLabel: null
   defaultTransform: null
   enableSourceEditingForNonAdmins: false

@@ -1,0 +1,13 @@
+headingLevels:
+  - 3
+name: 'Page - Content'
+toolbar:
+  - createEntry
+  - heading
+  - bulletedList
+  - numberedList
+  - '|'
+  - bold
+  - italic
+  - link
+  - removeFormat

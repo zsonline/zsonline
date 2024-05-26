@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  4ebe5674-2801-4c52-80b9-ee2eb273d299:
+  d7048f23-b349-4f2e-b5f6-eb5595255268:
     tabs:
       -
         elementCondition: null
@@ -30,13 +30,28 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: ec9300e8-ff4c-49d5-97ae-1a2689b9e777
+            uid: 227e7752-3d7a-4bd1-8d60-9ef2449c46b3
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 9a7641a1-9aa0-423c-a776-c0422cf7f378 # Page - Image
+            fieldUid: a91ae399-006d-491c-be06-43159f3523fd # Content Quote - Quote
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2f0718e6-095b-4f4f-a815-0b30bc21979f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a34a04ef-5b2f-4d2a-bd51-83afb13d4337 # Content Quote - Caption
             handle: null
             includeInCards: false
             instructions: null
@@ -45,49 +60,19 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a2bc2795-1d12-4df1-939e-261b1eb161d1
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 4866b939-c650-45b9-97eb-3fa0eeecea01 # Page - Content
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e987ed0c-08f9-45c2-92eb-bc61a855ae4e
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Legacy - Content
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 86101875-be61-4608-82e5-3f2e3d32f30c
+            uid: e0a2878a-e40c-4148-ac04-2f538ffbce86
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: c989164d-182f-451f-bc04-5ccde8838645
+        uid: 7c6f70b2-23a8-468c-b020-f5f9d15c17c1
         userCondition: null
-handle: page
-hasTitleField: true
+handle: contentQuote
+hasTitleField: false
 icon: null
-name: Page
-showSlugField: true
-showStatusField: true
+name: 'Content Quote'
+showSlugField: false
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
 titleFormat: null

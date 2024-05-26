@@ -1,12 +1,12 @@
-columnSuffix: zzgrvlns
-handle: timelineEventArticleContent
+columnSuffix: null
+handle: contentNoteContent
 instructions: null
-name: 'Timeline Event (Article) - Content'
+name: 'Content Note - Content'
 searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: ''
-  ckeConfig: b4fa2985-51d4-428c-a10e-130fd6687f7b # Timeline Event (Article) - Content
+  ckeConfig: 30ad3ecb-e175-42bd-8a93-6b5432ae932f # Content Note - Content
   createButtonLabel: null
   defaultTransform: null
   enableSourceEditingForNonAdmins: false

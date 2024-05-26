@@ -126,7 +126,22 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826 # Timeline Event (Article) - Lead
+            fieldUid: 91d8d1f4-db2b-49ba-9de0-187a49dd5276 # Timeline Event (Article) - Lead
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cadb8ad0-801e-4978-a8c9-2df5816201fd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826 # Legacy - Description
             handle: null
             includeInCards: false
             instructions: null

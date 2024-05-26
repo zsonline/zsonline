@@ -1,0 +1,27 @@
+columnSuffix: null
+handle: articleContent
+instructions: null
+name: 'Article - Content'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  ckeConfig: d3dc65f7-7b0a-4ff2-b2e9-54c9ff11d3de # Article - Content
+  createButtonLabel: null
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  entryTypes:
+    - 5c6da112-a718-4124-97fb-97f8c5b0ac06 # Content Image
+    - deee59e0-88c5-4df0-b499-639671b936b2 # Content Gallery
+    - 614a8287-bcf0-40de-8795-3ab58a7a4d50 # Content Quote
+    - 232f0e97-046b-417c-bb0b-d38f41748a3a # Content Note
+    - 5bbeef56-cf6d-449b-9e83-18322e58ec53 # Content File
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field
