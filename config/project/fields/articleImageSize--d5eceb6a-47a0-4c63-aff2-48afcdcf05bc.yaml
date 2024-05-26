@@ -1,7 +1,7 @@
-columnSuffix: heaktlji
-handle: contentImagePosition
+columnSuffix: nqywdzxe
+handle: articleImageSize
 instructions: null
-name: 'Shared - Image Position'
+name: 'Article - Image Size'
 searchable: false
 settings:
   options:
@@ -9,10 +9,21 @@ settings:
       __assoc__:
         -
           - label
-          - Top
+          - Small
         -
           - value
-          - top
+          - small
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Medium
+        -
+          - value
+          - medium
         -
           - default
           - '1'
@@ -20,10 +31,10 @@ settings:
       __assoc__:
         -
           - label
-          - Bottom
+          - Large
         -
           - value
-          - bottom
+          - large
         -
           - default
           - ''

@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6aab4182-8fbc-4f80-b6e3-504f5f487ecc # Shared - Image
+            fieldUid: 9a7641a1-9aa0-423c-a776-c0422cf7f378 # Page - Image
             handle: null
             includeInCards: false
             instructions: null
@@ -45,13 +45,13 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6dfa1734-c210-4537-aa1d-452a5a94e88b
+            uid: a2bc2795-1d12-4df1-939e-261b1eb161d1
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Shared - Content
+            fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Legacy - Content
             handle: null
             includeInCards: false
             instructions: null
@@ -67,50 +67,14 @@ fieldLayouts:
         name: Content
         uid: c989164d-182f-451f-bc04-5ccde8838645
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: b0b838c9-5d25-43de-886a-bdf38b92df07 # Shared - Image Position
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 26f83501-a129-4d02-873f-0835b8ae65ab
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: d5eceb6a-47a0-4c63-aff2-48afcdcf05bc # Shared - Image Size
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a65faf5b-aa40-450b-ab97-e3fa26a0f5a8
-            userCondition: null
-            warning: null
-            width: 100
-        name: Appearance
-        uid: 512bcd5c-ca24-4d38-8b09-18fce2108ace
-        userCondition: null
 handle: page
 hasTitleField: true
-icon: null
+icon: ''
 name: Page
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

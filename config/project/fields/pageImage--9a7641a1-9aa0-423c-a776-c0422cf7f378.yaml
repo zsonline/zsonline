@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: contentImage
+handle: pageImage
 instructions: null
-name: 'Shared - Image'
+name: 'Page - Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -24,11 +24,10 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: true
+  showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  sources:
-    - 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
+  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: large

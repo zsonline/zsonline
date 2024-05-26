@@ -1,4 +1,4 @@
-dateModified: 1716747410
+dateModified: 1716749000
 elementSources:
   craft\elements\User:
     -
@@ -199,10 +199,10 @@ meta:
     4a5cdf1b-642d-4a37-854f-c3b1168bea2d: Editors # Editors
     4ce497c4-83db-4505-966c-25ac2477e7fb: Ads # Ads
     4e85c514-8a85-45c7-996a-0824ef8d667b: 'Timeline - Description' # Timeline - Description
-    5a09781f-aab3-4633-b3ed-6bd0bda1ad48: 'Shared - Content' # Shared - Content
+    5a09781f-aab3-4633-b3ed-6bd0bda1ad48: 'Legacy - Content' # Legacy - Content
     5c6f5aa7-cf71-41b9-ac00-8f640607916a: Contributors # Contributors
     5fa65803-cc01-4718-967f-17c1fac740ab: Files # Files
-    6aab4182-8fbc-4f80-b6e3-504f5f487ecc: 'Shared - Image' # Shared - Image
+    6aab4182-8fbc-4f80-b6e3-504f5f487ecc: 'Article - Image' # Article - Image
     6aee99fe-72b2-4d7d-a791-a8b6b15b3118: 'Timeline Event (Article) - Image' # Timeline Event (Article) - Image
     6c7e7503-494c-4a2c-84c8-fbfb56dcbe67: 'Timeline Event - Image' # Timeline Event - Image
     6cdd6eb7-76e7-4ae1-949a-513b1ede029c: 'Issue - Number' # Issue - Number
@@ -212,6 +212,7 @@ meta:
     8bf7e76a-4365-4da0-a4c8-a545c79488c3: 'Timeline Event - Label' # Timeline Event - Label
     8c68bef4-fce4-4168-aa13-3ca1947567fb: 'Timeline Event (Article) - Title' # Timeline Event (Article) - Title
     8fc13160-607f-43ed-9ae7-e5b572317317: 'Timeline Event (Article) - Content' # Timeline Event (Article) - Content
+    9a7641a1-9aa0-423c-a776-c0422cf7f378: 'Page - Image' # Page - Image
     9c4c8063-ca7a-411d-ab4e-cb9498df24c8: 'Timeline Event - Description' # Timeline Event - Description
     9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed: 'Article - Ad' # Article - Ad
     9d3883d3-f157-4a96-a03e-5b86dbac381d: 'Timeline Event - Print Link' # Timeline Event - Print Link
@@ -225,6 +226,7 @@ meta:
     28f5783a-9790-439d-b079-1bc2b0cc58f9: 'Article - Related' # Article - Related
     33d4c786-8ab6-42cf-9aaa-e48f7d18b820: 'Home - Sections' # Home - Sections
     36ea09ec-8867-4d74-96ee-d55c21e44104: 'Contribution (External)' # Contribution (External)
+    49b8a091-c188-4f35-a61b-6162eb8514a9: 'Image - Contributions' # Image - Contributions
     56c4202e-de36-4fe8-ba9a-97ccdb7d8bb6: 'Subscription - Lastname' # Subscription - Lastname
     74e21a53-79cd-4aa7-85b3-bff442e02c68: 'Timeline Event' # Timeline Event
     85a18a10-e219-4aa0-b2f9-0863939b21fc: 'Contribution - Contributor' # Contribution - Contributor
@@ -259,7 +261,7 @@ meta:
     ab58e9ac-d8c0-428f-a72a-2132a4976859: Home # Home
     adf21248-5e45-44f0-a3d9-b2ece6004c5e: Contributors # Contributors
     ae3e2976-5a2f-441c-a712-71c849fe2a40: 'Issue Section - Articles' # Issue Section - Articles
-    b0b838c9-5d25-43de-886a-bdf38b92df07: 'Shared - Image Position' # Shared - Image Position
+    b0b838c9-5d25-43de-886a-bdf38b92df07: 'Article - Image Position' # Article - Image Position
     b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: Page # Page
     b4fa2985-51d4-428c-a10e-130fd6687f7b: 'Timeline Content' # Timeline Content
     b231772f-f289-459a-98aa-4307862a26f1: 'Timeline Event (Article) - Publication' # Timeline Event (Article) - Publication
@@ -270,10 +272,10 @@ meta:
     bd3e37bc-785f-4f35-a3ba-42a801ec0e80: Timeline # Timeline
     c529f035-1e02-4af8-a7f0-afe4e24e634c: 'Timeline Event (Article) - Byline' # Timeline Event (Article) - Byline
     c6375497-b7f2-4761-b74b-96fd072a5a6f: Subscriptions # Subscriptions
-    cb91d72b-d6d9-439e-8e7b-f3f871694967: 'Shared - Contributions' # Shared - Contributions
+    cb91d72b-d6d9-439e-8e7b-f3f871694967: 'Article - Contributions' # Article - Contributions
     cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
     d0ba75f4-0ec9-406b-8e28-5a50980147cc: 'Home Section' # Home Section
-    d5eceb6a-47a0-4c63-aff2-48afcdcf05bc: 'Shared - Image Size' # Shared - Image Size
+    d5eceb6a-47a0-4c63-aff2-48afcdcf05bc: 'Article - Image Size' # Article - Image Size
     d29e8b36-a8aa-4b2f-9033-2c5e9113427c: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
     d64265d4-5a86-41a5-a68e-c73f8c90123e: Timeline # Timeline
     d6607152-35ab-435a-9c88-53f1e9ab6f5c: 'Home Section - Title' # Home Section - Title

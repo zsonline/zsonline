@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: contributions
+handle: imageContributions
 instructions: null
-name: 'Article - Contributions'
+name: 'Image - Contributions'
 searchable: false
 settings:
   createButtonLabel: null

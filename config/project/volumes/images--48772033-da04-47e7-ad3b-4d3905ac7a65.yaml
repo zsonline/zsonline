@@ -52,7 +52,22 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: cb91d72b-d6d9-439e-8e7b-f3f871694967 # Shared - Contributions
+            fieldUid: 49b8a091-c188-4f35-a61b-6162eb8514a9 # Image - Contributions
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67baab17-4a70-4308-a19c-f4bbe07bcfef
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cb91d72b-d6d9-439e-8e7b-f3f871694967 # Article - Contributions
             handle: null
             includeInCards: false
             instructions: null
