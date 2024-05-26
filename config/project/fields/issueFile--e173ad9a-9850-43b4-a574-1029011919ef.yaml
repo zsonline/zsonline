@@ -1,8 +1,7 @@
 columnSuffix: null
-contentColumnType: string
 handle: issueFile
 instructions: null
-name: File
+name: 'Issue File'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -10,9 +9,11 @@ settings:
   allowUploads: false
   allowedKinds:
     - pdf
-  defaultUploadLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   defaultUploadLocationSubpath: null
   localizeRelations: false
+  maintainHierarchy: false
   maxRelations: 1
   minRelations: 1
   previewMode: full
@@ -21,22 +22,11 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   restrictedLocationSubpath: null
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Asset
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\assets\AssetCondition
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  source: null
   sources:
     - 'volume:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   targetSiteId: null

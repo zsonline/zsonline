@@ -1,11 +1,11 @@
-columnSuffix: hdiprzew
-handle: label
+columnSuffix: rbdqutal
+handle: timelineEventArticleByline
 instructions: null
-name: 'Articles - Group - Label'
+name: 'Timeline Event Article Byline'
 searchable: false
 settings:
   byteLimit: null
-  charLimit: 32
+  charLimit: null
   code: false
   initialRows: 4
   multiline: false

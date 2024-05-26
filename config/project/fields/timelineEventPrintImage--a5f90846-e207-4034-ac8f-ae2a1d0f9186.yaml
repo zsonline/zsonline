@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: nodeImage
+handle: timelineEventPrintImage
 instructions: null
-name: 'Timeline - Regular - Image'
+name: 'Timeline Event Print Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -14,7 +14,7 @@ settings:
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: true

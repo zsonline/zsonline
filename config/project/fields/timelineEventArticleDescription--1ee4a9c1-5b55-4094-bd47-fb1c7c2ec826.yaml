@@ -1,7 +1,7 @@
 columnSuffix: ivoorgte
-handle: nodeEmbedDescription
+handle: timelineEventArticleDescription
 instructions: null
-name: 'Timeline - Embed - Description'
+name: 'Timeline Event Article Description'
 searchable: false
 settings:
   availableTransforms: ''

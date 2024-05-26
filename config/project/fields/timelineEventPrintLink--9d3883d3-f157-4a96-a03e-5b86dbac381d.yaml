@@ -1,7 +1,7 @@
 columnSuffix: axnafpsw
-handle: nodePrintLink
+handle: timelineEventPrintLink
 instructions: null
-name: 'Timeline - Regular - Print Link'
+name: 'Timeline Event Print Link'
 searchable: false
 settings:
   maxLength: 255

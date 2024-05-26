@@ -1,14 +1,12 @@
 columnSuffix: enhcyavm
-contentColumnType: text
 handle: contentDescription
 instructions: null
-name: Description
-searchable: true
+name: 'Content Description'
+searchable: false
 settings:
   byteLimit: null
   charLimit: null
   code: false
-  columnType: null
   initialRows: 4
   multiline: false
   placeholder: null

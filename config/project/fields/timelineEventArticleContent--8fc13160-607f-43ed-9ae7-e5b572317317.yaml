@@ -1,12 +1,12 @@
-columnSuffix: hdedlpoh
-handle: nodeDescription
+columnSuffix: zzgrvlns
+handle: timelineEventArticleContent
 instructions: null
-name: 'Timeline - Regular - Description'
+name: 'Timeline Event Article Content'
 searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: ''
-  ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Timeline Minimal
+  ckeConfig: b4fa2985-51d4-428c-a10e-130fd6687f7b # Timeline Content
   createButtonLabel: null
   defaultTransform: null
   enableSourceEditingForNonAdmins: false

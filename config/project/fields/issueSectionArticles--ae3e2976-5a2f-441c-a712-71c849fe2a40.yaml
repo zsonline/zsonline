@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: articles2
+handle: issueSectionArticles
 instructions: null
-name: 'Blocks - Articles - Layouts - Articles'
+name: 'Issue Section Articles'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -17,7 +17,7 @@ settings:
     - 'section:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Entries

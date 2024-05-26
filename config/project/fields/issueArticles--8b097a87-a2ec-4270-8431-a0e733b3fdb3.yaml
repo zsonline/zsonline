@@ -1,16 +1,19 @@
 columnSuffix: null
-contentColumnType: string
 handle: issueArticles
 instructions: null
-name: Articles
-searchable: true
+name: 'Issue Articles'
+searchable: false
 settings:
+  createButtonLabel: null
   entryTypes:
-    - b2237231-890f-4253-ab7f-251f41d3598c # Group
+    - b2237231-890f-4253-ab7f-251f41d3598c # Issue Section
+  includeTableView: false
   maxEntries: null
   minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

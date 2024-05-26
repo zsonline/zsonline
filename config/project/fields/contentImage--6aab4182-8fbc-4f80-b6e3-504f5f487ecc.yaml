@@ -1,8 +1,7 @@
 columnSuffix: null
-contentColumnType: string
 handle: contentImage
 instructions: null
-name: Image
+name: 'Content Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -10,9 +9,11 @@ settings:
   allowUploads: false
   allowedKinds:
     - image
+  branchLimit: null
   defaultUploadLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   defaultUploadLocationSubpath: null
   localizeRelations: false
+  maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   previewMode: full
@@ -21,22 +22,11 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   restrictedLocationSubpath: null
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Asset
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\assets\AssetCondition
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  source: null
   sources:
     - 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   targetSiteId: null

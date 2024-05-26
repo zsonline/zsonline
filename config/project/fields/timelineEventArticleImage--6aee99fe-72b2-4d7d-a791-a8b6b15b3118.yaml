@@ -1,14 +1,13 @@
 columnSuffix: null
-handle: nodePrintImage
+handle: timelineEventArticleImage
 instructions: null
-name: 'Timeline - Regular - Print Image'
+name: 'Timeline Event Article Image'
 searchable: false
 settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
-  allowedKinds:
-    - image
+  allowedKinds: null
   branchLimit: null
   defaultUploadLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   defaultUploadLocationSubpath: null
@@ -17,7 +16,7 @@ settings:
   maxRelations: 1
   minRelations: null
   previewMode: full
-  restrictFiles: true
+  restrictFiles: false
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images

@@ -1,4 +1,4 @@
-dateModified: 1716743999
+dateModified: 1716745465
 elementSources:
   craft\elements\User:
     -
@@ -185,30 +185,42 @@ fs:
     url: '@web/assets/images'
 meta:
   __names__:
+    0cf2962b-f593-4e6b-9ac2-9544710d8aad: 'Home Section Layout Appearance' # Home Section Layout Appearance
     0fd78a25-b16e-4d38-a0cc-80c28df2b958: 'Contributor Lastname' # Contributor Lastname
-    1bf3a5c8-628e-4b3c-b18b-aa384eec608e: Format # Format
+    1bf3a5c8-628e-4b3c-b18b-aa384eec608e: 'Article Format' # Article Format
+    1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826: 'Timeline Event Article Description' # Timeline Event Article Description
     2ef3f3d8-ae1c-480e-a51b-db580170d832: Formats # Formats
     3a27561f-43cc-469a-a2fa-6920676a2b3a: 'Timeline Minimal' # Timeline Minimal
     3cc8b7a7-5c00-4889-b691-ca2edc74df61: Ad # Ad
     4a5cdf1b-642d-4a37-854f-c3b1168bea2d: Editors # Editors
     4bacc350-5543-44ef-b96a-8b93bab7ce04: Title # Title
     4ce497c4-83db-4505-966c-25ac2477e7fb: Ads # Ads
-    4e85c514-8a85-45c7-996a-0824ef8d667b: Description # Description
+    4e85c514-8a85-45c7-996a-0824ef8d667b: 'Timeline Description' # Timeline Description
     5a09781f-aab3-4633-b3ed-6bd0bda1ad48: Content # Content
     5c6f5aa7-cf71-41b9-ac00-8f640607916a: Contributors # Contributors
     5fa65803-cc01-4718-967f-17c1fac740ab: Files # Files
-    6aab4182-8fbc-4f80-b6e3-504f5f487ecc: Image # Image
-    6cdd6eb7-76e7-4ae1-949a-513b1ede029c: Number # Number
+    6aab4182-8fbc-4f80-b6e3-504f5f487ecc: 'Content Image' # Content Image
+    6aee99fe-72b2-4d7d-a791-a8b6b15b3118: 'Timeline Event Article Image' # Timeline Event Article Image
+    6c7e7503-494c-4a2c-84c8-fbfb56dcbe67: 'Timeline Event Image' # Timeline Event Image
+    6cdd6eb7-76e7-4ae1-949a-513b1ede029c: 'Issue Number' # Issue Number
     7dac239d-784f-4ec9-80fc-46b2c4362060: Articles # Articles
     7ef5f597-7ee8-473c-9647-ba485d262e5a: Subscriber # Subscriber
-    8b097a87-a2ec-4270-8431-a0e733b3fdb3: Articles # Articles
-    9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed: Ad # Ad
+    8b097a87-a2ec-4270-8431-a0e733b3fdb3: 'Issue Articles' # Issue Articles
+    8bf7e76a-4365-4da0-a4c8-a545c79488c3: 'Timeline Event Label' # Timeline Event Label
+    8c68bef4-fce4-4168-aa13-3ca1947567fb: 'Timeline Event Article Title' # Timeline Event Article Title
+    8fc13160-607f-43ed-9ae7-e5b572317317: 'Timeline Event Article Content' # Timeline Event Article Content
+    9c4c8063-ca7a-411d-ab4e-cb9498df24c8: 'Timeline Event Description' # Timeline Event Description
+    9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed: 'Article Ad' # Article Ad
+    9d3883d3-f157-4a96-a03e-5b86dbac381d: 'Timeline Event Print Link' # Timeline Event Print Link
+    9f01ed5b-f89c-478b-a859-71fd331c8d93: 'Issue Section Label' # Issue Section Label
     09f3e7d3-dd38-4d06-ac5c-fbff3a017d92: Issues # Issues
-    15dca033-1e00-43b6-bcd3-05ca3c07b14f: Image # Image
+    13c1314c-8e18-452c-99b9-40ddcf9ba5f2: 'Timeline Event Year' # Timeline Event Year
+    15dca033-1e00-43b6-bcd3-05ca3c07b14f: 'Timeline Image' # Timeline Image
     18ae8f32-e01d-480d-b9b7-9b166fcdceda: Home # Home
     20bb750f-abb8-42b0-9ba8-adf65d1ee624: 'Subscription End Date' # Subscription End Date
-    28f5783a-9790-439d-b079-1bc2b0cc58f9: Related # Related
-    33d4c786-8ab6-42cf-9aaa-e48f7d18b820: Blocks # Blocks
+    024d03f4-9614-497a-9274-7340a22f343c: 'Home Section Color' # Home Section Color
+    28f5783a-9790-439d-b079-1bc2b0cc58f9: 'Article Related' # Article Related
+    33d4c786-8ab6-42cf-9aaa-e48f7d18b820: 'Home Sections' # Home Sections
     36ea09ec-8867-4d74-96ee-d55c21e44104: 'Contribution (External)' # Contribution (External)
     56c4202e-de36-4fe8-ba9a-97ccdb7d8bb6: 'Subscription Lastname' # Subscription Lastname
     74e21a53-79cd-4aa7-85b3-bff442e02c68: 'Timeline Event' # Timeline Event
@@ -218,16 +230,17 @@ meta:
     241d2e87-c08f-4847-90e8-4ad1d718f876: Format # Format
     274b5d00-df3a-4b76-861b-ca591e2af249: 'Contribution User' # Contribution User
     408c6114-fd69-445a-8240-e8841521181d: 'Subscription Address' # Subscription Address
-    420d0b54-9f18-41a9-b095-de7adfde688d: Image # Image
+    420d0b54-9f18-41a9-b095-de7adfde688d: 'Ad Image' # Ad Image
     429e38b0-5490-4b1b-be5e-99adcf0d6c47: Sales # Sales
     437bb34b-df33-490d-a865-5fcd8eac751b: Contributor # Contributor
-    438d977b-985e-4c1f-9051-8e8e9b279e22: Topics # Topics
+    438d977b-985e-4c1f-9051-8e8e9b279e22: 'Article Topics' # Article Topics
     683c8764-91e2-4a9e-b0cf-d7bed17d1d5d: 'Timeline Event (Article)' # Timeline Event (Article)
+    683cb842-2907-43f6-a6be-a4a3833c5eb5: 'Timeline Event Article Year' # Timeline Event Article Year
     785ebd4b-4b47-46f7-a0a2-cd889b31058e: Topic # Topic
     944c11ef-571f-4e08-a4bb-db2540e4b404: 'Subscription Plan' # Subscription Plan
-    950c0af3-396d-40b2-a1ca-bd4f80e037b6: Timeline # Timeline
+    950c0af3-396d-40b2-a1ca-bd4f80e037b6: 'Timeline Events' # Timeline Events
     1285a5ca-2942-4a8d-b303-352bb6885151: 'Image Size' # Image Size
-    3458cf19-d496-4a9e-808d-47e0b2323224: 'Blocks - Articles - Layouts' # Blocks - Articles - Layouts
+    3458cf19-d496-4a9e-808d-47e0b2323224: 'Home Section Layouts' # Home Section Layouts
     3581bd1c-2c0a-43ba-bb16-ca6221b1410c: Page # Page
     4225bf4b-ab10-4bf8-8408-2c2280a0a599: Subscription # Subscription
     9549d5ad-d6e4-45a6-8376-edfc95d27e18: Embeds # Embeds
@@ -244,32 +257,40 @@ meta:
     58707577-3441-49f2-bccc-3cb8c462f1e9: Article # Article
     77682833-175e-4825-998b-7af43363b40d: Link # Link
     a3b06153-7a2e-425b-a7f7-61e925da17b9: Contribution # Contribution
+    a5f90846-e207-4034-ac8f-ae2a1d0f9186: 'Timeline Event Print Image' # Timeline Event Print Image
     a10ce228-96c0-4d8d-8423-9ab5086b325f: 'Date Published' # Date Published
     a46d69bc-dad9-44b6-9ca0-9ce75f501b7b: 'Contribution Type' # Contribution Type
-    a71cf75d-44bb-4489-ad90-93f218828cd1: Description # Description
+    a71cf75d-44bb-4489-ad90-93f218828cd1: 'Content Description' # Content Description
     ab58e9ac-d8c0-428f-a72a-2132a4976859: Home # Home
     adf21248-5e45-44f0-a3d9-b2ece6004c5e: Contributors # Contributors
-    b0b838c9-5d25-43de-886a-bdf38b92df07: 'Image Position' # Image Position
+    ae3e2976-5a2f-441c-a712-71c849fe2a40: 'Issue Section Articles' # Issue Section Articles
+    b0b838c9-5d25-43de-886a-bdf38b92df07: 'Content Image Position' # Content Image Position
     b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: Page # Page
     b4fa2985-51d4-428c-a10e-130fd6687f7b: 'Timeline Content' # Timeline Content
-    b2237231-890f-4253-ab7f-251f41d3598c: Group # Group
+    b231772f-f289-459a-98aa-4307862a26f1: 'Timeline Event Article Publication' # Timeline Event Article Publication
+    b2237231-890f-4253-ab7f-251f41d3598c: 'Issue Section' # Issue Section
+    b6909423-4a75-4b31-8af2-4ec0935f6bcb: 'Timeline Event Title' # Timeline Event Title
     b7794701-7ea0-40bb-8bba-27df38f94295: 'Subscription Email' # Subscription Email
-    bcb6d13b-de66-4331-8d15-bb23ef7a9736: Link # Link
+    bcb6d13b-de66-4331-8d15-bb23ef7a9736: 'Ad Link' # Ad Link
     bd3e37bc-785f-4f35-a3ba-42a801ec0e80: Timeline # Timeline
+    c529f035-1e02-4af8-a7f0-afe4e24e634c: 'Timeline Event Article Byline' # Timeline Event Article Byline
     c6375497-b7f2-4761-b74b-96fd072a5a6f: Subscriptions # Subscriptions
     cb91d72b-d6d9-439e-8e7b-f3f871694967: Contributions # Contributions
     cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
     d0ba75f4-0ec9-406b-8e28-5a50980147cc: 'Home Section' # Home Section
-    d5eceb6a-47a0-4c63-aff2-48afcdcf05bc: 'Image Size' # Image Size
+    d5eceb6a-47a0-4c63-aff2-48afcdcf05bc: 'Content Image Size' # Content Image Size
     d29e8b36-a8aa-4b2f-9033-2c5e9113427c: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
     d64265d4-5a86-41a5-a68e-c73f8c90123e: Timeline # Timeline
+    d6607152-35ab-435a-9c88-53f1e9ab6f5c: 'Home Section Label' # Home Section Label
     e60b1147-c0d1-4999-99e3-8bbc556e4fa5: Ads # Ads
-    e173ad9a-9850-43b4-a574-1029011919ef: File # File
-    ef819456-45fb-4c34-a4e6-e32ab105c6a3: Caption # Caption
-    f4cde807-f639-4b1d-bebe-8aa3cd4de160: Year # Year
+    e173ad9a-9850-43b4-a574-1029011919ef: 'Issue File' # Issue File
+    ef819456-45fb-4c34-a4e6-e32ab105c6a3: 'Asset Caption' # Asset Caption
+    f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127: 'Timeline Event Article Label' # Timeline Event Article Label
+    f4cde807-f639-4b1d-bebe-8aa3cd4de160: 'Issue Year' # Issue Year
     f8e13236-f1d0-4327-a58e-8a5ab4493c32: 'Contributor Firstname' # Contributor Firstname
+    f197e112-2648-4604-852c-cf4171abc6c2: 'Home Section Layout Articles' # Home Section Layout Articles
     f502974c-3cc3-4526-bbf0-4320147a482d: 'Subscription Firstname' # Subscription Firstname
-    ff39e44a-c59b-40f1-9eae-5080bf251c2d: Cover # Cover
+    ff39e44a-c59b-40f1-9eae-5080bf251c2d: 'Issue Cover' # Issue Cover
 plugins:
   ckeditor:
     edition: standard

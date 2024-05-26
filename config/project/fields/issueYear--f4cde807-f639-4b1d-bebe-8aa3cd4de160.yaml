@@ -1,9 +1,8 @@
 columnSuffix: womevpsh
-contentColumnType: integer(10)
 handle: issueYear
 instructions: null
-name: Year
-searchable: true
+name: 'Issue Year'
+searchable: false
 settings:
   decimals: 0
   defaultValue: null

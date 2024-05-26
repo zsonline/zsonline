@@ -1,8 +1,7 @@
 columnSuffix: lmealsfp
-contentColumnType: string(255)
 handle: adLink
 instructions: null
-name: Link
+name: 'Ad Link'
 searchable: false
 settings:
   maxLength: 255

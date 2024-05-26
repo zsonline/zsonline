@@ -1,9 +1,8 @@
 columnSuffix: tcuhufco
-contentColumnType: integer(10)
 handle: issueNumber
 instructions: null
-name: Number
-searchable: true
+name: 'Issue Number'
+searchable: false
 settings:
   decimals: 0
   defaultValue: null

@@ -1,7 +1,7 @@
-columnSuffix: ugkqpmrc
-handle: nodeLabel2
+columnSuffix: yurhecdi
+handle: timelineEventTitle
 instructions: null
-name: 'Timeline - Embed - Label'
+name: 'Timeline Event Title'
 searchable: false
 settings:
   byteLimit: null

@@ -1,9 +1,8 @@
 columnSuffix: mfgqsbwu
-contentColumnType: text
 handle: contentContent
 instructions: null
 name: Content
-searchable: true
+searchable: false
 settings:
   embedVolumes:
     - 9549d5ad-d6e4-45a6-8376-edfc95d27e18 # Embeds

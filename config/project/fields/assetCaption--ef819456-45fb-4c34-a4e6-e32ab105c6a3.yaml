@@ -1,14 +1,12 @@
 columnSuffix: fdqyjrqg
-contentColumnType: text
-handle: caption
+handle: assetCaption
 instructions: null
-name: Caption
-searchable: true
+name: 'Asset Caption'
+searchable: false
 settings:
   byteLimit: null
   charLimit: null
   code: false
-  columnType: null
   initialRows: 4
   multiline: false
   placeholder: null

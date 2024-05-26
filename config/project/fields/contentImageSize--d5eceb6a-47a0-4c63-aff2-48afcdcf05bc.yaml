@@ -1,8 +1,7 @@
 columnSuffix: nqywdzxe
-contentColumnType: string
 handle: contentImageSize
 instructions: null
-name: 'Image Size'
+name: 'Content Image Size'
 searchable: false
 settings:
   options:

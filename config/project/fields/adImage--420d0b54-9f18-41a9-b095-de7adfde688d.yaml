@@ -1,8 +1,7 @@
 columnSuffix: null
-contentColumnType: string
 handle: adImage
 instructions: null
-name: Image
+name: 'Ad Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -10,9 +9,11 @@ settings:
   allowUploads: true
   allowedKinds:
     - image
+  branchLimit: null
   defaultUploadLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   defaultUploadLocationSubpath: null
   localizeRelations: false
+  maintainHierarchy: false
   maxRelations: 1
   minRelations: 1
   previewMode: full
@@ -21,22 +22,11 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
   restrictedLocationSubpath: null
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Asset
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\assets\AssetCondition
   selectionLabel: null
-  showSiteMenu: false
+  showCardsInGrid: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  source: null
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

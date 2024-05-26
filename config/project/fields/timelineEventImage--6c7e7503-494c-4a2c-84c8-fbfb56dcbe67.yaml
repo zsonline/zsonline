@@ -1,22 +1,23 @@
 columnSuffix: null
-handle: nodeEmbedImage
+handle: timelineEventImage
 instructions: null
-name: 'Timeline - Embed - Image'
+name: 'Timeline Event Image'
 searchable: false
 settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
-  allowedKinds: null
+  allowedKinds:
+    - image
   branchLimit: null
   defaultUploadLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: null
   minRelations: null
   previewMode: full
-  restrictFiles: false
+  restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images

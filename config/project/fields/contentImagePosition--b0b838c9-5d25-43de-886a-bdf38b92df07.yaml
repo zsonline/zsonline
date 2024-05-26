@@ -1,8 +1,7 @@
 columnSuffix: heaktlji
-contentColumnType: string
 handle: contentImagePosition
 instructions: null
-name: 'Image Position'
+name: 'Content Image Position'
 searchable: false
 settings:
   options:

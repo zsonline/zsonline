@@ -1,11 +1,11 @@
-columnSuffix: jywwqrac
-handle: nodeLabel
+columnSuffix: hdiprzew
+handle: issueSectionLabel
 instructions: null
-name: 'Timeline - Regular - Label'
+name: 'Issue Section Label'
 searchable: false
 settings:
   byteLimit: null
-  charLimit: null
+  charLimit: 32
   code: false
   initialRows: 4
   multiline: false

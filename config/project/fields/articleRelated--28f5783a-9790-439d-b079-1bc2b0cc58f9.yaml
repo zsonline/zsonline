@@ -1,33 +1,23 @@
 columnSuffix: null
-contentColumnType: string
 handle: articleRelated
 instructions: null
-name: Related
+name: 'Article Related'
 searchable: false
 settings:
   allowSelfRelations: false
+  branchLimit: null
   localizeRelations: false
+  maintainHierarchy: false
   maxRelations: null
   minRelations: null
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Entry
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\entries\EntryCondition
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: true
-  source: null
   sources:
     - 'section:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Entries

@@ -1,8 +1,7 @@
 columnSuffix: null
-contentColumnType: string
 handle: timelineImage
 instructions: null
-name: Image
+name: 'Timeline Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -23,18 +22,8 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   restrictedLocationSubpath: null
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Asset
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\assets\AssetCondition
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

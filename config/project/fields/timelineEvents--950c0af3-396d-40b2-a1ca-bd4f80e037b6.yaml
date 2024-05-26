@@ -1,17 +1,20 @@
 columnSuffix: null
-contentColumnType: string
-handle: timelineNodes
+handle: timelineEvents
 instructions: null
-name: Timeline
+name: 'Timeline Events'
 searchable: false
 settings:
+  createButtonLabel: null
   entryTypes:
     - 74e21a53-79cd-4aa7-85b3-bff442e02c68 # Timeline Event
     - 683c8764-91e2-4a9e-b0cf-d7bed17d1d5d # Timeline Event (Article)
+  includeTableView: false
   maxEntries: null
   minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

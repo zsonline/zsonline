@@ -1,14 +1,13 @@
 columnSuffix: tdjzmndj
-contentColumnType: text
 handle: timelineDescription
 instructions: null
-name: Description
+name: 'Timeline Description'
 searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: ''
   ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Timeline Minimal
-  columnType: text
+  createButtonLabel: null
   defaultTransform: null
   enableSourceEditingForNonAdmins: false
   purifierConfig: null

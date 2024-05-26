@@ -1,7 +1,7 @@
 columnSuffix: irbejnhs
-handle: backgroundColor
+handle: homeSectionColor
 instructions: null
-name: 'Blocks - Articles - Color'
+name: 'Home Section Color'
 searchable: false
 settings:
   defaultColor: null
