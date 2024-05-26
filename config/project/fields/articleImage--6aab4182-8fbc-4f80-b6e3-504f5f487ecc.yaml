@@ -6,7 +6,7 @@ searchable: false
 settings:
   allowSelfRelations: false
   allowSubfolders: false
-  allowUploads: false
+  allowUploads: true
   allowedKinds:
     - image
   branchLimit: null
@@ -30,7 +30,7 @@ settings:
   sources:
     - 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: large
 translationKeyFormat: null
 translationMethod: site

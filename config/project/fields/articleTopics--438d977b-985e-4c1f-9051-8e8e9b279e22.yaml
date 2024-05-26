@@ -16,7 +16,7 @@ settings:
   sources:
     - 'section:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: list
 translationKeyFormat: null
 translationMethod: site

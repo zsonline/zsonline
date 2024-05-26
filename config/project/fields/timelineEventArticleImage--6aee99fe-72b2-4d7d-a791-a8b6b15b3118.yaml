@@ -7,7 +7,8 @@ settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
-  allowedKinds: null
+  allowedKinds:
+    - image
   branchLimit: null
   defaultUploadLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   defaultUploadLocationSubpath: null
@@ -16,7 +17,7 @@ settings:
   maxRelations: 1
   minRelations: null
   previewMode: full
-  restrictFiles: false
+  restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
@@ -28,7 +29,7 @@ settings:
   showUnpermittedVolumes: false
   sources: '*'
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: large
 translationKeyFormat: null
 translationMethod: site

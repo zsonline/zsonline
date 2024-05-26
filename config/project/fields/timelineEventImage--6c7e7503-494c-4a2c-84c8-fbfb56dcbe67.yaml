@@ -14,7 +14,7 @@ settings:
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: true
@@ -29,7 +29,7 @@ settings:
   showUnpermittedVolumes: false
   sources: '*'
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: large
 translationKeyFormat: null
 translationMethod: site

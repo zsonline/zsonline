@@ -29,7 +29,7 @@ settings:
   showUnpermittedVolumes: false
   sources: '*'
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: large
 translationKeyFormat: null
 translationMethod: site

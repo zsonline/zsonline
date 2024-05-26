@@ -6,7 +6,7 @@ searchable: false
 settings:
   allowSelfRelations: false
   allowSubfolders: false
-  allowUploads: false
+  allowUploads: true
   allowedKinds:
     - pdf
   branchLimit: null
@@ -15,7 +15,7 @@ settings:
   localizeRelations: false
   maintainHierarchy: false
   maxRelations: 1
-  minRelations: 1
+  minRelations: null
   previewMode: full
   restrictFiles: true
   restrictLocation: true
@@ -30,7 +30,7 @@ settings:
   sources:
     - 'volume:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: list
 translationKeyFormat: null
 translationMethod: site
