@@ -1,10 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - bd3e37bc-785f-4f35-a3ba-42a801ec0e80 # Timeline
-handle: timeline
+  - 437bb34b-df33-490d-a865-5fcd8eac751b # Contributor
+handle: contributors
 maxAuthors: 1
-name: Timeline
+name: Contributors
 previewTargets:
   -
     __assoc__:
@@ -22,6 +22,6 @@ siteSettings:
   cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: # Zürcher Studierendenzeitung
     enabledByDefault: true
     hasUrls: true
-    template: _pages/timeline.twig
-    uriFormat: '100'
-type: single
+    template: _pages/user.twig
+    uriFormat: 'autor-innen/{slug}'
+type: channel

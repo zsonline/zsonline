@@ -87,7 +87,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: cb91d72b-d6d9-439e-8e7b-f3f871694967 # Contributors
+            fieldUid: cb91d72b-d6d9-439e-8e7b-f3f871694967 # Contributions
             handle: null
             includeInCards: false
             instructions: null

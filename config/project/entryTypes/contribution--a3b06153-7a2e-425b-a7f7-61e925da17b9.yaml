@@ -1,0 +1,95 @@
+color: null
+fieldLayouts:
+  2cc04b72-bbd9-4c62-bffc-5f982174c0f8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0b37615e-d964-418d-8d21-1f72178c4f3e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 85a18a10-e219-4aa0-b2f9-0863939b21fc # Contribution Contributor
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 258a3faa-29a6-421f-af0e-69a21f134d29
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 274b5d00-df3a-4b76-861b-ca591e2af249 # Contribution User
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3fc89327-b4dd-432c-bbcb-8cea0826756f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a46d69bc-dad9-44b6-9ca0-9ce75f501b7b # Contribution Type
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0c9c55be-9130-43f2-ae2e-ef2f0422289e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: babe03a7-c77f-44d6-b6f0-ced845b55aa9
+        userCondition: null
+handle: contribution
+hasTitleField: false
+icon: ''
+name: Contribution
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

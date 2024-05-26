@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: contributions
+instructions: null
+name: Contributions
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - a3b06153-7a2e-425b-a7f7-61e925da17b9 # Contribution
+    - 36ea09ec-8867-4d74-96ee-d55c21e44104 # Contribution (External)
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

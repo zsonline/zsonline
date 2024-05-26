@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  2cc04b72-bbd9-4c62-bffc-5f982174c0f8:
+  dac15720-7b49-4057-a85d-e128b911703e:
     tabs:
       -
         elementCondition: null
@@ -30,47 +30,47 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 0b37615e-d964-418d-8d21-1f72178c4f3e
+            uid: c5f731a3-005b-4f54-9cd7-ee2d1cd40d49
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 274b5d00-df3a-4b76-861b-ca591e2af249
+            fieldUid: 37773290-a8f4-4562-bc4f-fb8c41a63584 # Contribution External Label
             handle: null
             includeInCards: true
             instructions: null
-            label: User
+            label: null
             providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3fc89327-b4dd-432c-bbcb-8cea0826756f
+            uid: 07c2a406-3d54-4ca4-888e-99b42889e52a
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: a46d69bc-dad9-44b6-9ca0-9ce75f501b7b
-            handle: contribution
+            fieldUid: 92be950a-0880-49a1-bd9a-dcfdb0745a8a # Contribution External Type
+            handle: null
             includeInCards: false
             instructions: null
-            label: Contribution
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0c9c55be-9130-43f2-ae2e-ef2f0422289e
+            uid: c1e2d30b-a046-4f11-b1c0-877d1dfeaf54
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: babe03a7-c77f-44d6-b6f0-ced845b55aa9
+        uid: fcb5a079-6051-4d2f-8a98-fd0c7d162112
         userCondition: null
-handle: contributor
+handle: contributionExternal
 hasTitleField: false
 icon: ''
-name: Contributor
+name: 'Contribution (External)'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null

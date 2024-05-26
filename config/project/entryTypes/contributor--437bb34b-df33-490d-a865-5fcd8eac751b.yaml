@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  dac15720-7b49-4057-a85d-e128b911703e:
+  7bc0104f-544f-45b4-810b-2938b10ed8b2:
     tabs:
       -
         elementCondition: null
@@ -30,51 +30,51 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: c5f731a3-005b-4f54-9cd7-ee2d1cd40d49
+            uid: 9d67c543-135b-4cdb-a0d4-5ce5b0a97dfa
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 37773290-a8f4-4562-bc4f-fb8c41a63584 # Contributors - Other - Label
-            handle: label
-            includeInCards: true
-            instructions: null
-            label: Label
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 07c2a406-3d54-4ca4-888e-99b42889e52a
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 92be950a-0880-49a1-bd9a-dcfdb0745a8a # Contributors - Other - Contribution
+            fieldUid: f8e13236-f1d0-4327-a58e-8a5ab4493c32 # Contributor Firstname
             handle: null
             includeInCards: false
             instructions: null
-            label: Contribution
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c1e2d30b-a046-4f11-b1c0-877d1dfeaf54
+            uid: 45aa1b17-e32c-4a3c-a263-ae6567a288e9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0fd78a25-b16e-4d38-a0cc-80c28df2b958 # Contributor Lastname
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ab543ab1-be88-4707-999c-b36587c85fc1
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: fcb5a079-6051-4d2f-8a98-fd0c7d162112
+        uid: ec318b35-5397-4249-a30a-e398e9d5d029
         userCondition: null
-handle: contributorExternal
+handle: contributor
 hasTitleField: false
 icon: ''
-name: 'Contributor (External)'
-showSlugField: false
-showStatusField: false
+name: Contributor
+showSlugField: true
+showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: '{contributorFirstname} {contributorLastname}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -1,8 +1,9 @@
 defaultPlacement: end
-enableVersioning: false
+enableVersioning: true
 entryTypes:
   - 3cc8b7a7-5c00-4889-b691-ca2edc74df61 # Ad
 handle: ads
+maxAuthors: 1
 name: Ads
 propagationMethod: all
 siteSettings:

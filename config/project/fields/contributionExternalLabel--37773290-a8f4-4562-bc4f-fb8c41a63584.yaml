@@ -1,7 +1,7 @@
 columnSuffix: kifzlerj
-handle: label4
+handle: contributionExternalLabel
 instructions: null
-name: 'Contributors - Other - Label'
+name: 'Contribution External Label'
 searchable: false
 settings:
   byteLimit: null

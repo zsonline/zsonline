@@ -1,8 +1,8 @@
 columnSuffix: null
-handle: user
+handle: contributionContributor
 instructions: null
-name: 'Contributors - User - User'
-searchable: true
+name: 'Contribution Contributor'
+searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
@@ -12,11 +12,12 @@ settings:
   minRelations: 1
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: true
-  sources: '*'
+  showSiteMenu: false
+  sources:
+    - 'section:5c6f5aa7-cf71-41b9-ac00-8f640607916a' # Contributors
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Users
+type: craft\fields\Entries

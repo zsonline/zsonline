@@ -1,7 +1,7 @@
-columnSuffix: qeqfmiox
-handle: contribution2
+columnSuffix: null
+handle: contributorLastname
 instructions: null
-name: 'Contributors - User - Contribution'
+name: 'Contributor Lastname'
 searchable: false
 settings:
   byteLimit: null
