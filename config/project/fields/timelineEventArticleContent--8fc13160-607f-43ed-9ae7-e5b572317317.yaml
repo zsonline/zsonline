@@ -1,7 +1,7 @@
 columnSuffix: zzgrvlns
 handle: timelineEventArticleContent
 instructions: null
-name: 'Timeline Event Article Content'
+name: 'Timeline Event (Article) - Content'
 searchable: false
 settings:
   availableTransforms: ''

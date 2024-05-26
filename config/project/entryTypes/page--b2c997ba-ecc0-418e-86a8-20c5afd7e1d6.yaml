@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6aab4182-8fbc-4f80-b6e3-504f5f487ecc # Content Image
+            fieldUid: 6aab4182-8fbc-4f80-b6e3-504f5f487ecc # Shared - Image
             handle: null
             includeInCards: false
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Content
+            fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Shared - Content
             handle: null
             includeInCards: false
             instructions: null
@@ -72,7 +72,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: b0b838c9-5d25-43de-886a-bdf38b92df07 # Content Image Position
+            fieldUid: b0b838c9-5d25-43de-886a-bdf38b92df07 # Shared - Image Position
             handle: null
             includeInCards: false
             instructions: null
@@ -87,7 +87,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d5eceb6a-47a0-4c63-aff2-48afcdcf05bc # Content Image Size
+            fieldUid: d5eceb6a-47a0-4c63-aff2-48afcdcf05bc # Shared - Image Size
             handle: null
             includeInCards: false
             instructions: null

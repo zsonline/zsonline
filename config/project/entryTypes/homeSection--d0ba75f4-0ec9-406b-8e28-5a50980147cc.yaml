@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d6607152-35ab-435a-9c88-53f1e9ab6f5c # Home Section Label
+            fieldUid: d6607152-35ab-435a-9c88-53f1e9ab6f5c # Home Section - Title
             handle: null
             includeInCards: true
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 024d03f4-9614-497a-9274-7340a22f343c # Home Section Color
+            fieldUid: 024d03f4-9614-497a-9274-7340a22f343c # Home Section - Color
             handle: null
             includeInCards: false
             instructions: null
@@ -66,7 +66,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 3458cf19-d496-4a9e-808d-47e0b2323224 # Home Section Layouts
+            fieldUid: 3458cf19-d496-4a9e-808d-47e0b2323224 # Home Section - Layouts
             handle: null
             includeInCards: false
             instructions: null

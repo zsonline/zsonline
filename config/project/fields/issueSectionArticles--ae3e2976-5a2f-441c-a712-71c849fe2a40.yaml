@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: issueSectionArticles
 instructions: null
-name: 'Issue Section Articles'
+name: 'Issue Section - Articles'
 searchable: false
 settings:
   allowSelfRelations: false

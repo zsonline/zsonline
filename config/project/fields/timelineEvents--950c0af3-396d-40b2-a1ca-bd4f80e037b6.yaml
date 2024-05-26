@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: timelineEvents
 instructions: null
-name: 'Timeline Events'
+name: 'Timeline - Events'
 searchable: false
 settings:
   createButtonLabel: null

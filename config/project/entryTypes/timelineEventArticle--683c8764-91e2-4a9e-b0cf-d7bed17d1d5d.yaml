@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 683cb842-2907-43f6-a6be-a4a3833c5eb5 # Timeline Event Article Year
+            fieldUid: 683cb842-2907-43f6-a6be-a4a3833c5eb5 # Timeline Event (Article) - Year
             handle: null
             includeInCards: true
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127 # Timeline Event Article Label
+            fieldUid: f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127 # Timeline Event (Article) - Label
             handle: null
             includeInCards: false
             instructions: null
@@ -66,7 +66,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 6aee99fe-72b2-4d7d-a791-a8b6b15b3118 # Timeline Event Article Image
+            fieldUid: 6aee99fe-72b2-4d7d-a791-a8b6b15b3118 # Timeline Event (Article) - Image
             handle: null
             includeInCards: false
             instructions: null
@@ -81,7 +81,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: b231772f-f289-459a-98aa-4307862a26f1 # Timeline Event Article Publication
+            fieldUid: b231772f-f289-459a-98aa-4307862a26f1 # Timeline Event (Article) - Publication
             handle: null
             includeInCards: false
             instructions: null
@@ -96,7 +96,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8c68bef4-fce4-4168-aa13-3ca1947567fb # Timeline Event Article Title
+            fieldUid: 8c68bef4-fce4-4168-aa13-3ca1947567fb # Timeline Event (Article) - Title
             handle: null
             includeInCards: false
             instructions: null
@@ -111,7 +111,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: c529f035-1e02-4af8-a7f0-afe4e24e634c # Timeline Event Article Byline
+            fieldUid: c529f035-1e02-4af8-a7f0-afe4e24e634c # Timeline Event (Article) - Byline
             handle: null
             includeInCards: false
             instructions: null
@@ -126,7 +126,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826 # Timeline Event Article Description
+            fieldUid: 1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826 # Timeline Event (Article) - Lead
             handle: null
             includeInCards: false
             instructions: null
@@ -141,7 +141,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8fc13160-607f-43ed-9ae7-e5b572317317 # Timeline Event Article Content
+            fieldUid: 8fc13160-607f-43ed-9ae7-e5b572317317 # Timeline Event (Article) - Content
             handle: null
             includeInCards: false
             instructions: null

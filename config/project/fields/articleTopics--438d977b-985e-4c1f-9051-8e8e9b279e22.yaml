@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: articleTopics
 instructions: null
-name: 'Article Topics'
+name: 'Article - Topics'
 searchable: false
 settings:
   allowSelfRelations: false

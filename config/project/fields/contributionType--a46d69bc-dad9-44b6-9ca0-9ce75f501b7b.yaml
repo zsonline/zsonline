@@ -1,7 +1,7 @@
 columnSuffix: qeqfmiox
 handle: contributionType
 instructions: null
-name: 'Contribution Type'
+name: 'Contribution - Type'
 searchable: false
 settings:
   byteLimit: null

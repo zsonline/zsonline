@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: subscriptionFirstname
 instructions: null
-name: 'Subscription Firstname'
+name: 'Subscription - Firstname'
 searchable: false
 settings:
   byteLimit: null

@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: issueArticles
 instructions: null
-name: 'Issue Articles'
+name: 'Issue - Articles'
 searchable: false
 settings:
   createButtonLabel: null

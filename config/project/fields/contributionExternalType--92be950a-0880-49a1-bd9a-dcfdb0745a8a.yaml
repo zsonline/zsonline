@@ -1,7 +1,7 @@
 columnSuffix: flerxjeq
 handle: contributionExternalType
 instructions: null
-name: 'Contribution External Type'
+name: 'Contribution (External) - Type'
 searchable: false
 settings:
   byteLimit: null

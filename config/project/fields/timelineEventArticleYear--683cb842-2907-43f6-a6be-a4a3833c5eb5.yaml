@@ -1,7 +1,7 @@
 columnSuffix: edeoeqze
 handle: timelineEventArticleYear
 instructions: null
-name: 'Timeline Event Article Year'
+name: 'Timeline Event (Article) - Year'
 searchable: false
 settings:
   decimals: 0

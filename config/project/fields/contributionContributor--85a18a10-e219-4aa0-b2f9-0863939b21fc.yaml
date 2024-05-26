@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: contributionContributor
 instructions: null
-name: 'Contribution Contributor'
+name: 'Contribution - Contributor'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -12,7 +12,7 @@ settings:
   minRelations: 1
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   sources:
     - 'section:5c6f5aa7-cf71-41b9-ac00-8f640607916a' # Contributors
   targetSiteId: null

@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: timelineImage
 instructions: null
-name: 'Timeline Image'
+name: 'Timeline - Image'
 searchable: false
 settings:
   allowSelfRelations: false

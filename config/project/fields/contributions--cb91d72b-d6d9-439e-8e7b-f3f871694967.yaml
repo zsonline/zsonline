@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: contributions
 instructions: null
-name: Contributions
+name: 'Shared - Contributions'
 searchable: false
 settings:
   createButtonLabel: null

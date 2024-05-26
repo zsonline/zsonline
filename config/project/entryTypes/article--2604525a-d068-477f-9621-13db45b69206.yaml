@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: a71cf75d-44bb-4489-ad90-93f218828cd1 # Content Description
+            fieldUid: a71cf75d-44bb-4489-ad90-93f218828cd1 # Article - Lead
             handle: null
             includeInCards: false
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6aab4182-8fbc-4f80-b6e3-504f5f487ecc # Content Image
+            fieldUid: 6aab4182-8fbc-4f80-b6e3-504f5f487ecc # Shared - Image
             handle: null
             includeInCards: false
             instructions: null
@@ -66,7 +66,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Content
+            fieldUid: 5a09781f-aab3-4633-b3ed-6bd0bda1ad48 # Shared - Content
             handle: null
             includeInCards: false
             instructions: null
@@ -87,7 +87,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: cb91d72b-d6d9-439e-8e7b-f3f871694967 # Contributions
+            fieldUid: cb91d72b-d6d9-439e-8e7b-f3f871694967 # Shared - Contributions
             handle: null
             includeInCards: false
             instructions: null
@@ -102,7 +102,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 1bf3a5c8-628e-4b3c-b18b-aa384eec608e # Article Format
+            fieldUid: 1bf3a5c8-628e-4b3c-b18b-aa384eec608e # Article - Format
             handle: null
             includeInCards: false
             instructions: null
@@ -117,7 +117,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 438d977b-985e-4c1f-9051-8e8e9b279e22 # Article Topics
+            fieldUid: 438d977b-985e-4c1f-9051-8e8e9b279e22 # Article - Topics
             handle: null
             includeInCards: false
             instructions: null
@@ -132,7 +132,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 28f5783a-9790-439d-b079-1bc2b0cc58f9 # Article Related
+            fieldUid: 28f5783a-9790-439d-b079-1bc2b0cc58f9 # Article - Related
             handle: null
             includeInCards: false
             instructions: null
@@ -153,7 +153,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: d5eceb6a-47a0-4c63-aff2-48afcdcf05bc # Content Image Size
+            fieldUid: d5eceb6a-47a0-4c63-aff2-48afcdcf05bc # Shared - Image Size
             handle: null
             includeInCards: false
             instructions: null
@@ -168,7 +168,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: b0b838c9-5d25-43de-886a-bdf38b92df07 # Content Image Position
+            fieldUid: b0b838c9-5d25-43de-886a-bdf38b92df07 # Shared - Image Position
             handle: null
             includeInCards: false
             instructions: null
@@ -188,7 +188,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed # Article Ad
+            fieldUid: 9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed # Article - Ad
             handle: null
             includeInCards: false
             instructions: null

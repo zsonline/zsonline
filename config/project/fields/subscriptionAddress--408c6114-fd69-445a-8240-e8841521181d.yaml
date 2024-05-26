@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: subscriptionAddress
 instructions: null
-name: 'Subscription Address'
+name: 'Subscription - Address'
 searchable: false
 settings:
   maxAddresses: 1

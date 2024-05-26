@@ -1,11 +1,11 @@
-columnSuffix: kifzlerj
-handle: contributionExternalLabel
+columnSuffix: hdiprzew
+handle: issueSectionTitle
 instructions: null
-name: 'Contribution External Label'
+name: 'Issue Section - Title'
 searchable: false
 settings:
   byteLimit: null
-  charLimit: null
+  charLimit: 32
   code: false
   initialRows: 4
   multiline: false

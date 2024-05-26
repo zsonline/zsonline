@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: contributionUser
 instructions: null
-name: 'Contribution User'
+name: 'Legacy - User'
 searchable: false
 settings:
   allowSelfRelations: false

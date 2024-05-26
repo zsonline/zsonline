@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: timelineEventImage
 instructions: null
-name: 'Timeline Event Image'
+name: 'Timeline Event - Image'
 searchable: false
 settings:
   allowSelfRelations: false

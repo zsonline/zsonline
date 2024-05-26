@@ -1,7 +1,7 @@
 columnSuffix: tcuhufco
 handle: issueNumber
 instructions: null
-name: 'Issue Number'
+name: 'Issue - Number'
 searchable: false
 settings:
   decimals: 0

@@ -1,7 +1,7 @@
 columnSuffix: lzeedpap
 handle: articleAd
 instructions: null
-name: 'Article Ad'
+name: 'Article - Ad'
 searchable: false
 settings:
   default: false

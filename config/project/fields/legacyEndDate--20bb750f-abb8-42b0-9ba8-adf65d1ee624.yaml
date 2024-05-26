@@ -1,7 +1,7 @@
 columnSuffix: ziprywbg
-handle: subscriptionEndDate
+handle: legacyEndDate
 instructions: null
-name: 'Subscription End Date'
+name: 'Legacy - End Date'
 searchable: false
 settings:
   max: null

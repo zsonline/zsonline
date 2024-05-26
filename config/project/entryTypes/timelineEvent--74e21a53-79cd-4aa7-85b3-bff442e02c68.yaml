@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 13c1314c-8e18-452c-99b9-40ddcf9ba5f2 # Timeline Event Year
+            fieldUid: 13c1314c-8e18-452c-99b9-40ddcf9ba5f2 # Timeline Event - Year
             handle: null
             includeInCards: true
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 8bf7e76a-4365-4da0-a4c8-a545c79488c3 # Timeline Event Label
+            fieldUid: 8bf7e76a-4365-4da0-a4c8-a545c79488c3 # Timeline Event - Label
             handle: null
             includeInCards: false
             instructions: null
@@ -66,7 +66,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: b6909423-4a75-4b31-8af2-4ec0935f6bcb # Timeline Event Title
+            fieldUid: b6909423-4a75-4b31-8af2-4ec0935f6bcb # Timeline Event - Title
             handle: null
             includeInCards: false
             instructions: null
@@ -81,7 +81,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6c7e7503-494c-4a2c-84c8-fbfb56dcbe67 # Timeline Event Image
+            fieldUid: 6c7e7503-494c-4a2c-84c8-fbfb56dcbe67 # Timeline Event - Image
             handle: null
             includeInCards: false
             instructions: null
@@ -96,7 +96,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 9c4c8063-ca7a-411d-ab4e-cb9498df24c8 # Timeline Event Description
+            fieldUid: 9c4c8063-ca7a-411d-ab4e-cb9498df24c8 # Timeline Event - Description
             handle: null
             includeInCards: false
             instructions: null
@@ -111,7 +111,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: a5f90846-e207-4034-ac8f-ae2a1d0f9186 # Timeline Event Print Image
+            fieldUid: a5f90846-e207-4034-ac8f-ae2a1d0f9186 # Timeline Event - Print Image
             handle: null
             includeInCards: false
             instructions: null
@@ -126,7 +126,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 9d3883d3-f157-4a96-a03e-5b86dbac381d # Timeline Event Print Link
+            fieldUid: 9d3883d3-f157-4a96-a03e-5b86dbac381d # Timeline Event - Print Link
             handle: null
             includeInCards: false
             instructions: null

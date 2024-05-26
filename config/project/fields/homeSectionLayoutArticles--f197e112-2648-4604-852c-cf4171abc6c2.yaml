@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: homeSectionLayoutArticles
 instructions: null
-name: 'Home Section Layout Articles'
+name: 'Home Section Layout - Articles'
 searchable: false
 settings:
   allowSelfRelations: false

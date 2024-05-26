@@ -1,7 +1,7 @@
 columnSuffix: rbdqutal
 handle: timelineEventArticleByline
 instructions: null
-name: 'Timeline Event Article Byline'
+name: 'Timeline Event (Article) - Byline'
 searchable: false
 settings:
   byteLimit: null

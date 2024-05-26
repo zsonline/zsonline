@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: subscriptionEmail
 instructions: null
-name: 'Subscription Email'
+name: 'Subscription - Email'
 searchable: false
 settings:
   placeholder: null

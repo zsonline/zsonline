@@ -122,7 +122,7 @@ tabs:
         userCondition: null
       -
         elementCondition: null
-        fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription Plan
+        fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription - Plan
         handle: null
         includeInCards: false
         instructions: null
@@ -137,7 +137,7 @@ tabs:
         width: 100
       -
         elementCondition: null
-        fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # Subscription End Date
+        fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # Legacy - End Date
         handle: null
         includeInCards: false
         instructions: null

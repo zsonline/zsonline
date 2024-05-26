@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 9f01ed5b-f89c-478b-a859-71fd331c8d93 # Issue Section Label
+            fieldUid: 9f01ed5b-f89c-478b-a859-71fd331c8d93 # Issue Section - Title
             handle: null
             includeInCards: true
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: ae3e2976-5a2f-441c-a712-71c849fe2a40 # Issue Section Articles
+            fieldUid: ae3e2976-5a2f-441c-a712-71c849fe2a40 # Issue Section - Articles
             handle: null
             includeInCards: false
             instructions: null

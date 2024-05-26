@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: adImage
 instructions: null
-name: 'Ad Image'
+name: 'Ad - Image'
 searchable: false
 settings:
   allowSelfRelations: false

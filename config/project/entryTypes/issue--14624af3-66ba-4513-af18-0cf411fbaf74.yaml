@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6cdd6eb7-76e7-4ae1-949a-513b1ede029c # Issue Number
+            fieldUid: 6cdd6eb7-76e7-4ae1-949a-513b1ede029c # Issue - Number
             handle: null
             includeInCards: false
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: f4cde807-f639-4b1d-bebe-8aa3cd4de160 # Issue Year
+            fieldUid: f4cde807-f639-4b1d-bebe-8aa3cd4de160 # Issue - Year
             handle: null
             includeInCards: false
             instructions: null
@@ -71,7 +71,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: ff39e44a-c59b-40f1-9eae-5080bf251c2d # Issue Cover
+            fieldUid: ff39e44a-c59b-40f1-9eae-5080bf251c2d # Issue - Cover
             handle: null
             includeInCards: false
             instructions: null
@@ -86,7 +86,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e173ad9a-9850-43b4-a574-1029011919ef # Issue File
+            fieldUid: e173ad9a-9850-43b4-a574-1029011919ef # Issue - File
             handle: null
             includeInCards: false
             instructions: null
@@ -106,7 +106,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 8b097a87-a2ec-4270-8431-a0e733b3fdb3 # Issue Articles
+            fieldUid: 8b097a87-a2ec-4270-8431-a0e733b3fdb3 # Issue - Articles
             handle: null
             includeInCards: false
             instructions: null

@@ -1,7 +1,7 @@
 columnSuffix: womevpsh
 handle: issueYear
 instructions: null
-name: 'Issue Year'
+name: 'Issue - Year'
 searchable: false
 settings:
   decimals: 0

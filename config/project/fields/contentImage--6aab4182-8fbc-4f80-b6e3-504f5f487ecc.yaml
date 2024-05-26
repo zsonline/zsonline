@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: contentImage
 instructions: null
-name: 'Content Image'
+name: 'Shared - Image'
 searchable: false
 settings:
   allowSelfRelations: false

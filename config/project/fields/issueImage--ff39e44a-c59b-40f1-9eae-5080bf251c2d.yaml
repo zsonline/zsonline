@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: issueImage
 instructions: null
-name: 'Issue Cover'
+name: 'Issue - Cover'
 searchable: false
 settings:
   allowSelfRelations: false

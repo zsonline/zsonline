@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: f8e13236-f1d0-4327-a58e-8a5ab4493c32 # Contributor Firstname
+            fieldUid: f8e13236-f1d0-4327-a58e-8a5ab4493c32 # Contributor - Firstname
             handle: null
             includeInCards: false
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 0fd78a25-b16e-4d38-a0cc-80c28df2b958 # Contributor Lastname
+            fieldUid: 0fd78a25-b16e-4d38-a0cc-80c28df2b958 # Contributor - Lastname
             handle: null
             includeInCards: false
             instructions: null

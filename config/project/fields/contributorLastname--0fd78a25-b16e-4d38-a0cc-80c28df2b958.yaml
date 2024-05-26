@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: contributorLastname
 instructions: null
-name: 'Contributor Lastname'
+name: 'Contributor - Lastname'
 searchable: false
 settings:
   byteLimit: null

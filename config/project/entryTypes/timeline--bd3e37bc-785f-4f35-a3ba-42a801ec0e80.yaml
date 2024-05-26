@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 15dca033-1e00-43b6-bcd3-05ca3c07b14f # Timeline Image
+            fieldUid: 15dca033-1e00-43b6-bcd3-05ca3c07b14f # Timeline - Image
             handle: null
             includeInCards: false
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 4e85c514-8a85-45c7-996a-0824ef8d667b # Timeline Description
+            fieldUid: 4e85c514-8a85-45c7-996a-0824ef8d667b # Timeline - Description
             handle: null
             includeInCards: false
             instructions: null
@@ -71,7 +71,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 950c0af3-396d-40b2-a1ca-bd4f80e037b6 # Timeline Events
+            fieldUid: 950c0af3-396d-40b2-a1ca-bd4f80e037b6 # Timeline - Events
             handle: null
             includeInCards: false
             instructions: null

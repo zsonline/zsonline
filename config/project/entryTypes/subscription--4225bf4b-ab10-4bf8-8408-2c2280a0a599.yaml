@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: f502974c-3cc3-4526-bbf0-4320147a482d # Subscription Firstname
+            fieldUid: f502974c-3cc3-4526-bbf0-4320147a482d # Subscription - Firstname
             handle: null
             includeInCards: false
             instructions: null
@@ -51,7 +51,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 56c4202e-de36-4fe8-ba9a-97ccdb7d8bb6 # Subscription Lastname
+            fieldUid: 56c4202e-de36-4fe8-ba9a-97ccdb7d8bb6 # Subscription - Lastname
             handle: null
             includeInCards: false
             instructions: null
@@ -66,7 +66,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 408c6114-fd69-445a-8240-e8841521181d # Subscription Address
+            fieldUid: 408c6114-fd69-445a-8240-e8841521181d # Subscription - Address
             handle: null
             includeInCards: false
             instructions: null
@@ -81,7 +81,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: b7794701-7ea0-40bb-8bba-27df38f94295 # Subscription Email
+            fieldUid: b7794701-7ea0-40bb-8bba-27df38f94295 # Subscription - Email
             handle: null
             includeInCards: false
             instructions: null
@@ -101,7 +101,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription Plan
+            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription - Plan
             handle: null
             includeInCards: false
             instructions: null

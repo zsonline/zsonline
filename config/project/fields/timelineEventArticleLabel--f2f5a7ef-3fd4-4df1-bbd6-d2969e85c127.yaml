@@ -1,7 +1,7 @@
 columnSuffix: ugkqpmrc
 handle: timelineEventArticleLabel
 instructions: null
-name: 'Timeline Event Article Label'
+name: 'Timeline Event (Article) - Label'
 searchable: false
 settings:
   byteLimit: null
