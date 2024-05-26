@@ -39,12 +39,12 @@ fieldLayouts:
         userCondition: null
 handle: format
 hasTitleField: true
-icon: ''
+icon: null
 name: Format
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

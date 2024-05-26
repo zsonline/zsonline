@@ -69,7 +69,7 @@ fieldLayouts:
         userCondition: null
 handle: ad
 hasTitleField: false
-icon: ''
+icon: null
 name: Ad
 showSlugField: false
 showStatusField: true

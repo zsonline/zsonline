@@ -3,6 +3,7 @@ enableVersioning: true
 entryTypes:
   - 14624af3-66ba-4513-af18-0cf411fbaf74 # Issue
 handle: issues
+maxAuthors: 1
 name: Issues
 previewTargets:
   -
@@ -11,11 +12,11 @@ previewTargets:
         - label
         - 'Primary entry page'
       -
-        - urlFormat
-        - '{url}'
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: all
 siteSettings:
   cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: # Zürcher Studierendenzeitung

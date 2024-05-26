@@ -3,6 +3,7 @@ enableVersioning: true
 entryTypes:
   - 241d2e87-c08f-4847-90e8-4ad1d718f876 # Format
 handle: formats
+maxAuthors: 1
 name: Formats
 previewTargets:
   -
@@ -11,11 +12,11 @@ previewTargets:
         - label
         - 'Primary entry page'
       -
-        - urlFormat
-        - '{url}'
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: all
 siteSettings:
   cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: # Zürcher Studierendenzeitung

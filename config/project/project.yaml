@@ -1,4 +1,4 @@
-dateModified: 1716745465
+dateModified: 1716745588
 elementSources:
   craft\elements\User:
     -
@@ -183,6 +183,10 @@ fs:
       path: '@webroot/assets/images'
     type: craft\fs\Local
     url: '@web/assets/images'
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 meta:
   __names__:
     0cf2962b-f593-4e6b-9ac2-9544710d8aad: 'Home Section Layout Appearance' # Home Section Layout Appearance
@@ -193,7 +197,6 @@ meta:
     3a27561f-43cc-469a-a2fa-6920676a2b3a: 'Timeline Minimal' # Timeline Minimal
     3cc8b7a7-5c00-4889-b691-ca2edc74df61: Ad # Ad
     4a5cdf1b-642d-4a37-854f-c3b1168bea2d: Editors # Editors
-    4bacc350-5543-44ef-b96a-8b93bab7ce04: Title # Title
     4ce497c4-83db-4505-966c-25ac2477e7fb: Ads # Ads
     4e85c514-8a85-45c7-996a-0824ef8d667b: 'Timeline Description' # Timeline Description
     5a09781f-aab3-4633-b3ed-6bd0bda1ad48: Content # Content
@@ -226,7 +229,6 @@ meta:
     74e21a53-79cd-4aa7-85b3-bff442e02c68: 'Timeline Event' # Timeline Event
     85a18a10-e219-4aa0-b2f9-0863939b21fc: 'Contribution Contributor' # Contribution Contributor
     92be950a-0880-49a1-bd9a-dcfdb0745a8a: 'Contribution External Type' # Contribution External Type
-    166c4d66-1a40-4e4b-9134-94fd09c8af81: Description # Description
     241d2e87-c08f-4847-90e8-4ad1d718f876: Format # Format
     274b5d00-df3a-4b76-861b-ca591e2af249: 'Contribution User' # Contribution User
     408c6114-fd69-445a-8240-e8841521181d: 'Subscription Address' # Subscription Address
@@ -239,26 +241,19 @@ meta:
     785ebd4b-4b47-46f7-a0a2-cd889b31058e: Topic # Topic
     944c11ef-571f-4e08-a4bb-db2540e4b404: 'Subscription Plan' # Subscription Plan
     950c0af3-396d-40b2-a1ca-bd4f80e037b6: 'Timeline Events' # Timeline Events
-    1285a5ca-2942-4a8d-b303-352bb6885151: 'Image Size' # Image Size
     3458cf19-d496-4a9e-808d-47e0b2323224: 'Home Section Layouts' # Home Section Layouts
-    3581bd1c-2c0a-43ba-bb16-ca6221b1410c: Page # Page
     4225bf4b-ab10-4bf8-8408-2c2280a0a599: Subscription # Subscription
     9549d5ad-d6e4-45a6-8376-edfc95d27e18: Embeds # Embeds
     9695de25-bf17-41a7-b295-68ad5cccc6c8: Pages # Pages
     10492ed9-cbb8-423a-951b-8e0dd55b11f4: 'Home Section Layout' # Home Section Layout
     14624af3-66ba-4513-af18-0cf411fbaf74: Issue # Issue
-    29112f01-afc1-469b-93b1-8f4e55a8215f: Link # Link
-    76542e11-45e2-40c9-adfa-23d2ae8406d5: 'End Date' # End Date
     78967f52-4d7b-4aec-9fba-53d6aa2f5a2e: Navigation # Navigation
     732552e1-9a9c-4c59-b08a-f0b293aaf7d1: Topics # Topics
     2604525a-d068-477f-9621-13db45b69206: Article # Article
     37773290-a8f4-4562-bc4f-fb8c41a63584: 'Contribution External Label' # Contribution External Label
     48772033-da04-47e7-ad3b-4d3905ac7a65: Images # Images
-    58707577-3441-49f2-bccc-3cb8c462f1e9: Article # Article
-    77682833-175e-4825-998b-7af43363b40d: Link # Link
     a3b06153-7a2e-425b-a7f7-61e925da17b9: Contribution # Contribution
     a5f90846-e207-4034-ac8f-ae2a1d0f9186: 'Timeline Event Print Image' # Timeline Event Print Image
-    a10ce228-96c0-4d8d-8423-9ab5086b325f: 'Date Published' # Date Published
     a46d69bc-dad9-44b6-9ca0-9ce75f501b7b: 'Contribution Type' # Contribution Type
     a71cf75d-44bb-4489-ad90-93f218828cd1: 'Content Description' # Content Description
     ab58e9ac-d8c0-428f-a72a-2132a4976859: Home # Home

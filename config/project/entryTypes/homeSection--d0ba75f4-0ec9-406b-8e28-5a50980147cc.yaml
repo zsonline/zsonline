@@ -84,12 +84,12 @@ fieldLayouts:
         userCondition: null
 handle: homeSection
 hasTitleField: false
-icon: ''
+icon: null
 name: 'Home Section'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

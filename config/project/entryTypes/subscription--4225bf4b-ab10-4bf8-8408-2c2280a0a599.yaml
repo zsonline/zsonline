@@ -119,7 +119,7 @@ fieldLayouts:
         userCondition: null
 handle: subscription
 hasTitleField: false
-icon: ''
+icon: null
 name: Subscription
 showSlugField: false
 showStatusField: false

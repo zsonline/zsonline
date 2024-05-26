@@ -69,12 +69,12 @@ fieldLayouts:
         userCondition: null
 handle: homeSectionLayout
 hasTitleField: false
-icon: ''
+icon: null
 name: 'Home Section Layout'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

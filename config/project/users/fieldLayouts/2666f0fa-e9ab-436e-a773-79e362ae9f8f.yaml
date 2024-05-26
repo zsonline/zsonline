@@ -13,19 +13,107 @@ tabs:
       fieldContext: global
     elements:
       -
-        attribute: addresses
+        autocapitalize: true
+        autocomplete: false
+        autocorrect: true
+        class: null
+        disabled: false
         elementCondition: null
         id: null
+        includeInCards: false
+        inputType: null
+        instructions: null
+        label: null
+        max: null
+        min: null
+        name: null
+        orientation: null
+        placeholder: null
+        providesThumbs: false
+        readonly: false
+        requirable: false
+        size: null
+        step: null
+        tip: null
+        title: null
+        type: craft\fieldlayoutelements\users\UsernameField
+        uid: c9b5223c-4fd0-4e4a-9e4a-eb3d54a373fe
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        attribute: fullName
+        autocapitalize: true
+        autocomplete: false
+        autocorrect: true
+        class: null
+        disabled: false
+        elementCondition: null
+        id: null
+        includeInCards: false
+        inputType: null
+        instructions: null
+        label: null
+        max: null
+        min: null
+        name: null
+        orientation: null
+        placeholder: null
+        providesThumbs: false
+        readonly: false
+        requirable: true
+        required: false
+        size: null
+        step: null
+        tip: null
+        title: null
+        type: craft\fieldlayoutelements\users\FullNameField
+        uid: 882489df-f923-4d4a-b583-cad09a127ac6
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        id: null
+        includeInCards: false
         instructions: null
         label: null
         orientation: null
+        providesThumbs: false
         requirable: false
-        required: false
         tip: null
-        type: craft\fieldlayoutelements\users\AddressesField
-        uid: 9fa384ed-1700-4725-9da7-9cc519aabfa3
+        type: craft\fieldlayoutelements\users\PhotoField
+        uid: d54574ce-b9ca-42b8-b943-6c590b9a342d
         userCondition: null
         warning: null
+        width: 100
+      -
+        autocapitalize: true
+        autocomplete: false
+        autocorrect: true
+        class: null
+        disabled: false
+        elementCondition: null
+        id: null
+        includeInCards: false
+        inputType: null
+        instructions: null
+        label: null
+        max: null
+        min: null
+        name: null
+        orientation: null
+        placeholder: null
+        providesThumbs: false
+        readonly: false
+        requirable: false
+        size: null
+        step: null
+        tip: null
+        title: null
+        type: craft\fieldlayoutelements\users\EmailField
+        uid: a9d8600a-0073-460b-8325-a726537b34b4
+        userCondition: null
         width: 100
       -
         elementCondition: null
@@ -35,8 +123,11 @@ tabs:
       -
         elementCondition: null
         fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription Plan
+        handle: null
+        includeInCards: false
         instructions: null
         label: null
+        providesThumbs: false
         required: false
         tip: null
         type: craft\fieldlayoutelements\CustomField
@@ -47,8 +138,11 @@ tabs:
       -
         elementCondition: null
         fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # Subscription End Date
+        handle: null
+        includeInCards: false
         instructions: null
         label: null
+        providesThumbs: false
         required: false
         tip: null
         type: craft\fieldlayoutelements\CustomField

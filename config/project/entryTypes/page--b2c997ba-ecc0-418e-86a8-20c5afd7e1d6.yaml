@@ -105,12 +105,12 @@ fieldLayouts:
         userCondition: null
 handle: page
 hasTitleField: true
-icon: ''
+icon: null
 name: Page
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

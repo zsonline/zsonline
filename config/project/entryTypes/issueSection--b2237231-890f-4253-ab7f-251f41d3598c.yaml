@@ -69,12 +69,12 @@ fieldLayouts:
         userCondition: null
 handle: issueSection
 hasTitleField: false
-icon: ''
+icon: null
 name: 'Issue Section'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

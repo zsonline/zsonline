@@ -144,12 +144,12 @@ fieldLayouts:
         userCondition: null
 handle: timelineEvent
 hasTitleField: false
-icon: ''
+icon: null
 name: 'Timeline Event'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

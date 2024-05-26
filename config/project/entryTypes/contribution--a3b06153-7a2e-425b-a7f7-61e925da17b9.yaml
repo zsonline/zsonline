@@ -84,12 +84,12 @@ fieldLayouts:
         userCondition: null
 handle: contribution
 hasTitleField: false
-icon: ''
+icon: null
 name: Contribution
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

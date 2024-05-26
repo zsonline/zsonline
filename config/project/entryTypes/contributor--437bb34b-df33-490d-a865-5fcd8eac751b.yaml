@@ -69,7 +69,7 @@ fieldLayouts:
         userCondition: null
 handle: contributor
 hasTitleField: false
-icon: ''
+icon: null
 name: Contributor
 showSlugField: true
 showStatusField: true

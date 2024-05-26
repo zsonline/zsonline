@@ -206,12 +206,12 @@ fieldLayouts:
         userCondition: null
 handle: article
 hasTitleField: true
-icon: ''
+icon: null
 name: Article
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

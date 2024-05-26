@@ -89,7 +89,7 @@ fieldLayouts:
         userCondition: null
 handle: timeline
 hasTitleField: true
-icon: ''
+icon: null
 name: Timeline
 showSlugField: false
 showStatusField: true

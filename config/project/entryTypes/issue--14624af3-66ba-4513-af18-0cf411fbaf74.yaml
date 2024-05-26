@@ -124,12 +124,12 @@ fieldLayouts:
         userCondition: null
 handle: issue
 hasTitleField: true
-icon: ''
+icon: null
 name: Issue
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
