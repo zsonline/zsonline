@@ -106,7 +106,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 8b097a87-a2ec-4270-8431-a0e733b3fdb3 # Issue - Articles
+            fieldUid: 8b097a87-a2ec-4270-8431-a0e733b3fdb3 # Issue - Sections
             handle: null
             includeInCards: false
             instructions: null

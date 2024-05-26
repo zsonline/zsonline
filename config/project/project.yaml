@@ -1,4 +1,4 @@
-dateModified: 1716749000
+dateModified: 1716749552
 elementSources:
   craft\elements\User:
     -
@@ -208,7 +208,7 @@ meta:
     6cdd6eb7-76e7-4ae1-949a-513b1ede029c: 'Issue - Number' # Issue - Number
     7dac239d-784f-4ec9-80fc-46b2c4362060: Articles # Articles
     7ef5f597-7ee8-473c-9647-ba485d262e5a: Subscriber # Subscriber
-    8b097a87-a2ec-4270-8431-a0e733b3fdb3: 'Issue - Articles' # Issue - Articles
+    8b097a87-a2ec-4270-8431-a0e733b3fdb3: 'Issue - Sections' # Issue - Sections
     8bf7e76a-4365-4da0-a4c8-a545c79488c3: 'Timeline Event - Label' # Timeline Event - Label
     8c68bef4-fce4-4168-aa13-3ca1947567fb: 'Timeline Event (Article) - Title' # Timeline Event (Article) - Title
     8fc13160-607f-43ed-9ae7-e5b572317317: 'Timeline Event (Article) - Content' # Timeline Event (Article) - Content
