@@ -37,10 +37,10 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: d6607152-35ab-435a-9c88-53f1e9ab6f5c
-            handle: label
+            handle: null
             includeInCards: true
             instructions: null
-            label: Title
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -55,7 +55,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Color
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -70,7 +70,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Layouts
+            label: null
             providesThumbs: false
             required: false
             tip: null

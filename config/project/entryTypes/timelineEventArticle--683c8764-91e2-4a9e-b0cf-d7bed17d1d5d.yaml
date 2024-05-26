@@ -37,10 +37,10 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 683cb842-2907-43f6-a6be-a4a3833c5eb5
-            handle: nodeYear
+            handle: null
             includeInCards: true
             instructions: null
-            label: Year
+            label: null
             providesThumbs: false
             required: true
             tip: null
@@ -52,10 +52,10 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127
-            handle: nodeLabel
+            handle: null
             includeInCards: false
             instructions: null
-            label: Label
+            label: null
             providesThumbs: false
             required: true
             tip: null
@@ -70,7 +70,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Image
+            label: null
             providesThumbs: true
             required: false
             tip: null
@@ -85,7 +85,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Publication
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -100,7 +100,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Title
+            label: null
             providesThumbs: false
             required: true
             tip: null
@@ -115,7 +115,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Byline
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -130,7 +130,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Description
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -145,7 +145,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Content
+            label: null
             providesThumbs: false
             required: true
             tip: null

@@ -55,7 +55,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Introduction
+            label: null
             providesThumbs: false
             required: false
             tip: null

@@ -40,7 +40,7 @@ fieldLayouts:
             handle: null
             includeInCards: true
             instructions: null
-            label: Appearance
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -52,10 +52,10 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: f197e112-2648-4604-852c-cf4171abc6c2
-            handle: articles
+            handle: null
             includeInCards: false
             instructions: null
-            label: Articles
+            label: null
             providesThumbs: false
             required: false
             tip: null

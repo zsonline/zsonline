@@ -6,12 +6,41 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 58e9b8bf-8908-4eab-ab0c-3a6b7a4d7838
+            userCondition: null
+            warning: null
+            width: 100
+          -
             elementCondition: null
             fieldUid: 9f01ed5b-f89c-478b-a859-71fd331c8d93
             handle: null
             includeInCards: true
             instructions: null
-            label: Label
+            label: null
             providesThumbs: false
             required: true
             tip: null
@@ -26,7 +55,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Articles
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -40,12 +69,12 @@ fieldLayouts:
         userCondition: null
 handle: group
 hasTitleField: false
-icon: null
+icon: ''
 name: Group
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -37,21 +37,6 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: f502974c-3cc3-4526-bbf0-4320147a482d # Subscription Firstname
-            handle: subscriptionFirstname2
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 73f6906d-8de5-4f8b-b522-ba6aa548f1b5
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: f502974c-3cc3-4526-bbf0-4320147a482d # Subscription Firstname
             handle: null
             includeInCards: false
             instructions: null
@@ -78,7 +63,7 @@ fieldLayouts:
             uid: c990f766-d74a-465a-b764-f6ba96cfcc06
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 408c6114-fd69-445a-8240-e8841521181d # Subscription Address
