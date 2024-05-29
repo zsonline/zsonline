@@ -72,7 +72,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ad893672-8209-42b8-96de-2b94cb515356
@@ -84,12 +84,12 @@ fieldLayouts:
         userCondition: null
 handle: homeSection
 hasTitleField: false
-icon: null
+icon: table-rows
 name: 'Home Section'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{homeSectionTitle|default(''-'')}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

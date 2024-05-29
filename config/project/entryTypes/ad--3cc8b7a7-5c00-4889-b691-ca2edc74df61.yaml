@@ -41,7 +41,7 @@ fieldLayouts:
             includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
+            providesThumbs: true
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -69,7 +69,7 @@ fieldLayouts:
         userCondition: null
 handle: ad
 hasTitleField: false
-icon: null
+icon: dollar-sign
 name: Ad
 showSlugField: false
 showStatusField: true

@@ -1,4 +1,4 @@
-dateModified: 1716758469
+dateModified: 1717004483
 elementSources:
   craft\elements\User:
     -
@@ -215,7 +215,7 @@ meta:
     7ef5f597-7ee8-473c-9647-ba485d262e5a: Subscriber # Subscriber
     8b097a87-a2ec-4270-8431-a0e733b3fdb3: 'Issue - Sections' # Issue - Sections
     8bf7e76a-4365-4da0-a4c8-a545c79488c3: 'Timeline Event - Label' # Timeline Event - Label
-    8c68bef4-fce4-4168-aa13-3ca1947567fb: 'Timeline Event (Article) - Title' # Timeline Event (Article) - Title
+    8c68bef4-fce4-4168-aa13-3ca1947567fb: 'Legacy - Title' # Legacy - Title
     8fc13160-607f-43ed-9ae7-e5b572317317: 'Timeline Event (Article) - Content' # Timeline Event (Article) - Content
     9a7641a1-9aa0-423c-a776-c0422cf7f378: 'Page - Image' # Page - Image
     9c4c8063-ca7a-411d-ab4e-cb9498df24c8: 'Timeline Event - Description' # Timeline Event - Description
@@ -282,7 +282,7 @@ meta:
     b4fa2985-51d4-428c-a10e-130fd6687f7b: 'Timeline Event (Article) - Content' # Timeline Event (Article) - Content
     b231772f-f289-459a-98aa-4307862a26f1: 'Timeline Event (Article) - Publication' # Timeline Event (Article) - Publication
     b2237231-890f-4253-ab7f-251f41d3598c: 'Issue Section' # Issue Section
-    b6909423-4a75-4b31-8af2-4ec0935f6bcb: 'Timeline Event - Title' # Timeline Event - Title
+    b6909423-4a75-4b31-8af2-4ec0935f6bcb: 'Legacy - Title' # Legacy - Title
     b7794701-7ea0-40bb-8bba-27df38f94295: 'Subscription - Email' # Subscription - Email
     bcb6d13b-de66-4331-8d15-bb23ef7a9736: 'Ad - Link' # Ad - Link
     bd3e37bc-785f-4f35-a3ba-42a801ec0e80: Timeline # Timeline

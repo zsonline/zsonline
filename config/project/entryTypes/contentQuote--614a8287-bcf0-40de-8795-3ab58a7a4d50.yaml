@@ -53,7 +53,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: a34a04ef-5b2f-4d2a-bd51-83afb13d4337 # Content Quote - Caption
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -69,12 +69,12 @@ fieldLayouts:
         userCondition: null
 handle: contentQuote
 hasTitleField: false
-icon: null
+icon: quote-right
 name: 'Content Quote'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '«{contentQuoteQuote}»'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

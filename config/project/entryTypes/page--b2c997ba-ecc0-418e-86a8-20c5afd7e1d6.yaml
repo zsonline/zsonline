@@ -41,7 +41,7 @@ fieldLayouts:
             includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
+            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -84,7 +84,7 @@ fieldLayouts:
         userCondition: null
 handle: page
 hasTitleField: true
-icon: null
+icon: page
 name: Page
 showSlugField: true
 showStatusField: true

@@ -39,7 +39,7 @@ fieldLayouts:
         userCondition: null
 handle: topic
 hasTitleField: true
-icon: null
+icon: folder-open
 name: Topic
 showSlugField: true
 showStatusField: true

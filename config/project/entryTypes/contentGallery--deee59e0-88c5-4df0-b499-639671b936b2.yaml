@@ -38,7 +38,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 4d2d5d09-2278-47d1-8e63-1b70ad5116b4 # Content Gallery - Images
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -54,12 +54,12 @@ fieldLayouts:
         userCondition: null
 handle: contentGallery
 hasTitleField: false
-icon: null
+icon: images
 name: 'Content Gallery'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{contentGalleryImages.one()} (+{contentGalleryImages.count()})'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

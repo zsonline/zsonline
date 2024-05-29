@@ -38,11 +38,11 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 0cf2962b-f593-4e6b-9ac2-9544710d8aad # Home Section Layout - Appearance
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b0e6e01f-d9fd-41ff-983f-5dfc4bc9cadb
@@ -53,11 +53,11 @@ fieldLayouts:
             elementCondition: null
             fieldUid: f197e112-2648-4604-852c-cf4171abc6c2 # Home Section Layout - Articles
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 33bed828-5224-4d4d-a75d-f3c631cc7cfa
@@ -69,12 +69,12 @@ fieldLayouts:
         userCondition: null
 handle: homeSectionLayout
 hasTitleField: false
-icon: null
+icon: table-list
 name: 'Home Section Layout'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{homeSectionLayoutAppearance.label}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

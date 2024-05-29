@@ -38,7 +38,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 37773290-a8f4-4562-bc4f-fb8c41a63584 # Contribution (External) - Contributor
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
@@ -53,7 +53,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 92be950a-0880-49a1-bd9a-dcfdb0745a8a # Contribution (External) - Type
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -69,12 +69,12 @@ fieldLayouts:
         userCondition: null
 handle: contributionExternal
 hasTitleField: false
-icon: null
+icon: address-book
 name: 'Contribution (External)'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{contributionExternalContributor}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

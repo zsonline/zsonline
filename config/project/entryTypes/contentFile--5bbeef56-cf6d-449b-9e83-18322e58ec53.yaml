@@ -38,10 +38,10 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 5e969c43-23fb-4bfc-a51a-e8e26b1b66ba # Content File - File
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
+            providesThumbs: true
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -54,12 +54,12 @@ fieldLayouts:
         userCondition: null
 handle: contentFile
 hasTitleField: false
-icon: null
+icon: file
 name: 'Content File'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{contentFileFile.one()}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

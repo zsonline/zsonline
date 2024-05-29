@@ -53,7 +53,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 8bf7e76a-4365-4da0-a4c8-a545c79488c3 # Timeline Event - Label
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -66,7 +66,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: b6909423-4a75-4b31-8af2-4ec0935f6bcb # Timeline Event - Title
+            fieldUid: b6909423-4a75-4b31-8af2-4ec0935f6bcb # Legacy - Title
             handle: null
             includeInCards: false
             instructions: null
@@ -143,8 +143,8 @@ fieldLayouts:
         uid: 8c06c300-2013-4023-a861-b4409fb0e673
         userCondition: null
 handle: timelineEvent
-hasTitleField: false
-icon: null
+hasTitleField: true
+icon: calendar
 name: 'Timeline Event'
 showSlugField: false
 showStatusField: false

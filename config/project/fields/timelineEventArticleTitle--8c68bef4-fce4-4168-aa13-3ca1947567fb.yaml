@@ -1,7 +1,7 @@
 columnSuffix: dztklvll
 handle: timelineEventArticleTitle
 instructions: null
-name: 'Timeline Event (Article) - Title'
+name: 'Legacy - Title'
 searchable: false
 settings:
   byteLimit: null

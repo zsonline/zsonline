@@ -38,7 +38,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 9f01ed5b-f89c-478b-a859-71fd331c8d93 # Issue Section - Title
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
@@ -53,11 +53,11 @@ fieldLayouts:
             elementCondition: null
             fieldUid: ae3e2976-5a2f-441c-a712-71c849fe2a40 # Issue Section - Articles
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7b075b3a-7acb-4805-a8d8-a2cfcb296bc3
@@ -69,12 +69,12 @@ fieldLayouts:
         userCondition: null
 handle: issueSection
 hasTitleField: false
-icon: null
+icon: table-list
 name: 'Issue Section'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{issueSectionTitle|default(''-'')}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

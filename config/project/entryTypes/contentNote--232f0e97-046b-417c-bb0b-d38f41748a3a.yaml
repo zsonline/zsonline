@@ -53,7 +53,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 6c54d505-9d57-4707-9916-cdac49a0c034 # Content Note - Content
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -69,12 +69,12 @@ fieldLayouts:
         userCondition: null
 handle: contentNote
 hasTitleField: false
-icon: null
+icon: note
 name: 'Content Note'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{contentNoteTitle|default(''-'')}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

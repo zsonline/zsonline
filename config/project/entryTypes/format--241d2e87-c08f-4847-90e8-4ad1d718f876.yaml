@@ -39,7 +39,7 @@ fieldLayouts:
         userCondition: null
 handle: format
 hasTitleField: true
-icon: null
+icon: shapes
 name: Format
 showSlugField: true
 showStatusField: true

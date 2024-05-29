@@ -54,12 +54,12 @@ fieldLayouts:
         userCondition: null
 handle: home
 hasTitleField: false
-icon: null
+icon: house
 name: Home
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{section.name|raw}'
+titleFormat: '{section.name}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

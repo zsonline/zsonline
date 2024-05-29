@@ -1,7 +1,7 @@
 columnSuffix: yurhecdi
 handle: timelineEventTitle
 instructions: null
-name: 'Timeline Event - Title'
+name: 'Legacy - Title'
 searchable: false
 settings:
   byteLimit: null

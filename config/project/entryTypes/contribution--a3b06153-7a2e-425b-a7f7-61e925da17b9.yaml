@@ -53,7 +53,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 274b5d00-df3a-4b76-861b-ca591e2af249 # Legacy - User
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
@@ -68,7 +68,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: a46d69bc-dad9-44b6-9ca0-9ce75f501b7b # Contribution - Type
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -84,12 +84,12 @@ fieldLayouts:
         userCondition: null
 handle: contribution
 hasTitleField: false
-icon: null
+icon: user
 name: Contribution
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{contributionContributor.one()}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -38,10 +38,10 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 21e4a371-781d-4752-b0cd-106498851db5 # Content Image - Image
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
+            providesThumbs: true
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,7 +53,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: f854dd38-7b4e-4c96-94ae-741cf4593a1e # Content Image - Size
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -69,12 +69,12 @@ fieldLayouts:
         userCondition: null
 handle: contentImage
 hasTitleField: false
-icon: null
+icon: image
 name: 'Content Image'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{contentImageImage.one()}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
