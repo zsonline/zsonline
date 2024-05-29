@@ -83,12 +83,12 @@ fieldLayouts:
         name: Content
         uid: 14dab603-cd6a-4f78-b21c-420f3c650a92
         userCondition: null
-fs: images
+fs: public
 handle: images
 name: Images
 sortOrder: 2
-subpath: ''
+subpath: images
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 transformFs: ''
-transformSubpath: transforms
+transformSubpath: images/transforms

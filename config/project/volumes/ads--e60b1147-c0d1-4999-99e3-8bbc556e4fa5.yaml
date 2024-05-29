@@ -38,12 +38,12 @@ fieldLayouts:
         name: Content
         uid: d2f85228-c63a-4391-8cef-364e4da13d08
         userCondition: null
-fs: ads
+fs: public
 handle: ads
 name: Ads
 sortOrder: 7
-subpath: ''
+subpath: ads
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 transformFs: ''
-transformSubpath: transforms
+transformSubpath: ads/transforms

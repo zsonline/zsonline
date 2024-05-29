@@ -1,4 +1,4 @@
-dateModified: 1717004483
+dateModified: 1717005144
 elementSources:
   craft\elements\User:
     -
@@ -155,13 +155,6 @@ email:
   fromName: 'Zürcher Studierendenzeitung'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
-  ads:
-    hasUrls: true
-    name: Ads
-    settings:
-      path: '@webroot/assets/ads'
-    type: craft\fs\Local
-    url: '@web/assets/ads'
   embeds:
     hasUrls: false
     name: Embeds
@@ -169,20 +162,13 @@ fs:
       path: '@storage/assets/embeds'
     type: craft\fs\Local
     url: null
-  files:
+  public:
     hasUrls: true
-    name: Files
+    name: Public
     settings:
-      path: '@webroot/assets/files'
+      path: '@webroot/assets'
     type: craft\fs\Local
-    url: '@web/assets/files'
-  images:
-    hasUrls: true
-    name: Images
-    settings:
-      path: '@webroot/assets/images'
-    type: craft\fs\Local
-    url: '@web/assets/images'
+    url: '@web/assets'
 graphql:
   publicToken:
     enabled: false

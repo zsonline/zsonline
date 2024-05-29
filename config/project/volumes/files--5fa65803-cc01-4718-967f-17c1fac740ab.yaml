@@ -38,12 +38,12 @@ fieldLayouts:
         name: Content
         uid: 5f75ceca-1919-47c4-834d-1259c2db466d
         userCondition: null
-fs: files
+fs: public
 handle: files
 name: Files
 sortOrder: 5
-subpath: ''
+subpath: files
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 transformFs: ''
-transformSubpath: transforms
+transformSubpath: files/transforms
