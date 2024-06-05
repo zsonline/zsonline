@@ -36,22 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 85a18a10-e219-4aa0-b2f9-0863939b21fc # Contribution - Contributor
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 258a3faa-29a6-421f-af0e-69a21f134d29
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 274b5d00-df3a-4b76-861b-ca591e2af249 # Legacy - User
+            fieldUid: 274b5d00-df3a-4b76-861b-ca591e2af249 # Contribution - User
             handle: null
             includeInCards: false
             instructions: null

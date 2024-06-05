@@ -1,4 +1,4 @@
-dateModified: 1717615596
+dateModified: 1717617089
 elementSources:
   craft\elements\User:
     -
@@ -176,7 +176,6 @@ graphql:
 meta:
   __names__:
     0cf2962b-f593-4e6b-9ac2-9544710d8aad: 'Home Section Layout - Appearance' # Home Section Layout - Appearance
-    0fd78a25-b16e-4d38-a0cc-80c28df2b958: 'Contributor - Lastname' # Contributor - Lastname
     1bf3a5c8-628e-4b3c-b18b-aa384eec608e: 'Article - Format' # Article - Format
     1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826: 'Legacy - Description' # Legacy - Description
     2ef3f3d8-ae1c-480e-a51b-db580170d832: Formats # Formats
@@ -189,7 +188,6 @@ meta:
     5a09781f-aab3-4633-b3ed-6bd0bda1ad48: 'Legacy - Content' # Legacy - Content
     5bbeef56-cf6d-449b-9e83-18322e58ec53: 'Content File' # Content File
     5c6da112-a718-4124-97fb-97f8c5b0ac06: 'Content Image' # Content Image
-    5c6f5aa7-cf71-41b9-ac00-8f640607916a: Contributors # Contributors
     5e969c43-23fb-4bfc-a51a-e8e26b1b66ba: 'Content File - File' # Content File - File
     5fa65803-cc01-4718-967f-17c1fac740ab: Files # Files
     6aab4182-8fbc-4f80-b6e3-504f5f487ecc: 'Article - Image' # Article - Image
@@ -223,16 +221,14 @@ meta:
     50b7bb6c-00c3-462d-8d00-1ae343ce044a: 'Article - Content' # Article - Content
     67a0dda7-852f-4f0d-ae27-228660fce59e: 'Content Note - Title' # Content Note - Title
     74e21a53-79cd-4aa7-85b3-bff442e02c68: 'Timeline Event' # Timeline Event
-    85a18a10-e219-4aa0-b2f9-0863939b21fc: 'Contribution - Contributor' # Contribution - Contributor
     91d8d1f4-db2b-49ba-9de0-187a49dd5276: 'Timeline Event (Article) - Lead' # Timeline Event (Article) - Lead
     92be950a-0880-49a1-bd9a-dcfdb0745a8a: 'Contribution (External) - Type' # Contribution (External) - Type
     232f0e97-046b-417c-bb0b-d38f41748a3a: 'Content Note' # Content Note
     241d2e87-c08f-4847-90e8-4ad1d718f876: Format # Format
-    274b5d00-df3a-4b76-861b-ca591e2af249: 'Legacy - User' # Legacy - User
+    274b5d00-df3a-4b76-861b-ca591e2af249: 'Contribution - User' # Contribution - User
     408c6114-fd69-445a-8240-e8841521181d: 'Subscription - Address' # Subscription - Address
     420d0b54-9f18-41a9-b095-de7adfde688d: 'Ad - Image' # Ad - Image
     429e38b0-5490-4b1b-be5e-99adcf0d6c47: Sales # Sales
-    437bb34b-df33-490d-a865-5fcd8eac751b: Contributor # Contributor
     438d977b-985e-4c1f-9051-8e8e9b279e22: 'Article - Topics' # Article - Topics
     614a8287-bcf0-40de-8795-3ab58a7a4d50: 'Content Quote' # Content Quote
     683c8764-91e2-4a9e-b0cf-d7bed17d1d5d: 'Timeline Event (Article)' # Timeline Event (Article)
@@ -288,7 +284,6 @@ meta:
     ef819456-45fb-4c34-a4e6-e32ab105c6a3: 'Image - Caption' # Image - Caption
     f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127: 'Timeline Event (Article) - Label' # Timeline Event (Article) - Label
     f4cde807-f639-4b1d-bebe-8aa3cd4de160: 'Issue - Year' # Issue - Year
-    f8e13236-f1d0-4327-a58e-8a5ab4493c32: 'Contributor - Firstname' # Contributor - Firstname
     f197e112-2648-4604-852c-cf4171abc6c2: 'Home Section Layout - Articles' # Home Section Layout - Articles
     f854dd38-7b4e-4c96-94ae-741cf4593a1e: 'Content Image - Size' # Content Image - Size
     ff39e44a-c59b-40f1-9eae-5080bf251c2d: 'Issue - Cover' # Issue - Cover
