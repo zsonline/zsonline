@@ -15,7 +15,7 @@ settings:
   showSiteMenu: true
   sources: '*'
   targetSiteId: null
-  validateRelatedElements: true
+  validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: site
