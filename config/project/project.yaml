@@ -1,4 +1,4 @@
-dateModified: 1717362246
+dateModified: 1717615596
 elementSources:
   craft\elements\User:
     -
@@ -221,7 +221,6 @@ meta:
     36ea09ec-8867-4d74-96ee-d55c21e44104: 'Contribution (External)' # Contribution (External)
     49b8a091-c188-4f35-a61b-6162eb8514a9: 'Image - Contributions' # Image - Contributions
     50b7bb6c-00c3-462d-8d00-1ae343ce044a: 'Article - Content' # Article - Content
-    56c4202e-de36-4fe8-ba9a-97ccdb7d8bb6: 'Subscription - Lastname' # Subscription - Lastname
     67a0dda7-852f-4f0d-ae27-228660fce59e: 'Content Note - Title' # Content Note - Title
     74e21a53-79cd-4aa7-85b3-bff442e02c68: 'Timeline Event' # Timeline Event
     85a18a10-e219-4aa0-b2f9-0863939b21fc: 'Contribution - Contributor' # Contribution - Contributor
@@ -292,7 +291,6 @@ meta:
     f8e13236-f1d0-4327-a58e-8a5ab4493c32: 'Contributor - Firstname' # Contributor - Firstname
     f197e112-2648-4604-852c-cf4171abc6c2: 'Home Section Layout - Articles' # Home Section Layout - Articles
     f854dd38-7b4e-4c96-94ae-741cf4593a1e: 'Content Image - Size' # Content Image - Size
-    f502974c-3cc3-4526-bbf0-4320147a482d: 'Subscription - Firstname' # Subscription - Firstname
     ff39e44a-c59b-40f1-9eae-5080bf251c2d: 'Issue - Cover' # Issue - Cover
 plugins:
   ckeditor:

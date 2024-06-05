@@ -36,36 +36,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: f502974c-3cc3-4526-bbf0-4320147a482d # Subscription - Firstname
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 26817320-374a-4e12-ac49-3c2399144f45
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 56c4202e-de36-4fe8-ba9a-97ccdb7d8bb6 # Subscription - Lastname
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c990f766-d74a-465a-b764-f6ba96cfcc06
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
             fieldUid: 408c6114-fd69-445a-8240-e8841521181d # Subscription - Address
             handle: null
             includeInCards: false
@@ -125,6 +95,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{subscriptionFirstname} {subscriptionLastname}'
+titleFormat: '{subscriptionAddress.one().fullName}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
