@@ -44,5 +44,23 @@ class Module extends BaseModule
                 $event->exporters[] = PrintingExporter::class;
             }
         );
+
+        Event::on(User::class, User::EVENT_AFTER_VALIDATE, function (Event $event) {
+            $user = $event->sender;
+            if (!$user->firstSave || !$user->enabled) {
+                return;
+            }
+
+            $user->email = null;
+        });
+
+        Event::on(User::class, User::EVENT_AFTER_SAVE, function (Event $event) {
+            $user = $event->sender;
+            if (!$user->firstSave) {
+                return;
+            }
+
+            Craft::$app->users->deactivateUser($user);
+        });
     }
 }
