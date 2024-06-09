@@ -1,5 +1,10 @@
 headingLevels: false
 name: 'Content Note - Content'
+options:
+  list:
+    multiBlock: false
+    properties:
+      styles: false
 toolbar:
   - bulletedList
   - numberedList

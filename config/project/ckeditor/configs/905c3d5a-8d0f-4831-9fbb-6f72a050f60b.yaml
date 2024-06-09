@@ -1,11 +1,17 @@
 headingLevels:
   - 3
 name: 'Page - Content'
+options:
+  list:
+    multiBlock: false
+    properties:
+      styles: false
 toolbar:
   - createEntry
   - heading
   - bulletedList
   - numberedList
+  - mediaEmbed
   - '|'
   - bold
   - italic

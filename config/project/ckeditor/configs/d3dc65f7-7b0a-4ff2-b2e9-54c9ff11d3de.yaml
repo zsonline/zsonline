@@ -1,6 +1,11 @@
 headingLevels:
   - 3
 name: 'Article - Content'
+options:
+  list:
+    multiBlock: false
+    properties:
+      styles: false
 toolbar:
   - createEntry
   - heading
