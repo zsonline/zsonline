@@ -1,16 +1,6 @@
 tabs:
   -
-    elementCondition:
-      class: craft\elements\conditions\users\UserCondition
-      conditionRules:
-        -
-          class: craft\elements\conditions\users\GroupConditionRule
-          operator: in
-          uid: 65cbad6d-9151-4b83-8fd7-e15c2793a9ce
-          values:
-            - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
-      elementType: craft\elements\User
-      fieldContext: global
+    elementCondition: null
     elements:
       -
         autocapitalize: true
@@ -115,11 +105,22 @@ tabs:
         uid: a9d8600a-0073-460b-8325-a726537b34b4
         userCondition: null
         width: 100
-      -
-        elementCondition: null
-        type: craft\fieldlayoutelements\HorizontalRule
-        uid: 67f44ab5-2a2e-4bb6-a54e-9483f28832b7
-        userCondition: null
+    name: Content
+    uid: 1d0b2e0b-5676-46da-8994-c0cac4ee5784
+    userCondition: null
+  -
+    elementCondition:
+      class: craft\elements\conditions\users\UserCondition
+      conditionRules:
+        -
+          class: craft\elements\conditions\users\GroupConditionRule
+          operator: in
+          uid: 65cbad6d-9151-4b83-8fd7-e15c2793a9ce
+          values:
+            - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
+      elementType: craft\elements\User
+      fieldContext: global
+    elements:
       -
         elementCondition: null
         fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription - Plan
