@@ -75,6 +75,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{contributionContributor.one()}'
+titleFormat: '{contributionUser.one()}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
