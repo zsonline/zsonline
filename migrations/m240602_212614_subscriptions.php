@@ -27,9 +27,6 @@ class m240602_212614_subscriptions extends Migration
 
         foreach(User::find()->group('subscriber')->all() as $user) {
             $existingAddress = $user->addresses->one();
-            if(!$existingAddress) {
-                continue;
-            }
 
             $entry = new Entry();
             $entry->sectionId = $section->id;
@@ -62,8 +59,30 @@ class m240602_212614_subscriptions extends Migration
                 throw new Exception("Couldn't resave subscriber: " . implode(', ', $entry->getFirstErrors()));
             }
 
-            if (!Craft::$app->elements->deleteElement($user, true)) {
-                throw new Exception("Couldn't delete user: " . implode(', ', $user->getFirstErrors()));
+            $contributions = Entry::find()->type('contribution')->relatedTo($user)->all();
+            $group = Craft::$app->userGroups->getGroupByHandle('contributors');
+
+            if (count($contributions)) {
+                foreach ($user->addresses->all() as $address) {
+                    if (!Craft::$app->elements->deleteElement($address, true)) {
+                        throw new Exception("Couldn't delete address: " . implode(', ', $address->getFirstErrors()));
+                    }
+                }
+
+                if (!Craft::$app->users->assignUserToGroups($user->id, [$group->id])) {
+                    throw new Exception("Couldn't assign user to group: " . implode(', ', $user->getFirstErrors()));
+                }
+
+                $user->setFieldValue('subscriptionPlan', null);
+                $user->setFieldValue('subscriptionEndDate', null);
+
+                if (!Craft::$app->elements->saveElement($user)) {
+                    throw new Exception("Couldn't save user: " . implode(', ', $user->getFirstErrors()));
+                }
+            } else {
+                if (!Craft::$app->elements->deleteElement($user, true)) {
+                    throw new Exception("Couldn't delete user: " . implode(', ', $user->getFirstErrors()));
+                }
             }
         }
 
