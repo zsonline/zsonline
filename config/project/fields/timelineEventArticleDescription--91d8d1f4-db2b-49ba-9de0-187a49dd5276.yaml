@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: timelineEventArticleLead
+handle: timelineEventArticleDescription
 instructions: null
-name: 'Timeline Event (Article) - Lead'
+name: 'Timeline Event (Article) - Description'
 searchable: false
 settings:
   byteLimit: null

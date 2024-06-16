@@ -21,8 +21,8 @@ class m240602_212420_timeline extends Migration
         foreach(Entry::find()->type('timelineEventArticle')->all() as $entry) {
             $entry->title = $entry->getFieldValue('timelineEventArticleTitle');
             $entry->setFieldValue(
-                'timelineEventArticleLead',
-                trim(strip_tags($entry->getFieldValue('timelineEventArticleDescription')))
+                'timelineEventArticleDescription',
+                trim(strip_tags($entry->getFieldValue('timelineEventArticleDescriptionLegacy')))
             );
             if (!Craft::$app->elements->saveElement($entry)) {
                 throw new Exception("Couldn't save timeline event article: " . implode(', ', $entry->getFirstErrors()));

@@ -1,5 +1,5 @@
 columnSuffix: ivoorgte
-handle: timelineEventArticleDescription
+handle: timelineEventArticleDescriptionLegacy
 instructions: null
 name: 'Legacy - Description'
 searchable: false
