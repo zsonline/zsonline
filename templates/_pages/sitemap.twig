@@ -9,25 +9,36 @@
 ] -%}
 
 {%- set entries = craft.entries()
-    .all() -%}
+    .section([
+        'home',
+        'articles',
+        'formats',
+        'issues',
+        'pages',
+        'timeline',
+        'topics'
+    ])
+    .collect() -%}
 
 {%- set users = craft.users()
     .group('contributors')
-    .all() -%}
+    .collect() -%}
 
 {%- set issueYears = craft.entries()
     .section('issues')
-    .select('field_issueYear_womevpsh')
+    .select(
+        craft.app.entries
+            .getEntryTypeByHandle('issue')
+            .getFieldLayout()
+            .getFieldByHandle('issueYear')
+            .getValueSql()
+    )
     .distinct()
     .orderBy('issueYear DESC')
     .column() -%}
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>{{ url('')|slice(0, -1) }}</loc>
-    </url>
-
     {% for route in routes %}
         <url>
             <loc>{{ url(route) }}</loc>

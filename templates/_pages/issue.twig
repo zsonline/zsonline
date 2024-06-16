@@ -8,14 +8,14 @@
 {% set layoutSize = 'medium' %}
 
 {% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
-    'issueArticles.group:articles.articleFormat',
-    ['issueArticles.group:articles.contentImage', {
+    'issueSections.issueSection:issueSectionArticles.articleFormat',
+    ['issueSections.issueSection:issueSectionArticles.articleImage', {
         withTransforms: [
             { height: 250, width: 400 }
         ]
     }],
-    'issueArticles.group:articles.contributors.other',
-    'issueArticles.group:articles.contributors.user:user',
+    'issueSections.issueSection:issueSectionArticles.articleContributions.contribution:contributionUser',
+    'issueSections.issueSection:issueSectionArticles.articleContributions.contributionExternal',
     'issueFile',
     'issueImage'
 ]) %}
@@ -23,10 +23,10 @@
 {% set entry = collect([entry]).first() %}
 
 {% set data = [] %}
-{% for group in entry.issueArticles %}
+{% for section in entry.issueSections %}
     {% set data = data|merge([{
-        entries: group.articles,
-        title: group.label
+        entries: section.issueSectionArticles,
+        title: section.title
     }]) %}
 {% endfor %}
 

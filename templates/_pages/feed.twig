@@ -3,9 +3,10 @@
 {%- set articles = craft.entries()
     .section('articles')
     .with([
-        'contributors.other',
-        'contributors.user:user'
+        'articleContributions.contribution:contributionUser',
+        'articleContributions.contributionExternal'
     ])
+    .orderBy('postDate DESC')
     .collect() -%}
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -32,8 +33,8 @@
             <id>{{ article.url }}</id>
 
             <title>{{ article.title }}</title>
-            {% if article.contentDescription %}
-                <summary>{{ article.contentDescription }}</summary>
+            {% if article.articleLead %}
+                <summary>{{ article.articleLead }}</summary>
             {% endif %}
 
             <link href="{{ article.url }}" rel="alternate" type="html" />
@@ -41,15 +42,15 @@
             <published>{{ article.postDate|date('c') }}</published>
             <updated>{{ article.dateUpdated|date('c') }}</updated>
 
-            {% for contributor in article.contributors %}
+            {% for contribution in article.articleContributions %}
                 <author>
-                    {% if contributor.type == 'user' %}
-                        {% set user = contributor.user.first() %}
+                    {% if contribution.type == 'contribution' %}
+                        {% set user = contribution.contributionUser.first() %}
 
                         <name>{{ user.fullName }}</name>
                         <uri>{{ url('autor-innen/' ~ user.username) }}</uri>
-                    {% elseif contributor.type == 'other' %}
-                        <name>{{ contributor.label }}</name>
+                    {% elseif contribution.type == 'contributionExternal' %}
+                        <name>{{ contribution.contributionExternalContributor }}</name>
                     {% endif %}
                 </author>
             {% endfor %}

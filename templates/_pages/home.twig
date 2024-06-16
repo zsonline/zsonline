@@ -7,9 +7,8 @@
 {% set home = craft.entries()
     .section('home')
     .with([
-        'homeBlocks.articles',
-        'homeBlocks.articles:layouts.articles.articleFormat',
-        ['homeBlocks.articles:layouts.articles.contentImage', {
+        'homeSections.homeSection:homeSectionLayouts.homeSectionLayout:homeSectionLayoutArticles.articleFormat',
+        ['homeSections.homeSection:homeSectionLayouts.homeSectionLayout:homeSectionLayoutArticles.articleImage', {
             withTransforms: [
                 { height: 250, width: 400 },
                 { height: 406, width: 650 },
@@ -17,108 +16,79 @@
                 { height: 900, width: 1440 }
             ]
         }],
-        'homeBlocks.articles:layouts.articles.contributors.other',
-        'homeBlocks.articles:layouts.articles.contributors.user:user',
-        'homeBlocks.anniversary',
-        ['homeBlocks.anniversary:anniversaryImage', {
-            withTransforms: [
-                { height: 650, width: 650 },
-                { height: 400, width: 1024 },
-                { height: 500, width: 1440 }
-            ]
-        }],
+        'homeSections.homeSection:homeSectionLayouts.homeSectionLayout:homeSectionLayoutArticles.articleContributions.contribution:contributionUser',
+        'homeSections.homeSection:homeSectionLayouts.homeSectionLayout:homeSectionLayoutArticles.articleContributions.contributionExternal'
     ])
     .limit(1)
-    .collect() %}
+    .collect()
+    .first() %}
 
 {% set headerSize = 'large' %}
-{% set headerStyle = home.first().homeBlocks.count() > 0 and home.first().homeBlocks.first().backgroundColor ? 'transparent' : 'solid' %}
+{% set headerStyle = home.homeSections.count() > 0 and home.homeSections.first().homeSectionColor ? 'transparent' : 'solid' %}
 {% set layoutSize = 'large' %}
 
 {% block main %}
     <div class="home">
-        {% for block in home.first().homeBlocks %}
-            <div class="{{ html_classes('home-block', 'home-' ~ block.type, {
-                'home-block--colored': block.backgroundColor,
-                'home-block--colored-prev': loop.index0 - 1 >= 0 and home.first().homeBlocks[loop.index0 - 1].backgroundColor,
-                'home-block--colored-next': loop.index0 + 1 < loop.length and home.first().homeBlocks[loop.index0 + 1].backgroundColor,
-                'home-block--labeled': block.label
-            }) }}" style="--color-home-block-bg: {{ block.backgroundColor }};">
-                {% if block.label %}
-                    <h3 class="home-block__label">{{ block.label }}</h3>
+        {% for section in home.homeSections %}
+            <div class="{{ html_classes('home-block', 'home-' ~ section.type, {
+                'home-block--colored': section.homeSectionColor,
+                'home-block--colored-prev': loop.index0 - 1 >= 0 and home.homeSections[loop.index0 - 1].homeSectionColor,
+                'home-block--colored-next': loop.index0 + 1 < loop.length and home.homeSections[loop.index0 + 1].homeSectionColor,
+                'home-block--labeled': section.homeSectionTitle
+            }) }}" style="--color-home-block-bg: {{ section.homeSectionColor }};">
+                {% if section.homeSectionTitle %}
+                    <h3 class="home-block__label">{{ section.homeSectionTitle }}</h3>
                 {% endif %}
 
-                {% switch block.type %}
-                    {% case 'articles' %}
-                        {% for layout in block.layouts %}
-                            <div class="{{ html_classes('home-articles__row', 'home-articles__row--' ~ layout.appearance) }}">
-                                {% switch layout.appearance %}
-                                    {% case 'h' or 'v' %}
-                                        {% if layout.articles|length >= 1 %}
-                                            <div class="home-articles__column">
-                                                {{ preview({
-                                                    article: layout.articles.first(),
-                                                    orientation: (layout.appearance == 'h') ? 'horizontal' : 'vertical',
-                                                    size: 'large'
-                                                }) }}
-                                            </div>
-                                        {% endif %}
-                                    {% case 'hh' or 'vv' %}
-                                        {% for article in layout.articles.slice(0, 2) %}
-                                            <div class="home-articles__column">
+                {% for layout in section.homeSectionLayouts %}
+                    <div class="{{ html_classes('home-articles__row', 'home-articles__row--' ~ layout.homeSectionLayoutAppearance) }}">
+                        {% switch layout.homeSectionLayoutAppearance %}
+                            {% case 'h' or 'v' %}
+                                {% if layout.homeSectionLayoutArticles|length >= 1 %}
+                                    <div class="home-articles__column">
+                                        {{ preview({
+                                            article: layout.homeSectionLayoutArticles.first(),
+                                            orientation: (layout.homeSectionLayoutAppearance == 'h') ? 'horizontal' : 'vertical',
+                                            size: 'large'
+                                        }) }}
+                                    </div>
+                                {% endif %}
+                            {% case 'hh' or 'vv' %}
+                                {% for article in layout.homeSectionLayoutArticles.slice(0, 2) %}
+                                    <div class="home-articles__column">
+                                        {{ preview({
+                                            article: article,
+                                            orientation: (layout.homeSectionLayoutAppearance == 'hh') ? 'horizontal' : 'vertical',
+                                            size: (layout.homeSectionLayoutAppearance == 'hh') ? 'small' : 'medium'
+                                        }) }}
+                                    </div>
+                                {% endfor %}
+                            {% case 'vh' %}
+                                {% if layout.homeSectionLayoutArticles|length > 0 %}
+                                    <div class="home-articles__column">
+                                        {{ preview({
+                                            article: layout.homeSectionLayoutArticles.first(),
+                                            orientation: 'vertical',
+                                            size: 'medium'
+                                        }) }}
+                                    </div>
+                                {% endif %}
+                                {% if layout.homeSectionLayoutArticles|length > 1 %}
+                                    <div class="home-articles__column">
+                                        {% for article in layout.homeSectionLayoutArticles.slice(1, 3) %}
+                                            <div class="home-articles__column__row">
                                                 {{ preview({
                                                     article: article,
-                                                    orientation: (layout.appearance == 'hh') ? 'horizontal' : 'vertical',
-                                                    size: (layout.appearance == 'hh') ? 'small' : 'medium'
+                                                    orientation: 'horizontal',
+                                                    size: 'small'
                                                 }) }}
                                             </div>
                                         {% endfor %}
-                                    {% case 'vh' %}
-                                        {% if layout.articles|length > 0 %}
-                                            <div class="home-articles__column">
-                                                {{ preview({
-                                                    article: layout.articles.first(),
-                                                    orientation: 'vertical',
-                                                    size: 'medium'
-                                                }) }}
-                                            </div>
-                                        {% endif %}
-                                        {% if layout.articles|length > 1 %}
-                                            <div class="home-articles__column">
-                                                {% for article in layout.articles.slice(1, 3) %}
-                                                    <div class="home-articles__column__row">
-                                                        {{ preview({
-                                                            article: article,
-                                                            orientation: 'horizontal',
-                                                            size: 'small'
-                                                        }) }}
-                                                    </div>
-                                                {% endfor %}
-                                            </div>
-                                        {% endif %}
-                                {% endswitch %}
-                            </div>
-                        {% endfor %}
-                    {% case 'anniversary' %}
-                        <a href="{{ url('100') }}" target="_blank" class="home-anniversary__preview">
-                            {% set image = block.anniversaryImage.first() %}
-                            {% set transform = { height: 500, width: 1440 } %}
-                            {% set srcset = image.getUrl({ height: 650, width: 650 }) ~ ' 650w, ' ~ image.getUrl({ height: 400, width: 1024 }) ~ ' 1024w, ' ~ image.getUrl({ height: 500, width: 1440 }) ~ ' 1440w' %}
-
-                            {{ tag('img', {
-                                height: image.getHeight(transform),
-                                sizes: '100vw',
-                                srcset: srcset,
-                                width: image.getWidth(transform)
-                            }) }}
-
-                            <div class="home-anniversary__preview__inner">
-                                <span class="home-anniversary__preview__label">{{ block.anniversaryLabel }}</span>
-                                <span class="home-anniversary__preview__description">{{ block.anniversaryDescription }}</span>
-                                <span class="home-anniversary__preview__link">Mehr erfahren {{ icon({ name: 'chevron-right' }) }}</span>
-                            </div>
-                        </a>
-                {% endswitch %}
+                                    </div>
+                                {% endif %}
+                        {% endswitch %}
+                    </div>
+                {% endfor %}
             </div>
         {% endfor %}
     </div>

@@ -11,17 +11,15 @@
 {% endmacro %}
 
 <form class="form" sprig s-method="post" s-action="site/subscriptions/create">
-    {{ csrfInput() }}
-
     <fieldset class="form__fields">
         <div class="form__field">
-            <input id="subscription__plan--regular" class="subscription__plan__input" name="plan" type="radio" value="regular" sprig {% if plan == 'regular' %}checked{% endif %}>
+            <input id="subscription__plan--regular" class="subscription__plan__input" name="plan" type="radio" value="regular" sprig s-vals='{"sprig:action":""}' {% if plan == 'regular' %}checked{% endif %}>
             <label class="subscription__plan__label" for="subscription__plan--regular">
                 <b>Reguläres Abo</b>
                 <span>CHF 50 / Jahr</span>
             </label>
 
-            <input id="subscription__plan--student" class="subscription__plan__input" name="plan" type="radio" value="student" sprig {% if plan == 'student' %}checked{% endif %}>
+            <input id="subscription__plan--student" class="subscription__plan__input" name="plan" type="radio" value="student" sprig s-vals='{"sprig:action":""}' {% if plan == 'student' %}checked{% endif %}>
             <label class="subscription__plan__label" for="subscription__plan--student">
                 <b>Studentisches Abo</b>
                 <span>Gratis</span>
@@ -33,7 +31,6 @@
             </label>
             {{ _self.errorList(subscription.getErrors('plan')) }}
         </div>
-
     </fieldset>
 
     {% if plan %}
@@ -89,7 +86,7 @@
         </fieldset>
     {% endif %}
 
-    {% if abort is defined %}
+    {% if sprig.isError %}
         <fieldset>
             <ul class="form__errors">
                 <li>Leider ist ein Fehler aufgetreten. Bitte <a href="{{ url('kontakt') }}">kontaktiere</a> uns, damit wir deine Bestellung abschliessen können.</li>
@@ -97,7 +94,7 @@
         </fieldset>
     {% endif %}
 
-    {% if success is defined and success %}
+    {% if sprig.isSuccess %}
         <fieldset>
             {% if plan == 'regular' %}
                 <span class="form__success">

@@ -9,7 +9,10 @@
 
 {% set entry = craft.users()
     .username(slug)
-    .one() %}
+    .group('contributors')
+    .limit(1)
+    .collect()
+    .first() %}
 
 {% if not entry %}
     {% exit 404 %}
@@ -17,22 +20,22 @@
 
 {% set query = craft.entries()
     .section('articles')
-    .contributors(
-        craft.matrixBlocks()
-            .field('contributors')
-            .type('user')
-            .user(entry)
+    .articleContributions(
+        craft.entries()
+            .field('articleContributions')
+            .type('contribution')
+            .contributionUser(entry)
             .all()
     )
     .with([
         'articleFormat',
-        ['contentImage', {
+        ['articleImage', {
             withTransforms: [
                 { height: 250, width: 400 }
             ]
         }],
-        'contributors.other',
-        'contributors.user:user'
+        'articleContributions.contribution:contributionUser',
+        'articleContributions.contributionExternal'
     ])
     .orderBy('postDate DESC')
     .limit(25) %}

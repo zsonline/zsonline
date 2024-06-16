@@ -10,21 +10,21 @@
 {% set articles = craft.entries()
     .section('articles')
     .after(now|date_modify("-6 months")|atom)
-    .contributors(
-        craft.matrixBlocks()
-            .field('contributors')
-            .type('user')
+    .articleContributions(
+        craft.entries()
+            .field('articleContributions')
+            .type('contribution')
             .all()
     )
     .with([
         'articleFormat',
-        ['contentImage', {
+        ['articleImage', {
             withTransforms: [
                 { height: 250, width: 400 }
             ]
         }],
-        'contributors.other',
-        'contributors.user:user'
+        'articleContributions.contribution:contributionUser',
+        'articleContributions.contributionExternal'
     ])
     .orderBy('postDate DESC')
     .collect() %}
@@ -34,7 +34,7 @@
     .group('contributors')
     .relatedTo({
         sourceElement: articles,
-        field: 'contributors.user'
+        field: 'articleContributions.contributionUser'
     })
     .orderBy('fullName')
     .collect() %}
@@ -43,7 +43,7 @@
 {% set data = {} %}
 {% for user in users %}
     {% set data = data|merge([{
-        entries: articles|filter(a => a.contributors|filter(m => m.type == 'user' and m.user|filter(u => u.fullname == user.fullname)|length > 0)|length > 0)|slice(0, 2),
+        entries: articles|filter(a => a.articleContributions|filter(e => e.type == 'contribution' and e.contributionUser|filter(c => c.fullName == user.fullName)|length > 0)|length > 0)|slice(0, 2),
         link: url('autor-innen/' ~ user.username),
         title: user.fullname
     }]) %}

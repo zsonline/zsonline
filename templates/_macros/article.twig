@@ -5,10 +5,8 @@
         size: 'small'
     } | merge(args) %}
 
-    {% from '_macros/content.twig' import meta %}
-
     {% set format = args.article.articleFormat.first() %}
-    {% set image = args.article.contentImage.first() %}
+    {% set image = args.article.articleImage.first() %}
 
     <a class="{{ html_classes('article-preview', 'article-preview--' ~ args.orientation, 'article-preview--' ~ args.size) }}" href="{{ args.article.url }}">
         {% if image %}
@@ -37,7 +35,7 @@
         <div class="article-preview__text">
             <h4 class="article-preview__title">{{ args.article.title }}</h4>
 
-            {% if args.article.contentDescription or format or args.article.articleAd %}
+            {% if args.article.articleLead or format or args.article.articleAd %}
                 <p class="article-preview__description">
                     {% if args.article.articleAd %}
                         <span class="ad-declaration article-preview__ad-declaration">Werbung</span>
@@ -47,20 +45,109 @@
                         <span class="article-preview__format">
                           {{- format.title -}}
                         </span>
-                        {%- if args.article.contentDescription -%}
+                        {%- if args.article.articleLead -%}
                             &ensp;&mdash;&ensp;
                         {%- endif -%}
                     {%- endif -%}
 
-                    {{ args.article.contentDescription }}
+                    {{ args.article.articleLead }}
                 </p>
             {% endif %}
 
-            {{ meta({
-                contributors: args.article.contributors.all(),
+            {{ _self.meta({
+                contributions: args.article.articleContributions,
                 datePublished: args.article.postDate,
                 showLinks: false,
             }) }}
         </div>
     </a>
+{% endmacro %}
+
+{% macro header(args) %}
+    {% set args = {
+        ad: false,
+        contributions: [],
+        class: '',
+        datePublished: null,
+        dateUpdated: null,
+        description: '',
+        format: null,
+        image: null,
+        imagePosition: 'top',
+        imageSize: 'medium',
+        title: ''
+    } | merge(args) %}
+
+    {% from '_macros/content.twig' import image %}
+
+    <div class="{{ html_classes('content-header', 'content-header--' ~ args.imagePosition, 'content-header--' ~ args.imageSize, args.class, {
+        'content-header--has-image': args.image
+    }) }}">
+        {% if args.image and args.imagePosition == 'top' %}
+            {{ image({
+                image: args.image,
+                loading: 'eager',
+                size: args.imageSize
+            }) }}
+        {% endif %}
+
+        <div class="content-header__text">
+            <h2>{{ args.title }}</h2>
+
+            {% if args.description or args.format %}
+                <p class="content-header__description">
+                    {%- if args.format -%}
+                        <a class="content-header__format" href="{{ args.format.url }}">
+                            {{- args.format.title -}}
+                        </a>
+                        {%- if args.description -%}
+                            &ensp;&mdash;&ensp;
+                        {%- endif -%}
+                    {%- endif -%}
+
+                    {{ args.description }}
+                </p>
+            {% endif %}
+
+            {% if args.ad %}
+                <span class="ad-declaration content-header__ad-declaration">Werbung</span>
+            {% endif %}
+
+            {{ _self.meta({
+                contributions: args.contributions,
+                datePublished: args.datePublished,
+                dateUpdated: args.dateUpdated
+            }) }}
+        </div>
+
+        {% if args.image and args.imagePosition == 'bottom' %}
+            {{ image({
+                image: args.image,
+                loading: 'eager',
+                size: args.imageSize
+            }) }}
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro meta(args) %}
+    {% set args = {
+        contributions: [],
+        datePublished: null,
+        showLinks: true
+    } | merge(args) %}
+
+    {% from '_macros/content.twig' import contributions %}
+
+    {% if args.contributions|length > 0 or args.datePublished %}
+        <div class="meta">
+            {% if args.contributions|length > 0 %}
+                <div>{{ contributions({ conjunction: 'und', contributions: args.contributions, showLinks: args.showLinks }) }}</div>
+            {% endif %}
+
+            {% if args.datePublished %}
+                <div>{{ args.datePublished|date('j. F Y') }}</div>
+            {% endif %}
+        </div>
+    {% endif %}
 {% endmacro %}

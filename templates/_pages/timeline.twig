@@ -14,17 +14,12 @@
                 { width: 1024 },
                 { width: 1440 },
 
-                {
-                    height: 628,
-                    width: 1200,
-                    format: 'jpeg'
-                }
+                { height: 628, width: 1200, format: 'jpeg' }
             ]
         }],
-        'timelineImage.contributors.other',
-        'timelineImage.contributors.user:user',
-        'timelineNodes',
-        ['timelineNodes.nodeRegular:nodeImage', {
+        'timelineImage.imageContributions.contribution:contributionUser',
+        'timelineImage.imageContributions.contributionExternal',
+        ['timelineEvents.timelineEvent:nodeImage', {
             withTransforms: [
                 { width: 400 },
                 { width: 650 },
@@ -32,21 +27,21 @@
                 { width: 1440 }
             ]
         }],
-        'timelineNodes.nodeRegular:nodeImage.contributors.other',
-        'timelineNodes.nodeRegular:nodeImage.contributors.user:user',
-        ['timelineNodes.nodeRegular:nodePrintImage', {
+        'timelineEvents.timelineEvent:timelineEventImage.imageContributions.contribution:contributionUser',
+        'timelineEvents.timelineEvent:timelineEventImage.imageContributions.contributionExternal',
+        ['timelineEvents.timelineEvent:timelineEventPrintImage', {
             withTransforms: [
                 { width: 250, height: 250, mode: 'fit' }
             ]
         }],
-        ['timelineNodes.nodeEmbed:nodeEmbedImage', {
+        ['timelineEvents.timelineEventArticle:timelineEventArticleImage', {
             withTransforms: [
                 { width: 400 },
                 { width: 650 }
             ]
         }],
-        'timelineNodes.nodeEmbed:nodeEmbedImage.contributors.other',
-        'timelineNodes.nodeEmbed:nodeEmbedImage.contributors.user:user',
+        'timelineEvents.timelineEventArticle:timelineEventArticleImage.imageContributions.contribution:contributionUser',
+        'timelineEvents.timelineEventArticle:timelineEventArticleImage.imageContributions.contributionExternal'
     ])
     .limit(1)
     .collect()
@@ -90,32 +85,32 @@
             </div>
 
             {{ caption({
-                caption: image.caption,
-                contributors: image.contributors.all()
+                caption: image.imageCaption,
+                contributions: image.imageContributions
             }) }}
         </div>
     {% endif %}
 
-    {% if entry.timelineNodes|length > 0 %}
+    {% if entry.timelineEvents|length > 0 %}
         <div class="timeline__timeline">
             <div class="timeline__line__outer">
                 <div class="timeline__line__inner"></div>
             </div>
             <div class="timeline__nodes">
-                {% for node in entry.timelineNodes %}
-                    {% if node.type == 'nodeRegular' %}
+                {% for event in entry.timelineEvents %}
+                    {% if event.type == 'timelineEvent' %}
                         <div class="timeline__node">
                             <div class="timeline__node__anchor">
-                                <span class="timeline__node__year">{{ node.nodeYear }}</span>
-                                <span class="timeline__node__label">{{ node.nodeLabel }}</span>
+                                <span class="timeline__node__year">{{ event.timelineEventYear }}</span>
+                                <span class="timeline__node__label">{{ event.timelineEventLabel }}</span>
                             </div>
                             <div class="timeline__node__container">
-                                <h3 class="timeline__node__title">{{ node.nodeTitle }}</h3>
+                                <h3 class="timeline__node__title">{{ event.title }}</h3>
                             </div>
 
-                            {% if node.nodeImage.count() > 0 %}
+                            {% if event.timelineEventImage.count() > 0 %}
                                 {{ image({
-                                    image: node.nodeImage.first(),
+                                    image: event.timelineEventImage.first(),
                                     lightbox: false,
                                     size: 'large'
                                 }) }}
@@ -123,12 +118,12 @@
 
                             <div class="timeline__node__container">
                                 <div class="timeline__node__description">
-                                    {{ node.nodeDescription }}
+                                    {{ event.timelineEventDescription }}
                                 </div>
 
-                                {% if node.nodePrintImage.count() > 0 %}
+                                {% if event.timelineEventPrintImage.count() > 0 %}
                                     {% set html %}
-                                        {% set image = node.nodePrintImage.first() %}
+                                        {% set image = event.timelineEventPrintImage.first() %}
                                         {% set transform = { width: 250, height: 250, mode: 'fit' } %}
 
                                         {{ tag('img', {
@@ -139,7 +134,7 @@
                                             width: image.getWidth(transform)
                                         }) }}
 
-                                        {% if node.nodePrintLink %}
+                                        {% if event.timelineEventPrintLink %}
                                             <span>
                                                 Ausgabe öffnen
                                                 {{ icon({
@@ -150,9 +145,9 @@
                                     {% endset %}
 
                                     <div class="timeline__node__print">
-                                        {% if node.nodePrintLink %}
+                                        {% if event.timelineEventPrintLink %}
                                             {{ tag('a', {
-                                                href: node.nodePrintLink,
+                                                href: event.timelineEventPrintLink,
                                                 html: html,
                                                 target: '_blank'
                                             }) }}
@@ -163,32 +158,32 @@
                                 {% endif %}
                             </div>
                         </div>
-                    {% elseif node.type == 'nodeEmbed' %}
+                    {% elseif event.type == 'timelineEventArticle' %}
                         <div class="timeline__node">
                             <div class="timeline__node__anchor">
-                                <span class="timeline__node__year">{{ node.nodeYear }}</span>
-                                <span class="timeline__node__label">{{ node.nodeLabel }}</span>
+                                <span class="timeline__node__year">{{ event.timelineEventArticleYear }}</span>
+                                <span class="timeline__node__label">{{ event.timelineEventArticleLabel }}</span>
                             </div>
 
                             <div class="timeline__node__container">
                                 <div class="timeline__embed-teaser timeline__embed" onclick="ZS.Timeline.openEmbed(this)">
-                                    {% if node.nodeEmbedImage.count() > 0 %}
+                                    {% if event.timelineEventArticleImage.count() > 0 %}
                                         {{ image({
                                             caption: false,
-                                            image: node.nodeEmbedImage.first(),
+                                            image: event.timelineEventArticleImage.first(),
                                             lightbox: false,
                                             size: 'small'
                                         }) }}
                                     {% endif %}
                                     <div class="timeline__embed-teaser__text">
-                                        {% if node.nodeEmbedPublication %}
-                                            <span class="timeline__embed__publication">{{ node.nodeEmbedPublication }}</span>
+                                        {% if event.timelineEventArticlePublication %}
+                                            <span class="timeline__embed__publication">{{ event.timelineEventArticlePublication }}</span>
                                         {% endif %}
 
-                                        <h3 class="timeline__embed__title">{{ node.nodeEmbedTitle }}</h3>
+                                        <h3 class="timeline__embed__title">{{ event.title }}</h3>
 
                                         <div class="timeline__embed__description">
-                                            {{ node.nodeEmbedDescription }}
+                                            {{ event.timelineEventArticleDescription }}
                                         </div>
 
                                         {{ button({
@@ -213,20 +208,20 @@
                                     </div>
                                     <div class="timeline__embed-overlay__article">
                                         <div class="timeline__embed-overlay__text">
-                                            {% if node.nodeEmbedPublication %}
-                                                <span class="timeline__embed__publication">{{ node.nodeEmbedPublication }}</span>
+                                            {% if event.timelineEventArticlePublication %}
+                                                <span class="timeline__embed__publication">{{ event.timelineEventArticlePublication }}</span>
                                             {% endif %}
 
-                                            <h3 class="timeline__embed__title">{{ node.nodeEmbedTitle }}</h3>
+                                            <h3 class="timeline__embed__title">{{ event.title }}</h3>
 
-                                            {% if node.nodeEmbedByline %}
-                                                <span class="timeline__embed__byline">{{ node.nodeEmbedByline }}</span>
+                                            {% if event.timelineEventArticleByline %}
+                                                <span class="timeline__embed__byline">{{ event.timelineEventArticleByline }}</span>
                                             {% endif %}
                                         </div>
 
-                                        {% if node.nodeEmbedImage.count() > 0 %}
+                                        {% if event.timelineEventArticleImage.count() > 0 %}
                                             {{ image({
-                                                image: node.nodeEmbedImage.first(),
+                                                image: event.timelineEventArticleImage.first(),
                                                 lightbox: false,
                                                 size: 'medium'
                                             }) }}
@@ -234,7 +229,7 @@
 
                                         <div class="timeline__embed-overlay__text">
                                             <div class="timeline__embed__content">
-                                                {{ node.nodeEmbedContent }}
+                                                {{ event.timelineEventArticleContent }}
                                             </div>
                                         </div>
                                     </div>

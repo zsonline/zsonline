@@ -38,13 +38,13 @@
             .search(searchQuery)
             .with([
                 'articleFormat',
-                ['contentImage', {
+                ['articleImage', {
                     withTransforms: [
                         { height: 250, width: 400 }
                     ]
                 }],
-                'contributors.other',
-                'contributors.user:user'
+                'articleContributions.contribution:contributionUser',
+                'articleContributions.contributionExternal'
             ])
             .orderBy('score')
             .limit(10) %}

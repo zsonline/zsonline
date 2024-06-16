@@ -29,13 +29,13 @@
             <div class="form__field">
                 <label for="comment-form__name">Name:</label>
                 {{ _self.errorList(comment.getErrors('name')) }}
-                <input id="comment-form__name" name="fields[name]" type="text" value="{{ comment.name ?? '' }}" />
+                <input id="comment-form__name" name="fields[name]" type="text" required value="{{ comment.name ?? '' }}" />
             </div>
 
             <div class="form__field">
                 <label for="comment-form__email">E-Mail-Adresse:</label>
                 {{ _self.errorList(comment.getErrors('email')) }}
-                <input id="comment-form__email" name="fields[email]" type="text" value="{{ comment.email ?? '' }}" />
+                <input id="comment-form__email" name="fields[email]" type="email" required value="{{ comment.email ?? '' }}" />
                 <p class="form__small">Deine E-Mail-Adresse wird nicht veröffentlicht.</p>
             </div>
         {% endif %}
@@ -43,11 +43,11 @@
         <div class="form__field">
             <label for="comment-form__comment">Kommentar:</label>
             {{ _self.errorList(comment.getErrors('comment')) }}
-            <textarea id="comment-form__comment" name="fields[comment]">{{ comment.comment ?? '' }}</textarea>
+            <textarea id="comment-form__comment" name="fields[comment]" required>{{ comment.comment ?? '' }}</textarea>
         </div>
     </fieldset>
 
-    {% if success is defined and success %}
+    {% if sprig.isSuccess %}
         <fieldset>
             <span class="form__success">Danke für deinen Kommentar. Es kann einige Tage dauern, bis er freigeschaltet wird.</span>
         </fieldset>

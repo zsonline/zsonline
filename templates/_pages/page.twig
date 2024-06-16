@@ -1,50 +1,31 @@
 {% extends '_layouts/default.twig' %}
 
-{% from '_macros/content.twig' import header %}
+{% from '_macros/article.twig' import header %}
+{% from '_macros/content.twig' import content %}
 {% from '_macros/lightbox.twig' import lightbox %}
 
 {% set headerSize = 'small' %}
-{% set headerStyle = entry.contentImageSize.value == 'large' and entry.contentImagePosition.value == 'top' and entry.contentImage|length > 0 ? 'gradient' : 'solid' %}
+{% set headerStyle = 'solid' %}
 {% set layoutSize = 'large' %}
 
 {% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
-    ['contentImage', {
+    ['pageImage', {
         withTransforms: [
             { width: 400 },
             { width: 650 },
             { width: 1024 },
             { width: 1440 },
 
-            {
-                mode: 'fit',
-                height: 400,
-                width: 400
-            },
-            {
-                mode: 'fit',
-                height: 650,
-                width: 650
-            },
-            {
-                mode: 'fit',
-                height: 1024,
-                width: 1024
-            },
-            {
-                mode: 'fit',
-                height: 1440,
-                width: 1440
-            },
+            { mode: 'fit', height: 400, width: 400 },
+            { mode: 'fit', height: 650, width: 650 },
+            { mode: 'fit', height: 1024, width: 1024 },
+            { mode: 'fit', height: 1440, width: 1440 },
 
-            {
-                height: 628,
-                width: 1200,
-                format: 'jpeg'
-            }
+            { height: 628, width: 1200, format: 'jpeg' }
         ]
     }],
-    'contentImage.contributors.other',
-    'contentImage.contributors.user:user',
+    'pageImage.imageContributions.contribution:contributionUser',
+    'pageImage.imageContributions.contributionExternal'
 ]) %}
 
 {% set entry = collect([entry]).first() %}
@@ -52,20 +33,22 @@
 {% block main %}
     {{ header({
         class: 'content-header--page',
-        image: entry.contentImage.first(),
-        imagePosition: entry.contentImagePosition.value,
-        imageSize: entry.contentImageSize.value,
+        image: entry.pageImage.first(),
+        imagePosition: 'bottom',
+        imageSize: 'small',
         title: entry.title
     }) }}
 
     <div class="content">
-        {{ entry.contentContent }}
+        {{ content({
+            content: entry.pageContent
+        }) }}
         {{ lightbox() }}
     </div>
 {% endblock %}
 
 {% set meta = {
-    image: entry.contentImage.first(),
+    image: entry.pageImage.first(),
     title: entry.title,
     url: entry.url
 } %}

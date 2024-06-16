@@ -3,11 +3,15 @@
 namespace site\controllers;
 
 use Craft;
+use DateTime;
 use craft\elements\Address;
+use craft\elements\Entry;
 use craft\elements\User;
+use craft\records\Field;
+use craft\records\EntryType;
+use craft\records\Section;
 use craft\web\Controller;
 use site\models\Subscription;
-use Throwable;
 use yii\web\BadRequestHttpException;
 use yii\web\Response;
 
@@ -49,78 +53,58 @@ class SubscriptionsController extends Controller
             );
         }
 
-        // Store user
-        $user = new User();
-        $user->fullName = $subscription->name;
-        $user->email = $subscription->email;
-        $user->subscriptionPlan = $subscription->plan;
-        $user->subscriptionEndDate = ($subscription->endDate + 1) . '-01-01';
-        try {
-            $success = Craft::$app->getElements()->saveElement($user);
-        } catch (Throwable $e) {
-            $success = false;
-        }
-        if(!$success) {
+        // Save entry
+        $entry = new Entry();
+        $entry->sectionId = Section::find()->where(['handle' => 'subscriptions'])->one()->id;
+        $entry->typeId = EntryType::find()->where(['handle' => 'subscription'])->one()->id;
+        $entry->authorId = User::find()->email('redaktion@zsonline.ch')->one()->id;
+        $entry->expiryDate = DateTime::createFromFormat('Y-m-d', ($subscription->endDate + 1) . '-01-01');
+        $entry->setFieldValue('subscriptionEmail', $subscription->email);
+        $entry->setFieldValue('subscriptionPlan', $subscription->plan);
+
+        if (!Craft::$app->getElements()->saveElement($entry)) {
             return $this->asModelFailure(
                 $subscription,
                 '',
-                'subscription',
-                routeParams: [
-                    'abort' => true
-                ]
+                'subscription'
             );
         }
 
-        // Assign user group
-        $userGroup = Craft::$app->userGroups->getGroupByHandle('subscriber');
-        if ($userGroup) {
-            try {
-                $success = Craft::$app->getUsers()->assignUserToGroups($user->id, [$userGroup->id]);
-            } catch (Throwable $e) {
-                $success = false;
-            }
-            if(!$success) {
-                return $this->asModelFailure(
-                    $subscription,
-                    '',
-                    'subscription',
-                    routeParams: [
-                        'abort' => true
-                    ]
-                );
-            }
-        }
-
-        // Add address
+        // Save address
         $address = new Address();
-        $address->ownerId = $user->id;
-        $address->title = 'Shipping address';
+        $address->ownerId = $entry->id;
+        $address->fieldId = Field::find()->where(['handle' => 'subscriptionAddress'])->one()->id;
+        $address->title = 'Lieferadresse';
+        $address->fullName = $subscription->name;
         $address->countryCode = 'CH';
         $address->addressLine1 = $subscription->addressLine1;
         $address->addressLine2 = $subscription->addressLine2;
         $address->postalCode = $subscription->postalCode;
         $address->locality = $subscription->locality;
 
-        try {
-            $success = Craft::$app->getElements()->saveElement($address);
-        } catch (Throwable $e) {
-            $success = false;
-        }
-        if(!$success) {
+        if (!Craft::$app->getElements()->saveElement($address)) {
+            Craft::$app->elements->deleteElement($entry, true);
+
             return $this->asModelFailure(
                 $subscription,
                 '',
-                'subscription',
-                routeParams: [
-                    'abort' => true
-                ]
+                'subscription'
+            );
+        }
+
+        // Resave to populate computed fields
+        if (!Craft::$app->getElements()->saveElement($entry)) {
+            return $this->asModelFailure(
+                $subscription,
+                '',
+                'subscription'
             );
         }
 
         return $this->asModelSuccess(
             $subscription,
             '',
-            'subscription',
+            'subscription'
         );
     }
 }

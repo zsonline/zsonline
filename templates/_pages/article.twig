@@ -1,65 +1,45 @@
 {% extends '_layouts/default.twig' %}
 
-{% from '_macros/article.twig' import preview %}
+{% from '_macros/article.twig' import header, preview %}
 {% from '_macros/button.twig' import button, link %}
-{% from '_macros/content.twig' import header %}
+{% from '_macros/content.twig' import content %}
 {% from '_macros/issue.twig' import tag %}
 {% from '_macros/lightbox.twig' import lightbox %}
 
 {% set headerSize = 'small' %}
-{% set headerStyle = entry.contentImageSize.value == 'large' and entry.contentImagePosition.value == 'top' and entry.contentImage|length > 0 ? 'gradient' : 'solid' %}
+{% set headerStyle = entry.articleImageSize.value == 'large' and entry.articleImagePosition.value == 'top' and entry.articleImage|length > 0 ? 'gradient' : 'solid' %}
 {% set layoutSize = 'large' %}
 
 {% do craft.app.elements.eagerLoadElements(className(entry), [entry], [
     'articleFormat',
-    ['contentImage', {
+    ['articleImage', {
         withTransforms: [
             { width: 400 },
             { width: 650 },
             { width: 1024 },
             { width: 1440 },
 
-            {
-                mode: 'fit',
-                height: 400,
-                width: 400
-            },
-            {
-                mode: 'fit',
-                height: 650,
-                width: 650
-            },
-            {
-                mode: 'fit',
-                height: 1024,
-                width: 1024
-            },
-            {
-                mode: 'fit',
-                height: 1440,
-                width: 1440
-            },
+            { mode: 'fit', height: 400, width: 400 },
+            { mode: 'fit', height: 650, width: 650 },
+            { mode: 'fit', height: 1024, width: 1024 },
+            { mode: 'fit', height: 1440, width: 1440 },
 
-            {
-                height: 628,
-                width: 1200,
-                format: 'jpeg'
-            }
+            { height: 628, width: 1200, format: 'jpeg' }
         ]
     }],
-    'contentImage.contributors.other',
-    'contentImage.contributors.user:user',
-    'contributors.other',
-    'contributors.user:user',
+    'articleImage.imageContributions.contribution:contributionUser',
+    'articleImage.imageContributions.contributionExternal',
+    'articleContributions.contribution:contributionUser',
+    'articleContributions.contributionExternal',
     'articleRelated',
     'articleRelated.articleFormat',
-    ['articleRelated.contentImage', {
+    ['articleRelated.articleImage', {
         withTransforms: [
             { height: 250, width: 400 }
         ]
     }],
-    'articleRelated.contributors.other',
-    'articleRelated.contributors.user:user'
+    'articleRelated.articleContributions.contribution:contributionUser',
+    'articleRelated.articleContributions.contributionExternal'
 ]) %}
 
 {% set entry = collect([entry]).first() %}
@@ -67,30 +47,43 @@
 {% block main %}
     {{ header({
         ad: entry.articleAd,
-        contributors: entry.contributors.all(),
+        contributions: entry.articleContributions,
         datePublished: entry.postDate,
         dateUpdated: entry.dateUpdated,
-        description: entry.contentDescription,
+        description: entry.articleLead,
         format: entry.articleFormat.first(),
-        image: entry.contentImage.first(),
-        imagePosition: entry.contentImagePosition.value,
-        imageSize: entry.contentImageSize.value,
+        image: entry.articleImage.first(),
+        imagePosition: entry.articleImagePosition.value,
+        imageSize: entry.articleImageSize.value,
         title: entry.title
     }) }}
 
     <div class="content progress-target">
-        {{ entry.contentContent }}
+        {{ content({
+            content: entry.articleContent
+        }) }}
     </div>
     {{ lightbox() }}
 
     <div class="content-footer">
-        {% set blockQuery = craft.matrixBlocks().field('issueArticles').type('group').articles(entry).all() %}
-        {% set articleIssue = craft.entries().section('issues').issueArticles(blockQuery).one() %}
-        {% if articleIssue %}
+        {% set issue = craft.entries()
+            .section('issues')
+            .issueSections(
+                craft.entries()
+                    .field('issueSections')
+                    .type('issueSection')
+                    .issueSectionArticles(entry)
+                    .all()
+            )
+            .limit(1)
+            .collect()
+            .first() %}
+
+        {% if issue %}
             <p class="content-footer__note">
-                Dieser Artikel erschien erstmals in der <a href="{{ articleIssue.url }}">Print-Ausgabe {{ tag({
-                    number: articleIssue.issueNumber,
-                    year: articleIssue.issueYear
+                Dieser Artikel erschien erstmals in der <a href="{{ issue.url }}">Print-Ausgabe {{ tag({
+                    number: issue.issueNumber,
+                    year: issue.issueYear
                 }) }}</a>.
             </p>
         {% endif %}
@@ -129,7 +122,7 @@
             </div>
         </div>
 
-        {% set articleRelated = entry.articleRelated.all() %}
+        {% set articleRelated = entry.articleRelated %}
         {% if articleRelated|length > 0 %}
             <div>
                 <h4>Ähnliche Artikel</h4>
@@ -161,7 +154,7 @@
             ) }}
         </div>
 
-        {% set articleTopics = entry.articleTopics.all() %}
+        {% set articleTopics = entry.articleTopics %}
         {% if articleTopics|length > 0 %}
             <div>
                 <h4>Themen</h4>
@@ -181,8 +174,8 @@
 {% endblock %}
 
 {% set meta = {
-    description: entry.contentDescription,
-    image: entry.contentImage.first(),
+    description: entry.articleLead,
+    image: entry.articleImage.first(),
     title: entry.title,
     type: 'article',
     url: entry.url
@@ -193,9 +186,9 @@
     <meta property="article:modified_time" content="{{ entry.dateUpdated|date('c') }}" />
 
     {% set authors = [] %}
-    {% for contributor in entry.contributors %}
-        {% if contributor.type == 'user' %}
-            {% set user = contributor.user.first() %}
+    {% for contribution in entry.articleContributions %}
+        {% if contribution.type == 'contribution' %}
+            {% set user = contribution.contributionUser.first() %}
 
             {% set authors = authors|merge({
                 "@type": "Person",
@@ -218,8 +211,8 @@
             "datePublished": entry.postDate|date('c'),
             "author": authors,
             "headline": entry.title,
-            "image": entry.contentImage.first()
-                ? [ entry.contentImage.first().getUrl({ height: 628, width: 1200, format: 'jpeg' }) ]
+            "image": entry.articleImage.first()
+                ? [ entry.articleImage.first().getUrl({ height: 628, width: 1200, format: 'jpeg' }) ]
                 : []
         }|json_encode(constant('JSON_PRETTY_PRINT') b-or constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES'))|raw }}
     </script>

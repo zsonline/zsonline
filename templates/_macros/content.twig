@@ -1,118 +1,121 @@
-{% macro header(args) %}
+{% macro content(args) %}
     {% set args = {
-        ad: false,
-        contributors: [],
-        class: '',
-        datePublished: null,
-        dateUpdated: null,
-        description: '',
-        format: null,
-        image: null,
-        imagePosition: 'top',
-        imageSize: 'medium',
-        title: ''
+        content: null
     } | merge(args) %}
 
-    <div class="{{ html_classes('content-header', 'content-header--' ~ args.imagePosition, 'content-header--' ~ args.imageSize, args.class, {
-        'content-header--has-image': args.image
-    }) }}">
-        {% if args.image and args.imagePosition == 'top' %}
-            {{ _self.image({
-                image: args.image,
-                loading: 'eager',
-                size: args.imageSize
-            }) }}
+    {% for chunk in args.content %}
+        {% if chunk.type == 'markup' %}
+            {{ chunk }}
+        {% else %}
+            {% switch chunk.entry.type.handle %}
+                {% case 'contentFile' %}
+                    {% set file = chunk.entry.contentFileFile
+                        .limit(1)
+                        .collect()
+                        .first() %}
+
+                    {% if file %}
+                        {% from '_macros/button.twig' import link %}
+
+                        <div class="content-block content-block--small">
+                            <div class="content-file">
+                                <span class="content-file__title">{{ file.title }}</span>
+                                <span class="content-file__filename">{{ file.filename }}</span>
+                                {{ link({
+                                    download: true,
+                                    href: file.url,
+                                    icon: 'download',
+                                    label: 'Herunterladen',
+                                    style: 'accent'
+                                }) }}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                {% case 'contentGallery' %}
+                    {% set images = chunk.entry.contentGalleryImages
+                        .with([
+                            'imageContributions.contribution:contributionUser',
+                            'imageContributions.contributionExternal'
+                        ])
+                        .withTransforms([
+                            { height: 300 },
+                            { height: 400 },
+                            { height: 500 },
+
+                            { mode: 'fit', height: 400, width: 400 },
+                            { mode: 'fit', height: 650, width: 650 },
+                            { mode: 'fit', height: 1024, width: 1024 },
+                            { mode: 'fit', height: 1440, width: 1440 }
+                        ])
+                        .collect() %}
+
+                    {% if images|length > 0 %}
+                        <div class="content-block content-block--medium">
+                            {{ _self.gallery({
+                                images: images
+                            }) }}
+                        </div>
+                    {% endif %}
+
+                {% case 'contentImage' %}
+                    {% set image = chunk.entry.contentImageImage
+                        .with([
+                            'imageContributions.contribution:contributionUser',
+                            'imageContributions.contributionExternal'
+                        ])
+                        .withTransforms([
+                            { width: 400 },
+                            { width: 650 },
+                            { width: 1024 },
+                            { width: 1440 },
+
+                            { mode: 'fit', height: 400, width: 400 },
+                            { mode: 'fit', height: 650, width: 650 },
+                            { mode: 'fit', height: 1024, width: 1024 },
+                            { mode: 'fit', height: 1440, width: 1440 }
+                        ])
+                        .limit(1)
+                        .collect()
+                        .first() %}
+
+                    {% if image %}
+                        <div class="content-block content-block--{{ chunk.entry.contentImageSize }}">
+                            {{ _self.image({
+                                image: image,
+                                size: chunk.entry.contentImageSize.value
+                            }) }}
+                        </div>
+                    {% endif %}
+
+                {% case 'contentNote' %}
+                    {% if chunk.entry.contentNoteTitle or chunk.entry.contentNoteContent %}
+                        <div class="content-block content-block--small">
+                            <figure class="content-note">
+                                {% if chunk.entry.contentNoteTitle %}
+                                    <h5>{{ chunk.entry.contentNoteTitle }}</h5>
+                                {% endif %}
+
+                                {{ chunk.entry.contentNoteContent }}
+                            </figure>
+                        </div>
+                    {% endif %}
+
+                {% case 'contentQuote' %}
+                    {% if chunk.entry.contentQuoteQuote %}
+                        <div class="content-block content-block--small">
+                            <figure class="content-quote">
+                                <blockquote>{{ chunk.entry.contentQuoteQuote }}</blockquote>
+                                {% if chunk.entry.contentQuoteCaption %}
+                                    <figcaption class="content-caption">{{ chunk.entry.contentQuoteCaption }}</figcaption>
+                                {% endif %}
+                            </figure>
+                        </div>
+                    {% endif %}
+
+            {% endswitch %}
         {% endif %}
-
-        <div class="content-header__text">
-            <h2>{{ args.title }}</h2>
-
-            {% if args.description or args.format %}
-                <p class="content-header__description">
-                    {%- if args.format -%}
-                        <a class="content-header__format" href="{{ args.format.url }}">
-                            {{- args.format.title -}}
-                        </a>
-                        {%- if args.description -%}
-                            &ensp;&mdash;&ensp;
-                        {%- endif -%}
-                    {%- endif -%}
-
-                    {{ args.description }}
-                </p>
-            {% endif %}
-
-            {% if args.ad %}
-                <span class="ad-declaration content-header__ad-declaration">Werbung</span>
-            {% endif %}
-
-            {{ _self.meta({
-                contributors: args.contributors,
-                datePublished: args.datePublished,
-                dateUpdated: args.dateUpdated
-            }) }}
-        </div>
-
-        {% if args.image and args.imagePosition == 'bottom' %}
-            {{ _self.image({
-                image: args.image,
-                loading: 'eager',
-                size: args.imageSize
-            }) }}
-        {% endif %}
-    </div>
-{% endmacro %}
-
-{% macro meta(args) %}
-    {% set args = {
-        contributors: [],
-        datePublished: null,
-        showLinks: true
-    } | merge(args) %}
-
-    {% if args.contributors|length > 0 or args.datePublished %}
-        <div class="meta">
-            {% if args.contributors|length > 0 %}
-                <div>{{ _self.contributors({ conjunction: 'und', contributors: args.contributors, showLinks: args.showLinks }) }}</div>
-            {% endif %}
-
-            {% if args.datePublished %}
-                <div>{{ args.datePublished|date('j. F Y') }}</div>
-            {% endif %}
-        </div>
-    {% endif %}
-{% endmacro %}
-
-{% macro contributors(args) %}
-    {%- set args = {
-        conjunction: '',
-        contributors: [],
-        showLinks: true
-    } | merge(args) -%}
-
-    {%- for contributor in args.contributors -%}
-        {%- if contributor.type == 'user' -%}
-            {%- set user = contributor.user.first() -%}
-
-            {%- if args.showLinks -%}
-                <a href="{{ url('autor-innen/' ~ user.username) }}">{{ user.fullName }}</a>
-            {%- else -%}
-                {{ user.fullName }}
-            {%- endif -%}
-        {%- elseif contributor.type == 'other' -%}
-            {{ contributor.label }}
-        {%- endif -%}
-
-        {%- if contributor.contribution and (loop.last or contributor.contribution != args.contributors[loop.index0 + 1].contribution) -%}
-            {{ ' (' ~ contributor.contribution ~ ')' }}
-        {%- endif -%}
-
-        {%- if loop.revindex > 2 or (loop.revindex == 2 and not args.conjunction) -%}
-            {{ ', ' }}
-        {%- elseif loop.revindex == 2 -%}
-            {{ ' ' ~ args.conjunction ~ ' ' }}
-        {%- endif -%}
-    {%- endfor -%}
+    {% endfor %}
 {% endmacro %}
 
 {% macro image(args) %}
@@ -150,8 +153,8 @@
 
             {% if args.caption %}
                 {{ _self.caption({
-                    caption: args.image.caption,
-                    contributors: args.image.contributors.all() ?? null
+                    caption: args.image.imageCaption,
+                    contributions: args.image.imageContributions ?? null
                 }) }}
             {% endif %}
         </figure>
@@ -182,8 +185,8 @@
                     }) }}
 
                     {{ _self.caption({
-                        caption: image.caption,
-                        contributors: image.contributors.all()
+                        caption: image.imageCaption,
+                        contributions: image.imageContributions
                     }) }}
                 </div>
             {% endfor %}
@@ -208,15 +211,55 @@
 {% macro caption(args) %}
     {% set args = {
         caption: '',
-        contributors: null
+        contributions: null
     } | merge(args) %}
 
-    {% if args.caption or args.contributors %}
+    {% if args.caption or args.contributions %}
         <figcaption class="content-caption">
             {{ args.caption }}
-            {% if args.contributors %}
-                <small>{{ _self.contributors({ contributors: args.contributors }) }}</small>
+            {% if args.contributions %}
+                <small>{{ _self.contributions({ contributions: args.contributions }) }}</small>
             {% endif %}
         </figcaption>
     {% endif %}
+{% endmacro %}
+
+{% macro contributions(args) %}
+    {%- set args = {
+        conjunction: '',
+        contributions: [],
+        showLinks: true
+    } | merge(args) -%}
+
+    {%- for contribution in args.contributions -%}
+        {%- set contributionType = '' -%}
+
+        {%- if contribution.type == 'contribution' -%}
+            {%- set user = contribution.contributionUser.first() -%}
+            {%- set contributionType = contribution.contributionType -%}
+
+            {%- if args.showLinks -%}
+                <a href="{{ url('autor-innen/' ~ user.username) }}">{{ user.fullName }}</a>
+            {%- else -%}
+                {{ user.fullName }}
+            {%- endif -%}
+        {%- elseif contribution.type == 'contributionExternal' -%}
+            {%- set contributionType = contribution.contributionExternalType -%}
+
+            {{ contribution.contributionExternalContributor }}
+        {%- endif -%}
+
+        {%- if contributionType and (loop.last or (
+            contributionType != args.contributions[loop.index0 + 1].contributionType and
+            contributionType != args.contributions[loop.index0 + 1].contributionExternalType
+        )) -%}
+            {{ ' (' ~ contributionType ~ ')' }}
+        {%- endif -%}
+
+        {%- if loop.revindex > 2 or (loop.revindex == 2 and not args.conjunction) -%}
+            {{ ', ' }}
+        {%- elseif loop.revindex == 2 -%}
+            {{ ' ' ~ args.conjunction ~ ' ' }}
+        {%- endif -%}
+    {%- endfor -%}
 {% endmacro %}
