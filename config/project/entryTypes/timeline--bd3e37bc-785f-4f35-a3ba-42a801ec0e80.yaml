@@ -88,13 +88,13 @@ fieldLayouts:
         uid: dede4f61-edee-4843-8ef1-048ddb2c9016
         userCondition: null
 handle: timeline
-hasTitleField: true
+hasTitleField: false
 icon: timeline
 name: Timeline
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{section.name|raw}'
+titleFormat: '{section.name}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

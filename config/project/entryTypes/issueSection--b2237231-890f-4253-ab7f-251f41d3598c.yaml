@@ -36,7 +36,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 9f01ed5b-f89c-478b-a859-71fd331c8d93 # Issue Section - Title
+            fieldUid: 9f01ed5b-f89c-478b-a859-71fd331c8d93 # Legacy - Title
             handle: null
             includeInCards: false
             instructions: null
@@ -68,13 +68,13 @@ fieldLayouts:
         uid: dc617b81-152e-4341-b008-7f8b7de6f0a4
         userCondition: null
 handle: issueSection
-hasTitleField: false
+hasTitleField: true
 icon: table-list
 name: 'Issue Section'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{issueSectionTitle|default(''-'')}'
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

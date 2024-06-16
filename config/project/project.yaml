@@ -1,4 +1,4 @@
-dateModified: 1718560003
+dateModified: 1718561202
 elementSources:
   craft\elements\User:
     -
@@ -205,7 +205,7 @@ meta:
     9c4c8063-ca7a-411d-ab4e-cb9498df24c8: 'Timeline Event - Description' # Timeline Event - Description
     9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed: 'Article - Ad' # Article - Ad
     9d3883d3-f157-4a96-a03e-5b86dbac381d: 'Timeline Event - Print Link' # Timeline Event - Print Link
-    9f01ed5b-f89c-478b-a859-71fd331c8d93: 'Issue Section - Title' # Issue Section - Title
+    9f01ed5b-f89c-478b-a859-71fd331c8d93: 'Legacy - Title' # Legacy - Title
     09f3e7d3-dd38-4d06-ac5c-fbff3a017d92: Issues # Issues
     13c1314c-8e18-452c-99b9-40ddcf9ba5f2: 'Timeline Event - Year' # Timeline Event - Year
     15dca033-1e00-43b6-bcd3-05ca3c07b14f: 'Timeline - Image' # Timeline - Image
