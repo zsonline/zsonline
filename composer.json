@@ -1,7 +1,7 @@
 {
   "require": {
     "craftcms/ckeditor": "4.1.0",
-    "craftcms/cms": "5.2.0",
+    "craftcms/cms": "5.2.3",
     "nystudio107/craft-plugin-vite": "^5.0.0",
     "nystudio107/craft-vite": "^5.0.0",
     "putyourlightson/craft-sprig": "3.0.2",
@@ -9,7 +9,7 @@
     "twig/html-extra": "^3.0.0",
     "verbb/comments": "^3.0.0",
     "verbb/navigation": "3.0.1",
-    "verbb/super-table": "^4.0.0",
+    "verbb/super-table": "4.0.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
