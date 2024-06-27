@@ -105,7 +105,7 @@
         }
     }
 
-    &__nodes {
+    &__events {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -115,7 +115,7 @@
         }
     }
 
-    &__node {
+    &__event {
         position: relative;
 
         &__anchor {
@@ -422,7 +422,7 @@
             }
         }
 
-        &__nodes {
+        &__events {
             gap: 3.5rem;
 
             > *:first-child {
@@ -430,7 +430,7 @@
             }
         }
 
-        &__node {
+        &__event {
             &__anchor {
                 gap: 0.75em;
                 padding: 0 $layout-padding 0 40px;
@@ -507,7 +507,7 @@
             }
         }
 
-        &__nodes {
+        &__events {
             gap: 4rem;
 
             > *:first-child {

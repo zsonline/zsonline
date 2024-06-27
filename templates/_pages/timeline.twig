@@ -19,7 +19,7 @@
         }],
         'timelineImage.imageContributions.contribution:contributionUser',
         'timelineImage.imageContributions.contributionExternal',
-        ['timelineEvents.timelineEvent:nodeImage', {
+        ['timelineEvents.timelineEvent:timelineEventImage', {
             withTransforms: [
                 { width: 400 },
                 { width: 650 },
@@ -96,16 +96,16 @@
             <div class="timeline__line__outer">
                 <div class="timeline__line__inner"></div>
             </div>
-            <div class="timeline__nodes">
+            <div class="timeline__events">
                 {% for event in entry.timelineEvents %}
                     {% if event.type == 'timelineEvent' %}
-                        <div class="timeline__node">
-                            <div class="timeline__node__anchor">
-                                <span class="timeline__node__year">{{ event.timelineEventYear }}</span>
-                                <span class="timeline__node__label">{{ event.timelineEventLabel }}</span>
+                        <div class="timeline__event">
+                            <div class="timeline__event__anchor">
+                                <span class="timeline__event__year">{{ event.timelineEventYear }}</span>
+                                <span class="timeline__event__label">{{ event.timelineEventLabel }}</span>
                             </div>
-                            <div class="timeline__node__container">
-                                <h3 class="timeline__node__title">{{ event.title }}</h3>
+                            <div class="timeline__event__container">
+                                <h3 class="timeline__event__title">{{ event.title }}</h3>
                             </div>
 
                             {% if event.timelineEventImage.count() > 0 %}
@@ -116,8 +116,8 @@
                                 }) }}
                             {% endif %}
 
-                            <div class="timeline__node__container">
-                                <div class="timeline__node__description">
+                            <div class="timeline__event__container">
+                                <div class="timeline__event__description">
                                     {{ event.timelineEventDescription }}
                                 </div>
 
@@ -144,7 +144,7 @@
                                         {% endif %}
                                     {% endset %}
 
-                                    <div class="timeline__node__print">
+                                    <div class="timeline__event__print">
                                         {% if event.timelineEventPrintLink %}
                                             {{ tag('a', {
                                                 href: event.timelineEventPrintLink,
@@ -159,13 +159,13 @@
                             </div>
                         </div>
                     {% elseif event.type == 'timelineEventArticle' %}
-                        <div class="timeline__node">
-                            <div class="timeline__node__anchor">
-                                <span class="timeline__node__year">{{ event.timelineEventArticleYear }}</span>
-                                <span class="timeline__node__label">{{ event.timelineEventArticleLabel }}</span>
+                        <div class="timeline__event">
+                            <div class="timeline__event__anchor">
+                                <span class="timeline__event__year">{{ event.timelineEventArticleYear }}</span>
+                                <span class="timeline__event__label">{{ event.timelineEventArticleLabel }}</span>
                             </div>
 
-                            <div class="timeline__node__container">
+                            <div class="timeline__event__container">
                                 <div class="timeline__embed-teaser timeline__embed" onclick="ZS.Timeline.openEmbed(this)">
                                     {% if event.timelineEventArticleImage.count() > 0 %}
                                         {{ image({

@@ -2,8 +2,8 @@ window.ZS = {
   ...window.ZS,
   Timeline: {
     openEmbed: (element) => {
-      const node = element?.closest(".timeline__node");
-      const overlay = node?.querySelector(".timeline__embed-overlay");
+      const event = element?.closest(".timeline__event");
+      const overlay = event?.querySelector(".timeline__embed-overlay");
 
       if (!overlay) {
         return;

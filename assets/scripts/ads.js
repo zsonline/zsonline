@@ -52,7 +52,7 @@ async function loadAds() {
 }
 
 async function insertAdsIntoHome(ads, home) {
-  const homeBlocks = home.querySelectorAll(".home-block");
+  const homeBlocks = home.querySelectorAll(".home-section");
   if (homeBlocks.length == 0) {
     return;
   }
@@ -69,9 +69,9 @@ async function insertAdsIntoHome(ads, home) {
     // Create DOM node
     const block = document.createElement("div");
     block.classList.add(
-      "home-block",
-      "home-block--colored-next",
-      "home-block--colored-prev",
+      "home-section",
+      "home-section--colored-next",
+      "home-section--colored-prev",
       "ad-block",
       "ad-block--home",
     );
@@ -85,12 +85,14 @@ async function insertAdsIntoHome(ads, home) {
     );
 
     // Remove margins of the previous and next home blocks
-    if (block.previousElementSibling.classList.contains("home-block")) {
-      block.previousElementSibling.classList.remove("home-block--colored-next");
+    if (block.previousElementSibling.classList.contains("home-section")) {
+      block.previousElementSibling.classList.remove(
+        "home-section--colored-next",
+      );
     }
 
-    if (block.nextElementSibling.classList.contains("home-block")) {
-      block.nextElementSibling.classList.remove("home-block--colored-prev");
+    if (block.nextElementSibling.classList.contains("home-section")) {
+      block.nextElementSibling.classList.remove("home-section--colored-prev");
     }
   }
 }

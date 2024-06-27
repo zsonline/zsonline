@@ -1,361 +1,227 @@
 .home {
   display: flex;
   flex-direction: column;
-}
 
-.home-block {
-  padding: 0 $layout-padding;
-
-  &:not(:first-child) {
-    padding-top: 1.75rem;
-
-    &.home-block--colored-prev {
-      padding-top: 2.75rem;
-    }
-
-    .home-block__label {
-      border-top: solid 2px var(--color-border-dark);
-    }
-  }
-
-  &:not(:last-child) {
-    padding-bottom: 1.75rem;
-
-    &.home-block--colored-next {
-      padding-bottom: 2.75rem;
-    }
-  }
-
-  &--colored {
-    --color-fg: var(--color-home-block-fg);
-    --color-fg-alt: var(--color-home-block-fg-alt);
-    --color-border-bright: var(--color-home-block-border-bright);
-    --color-border-dark: var(--color-home-block-border-dark);
-
-    color: var(--color-home-block-fg);
-    background-color: var(--color-home-block-bg);
-
-    &:first-child {
-      padding-top: 80px;
-    }
-
-    a {
-      &:hover,
-      &:focus,
-      &:active {
-        .article-preview__text {
-          opacity: 0.75;
-        }
-      }
-    }
-  }
-
-  &__label {
-    padding-top: 0.5em;
-    margin: 0 0 1.25em;
-  }
-}
-
-.home-articles {
-  &__row {
-    border-bottom: solid 1px var(--color-border-bright);
-  }
-
-  &.home-block--labeled {
-    .home-articles__row {
-      &:first-of-type {
-        border-top: solid 1px var(--color-border-bright);
-      }
-    }
-  }
-
-  &:not(:first-child) {
-    &:not(.home-block--labeled) {
-      .home-articles__row {
-        &:first-of-type {
-          border-top: solid 2px var(--color-border-dark);
-        }
-      }
-    }
-  }
-
-  &__column {
-    padding: 1.25rem 0;
-
-    &:not(:last-of-type) {
-      border-bottom: solid 1px var(--color-border-bright);
-    }
-
-    &__row:not(:last-of-type) {
-      padding-bottom: 1.25rem;
-      margin-bottom: 1.25rem;
-      border-bottom: solid 1px var(--color-border-bright);
-    }
-  }
-}
-
-.home-anniversary {
-  &:first-child {
-    &:not(.home-block--labeled) {
-      .home-anniversary__preview {
-        padding-top: 1.25rem;
-      }
-    }
-  }
-
-  &:not(:first-child) {
-    &:not(.home-block--labeled) {
-      .home-anniversary__preview {
-        padding-top: 1.25rem;
-        border-top: solid 2px var(--color-border-dark);
-      }
-    }
-  }
-
-  &__preview {
-    --color-accent: hsl(0deg 90% 65%);
-    --color-accent-alt: hsl(0deg 90% 70%);
-
-    position: relative;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: none;
-
-      .home-anniversary__preview__inner {
-        background: hsl(0deg 90% 10% / 50%);
-      }
-    }
-
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    &__inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      padding: 1.25rem;
-      color: var(--color-accent);
-      background: hsl(0deg 0% 0% / 50%);
-      transition: all 200ms ease-in-out;
-    }
-
-    &__label,
-    &__description,
-    &__link {
-      width: min(100%, $layout-width-small);
-    }
-
-    &__label {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.25;
-      letter-spacing: 0.05em;
-    }
-
-    &__link {
-      display: flex;
-      gap: 0.5em;
-      align-items: center;
-      text-decoration: underline;
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: var(--color-accent-alt);
-      }
-
-      svg {
-        width: 1em;
-        height: 1em;
-      }
-    }
-  }
-}
-
-.home-more {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  width: 100%;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-}
-
-@media (min-width: $breakpoint-tablet) {
-  .home-block {
-    padding: 0 $layout-padding-tablet;
+  &__section {
+    padding: 0 $layout-padding;
 
     &:not(:first-child) {
-      padding-top: 2rem;
+      padding-top: 1.75rem;
 
-      &.home-block--colored-prev {
-        padding-top: 3rem;
+      &.home__section--colored-prev {
+        padding-top: 2.75rem;
+      }
+
+      .home__section__label {
+        border-top: solid 2px var(--color-border-dark);
       }
     }
 
     &:not(:last-child) {
-      padding-bottom: 2rem;
+      padding-bottom: 1.75rem;
 
-      &.home-block--colored-next {
-        padding-bottom: 3rem;
+      &.home__section--colored-next {
+        padding-bottom: 2.75rem;
       }
     }
 
-    &--colored {
-      &:first-child {
-        padding-top: 85px;
-      }
-    }
-
-    &__label {
-      padding-top: 0.75em;
-      margin: 0 0 1.75em;
-    }
-  }
-
-  .home-articles {
-    &__row {
-      display: flex;
-      padding: 1.5rem 0;
-    }
-
-    &__column {
-      flex: 1;
-      padding: 0;
-      overflow: hidden;
-
-      &:not(:last-of-type) {
-        padding-right: 1.5rem;
-        margin-right: 1.5rem;
-        border: none;
-        border-right: solid 1px var(--color-border-bright);
-      }
-
-      &__row {
-        &:not(:last-of-type) {
-          padding-bottom: 1.5rem;
-          margin-bottom: 1.5rem;
-          border-bottom: solid 1px var(--color-border-bright);
-        }
-      }
-    }
-  }
-
-  .home-anniversary {
-    &:first-child {
-      &:not(.home-block--labeled) {
-        .home-anniversary__preview {
-          padding-top: 1.5rem;
+    &--labeled {
+      .home__layout__row {
+        &:first-of-type {
+          border-top: solid 1px var(--color-border-bright);
         }
       }
     }
 
     &:not(:first-child) {
-      &:not(.home-block--labeled) {
-        .home-anniversary__preview {
-          padding-top: 1.5rem;
+      &:not(.home__section--labeled) {
+        .home__layout__row {
+          &:first-of-type {
+            border-top: solid 2px var(--color-border-dark);
+          }
         }
       }
     }
 
-    &__preview {
-      &__inner {
-        padding: 1.5rem;
+    &--colored {
+      --color-fg: var(--color-home-section-fg);
+      --color-fg-alt: var(--color-home-section-fg-alt);
+      --color-border-bright: var(--color-home-section-border-bright);
+      --color-border-dark: var(--color-home-section-border-dark);
+
+      color: var(--color-home-section-fg);
+      background-color: var(--color-home-section-bg);
+
+      &:first-child {
+        padding-top: 80px;
+      }
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          .article-preview__text {
+            opacity: 0.75;
+          }
+        }
+      }
+    }
+
+    &__label {
+      padding-top: 0.5em;
+      margin: 0 0 1.25em;
+    }
+  }
+
+  &__layout {
+    &__row {
+      border-bottom: solid 1px var(--color-border-bright);
+    }
+
+    &__column {
+      padding: 1.25rem 0;
+
+      &:not(:last-of-type) {
+        border-bottom: solid 1px var(--color-border-bright);
+      }
+
+      &__row:not(:last-of-type) {
+        padding-bottom: 1.25rem;
+        margin-bottom: 1.25rem;
+        border-bottom: solid 1px var(--color-border-bright);
       }
     }
   }
 
-  .home-more {
-    margin-top: 4rem;
-    font-size: 1rem;
+  &__more {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .home {
+    &__section {
+      padding: 0 $layout-padding-tablet;
+
+      &:not(:first-child) {
+        padding-top: 2rem;
+
+        &.home__section--colored-prev {
+          padding-top: 3rem;
+        }
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 2rem;
+
+        &.home__section--colored-next {
+          padding-bottom: 3rem;
+        }
+      }
+
+      &--colored {
+        &:first-child {
+          padding-top: 85px;
+        }
+      }
+
+      &__label {
+        padding-top: 0.75em;
+        margin: 0 0 1.75em;
+      }
+    }
+
+    &__layout {
+      &__row {
+        display: flex;
+        padding: 1.5rem 0;
+      }
+
+      &__column {
+        flex: 1;
+        padding: 0;
+        overflow: hidden;
+
+        &:not(:last-of-type) {
+          padding-right: 1.5rem;
+          margin-right: 1.5rem;
+          border: none;
+          border-right: solid 1px var(--color-border-bright);
+        }
+
+        &__row {
+          &:not(:last-of-type) {
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: solid 1px var(--color-border-bright);
+          }
+        }
+      }
+    }
+
+    &__more {
+      margin-top: 4rem;
+      font-size: 1rem;
+    }
   }
 }
 
 @media (min-width: $breakpoint-desktop) {
-  .home-block {
-    padding: 0 $layout-padding-desktop;
+  .home {
+    &__section {
+      padding: 0 $layout-padding-desktop;
 
-    &:not(:first-child) {
-      padding-top: 3rem;
+      &:not(:first-child) {
+        padding-top: 3rem;
 
-      &.home-block--colored-prev {
-        padding-top: 4.5rem;
+        &.home__section--colored-prev {
+          padding-top: 4.5rem;
+        }
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 3rem;
+
+        &.home__section--colored-next {
+          padding-bottom: 4.5rem;
+        }
+      }
+
+      &--colored {
+        &:first-child {
+          padding-top: 150px;
+        }
       }
     }
 
-    &:not(:last-child) {
-      padding-bottom: 3rem;
-
-      &.home-block--colored-next {
-        padding-bottom: 4.5rem;
-      }
-    }
-
-    &--colored {
-      &:first-child {
-        padding-top: 150px;
-      }
-    }
-  }
-
-  .home-articles {
-    &__row {
-      padding: 2rem 0;
-    }
-
-    &__column {
-      &:not(:last-of-type) {
-        padding-right: 2rem;
-        margin-right: 2rem;
-      }
-
+    &__layout {
       &__row {
+        padding: 2rem 0;
+      }
+
+      &__column {
         &:not(:last-of-type) {
-          padding-bottom: 2rem;
-          margin-bottom: 2rem;
+          padding-right: 2rem;
+          margin-right: 2rem;
         }
-      }
-    }
-  }
 
-  .home-anniversary {
-    &:first-child {
-      &:not(.home-block--labeled) {
-        .home-anniversary__preview {
-          padding-top: 2rem;
-        }
-      }
-    }
-
-    &:not(:first-child) {
-      &:not(.home-block--labeled) {
-        .home-anniversary__preview {
-          padding-top: 2rem;
+        &__row {
+          &:not(:last-of-type) {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+          }
         }
       }
     }
 
-    &__preview {
-      &__inner {
-        padding: 2rem;
-      }
+    &__more {
+      margin-top: 6rem;
     }
-  }
-
-
-  .home-more {
-    margin-top: 6rem;
   }
 }

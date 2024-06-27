@@ -30,22 +30,22 @@
 {% block main %}
     <div class="home">
         {% for section in home.homeSections %}
-            <div class="{{ html_classes('home-block', 'home-' ~ section.type, {
-                'home-block--colored': section.homeSectionColor,
-                'home-block--colored-prev': loop.index0 - 1 >= 0 and home.homeSections[loop.index0 - 1].homeSectionColor,
-                'home-block--colored-next': loop.index0 + 1 < loop.length and home.homeSections[loop.index0 + 1].homeSectionColor,
-                'home-block--labeled': section.homeSectionTitle
-            }) }}" style="--color-home-block-bg: {{ section.homeSectionColor }};">
+            <div class="{{ html_classes('home__section', {
+                'home__section--colored': section.homeSectionColor,
+                'home__section--colored-prev': loop.index0 - 1 >= 0 and home.homeSections[loop.index0 - 1].homeSectionColor,
+                'home__section--colored-next': loop.index0 + 1 < loop.length and home.homeSections[loop.index0 + 1].homeSectionColor,
+                'home__section--labeled': section.homeSectionTitle
+            }) }}" style="--color-home-section-bg: {{ section.homeSectionColor }};">
                 {% if section.homeSectionTitle %}
-                    <h3 class="home-block__label">{{ section.homeSectionTitle }}</h3>
+                    <h3 class="home__section__label">{{ section.homeSectionTitle }}</h3>
                 {% endif %}
 
                 {% for layout in section.homeSectionLayouts %}
-                    <div class="{{ html_classes('home-articles__row', 'home-articles__row--' ~ layout.homeSectionLayoutAppearance) }}">
+                    <div class="{{ html_classes('home__layout__row', 'home__layout__row--' ~ layout.homeSectionLayoutAppearance) }}">
                         {% switch layout.homeSectionLayoutAppearance %}
                             {% case 'h' or 'v' %}
                                 {% if layout.homeSectionLayoutArticles|length >= 1 %}
-                                    <div class="home-articles__column">
+                                    <div class="home__layout__column">
                                         {{ preview({
                                             article: layout.homeSectionLayoutArticles.first(),
                                             orientation: (layout.homeSectionLayoutAppearance == 'h') ? 'horizontal' : 'vertical',
@@ -55,7 +55,7 @@
                                 {% endif %}
                             {% case 'hh' or 'vv' %}
                                 {% for article in layout.homeSectionLayoutArticles.slice(0, 2) %}
-                                    <div class="home-articles__column">
+                                    <div class="home__layout__column">
                                         {{ preview({
                                             article: article,
                                             orientation: (layout.homeSectionLayoutAppearance == 'hh') ? 'horizontal' : 'vertical',
@@ -65,7 +65,7 @@
                                 {% endfor %}
                             {% case 'vh' %}
                                 {% if layout.homeSectionLayoutArticles|length > 0 %}
-                                    <div class="home-articles__column">
+                                    <div class="home__layout__column">
                                         {{ preview({
                                             article: layout.homeSectionLayoutArticles.first(),
                                             orientation: 'vertical',
@@ -74,9 +74,9 @@
                                     </div>
                                 {% endif %}
                                 {% if layout.homeSectionLayoutArticles|length > 1 %}
-                                    <div class="home-articles__column">
+                                    <div class="home__layout__column">
                                         {% for article in layout.homeSectionLayoutArticles.slice(1, 3) %}
-                                            <div class="home-articles__column__row">
+                                            <div class="home__layout__column__row">
                                                 {{ preview({
                                                     article: article,
                                                     orientation: 'horizontal',
@@ -93,7 +93,7 @@
         {% endfor %}
     </div>
 
-    <div class="home-more">
+    <div class="home__more">
         <span>Nicht gefunden, wonach du suchst?</span>
         {{ link({
             href: url('artikel'),
