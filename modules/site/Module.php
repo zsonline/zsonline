@@ -4,10 +4,12 @@ namespace site;
 
 use Craft;
 use craft\base\Element;
+use craft\elements\Entry;
 use craft\elements\User;
 use craft\events\DefineRulesEvent;
 use craft\events\RegisterElementExportersEvent;
 use craft\i18n\PhpMessageSource;
+use craft\records\Section;
 use site\exporters\PrintingExporter;
 use Twig\Extra\Html\HtmlExtension;
 use yii\base\Event;
@@ -39,10 +41,18 @@ class Module extends BaseModule
         ];
 
         Event::on(
-            User::class,
-            Element::EVENT_REGISTER_EXPORTERS,
+            Entry::class,
+            Entry::EVENT_REGISTER_EXPORTERS,
             static function(RegisterElementExportersEvent $event) {
-                $event->exporters[] = PrintingExporter::class;
+                $section = Section::find()->where(['handle' => 'subscriptions'])->one();
+                if ($event->source == "section:$section->uid") {
+                    $event->exporters = [
+                        PrintingExporter::class
+                    ];
+                    return;
+                }
+
+            $event->exporters = [];
             }
         );
 

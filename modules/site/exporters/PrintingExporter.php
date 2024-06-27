@@ -22,19 +22,20 @@ class PrintingExporter extends ElementExporter
      */
     public function export(ElementQueryInterface $query): mixed
     {
-        $query->with(['addresses']);
+        $query->with(['subscriptionAddress']);
+        $query->limit(null);
 
         $results = [];
-        foreach ($query->each() as $user) {
-            if($user->addresses->count() == 0) {
+        foreach ($query->each() as $subscription) {
+            if($subscription->status != 'live' || $subscription->subscriptionAddress->count() == 0) {
                 continue;
             }
 
-            $address = $user->addresses->first();
+            $address = $subscription->subscriptionAddress->first();
 
             $results[] = [
-                'firstName' => $user->firstName,
-                'lastName' => $user->lastName,
+                'firstName' => $address->firstName,
+                'lastName' => $address->lastName,
                 'addressLine1' => $address->addressLine1,
                 'addressLine2' => $address->addressLine2,
                 'postalCode' => $address->postalCode,
