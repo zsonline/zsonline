@@ -4,7 +4,7 @@ use craft\helpers\App;
 
 return [
     'useDevServer' => App::env('DEV_MODE'),
-    'manifestPath' => '@webroot/dist/manifest.json',
+    'manifestPath' => '@webroot/dist/.vite/manifest.json',
     'devServerPublic' => Craft::getAlias('@web') . ':5173',
     'serverPublic' => Craft::getAlias('@web') . '/dist',
     'errorEntry' => '',
