@@ -34,6 +34,16 @@ class Module extends BaseModule
             Craft::$app->view->registerTwigExtension(new HtmlExtension());
         }
 
+        // Disable list indentation
+        if (Craft::$app->getRequest()->getIsCpRequest()) {
+            Craft::$app->getView()->registerJs('{
+                const editors = document.querySelectorAll(".ck-editor__editable");
+                for (const editor of editors) {
+                    editor.ckeditorInstance.commands.get("indentList").forceDisabled("noListIndent");
+                }
+            }');
+        }
+
         Craft::$app->i18n->translations['site'] = [
             'class' => PhpMessageSource::class,
             'sourceLanguage' => 'en',
