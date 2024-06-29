@@ -8,6 +8,7 @@ use craft\elements\Entry;
 use craft\elements\User;
 use craft\events\DefineRulesEvent;
 use craft\events\RegisterElementExportersEvent;
+use craft\helpers\StringHelper;
 use craft\i18n\PhpMessageSource;
 use craft\records\Section;
 use site\exporters\PrintingExporter;
@@ -55,6 +56,16 @@ class Module extends BaseModule
             $event->exporters = [];
             }
         );
+
+        Event::on(User::class, User::EVENT_BEFORE_SAVE, function (Event $event) {
+            $user = $event->sender;
+            if (!$user->firstSave) {
+                return;
+            }
+
+            $user->username = StringHelper::slugify($user->fullName);
+            $user->email = str_replace('-', '.', $user->username) . '@zsonline.ch';
+        });
 
         Event::on(User::class, User::EVENT_AFTER_SAVE, function (Event $event) {
             $user = $event->sender;
