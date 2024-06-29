@@ -38,7 +38,7 @@ return [
     'Contribution (External) - Type' => 'Beitrag',
     'Contribution - Type' => 'Beitrag',
     'Contribution - User' => 'Benutzer',
-    'Contributors' => 'Beiträger',
+    'Contributors' => 'Autor*innen',
     'Editors' => 'Redaktor*innen',
     'Files' => 'Dateien',
     'Format' => 'Rubrik',
@@ -69,7 +69,7 @@ return [
     'Page - Content' => 'Inhalt',
     'Page - Image' => 'Bild',
     'Pages' => 'Seiten',
-    'Sales' => 'Verkauf',
+    'Sales' => 'Verkäufer*innen',
     'Subscription' => 'Abonnement',
     'Subscription - Address' => 'Adresse',
     'Subscription - Email' => 'E-Mail',
@@ -96,7 +96,7 @@ return [
     'Timeline Event - Print Image' => 'Print-Bild',
     'Timeline Event - Print Link' => 'Print-Link',
     'Timeline Event - Year' => 'Jahr',
-    'Topic' => 'Dosser',
+    'Topic' => 'Dossier',
     'Topics' => 'Dossiers',
     'Zürcher Studierendenzeitung' => 'Zürcher Studierendenzeitung'
 ];
