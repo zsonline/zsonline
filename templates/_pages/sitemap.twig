@@ -20,9 +20,15 @@
     ])
     .collect() -%}
 
-{%- set users = craft.users()
-    .group('contributors')
-    .collect() -%}
+{% set users = craft.users()
+    .relatedTo({
+        sourceElement: craft.entries()
+            .section('articles')
+            .collect(),
+        field: 'articleContributions.contributionUser'
+    })
+    .orderBy('fullName')
+    .collect() %}
 
 {%- set issueYears = craft.entries()
     .section('issues')

@@ -6,16 +6,10 @@
 {% set headerSize = 'small' %}
 {% set layoutSize = 'medium' %}
 
-{# Query most recent articles that have contributors set #}
+{# Query most recent articles that have contributions set #}
 {% set articles = craft.entries()
     .section('articles')
-    .after(now|date_modify("-6 months")|atom)
-    .articleContributions(
-        craft.entries()
-            .field('articleContributions')
-            .type('contribution')
-            .all()
-    )
+    .after(now|date_modify("-3 months")|atom)
     .with([
         'articleFormat',
         ['articleImage', {
@@ -31,7 +25,6 @@
 
 {# Find the matching users #}
 {% set users = craft.users()
-    .group('contributors')
     .relatedTo({
         sourceElement: articles,
         field: 'articleContributions.contributionUser'

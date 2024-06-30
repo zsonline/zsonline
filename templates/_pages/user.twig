@@ -9,14 +9,9 @@
 
 {% set entry = craft.users()
     .username(slug)
-    .group('contributors')
     .limit(1)
     .collect()
     .first() %}
-
-{% if not entry %}
-    {% exit 404 %}
-{% endif %}
 
 {% set query = craft.entries()
     .section('articles')
@@ -41,6 +36,10 @@
     .limit(25) %}
 
 {% paginate query as pageInfo, pageEntries %}
+
+{% if not collect(pageEntries).count() %}
+    {% exit 404 %}
+{% endif %}
 
 {% block main %}
     {{ hero({

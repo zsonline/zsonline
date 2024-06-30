@@ -13,8 +13,7 @@ settings:
   selectionLabel: null
   showCardsInGrid: false
   showSiteMenu: true
-  sources:
-    - 'group:adf21248-5e45-44f0-a3d9-b2ece6004c5e' # Contributors
+  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
