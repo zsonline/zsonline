@@ -1,9 +1,0 @@
-{% from '_macros/content.twig' import gallery %}
-
-{% if images|length > 0 %}
-    <div class="content-block content-block--medium">
-        {{ gallery({
-            images: images
-        }) }}
-    </div>
-{% endif %}
