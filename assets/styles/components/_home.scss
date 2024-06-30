@@ -92,16 +92,6 @@
       }
     }
   }
-
-  &__more {
-    display: inline-flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    width: 100%;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-  }
 }
 
 @media (min-width: $breakpoint-tablet) {
@@ -164,11 +154,6 @@
         }
       }
     }
-
-    &__more {
-      margin-top: 4rem;
-      font-size: 1rem;
-    }
   }
 }
 
@@ -218,10 +203,6 @@
           }
         }
       }
-    }
-
-    &__more {
-      margin-top: 6rem;
     }
   }
 }
