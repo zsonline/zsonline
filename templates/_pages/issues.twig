@@ -19,7 +19,7 @@
         .section('issues')
         .max(issueYearField) %}
 
-    {% redirect url('print/' ~ newestYear) %}
+    {% redirect url('print/' ~ newestYear|round) %}
 {% endif %}
 
 {# Fetch issues for requested year #}
@@ -51,8 +51,8 @@
     .column() %}
 
 {# Determine pagination values #}
-{% set nextLabel = years|filter(y => y < year)|first %}
-{% set prevLabel = years|filter(y => y > year)|last %}
+{% set nextLabel = years|filter(y => y < year)|first|round %}
+{% set prevLabel = years|filter(y => y > year)|last|round %}
 {% set nextUrl = nextLabel ? url('print/' ~ nextLabel) : '' %}
 {% set prevUrl = prevLabel ? url('print/' ~ prevLabel) : '' %}
 

@@ -68,7 +68,7 @@
 
     {% for issueYear in issueYears %}
         <url>
-            <loc>{{ url('print/' ~ issueYear) }}</loc>
+            <loc>{{ url('print/' ~ issueYear|round) }}</loc>
         </url>
     {% endfor %}
 </urlset>
