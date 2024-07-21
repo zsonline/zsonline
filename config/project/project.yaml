@@ -1,4 +1,4 @@
-dateModified: 1721592024
+dateModified: 1721592552
 elementSources:
   craft\elements\User:
     -
@@ -239,87 +239,6 @@ plugins:
       templateEmail: null
       templateFolderOverride: null
       useQueueForNotifications: true
-  embeddedassets:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-    settings:
-      cacheDuration: 300
-      disableVimeoTracking: false
-      embedlyKey: ''
-      enableAutoRefresh: true
-      facebookKey: ''
-      googleKey: ''
-      iframelyKey: ''
-      maxAssetNameLength: 50
-      maxFileNameLength: 50
-      minImageSize: 16
-      parameters:
-        -
-          __assoc__:
-            -
-              - param
-              - maxwidth
-            -
-              - value
-              - '650'
-        -
-          __assoc__:
-            -
-              - param
-              - maxheight
-            -
-              - value
-              - '650'
-      preventNonWhitelistedUploads: false
-      referer: ''
-      showThumbnailsInCp: true
-      soundcloudKey: ''
-      useYouTubeNoCookie: false
-      whitelist:
-        - 'amazon.*'
-        - 'amazon.co.*'
-        - amcharts.com
-        - baidu.com
-        - collegehumor.com
-        - dailymotion.com
-        - deviantart.com
-        - embed.ly
-        - 'facebook.*'
-        - 'facebook.co.*'
-        - 'facebook.com.*'
-        - fb.com
-        - 'google.*'
-        - 'google.co.*'
-        - 'google.com.*'
-        - hulu.com
-        - iframely.com
-        - imgur.com
-        - instagr.am
-        - instagram.com
-        - kickstarter.com
-        - meetup.com
-        - meetupstatic.com
-        - netflix.com
-        - pbs.org
-        - nhpbs.org
-        - reddit.com
-        - soundcloud.com
-        - tiktok.com
-        - t.co
-        - 'twitter.*'
-        - 'twitter.co.*'
-        - 'twitter.com.*'
-        - twimg.com
-        - vimeo.com
-        - vine.co
-        - wikipedia.org
-        - wikimedia.org
-        - wordpress.com
-        - yahoo.com
-        - youtu.be
-        - youtube.com
-        - youtube-nocookie.com
   navigation:
     edition: standard
     enabled: true
