@@ -4,7 +4,6 @@ instructions: null
 name: 'Home Section - Layouts'
 searchable: false
 settings:
-  contentTable: ''
   createButtonLabel: null
   entryTypes:
     - 10492ed9-cbb8-423a-951b-8e0dd55b11f4 # Home Section Layout
@@ -18,4 +17,4 @@ settings:
   viewMode: cards
 translationKeyFormat: null
 translationMethod: site
-type: verbb\supertable\fields\SuperTableField
+type: craft\fields\Matrix

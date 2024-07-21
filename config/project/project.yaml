@@ -1,4 +1,4 @@
-dateModified: 1721592552
+dateModified: 1721592666
 elementSources:
   craft\elements\User:
     -
@@ -248,10 +248,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.1
-  super-table:
-    edition: standard
-    enabled: true
-    schemaVersion: 4.0.0
   vite:
     edition: standard
     enabled: true

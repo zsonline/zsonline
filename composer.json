@@ -7,7 +7,6 @@
     "twig/html-extra": "^3.0.0",
     "verbb/comments": "3.0.1",
     "verbb/navigation": "3.0.3",
-    "verbb/super-table": "4.0.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
