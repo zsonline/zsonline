@@ -96,21 +96,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8c68bef4-fce4-4168-aa13-3ca1947567fb # Legacy - Title
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a9703d91-4b69-4773-8abd-193116e73726
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: c529f035-1e02-4af8-a7f0-afe4e24e634c # Timeline Event (Article) - Byline
             handle: null
             includeInCards: false
@@ -141,21 +126,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826 # Legacy - Description
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 57422757-be01-4bc8-905f-08b22acee68c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 8fc13160-607f-43ed-9ae7-e5b572317317 # Timeline Event (Article) - Content
             handle: null
             includeInCards: false
@@ -180,6 +150,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -1,8 +1,18 @@
-dateModified: 1719759988
+dateModified: 1721591511
 elementSources:
   craft\elements\User:
     -
+      defaultSort:
+        - username
+        - asc
+      disabled: false
       key: '*'
+      tableAttributes:
+        - status
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
       type: native
     -
       key: admins
@@ -49,107 +59,6 @@ elementSources:
         - dateCreated
         - lastLoginDate
       type: native
-    -
-      heading: Subscribers
-      type: heading
-    -
-      condition:
-        class: craft\elements\conditions\users\UserCondition
-        conditionRules:
-          -
-            class: craft\elements\conditions\users\GroupConditionRule
-            operator: in
-            uid: eab66ea2-e6b8-4196-9824-79352af7daa0
-            values:
-              - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
-          -
-            class: craft\fields\conditions\OptionsFieldConditionRule
-            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription - Plan
-            operator: in
-            uid: b3f09856-6988-443b-b9dc-b929e4a623aa
-            values:
-              - regular
-        elementType: craft\elements\User
-        fieldContext: global
-      defaultSort:
-        - dateCreated
-        - desc
-      key: 'custom:fc585b69-a1d7-4a9e-a3b5-42baaac9fad8'
-      label: Regular
-      tableAttributes:
-        - email
-        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Subscription - Plan
-        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # Legacy - End Date
-        - dateCreated
-      type: custom
-      userGroups:
-        - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
-    -
-      condition:
-        class: craft\elements\conditions\users\UserCondition
-        conditionRules:
-          -
-            class: craft\elements\conditions\users\GroupConditionRule
-            operator: in
-            uid: 4478e6b4-9672-4061-9515-124133f91735
-            values:
-              - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
-          -
-            class: craft\fields\conditions\OptionsFieldConditionRule
-            fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription - Plan
-            operator: in
-            uid: faf1ed3f-aeaf-4346-9473-dbd05b18a806
-            values:
-              - student
-        elementType: craft\elements\User
-        fieldContext: global
-      defaultSort:
-        - username
-        - desc
-      key: 'custom:c9764f5a-b696-4ee4-99d2-c4b4f44469c5'
-      label: Student
-      tableAttributes:
-        - email
-        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Subscription - Plan
-        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # Legacy - End Date
-        - dateCreated
-      type: custom
-      userGroups:
-        - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
-    -
-      condition:
-        class: craft\elements\conditions\users\UserCondition
-        conditionRules:
-          -
-            class: craft\elements\conditions\users\GroupConditionRule
-            operator: in
-            uid: 2c3ad3eb-0474-42e9-8484-8c75f7acc9b0
-            values:
-              - 7ef5f597-7ee8-473c-9647-ba485d262e5a # Subscriber
-          -
-            class: craft\fields\conditions\DateFieldConditionRule
-            endDate: null
-            fieldUid: 20bb750f-abb8-42b0-9ba8-adf65d1ee624 # Legacy - End Date
-            periodType: minutesFromNow
-            periodValue: 1.0
-            rangeType: after
-            startDate: null
-            uid: ef962cc3-4481-4e71-8010-9e4a163c12c9
-        elementType: craft\elements\User
-        fieldContext: global
-      defaultSort:
-        - username
-        - desc
-      key: 'custom:688a1a87-de6f-4342-ab33-110ed85e1d7f'
-      label: Active
-      tableAttributes:
-        - email
-        - 'field:944c11ef-571f-4e08-a4bb-db2540e4b404' # Subscription - Plan
-        - 'field:20bb750f-abb8-42b0-9ba8-adf65d1ee624' # Legacy - End Date
-        - dateCreated
-      type: custom
-      userGroups:
-        - 4a5cdf1b-642d-4a37-854f-c3b1168bea2d # Editors
 email:
   fromEmail: redaktion@zsonline.ch
   fromName: 'Zürcher Studierendenzeitung'
@@ -177,7 +86,6 @@ meta:
   __names__:
     0cf2962b-f593-4e6b-9ac2-9544710d8aad: 'Home Section Layout - Appearance' # Home Section Layout - Appearance
     1bf3a5c8-628e-4b3c-b18b-aa384eec608e: 'Article - Format' # Article - Format
-    1ee4a9c1-5b55-4094-bd47-fb1c7c2ec826: 'Legacy - Description' # Legacy - Description
     2ef3f3d8-ae1c-480e-a51b-db580170d832: Formats # Formats
     3a27561f-43cc-469a-a2fa-6920676a2b3a: 'Timeline - Description' # Timeline - Description
     3cc8b7a7-5c00-4889-b691-ca2edc74df61: Ad # Ad
@@ -185,7 +93,6 @@ meta:
     4ce497c4-83db-4505-966c-25ac2477e7fb: Ads # Ads
     4d2d5d09-2278-47d1-8e63-1b70ad5116b4: 'Content Gallery - Images' # Content Gallery - Images
     4e85c514-8a85-45c7-996a-0824ef8d667b: 'Timeline - Description' # Timeline - Description
-    5a09781f-aab3-4633-b3ed-6bd0bda1ad48: 'Legacy - Content' # Legacy - Content
     5bbeef56-cf6d-449b-9e83-18322e58ec53: 'Content File' # Content File
     5c6da112-a718-4124-97fb-97f8c5b0ac06: 'Content Image' # Content Image
     5e969c43-23fb-4bfc-a51a-e8e26b1b66ba: 'Content File - File' # Content File - File
@@ -199,18 +106,15 @@ meta:
     7ef5f597-7ee8-473c-9647-ba485d262e5a: Subscriber # Subscriber
     8b097a87-a2ec-4270-8431-a0e733b3fdb3: 'Issue - Sections' # Issue - Sections
     8bf7e76a-4365-4da0-a4c8-a545c79488c3: 'Timeline Event - Label' # Timeline Event - Label
-    8c68bef4-fce4-4168-aa13-3ca1947567fb: 'Legacy - Title' # Legacy - Title
     8fc13160-607f-43ed-9ae7-e5b572317317: 'Timeline Event (Article) - Content' # Timeline Event (Article) - Content
     9a7641a1-9aa0-423c-a776-c0422cf7f378: 'Page - Image' # Page - Image
     9c4c8063-ca7a-411d-ab4e-cb9498df24c8: 'Timeline Event - Description' # Timeline Event - Description
     9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed: 'Article - Ad' # Article - Ad
     9d3883d3-f157-4a96-a03e-5b86dbac381d: 'Timeline Event - Print Link' # Timeline Event - Print Link
-    9f01ed5b-f89c-478b-a859-71fd331c8d93: 'Legacy - Title' # Legacy - Title
     09f3e7d3-dd38-4d06-ac5c-fbff3a017d92: Issues # Issues
     13c1314c-8e18-452c-99b9-40ddcf9ba5f2: 'Timeline Event - Year' # Timeline Event - Year
     15dca033-1e00-43b6-bcd3-05ca3c07b14f: 'Timeline - Image' # Timeline - Image
     18ae8f32-e01d-480d-b9b7-9b166fcdceda: Home # Home
-    20bb750f-abb8-42b0-9ba8-adf65d1ee624: 'Legacy - End Date' # Legacy - End Date
     21e4a371-781d-4752-b0cd-106498851db5: 'Content Image - Image' # Content Image - Image
     024d03f4-9614-497a-9274-7340a22f343c: 'Home Section - Color' # Home Section - Color
     28f5783a-9790-439d-b079-1bc2b0cc58f9: 'Article - Related' # Article - Related
@@ -263,7 +167,6 @@ meta:
     b4fa2985-51d4-428c-a10e-130fd6687f7b: 'Timeline Event (Article) - Content' # Timeline Event (Article) - Content
     b231772f-f289-459a-98aa-4307862a26f1: 'Timeline Event (Article) - Publication' # Timeline Event (Article) - Publication
     b2237231-890f-4253-ab7f-251f41d3598c: 'Issue Section' # Issue Section
-    b6909423-4a75-4b31-8af2-4ec0935f6bcb: 'Legacy - Title' # Legacy - Title
     b7794701-7ea0-40bb-8bba-27df38f94295: 'Subscription - Email' # Subscription - Email
     bcb6d13b-de66-4331-8d15-bb23ef7a9736: 'Ad - Link' # Ad - Link
     bd3e37bc-785f-4f35-a3ba-42a801ec0e80: Timeline # Timeline

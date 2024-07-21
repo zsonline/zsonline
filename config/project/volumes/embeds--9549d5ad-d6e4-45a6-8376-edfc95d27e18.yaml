@@ -50,21 +50,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: cb91d72b-d6d9-439e-8e7b-f3f871694967 # Article - Contributions
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: cb839516-3d70-4c01-aa41-435479339d30
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: f841490a-2049-412c-86f3-398f92b940fb
         userCondition: null

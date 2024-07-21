@@ -66,21 +66,6 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: b6909423-4a75-4b31-8af2-4ec0935f6bcb # Legacy - Title
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: dcc0bfcb-aec6-434e-985d-bd3e7940bb36
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 6c7e7503-494c-4a2c-84c8-fbfb56dcbe67 # Timeline Event - Image
             handle: null
             includeInCards: false
@@ -150,6 +135,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
