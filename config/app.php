@@ -18,14 +18,12 @@
  */
 
 use craft\helpers\App;
-use editor\Module as EditorModule;
 use site\Module as SiteModule;
 
 return [
-    'bootstrap' => ['editor', 'site'],
+    'bootstrap' => ['site'],
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
     'modules' => [
-        'editor' => EditorModule::class,
         'site' => SiteModule::class
     ],
 ];
