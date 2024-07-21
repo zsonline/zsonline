@@ -1,4 +1,4 @@
-dateModified: 1721591771
+dateModified: 1721592024
 elementSources:
   craft\elements\User:
     -
@@ -30,34 +30,10 @@ elementSources:
       heading: Groups
       type: heading
     -
-      defaultSort:
-        - username
-        - asc
-      disabled: false
-      key: 'group:adf21248-5e45-44f0-a3d9-b2ece6004c5e' # Contributors
-      tableAttributes:
-        - fullName
-        - email
-        - dateCreated
-        - lastLoginDate
-      type: native
-    -
       key: 'group:4a5cdf1b-642d-4a37-854f-c3b1168bea2d' # Editors
       type: native
     -
       key: 'group:429e38b0-5490-4b1b-be5e-99adcf0d6c47' # Sales
-      type: native
-    -
-      defaultSort:
-        - username
-        - asc
-      disabled: false
-      key: 'group:7ef5f597-7ee8-473c-9647-ba485d262e5a' # Subscriber
-      tableAttributes:
-        - fullName
-        - email
-        - dateCreated
-        - lastLoginDate
       type: native
 email:
   fromEmail: redaktion@zsonline.ch
@@ -96,7 +72,6 @@ meta:
     6c54d505-9d57-4707-9916-cdac49a0c034: 'Content Note - Content' # Content Note - Content
     6cdd6eb7-76e7-4ae1-949a-513b1ede029c: 'Issue - Number' # Issue - Number
     7dac239d-784f-4ec9-80fc-46b2c4362060: Articles # Articles
-    7ef5f597-7ee8-473c-9647-ba485d262e5a: Subscriber # Subscriber
     8b097a87-a2ec-4270-8431-a0e733b3fdb3: 'Issue - Sections' # Issue - Sections
     8bf7e76a-4365-4da0-a4c8-a545c79488c3: 'Timeline Event - Label' # Timeline Event - Label
     8fc13160-607f-43ed-9ae7-e5b572317317: 'Timeline Event (Article) - Content' # Timeline Event (Article) - Content
@@ -152,7 +127,6 @@ meta:
     a71cf75d-44bb-4489-ad90-93f218828cd1: 'Article - Lead' # Article - Lead
     a91ae399-006d-491c-be06-43159f3523fd: 'Content Quote - Quote' # Content Quote - Quote
     ab58e9ac-d8c0-428f-a72a-2132a4976859: Home # Home
-    adf21248-5e45-44f0-a3d9-b2ece6004c5e: Contributors # Contributors
     ae3e2976-5a2f-441c-a712-71c849fe2a40: 'Issue Section - Articles' # Issue Section - Articles
     b0b838c9-5d25-43de-886a-bdf38b92df07: 'Article - Image Position' # Article - Image Position
     b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: Page # Page

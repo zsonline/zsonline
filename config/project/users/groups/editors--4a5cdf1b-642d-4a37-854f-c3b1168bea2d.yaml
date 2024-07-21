@@ -8,8 +8,6 @@ permissions:
   - administrateusers
   - 'assignusergroup:429e38b0-5490-4b1b-be5e-99adcf0d6c47' # Sales
   - 'assignusergroup:4a5cdf1b-642d-4a37-854f-c3b1168bea2d' # Editors
-  - 'assignusergroup:7ef5f597-7ee8-473c-9647-ba485d262e5a' # Subscriber
-  - 'assignusergroup:adf21248-5e45-44f0-a3d9-b2ece6004c5e' # Contributors
   - comments-edit
   - comments-trash
   - 'createentries:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
