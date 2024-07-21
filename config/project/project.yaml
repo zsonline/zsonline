@@ -1,4 +1,4 @@
-dateModified: 1721591511
+dateModified: 1721591771
 elementSources:
   craft\elements\User:
     -
@@ -64,13 +64,6 @@ email:
   fromName: 'Zürcher Studierendenzeitung'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
-  embeds:
-    hasUrls: false
-    name: Embeds
-    settings:
-      path: '@storage/assets/embeds'
-    type: craft\fs\Local
-    url: null
   public:
     hasUrls: true
     name: Public
@@ -144,7 +137,6 @@ meta:
     3458cf19-d496-4a9e-808d-47e0b2323224: 'Home Section - Layouts' # Home Section - Layouts
     4225bf4b-ab10-4bf8-8408-2c2280a0a599: Subscription # Subscription
     4866b939-c650-45b9-97eb-3fa0eeecea01: 'Page - Content' # Page - Content
-    9549d5ad-d6e4-45a6-8376-edfc95d27e18: Embeds # Embeds
     9695de25-bf17-41a7-b295-68ad5cccc6c8: Pages # Pages
     10492ed9-cbb8-423a-951b-8e0dd55b11f4: 'Home Section Layout' # Home Section Layout
     14624af3-66ba-4513-af18-0cf411fbaf74: Issue # Issue

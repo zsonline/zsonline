@@ -4,8 +4,6 @@ name: Contributors
 permissions:
   - 'saveassets:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   - 'saveassets:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
-  - 'saveassets:9549d5ad-d6e4-45a6-8376-edfc95d27e18' # Embeds
-  - 'saveassets:fa72d4fb-f4f5-4c71-8882-9dad362ba78a'
   - 'saveentries:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
   - 'saveentries:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
   - 'saveentries:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics
@@ -14,8 +12,6 @@ permissions:
   - 'saveentries:ab58e9ac-d8c0-428f-a72a-2132a4976859' # Home
   - 'viewassets:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   - 'viewassets:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
-  - 'viewassets:9549d5ad-d6e4-45a6-8376-edfc95d27e18' # Embeds
-  - 'viewassets:fa72d4fb-f4f5-4c71-8882-9dad362ba78a'
   - 'viewentries:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
   - 'viewentries:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
   - 'viewentries:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics
