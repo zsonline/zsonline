@@ -2,7 +2,7 @@ columnSuffix: null
 handle: contributionUser
 instructions: null
 name: 'Contribution - User'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

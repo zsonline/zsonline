@@ -2,7 +2,7 @@ columnSuffix: enhcyavm
 handle: articleLead
 instructions: null
 name: 'Article - Lead'
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

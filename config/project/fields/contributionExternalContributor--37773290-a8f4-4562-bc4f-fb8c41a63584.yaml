@@ -2,7 +2,7 @@ columnSuffix: kifzlerj
 handle: contributionExternalContributor
 instructions: null
 name: 'Contribution (External) - Contributor'
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

@@ -2,7 +2,7 @@ columnSuffix: null
 handle: articleContributions
 instructions: null
 name: 'Article - Contributions'
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   entryTypes:
