@@ -19,6 +19,8 @@ return [
     'Articles' => 'Artikel',
     'Appearance' => 'Darstellung',
     'Content' => 'Inhalt',
+    'Content Embed' => 'Einbettung',
+    'Content Embed - Code' => 'Code',
     'Content File' => 'Datei',
     'Content File - File' => 'Datei',
     'Content Gallery' => 'Galerie',

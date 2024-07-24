@@ -16,6 +16,7 @@ settings:
     - 614a8287-bcf0-40de-8795-3ab58a7a4d50 # Content Quote
     - 232f0e97-046b-417c-bb0b-d38f41748a3a # Content Note
     - 5bbeef56-cf6d-449b-9e83-18322e58ec53 # Content File
+    - 628fb8dc-da3f-4d90-987b-5f236bd6efdc # Content Embed
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

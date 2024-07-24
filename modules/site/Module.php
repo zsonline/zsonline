@@ -39,7 +39,7 @@ class Module extends BaseModule
             Craft::$app->getView()->registerJs('{
                 const editors = document.querySelectorAll(".ck-editor__editable");
                 for (const editor of editors) {
-                    editor.ckeditorInstance.commands.get("indentList")?.forceDisabled("noListIndent");
+                    editor.ckeditorInstance?.commands.get("indentList")?.forceDisabled("noListIndent");
                 }
             }');
         }

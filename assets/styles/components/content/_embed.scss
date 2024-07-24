@@ -1,11 +1,6 @@
 .content-embed {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   overflow: hidden;
-
-  &__embed {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
 }

@@ -1,4 +1,4 @@
-dateModified: 1721677353
+dateModified: 1721856523
 elementSources:
   craft\elements\User:
     -
@@ -75,6 +75,7 @@ meta:
     8b097a87-a2ec-4270-8431-a0e733b3fdb3: 'Issue - Sections' # Issue - Sections
     8bf7e76a-4365-4da0-a4c8-a545c79488c3: 'Timeline Event - Label' # Timeline Event - Label
     8fc13160-607f-43ed-9ae7-e5b572317317: 'Timeline Event (Article) - Content' # Timeline Event (Article) - Content
+    9a995f04-0700-4207-a54c-e76e64b257c9: 'Content Embed - Code' # Content Embed - Code
     9a7641a1-9aa0-423c-a776-c0422cf7f378: 'Page - Image' # Page - Image
     9c4c8063-ca7a-411d-ab4e-cb9498df24c8: 'Timeline Event - Description' # Timeline Event - Description
     9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed: 'Article - Ad' # Article - Ad
@@ -103,6 +104,7 @@ meta:
     429e38b0-5490-4b1b-be5e-99adcf0d6c47: Sales # Sales
     438d977b-985e-4c1f-9051-8e8e9b279e22: 'Article - Topics' # Article - Topics
     614a8287-bcf0-40de-8795-3ab58a7a4d50: 'Content Quote' # Content Quote
+    628fb8dc-da3f-4d90-987b-5f236bd6efdc: 'Content Embed' # Content Embed
     683c8764-91e2-4a9e-b0cf-d7bed17d1d5d: 'Timeline Event (Article)' # Timeline Event (Article)
     683cb842-2907-43f6-a6be-a4a3833c5eb5: 'Timeline Event (Article) - Year' # Timeline Event (Article) - Year
     785ebd4b-4b47-46f7-a0a2-cd889b31058e: Topic # Topic
