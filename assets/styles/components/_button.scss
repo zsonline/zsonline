@@ -42,6 +42,13 @@
   border-radius: 100px;
   transition: all 100ms ease-in-out;
 
+  @include button(
+    var(--color-fg),
+    var(--color-fg-alt),
+    transparent,
+    transparent
+  );
+
   &.button--responsive {
     &.button--bright,
     &.button--dark,
@@ -57,13 +64,6 @@
       display: none;
     }
   }
-
-  @include button(
-    var(--color-fg),
-    var(--color-fg-alt),
-    transparent,
-    transparent
-  );
 
   &.button--bright,
   &.button--dark,

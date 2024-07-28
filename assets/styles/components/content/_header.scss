@@ -36,12 +36,12 @@
   }
 
   &__text {
-    @include layout("small");
-
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
+
+    @include layout("small");
 
     h2 {
       margin: 0;

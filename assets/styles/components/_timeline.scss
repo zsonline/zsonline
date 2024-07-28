@@ -353,8 +353,6 @@
         }
 
         &__inner {
-            @include layout('medium', false);
-
             position: absolute;
             right: 0;
             bottom: -50%;
@@ -365,6 +363,8 @@
             max-height: 100%;
             opacity: 0;
             transition: all 300ms ease-in-out;
+
+            @include layout('medium', false);
         }
 
         &__close {
@@ -386,9 +386,9 @@
         }
 
         &__text {
-            @include layout('small');
-
             margin: 2rem auto;
+
+            @include layout('small');
         }
     }
 }

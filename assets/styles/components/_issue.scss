@@ -4,9 +4,9 @@
   height: 100%;
 
   img {
+    object-fit: cover;
     border: solid 1px var(--color-border-bright);
     transition: opacity 200ms ease-in-out;
-    object-fit: cover;
   }
 
   span {

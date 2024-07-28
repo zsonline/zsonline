@@ -15,6 +15,14 @@
       .home__section__label {
         border-top: solid 2px var(--color-border-dark);
       }
+
+      &:not(.home__section--labeled) {
+        .home__layout__row {
+          &:first-of-type {
+            border-top: solid 2px var(--color-border-dark);
+          }
+        }
+      }
     }
 
     &:not(:last-child) {
@@ -29,16 +37,6 @@
       .home__layout__row {
         &:first-of-type {
           border-top: solid 1px var(--color-border-bright);
-        }
-      }
-    }
-
-    &:not(:first-child) {
-      &:not(.home__section--labeled) {
-        .home__layout__row {
-          &:first-of-type {
-            border-top: solid 2px var(--color-border-dark);
-          }
         }
       }
     }

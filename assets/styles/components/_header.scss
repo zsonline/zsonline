@@ -1,20 +1,20 @@
 .header {
-  @include layout("large", false);
-
   position: fixed;
   top: 0;
   z-index: 10;
   background-color: var(--color-bg);
   transition: background-color 200ms ease-in-out;
 
-  &__inner {
-    @include layout("large", true);
+  @include layout("large", false);
 
+  &__inner {
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
     padding: 12px $layout-padding;
+
+    @include layout("large", true);
   }
 
   &__rule {

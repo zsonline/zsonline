@@ -46,8 +46,8 @@
   }
 
   &__image {
-    transition: opacity 200ms ease-out;
     object-fit: cover;
+    transition: opacity 200ms ease-out;
   }
 
   &__text {
