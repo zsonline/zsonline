@@ -9,29 +9,17 @@
     "swiper": "^11.1.4"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "prettier": "^3.3.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.8.0",
+    "prettier": "^3.3.3",
     "sass": "^1.77.6",
     "stylelint": "^16.6.1",
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-standard-scss": "13.1.0",
     "vite": "^5.3.1",
     "vite-plugin-restart": "^0.4.0"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es2020": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:prettier/recommended"
-    ],
-    "parserOptions": {
-      "sourceType": "module"
-    }
   },
   "stylelint": {
     "extends": [
