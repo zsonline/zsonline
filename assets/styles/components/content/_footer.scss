@@ -1,8 +1,8 @@
 .content-footer {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin-top: 4.5rem;
+  gap: 2rem;
+  margin-top: 3rem !important;
 
   @include layout("small");
 
@@ -65,14 +65,14 @@
 
 @media (min-width: $breakpoint-tablet) {
   .content-footer {
-    gap: 3.5rem;
-    margin-top: 5.25rem;
+    gap: 3rem;
+    margin-top: 3.5rem !important;
   }
 }
 
 @media (min-width: $breakpoint-desktop) {
   .content-footer {
-    gap: 4rem;
-    margin-top: 6rem;
+    gap: 3.5rem;
+    margin-top: 4rem !important;
   }
 }

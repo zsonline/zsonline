@@ -12,7 +12,7 @@
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    padding: 12px $layout-padding;
+    padding: 12px $layout-padding !important;
 
     @include layout("large", true);
   }
@@ -186,7 +186,7 @@
 @media (min-width: $breakpoint-tablet) {
   .header {
     &__inner {
-      padding: 12px $layout-padding-tablet;
+      padding: 12px $layout-padding-tablet !important;
     }
 
     &__logo {
@@ -217,7 +217,7 @@
     width: min(100% - calc(2 * $layout-padding-desktop), $layout-width-large);
 
     &__inner {
-      padding: 12px $layout-padding-desktop;
+      padding: 12px $layout-padding-desktop !important;
     }
 
     &__logo {
