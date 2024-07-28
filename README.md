@@ -1,6 +1,6 @@
-# Web
+# [zsonline.ch](https://www.zsonline.ch/)
 
-Website of [Zürcher Studierendenzeitung](https://www.zsonline.ch), the
+Website of Zürcher Studierendenzeitung, the
 independent student newspaper for the University of Zurich and ETH Zurich.
 
 ## Installation
