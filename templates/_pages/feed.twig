@@ -1,5 +1,6 @@
 {%- header 'Content-Type: application/atom+xml' -%}
 
+{%- cache -%}
 {%- set articles = craft.entries()
     .section('articles')
     .with([
@@ -57,3 +58,4 @@
         </entry>
     {% endfor %}
 </feed>
+{%- endcache -%}
