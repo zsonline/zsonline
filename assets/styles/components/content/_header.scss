@@ -1,3 +1,6 @@
+@use "@styles/variables";
+@use "@styles/layout";
+
 .content-header {
   display: flex;
   flex-direction: column;
@@ -11,13 +14,13 @@
 
   &.content-header--small {
     .content-image {
-      @include layout("small");
+      @include layout.layout("small");
     }
   }
 
   &.content-header--medium {
     .content-image {
-      @include layout("medium");
+      @include layout.layout("medium");
     }
   }
 
@@ -27,7 +30,7 @@
     }
 
     .content-image {
-      @include layout("large", false);
+      @include layout.layout("large", false);
     }
   }
 
@@ -41,18 +44,18 @@
     gap: 1rem;
     align-items: flex-start;
 
-    @include layout("small");
+    @include layout.layout("small");
 
     h2 {
       margin: 0;
-      font-family: $font-sans-serif;
+      font-family: variables.$font-sans-serif;
       font-size: 1.3rem;
       font-weight: 700;
     }
 
     .content-header__description {
       margin: 0;
-      font-family: $font-serif;
+      font-family: variables.$font-serif;
       line-height: 1.5;
     }
 
@@ -77,7 +80,7 @@
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .content-header {
     gap: 1.75rem;
     margin-top: 1.5rem;
@@ -97,7 +100,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .content-header {
     gap: 2.25rem;
     margin-top: 2rem;

@@ -1,14 +1,12 @@
 @use "sass:map";
+@use "@styles/variables";
 
-@mixin layout(
-  $size: "medium",
-  $padding: true
-) {
+@mixin layout($size: "medium", $padding: true) {
   $width: map.get(
     (
-      "small" : $layout-width-small,
-      "medium" : $layout-width-medium,
-      "large" : $layout-width-large,
+      "small": variables.$layout-width-small,
+      "medium": variables.$layout-width-medium,
+      "large": variables.$layout-width-large,
     ),
     $size
   );
@@ -17,25 +15,25 @@
   margin: 0 auto;
 
   @if $padding {
-    max-width: $width + 2 * $layout-padding;
-    padding: 0 $layout-padding;
+    max-width: $width + 2 * variables.$layout-padding;
+    padding: 0 variables.$layout-padding;
   } @else {
     max-width: $width;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: variables.$breakpoint-tablet) {
     @if $padding {
-      max-width: $width + 2 * $layout-padding-tablet;
-      padding: 0 $layout-padding-tablet;
+      max-width: $width + 2 * variables.$layout-padding-tablet;
+      padding: 0 variables.$layout-padding-tablet;
     } @else {
       max-width: $width;
     }
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: variables.$breakpoint-desktop) {
     @if $padding {
-      max-width: $width + 2 * $layout-padding-desktop;
-      padding: 0 $layout-padding-desktop;
+      max-width: $width + 2 * variables.$layout-padding-desktop;
+      padding: 0 variables.$layout-padding-desktop;
     } @else {
       max-width: $width;
     }
@@ -49,13 +47,13 @@ body {
     overflow: hidden;
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    padding: 0 calc($layout-padding-desktop);
+  @media (min-width: variables.$breakpoint-desktop) {
+    padding: 0 calc(variables.$layout-padding-desktop);
   }
 }
 
 .wrapper {
-  max-width: $layout-width-large;
+  max-width: variables.$layout-width-large;
   padding: 0;
   margin: 0 auto;
   background-color: var(--color-bg);
@@ -65,14 +63,14 @@ body {
     padding-top: 71px;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: variables.$breakpoint-tablet) {
     &--header-small,
     &--header-large {
       padding-top: 92px;
     }
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: variables.$breakpoint-desktop) {
     &--header-small {
       padding-top: 92px;
     }
@@ -88,7 +86,7 @@ body {
 
   &.small,
   &.medium {
-    padding: 0 $layout-padding;
+    padding: 0 variables.$layout-padding;
   }
 
   &.small {

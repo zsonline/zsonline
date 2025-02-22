@@ -1,9 +1,6 @@
-@mixin button(
-  $color-fg,
-  $color-fg-alt,
-  $color-bg,
-  $color-bg-alt
-) {
+@use "@styles/variables";
+
+@mixin button($color-fg, $color-fg-alt, $color-bg, $color-bg-alt) {
   color: $color-fg;
   text-decoration-thickness: 0.1em;
   text-underline-offset: 0.2em;
@@ -104,7 +101,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .button {
     &.button--responsive {
       &.button--bright,

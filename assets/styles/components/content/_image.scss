@@ -1,9 +1,11 @@
+@use "@styles/variables";
+
 .content-image {
   margin: 0 auto;
 
   &.large {
     figcaption {
-      padding: 0 $layout-padding;
+      padding: 0 variables.$layout-padding;
     }
   }
 
@@ -16,21 +18,21 @@
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .content-image {
     &.large {
       figcaption {
-        padding: 0 $layout-padding-tablet;
+        padding: 0 variables.$layout-padding-tablet;
       }
     }
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .content-image {
     &.large {
       figcaption {
-        padding: 0 $layout-padding-desktop;
+        padding: 0 variables.$layout-padding-desktop;
       }
     }
   }

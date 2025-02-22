@@ -1,6 +1,8 @@
+@use "@styles/variables";
+
 .content-caption {
   margin-top: 0.25em;
-  font-family: $font-sans-serif;
+  font-family: variables.$font-sans-serif;
   font-size: 0.8em;
 
   small {

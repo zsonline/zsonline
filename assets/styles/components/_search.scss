@@ -1,9 +1,11 @@
+@use "@styles/variables";
+
 .search {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-@media (min-width: $breakpoint-tablet) {
-    .search {
-        margin-bottom: 3rem;
-    }
+@media (min-width: variables.$breakpoint-tablet) {
+  .search {
+    margin-bottom: 3rem;
+  }
 }

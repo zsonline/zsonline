@@ -1,3 +1,5 @@
+@use "@styles/variables";
+
 .article-preview {
   display: flex;
   flex-direction: column;
@@ -65,7 +67,7 @@
 
   &__description {
     margin: 0.75em 0 0;
-    font-family: $font-serif;
+    font-family: variables.$font-serif;
     font-size: 0.9em;
     font-weight: 300;
   }
@@ -81,7 +83,7 @@
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .article-preview {
     &--horizontal {
       flex-direction: row;
@@ -127,7 +129,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .article-preview {
     &--small {
       &.article-preview--horizontal {

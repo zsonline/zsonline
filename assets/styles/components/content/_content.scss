@@ -1,5 +1,7 @@
+@use "@styles/variables";
+
 .content {
-  font-family: $font-serif;
+  font-family: variables.$font-serif;
   font-weight: 300;
   line-height: 1.7;
 
@@ -8,8 +10,10 @@
   > p,
   > ul,
   > ol {
-    max-width: calc($layout-width-small + 2 * $layout-padding);
-    padding: 0 $layout-padding;
+    max-width: calc(
+      variables.$layout-width-small + 2 * variables.$layout-padding
+    );
+    padding: 0 variables.$layout-padding;
     margin-right: auto;
     margin-left: auto;
   }
@@ -32,7 +36,7 @@
   h3 {
     margin-top: 1.75em;
     margin-bottom: 1em;
-    font-family: $font-sans-serif;
+    font-family: variables.$font-sans-serif;
     font-size: 1.15em;
     font-weight: 700;
   }

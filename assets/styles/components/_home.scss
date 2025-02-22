@@ -1,9 +1,11 @@
+@use "@styles/variables";
+
 .home {
   display: flex;
   flex-direction: column;
 
   &__section {
-    padding: 0 $layout-padding;
+    padding: 0 variables.$layout-padding;
 
     &:not(:first-child) {
       padding-top: 1.75rem;
@@ -92,10 +94,10 @@
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .home {
     &__section {
-      padding: 0 $layout-padding-tablet;
+      padding: 0 variables.$layout-padding-tablet;
 
       &:not(:first-child) {
         padding-top: 2rem;
@@ -155,10 +157,10 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .home {
     &__section {
-      padding: 0 $layout-padding-desktop;
+      padding: 0 variables.$layout-padding-desktop;
 
       &:not(:first-child) {
         padding-top: 3rem;

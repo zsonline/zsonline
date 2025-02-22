@@ -1,8 +1,10 @@
+@use "@styles/variables";
+
 .footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 50px $layout-padding 30px;
+  padding: 50px variables.$layout-padding 30px;
   font-size: 0.8rem;
 
   &__inner {
@@ -30,10 +32,10 @@
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .footer {
     gap: 15px;
-    padding: 75px $layout-padding-tablet 35px;
+    padding: 75px variables.$layout-padding-tablet 35px;
 
     &__bottom {
       gap: 0.75rem;
@@ -42,10 +44,10 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .footer {
     gap: 15px;
-    padding: 125px $layout-padding-desktop 40px;
+    padding: 125px variables.$layout-padding-desktop 40px;
 
     &__bottom {
       gap: 1rem;

@@ -1,3 +1,5 @@
+@use "@styles/variables";
+
 .content-quote {
   max-width: 90%;
   text-align: center;
@@ -15,7 +17,7 @@
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .content-quote {
     blockquote {
       font-size: 1.75em;

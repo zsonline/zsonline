@@ -1,3 +1,5 @@
+@use "@styles/variables";
+
 .feed {
   display: flex;
   flex-direction: column;
@@ -62,7 +64,7 @@
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .feed {
     gap: 5rem;
 
@@ -99,7 +101,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .feed {
     &__section {
       gap: 3rem;

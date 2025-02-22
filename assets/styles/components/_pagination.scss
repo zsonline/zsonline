@@ -1,3 +1,5 @@
+@use "@styles/variables";
+
 .pagination {
   display: flex;
   gap: 1rem;
@@ -5,7 +7,7 @@
   margin-top: 2rem;
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .pagination {
     margin-top: 4rem;
   }

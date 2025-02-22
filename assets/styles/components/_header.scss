@@ -1,3 +1,6 @@
+@use "@styles/variables";
+@use "@styles/layout";
+
 .header {
   position: fixed;
   top: 0;
@@ -5,21 +8,21 @@
   background-color: var(--color-bg);
   transition: background-color 200ms ease-in-out;
 
-  @include layout("large", false);
+  @include layout.layout("large", false);
 
   &__inner {
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    padding: 12px $layout-padding !important;
+    padding: 12px variables.$layout-padding !important;
 
-    @include layout("large", true);
+    @include layout.layout("large", true);
   }
 
   &__rule {
     height: 2px;
-    margin: 0 $layout-padding;
+    margin: 0 variables.$layout-padding;
     background-color: var(--color-border-dark);
     transition: all 200ms ease-in-out;
 
@@ -63,13 +66,12 @@
 
   &--gradient {
     &.header--scroll-top {
-      background:
-        linear-gradient(
-          180deg,
-          hsl(0deg 0% 0% / 30%) 0%,
-          hsl(0deg 0% 0% / 15%) 75%,
-          hsl(0deg 0% 0% / 0%) 100%
-        );
+      background: linear-gradient(
+        180deg,
+        hsl(0deg 0% 0% / 30%) 0%,
+        hsl(0deg 0% 0% / 15%) 75%,
+        hsl(0deg 0% 0% / 0%) 100%
+      );
     }
   }
 
@@ -82,7 +84,7 @@
 
     svg {
       height: 42px;
-      margin-top: 3px;  // Compensate for vertical asymmetry
+      margin-top: 3px; // Compensate for vertical asymmetry
       font-size: 0;
       fill: var(--color-fg);
       transition: all 200ms ease-in-out;
@@ -119,9 +121,9 @@
     gap: 2.5rem;
     align-items: flex-start;
     align-items: flex-end;
-    width: min(400px + 2 * $layout-padding, 90vw);
+    width: min(400px + 2 * variables.$layout-padding, 90vw);
     height: 100vh;
-    padding: 20px $layout-padding 2em;
+    padding: 20px variables.$layout-padding 2em;
     overflow-y: auto;
     color: var(--color-fg);
     visibility: hidden;
@@ -183,21 +185,21 @@
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .header {
     &__inner {
-      padding: 12px $layout-padding-tablet !important;
+      padding: 12px variables.$layout-padding-tablet !important;
     }
 
     &__logo {
       svg {
         height: 60px;
-        margin-top: 6px;  // Compensate for vertical asymmetry
+        margin-top: 6px; // Compensate for vertical asymmetry
       }
     }
 
     &__rule {
-      margin: 0 $layout-padding-tablet;
+      margin: 0 variables.$layout-padding-tablet;
     }
 
     &__navigation-top {
@@ -206,52 +208,55 @@
 
     &__navigation-main {
       gap: 3rem;
-      width: min(400px + 2 * $layout-padding-tablet, 90vw);
-      padding: 20px $layout-padding-tablet 2em;
+      width: min(400px + 2 * variables.$layout-padding-tablet, 90vw);
+      padding: 20px variables.$layout-padding-tablet 2em;
     }
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .header {
-    width: min(100% - calc(2 * $layout-padding-desktop), $layout-width-large);
+    width: min(
+      100% - calc(2 * variables.$layout-padding-desktop),
+      variables.$layout-width-large
+    );
 
     &__inner {
-      padding: 12px $layout-padding-desktop !important;
+      padding: 12px variables.$layout-padding-desktop !important;
     }
 
     &__logo {
       svg {
         height: 60px;
-        margin-top: 6px;  // Compensate for vertical asymmetry
+        margin-top: 6px; // Compensate for vertical asymmetry
       }
     }
 
     &__rule {
-      margin: 0 $layout-padding-desktop;
+      margin: 0 variables.$layout-padding-desktop;
     }
 
     &--large {
       .header__inner {
-        padding: 15px $layout-padding-desktop;
+        padding: 15px variables.$layout-padding-desktop;
       }
 
       .header__logo {
         svg {
           height: 100px;
-          margin-top: 10px;  // Compensate for vertical asymmetry
+          margin-top: 10px; // Compensate for vertical asymmetry
         }
       }
 
       &.header--scroll-within {
         .header__inner {
-          padding: 12px $layout-padding-desktop;
+          padding: 12px variables.$layout-padding-desktop;
         }
 
         .header__logo {
           svg {
             height: 60px;
-            margin-top: 6px;  // Compensate for vertical asymmetry
+            margin-top: 6px; // Compensate for vertical asymmetry
           }
         }
       }
@@ -262,8 +267,8 @@
     }
 
     &__navigation-main {
-      width: min(400px + 2 * $layout-padding-desktop, 90vw);
-      padding: 20px $layout-padding-desktop 2em;
+      width: min(400px + 2 * variables.$layout-padding-desktop, 90vw);
+      padding: 20px variables.$layout-padding-desktop 2em;
     }
   }
 }

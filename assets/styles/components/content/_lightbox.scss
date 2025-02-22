@@ -1,3 +1,5 @@
+@use "@styles/variables";
+
 img[data-lightbox] {
   cursor: zoom-in;
 }
@@ -28,7 +30,7 @@ img[data-lightbox] {
     justify-content: center;
 
     img {
-      max-width: calc(100vw - 2 * $layout-padding);
+      max-width: calc(100vw - 2 * variables.$layout-padding);
       max-height: calc(100vh - 250px);
       object-fit: contain;
     }
@@ -36,7 +38,7 @@ img[data-lightbox] {
 
   &__header,
   &__footer {
-    padding: $layout-padding;
+    padding: variables.$layout-padding;
   }
 
   &__footer {
@@ -49,32 +51,32 @@ img[data-lightbox] {
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .lightbox {
     .swiper-slide {
       img {
-        max-width: calc(100vw - 2 * $layout-padding-tablet);
+        max-width: calc(100vw - 2 * variables.$layout-padding-tablet);
       }
     }
 
     &__header,
     &__footer {
-      padding: $layout-padding-tablet;
+      padding: variables.$layout-padding-tablet;
     }
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .lightbox {
     .swiper-slide {
       img {
-        max-width: calc(100vw - 2 * $layout-padding-desktop);
+        max-width: calc(100vw - 2 * variables.$layout-padding-desktop);
       }
     }
 
     &__header,
     &__footer {
-      padding: $layout-padding-desktop;
+      padding: variables.$layout-padding-desktop;
     }
   }
 }

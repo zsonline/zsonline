@@ -1,10 +1,13 @@
+@use "@styles/variables";
+@use "@styles/layout";
+
 .content-footer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 3rem !important;
 
-  @include layout("small");
+  @include layout.layout("small");
 
   > div {
     display: flex;
@@ -63,14 +66,14 @@
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: variables.$breakpoint-tablet) {
   .content-footer {
     gap: 3rem;
     margin-top: 3.5rem !important;
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: variables.$breakpoint-desktop) {
   .content-footer {
     gap: 3.5rem;
     margin-top: 4rem !important;

@@ -1,3 +1,5 @@
+@use "@styles/variables";
+
 .content-file {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   max-width: 90%;
   padding: 1.5rem;
   margin: 0 auto;
-  font-family: $font-sans-serif;
+  font-family: variables.$font-sans-serif;
   background-color: var(--color-bg-subdued);
   border-radius: 7px;
 

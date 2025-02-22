@@ -1,8 +1,10 @@
+@use "@styles/variables";
+
 .content-note {
   max-width: 90%;
   padding: 25px 20px;
   margin: 0 auto;
-  font-family: $font-sans-serif;
+  font-family: variables.$font-sans-serif;
   line-height: 1.5;
   background-color: var(--color-bg-subdued);
   border-radius: 7px;
