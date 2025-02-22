@@ -126,3 +126,4 @@ permissions:
   - 'viewpeerentrydrafts:ab58e9ac-d8c0-428f-a72a-2132a4976859' # Home
   - 'viewpeerentrydrafts:c6375497-b7f2-4761-b74b-96fd072a5a6f' # Subscriptions
   - 'viewpeerentrydrafts:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Timeline
+  - viewusers
