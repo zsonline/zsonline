@@ -3,5 +3,6 @@ deactivateByDefault: false
 defaultGroup: ''
 photoSubpath: null
 photoVolumeUid: null
-requireEmailVerification: true
+require2fa: all
+requireEmailVerification: false
 validateOnPublicRegistration: false
