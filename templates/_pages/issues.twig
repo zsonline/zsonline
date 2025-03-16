@@ -7,14 +7,14 @@
 {% set headerSize = 'small' %}
 {% set layoutSize = 'medium' %}
 
-{% set issueYearField = craft.app.entries
-    .getEntryTypeByHandle('issue')
-    .getFieldLayout()
-    .getFieldByHandle('issueYear')
-    .getValueSql() %}
-
 {# Redirect to newst issue year if the year parameter is not defined #}
 {% if year is not defined %}
+    {% set issueYearField = craft.app.entries
+        .getEntryTypeByHandle('issue')
+        .getFieldLayout()
+        .getFieldByHandle('issueYear')
+        .getValueSql() %}
+
     {% set newestYear = craft.entries()
         .section('issues')
         .max(issueYearField) %}
@@ -45,7 +45,7 @@
 {# Fetch all issue years for pagination #}
 {% set years = craft.entries()
     .section('issues')
-    .select(issueYearField)
+    .select('issueYear')
     .distinct()
     .orderBy('issueYear DESC')
     .column() %}
