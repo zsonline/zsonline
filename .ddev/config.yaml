@@ -8,8 +8,8 @@ router_https_port: "443"
 additional_hostnames:
   - "www.zs"
 database:
-  type: mysql
-  version: "8.0"
+  type: mariadb
+  version: "10.6"
 composer_version: "2"
 nodejs_version: "20"
 upload_dirs:
