@@ -15,7 +15,7 @@ return [
     'Article - Image Size' => 'Bildgrösse',
     'Article - Lead' => 'Lead',
     'Article - Related' => 'Verwandte Artikel',
-    'Article - Topics' => 'Dossiers',
+    'Article - Topics' => 'Themen',
     'Articles' => 'Artikel',
     'Appearance' => 'Darstellung',
     'Content' => 'Inhalt',
@@ -98,7 +98,7 @@ return [
     'Timeline Event - Print Image' => 'Print-Bild',
     'Timeline Event - Print Link' => 'Print-Link',
     'Timeline Event - Year' => 'Jahr',
-    'Topic' => 'Dossier',
-    'Topics' => 'Dossiers',
+    'Topic' => 'Thema',
+    'Topics' => 'Themen',
     'Zürcher Studierendenzeitung' => 'Zürcher Studierendenzeitung'
 ];
