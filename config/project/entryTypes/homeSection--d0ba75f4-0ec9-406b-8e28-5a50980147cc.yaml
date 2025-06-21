@@ -90,6 +90,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{homeSectionTitle|default(''-'')}'
+titleFormat: "{homeSectionTitle|default('-')}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

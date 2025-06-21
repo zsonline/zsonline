@@ -23,5 +23,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _pages/article.twig
-    uriFormat: '{postDate|date(''Y'')}/{postDate|date(''m'')}/{postDate|date(''d'')}/{slug}'
+    uriFormat: "{postDate|date('Y')}/{postDate|date('m')}/{postDate|date('d')}/{slug}"
 type: channel
