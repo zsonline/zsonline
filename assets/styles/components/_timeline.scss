@@ -390,7 +390,8 @@
     }
 
     &__text {
-      margin: 2rem auto;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
 
       @include layout.layout("small");
     }
