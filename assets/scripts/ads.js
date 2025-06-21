@@ -29,6 +29,7 @@ async function loadAds() {
     // Track view events
     const observer = new IntersectionObserver((entries, observer) => {
       if (entries.length != 1 || entries[0].isIntersecting) {
+        // eslint-disable-next-line no-undef
         gtag("event", "ad_view", {
           slug: entries[0].target.dataset.slug,
         });
@@ -40,6 +41,7 @@ async function loadAds() {
 
     // Track click events
     link.addEventListener("click", (e) => {
+      // eslint-disable-next-line no-undef
       gtag("event", "ad_click", {
         slug: e.target.dataset.slug,
       });

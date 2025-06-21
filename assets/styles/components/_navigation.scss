@@ -27,13 +27,13 @@
 
 .navigation__subsection {
   display: flex;
+  visibility: hidden;
   flex-direction: column;
   height: 0;
   padding: 0;
   margin: 0;
   overflow: hidden;
   list-style: none;
-  visibility: hidden;
   opacity: 0;
   transition:
     height 200ms ease-in-out,
@@ -42,9 +42,9 @@
     margin 0ms linear 200ms;
 
   &.navigation__subsection--open {
+    visibility: visible;
     height: auto;
     margin: -0.5em 0 0.5em;
-    visibility: visible;
     opacity: 1;
     transition:
       height 200ms ease-in-out,
