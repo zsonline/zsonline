@@ -4,6 +4,8 @@ instructions: null
 name: 'Article - Image Size'
 searchable: false
 settings:
+  customOptions: false
+  iconsOnly: false
   options:
     -
       __assoc__:
@@ -13,6 +15,9 @@ settings:
         -
           - value
           - small
+        -
+          - icon
+          - ''
         -
           - default
           - ''
@@ -25,6 +30,9 @@ settings:
           - value
           - medium
         -
+          - icon
+          - ''
+        -
           - default
           - '1'
     -
@@ -36,8 +44,11 @@ settings:
           - value
           - large
         -
+          - icon
+          - ''
+        -
           - default
           - ''
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\RadioButtons
+type: craft\fields\ButtonGroup
