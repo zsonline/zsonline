@@ -1,4 +1,4 @@
-dateModified: 1750515004
+dateModified: 1755460581
 elementSources:
   craft\elements\User:
     -
@@ -259,5 +259,5 @@ system:
   live: true
   name: 'Zürcher Studierendenzeitung'
   retryDuration: null
-  schemaVersion: 5.7.0.3
+  schemaVersion: 5.8.0.3
   timeZone: Europe/Zurich
