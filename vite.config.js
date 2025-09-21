@@ -38,5 +38,9 @@ export default defineConfig(({ command }) => ({
     host: "0.0.0.0",
     port: 5173,
     strictPort: true,
+    allowedHosts: ["zs.ddev.site", "www.zs.ddev.site"],
+    cors: {
+      origin: /^https:\/\/(?:www\.)?zs\.ddev\.site$/,
+    },
   },
 }));
