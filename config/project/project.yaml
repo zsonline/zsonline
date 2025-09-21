@@ -1,4 +1,4 @@
-dateModified: 1755460581
+dateModified: 1758473734
 elementSources:
   craft\elements\User:
     -
@@ -245,7 +245,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_NAVIGATION_LICENSE
-    schemaVersion: 2.1.0
+    schemaVersion: 2.1.1
   sprig:
     edition: standard
     enabled: true
