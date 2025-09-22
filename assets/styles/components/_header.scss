@@ -5,19 +5,16 @@
   position: fixed;
   top: 0;
   z-index: 10;
+  width: 100%;
   background-color: var(--color-bg);
   transition: background-color 200ms ease-in-out;
-
-  @include layout.layout("large", false);
 
   &__inner {
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    padding: 12px variables.$layout-padding !important;
-
-    @include layout.layout("large", true);
+    padding: 12px variables.$layout-padding;
   }
 
   &__rule {
@@ -187,8 +184,10 @@
 
 @media (min-width: variables.$breakpoint-tablet) {
   .header {
+    @include layout.layout("medium", false);
+
     &__inner {
-      padding: 12px variables.$layout-padding-tablet !important;
+      padding: 12px variables.$layout-padding-tablet;
     }
 
     &__logo {
@@ -216,13 +215,13 @@
 
 @media (min-width: variables.$breakpoint-desktop) {
   .header {
-    width: min(
+    max-width: min(
       100% - calc(2 * variables.$layout-padding-desktop),
       variables.$layout-width-large
     );
 
     &__inner {
-      padding: 12px variables.$layout-padding-desktop !important;
+      padding: 12px variables.$layout-padding-desktop;
     }
 
     &__logo {
