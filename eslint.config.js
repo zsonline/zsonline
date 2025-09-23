@@ -1,16 +1,14 @@
 import js from "@eslint/js";
 import globals from "globals";
-import prettier from "eslint-plugin-prettier/recommended";
+import prettier from "eslint-config-prettier/flat";
 
 export default [
   js.configs.recommended,
   prettier,
   {
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: {
-        ...globals.browser,
-      },
+      ecmaVersion: "latest",
+      globals: globals.browser,
       sourceType: "module",
     },
   },
