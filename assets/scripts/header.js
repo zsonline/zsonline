@@ -6,7 +6,7 @@ const progressTarget = document.querySelector(".progress-target");
 window.addEventListener("scroll", () => {
   // Update header class depending on whether the scroll position is at the
   // top of the page or within the page
-  if (window.scrollY == 0) {
+  if (window.scrollY === 0) {
     header.classList.add("header--scroll-top");
     header.classList.remove("header--scroll-within");
   } else {
@@ -28,7 +28,7 @@ window.addEventListener("scroll", () => {
       const contentScrollPosition = scrollPosition - progressTarget.offsetTop;
       const contentProgress = Math.min(
         Math.round((100 * contentScrollPosition) / progressTarget.offsetHeight),
-        100,
+        100
       );
 
       progress.style.width = `${contentProgress}%`;

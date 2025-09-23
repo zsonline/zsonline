@@ -5,7 +5,7 @@ class Lightbox {
   constructor() {
     // Query lightbox images. If none are defined, we do not initialise
     this.images = document.querySelectorAll("img[data-lightbox]");
-    if (this.images.length == 0) {
+    if (this.images.length === 0) {
       return;
     }
 
@@ -54,7 +54,7 @@ class Lightbox {
       slide.classList.add("swiper-slide");
       slide.innerHTML = new DOMParser().parseFromString(
         image.dataset.lightbox,
-        "text/html",
+        "text/html"
       ).documentElement.textContent;
 
       wrapper.appendChild(slide);

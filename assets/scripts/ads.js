@@ -28,7 +28,7 @@ async function loadAds() {
 
     // Track view events
     const observer = new IntersectionObserver((entries, observer) => {
-      if (entries.length != 1 || entries[0].isIntersecting) {
+      if (entries.length !== 1 || entries[0].isIntersecting) {
         // eslint-disable-next-line no-undef
         gtag("event", "ad_view", {
           slug: entries[0].target.dataset.slug,
@@ -54,8 +54,8 @@ async function loadAds() {
 }
 
 async function insertAdsIntoHome(ads, home) {
-  const homeBlocks = home.querySelectorAll(".home-section");
-  if (homeBlocks.length == 0) {
+  const homeBlocks = home.querySelectorAll(".home__section");
+  if (homeBlocks.length === 0) {
     return;
   }
 
@@ -64,16 +64,16 @@ async function insertAdsIntoHome(ads, home) {
   const indices = [0, Math.ceil(homeBlocks.length / 2) - 1];
 
   for (const ad of ads) {
-    if (indices.length == 0) {
+    if (indices.length === 0) {
       break;
     }
 
     // Create DOM node
     const block = document.createElement("div");
     block.classList.add(
-      "home-section",
-      "home-section--colored-next",
-      "home-section--colored-prev",
+      "home__section",
+      "home__section--colored-next",
+      "home__section--colored-prev",
       "ad-block",
       "ad-block--home"
     );
@@ -126,7 +126,7 @@ async function insertAdsIntoArticle(ads, article) {
   }
 
   for (let i = 0; i < ads.length; i++) {
-    if (indices.length == 0) {
+    if (indices.length === 0) {
       break;
     }
 
