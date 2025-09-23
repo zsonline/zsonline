@@ -18,8 +18,8 @@ RewriteRule ^(.*)/$ /$1 [L,R]
 RewriteRule ^100/buch$ /buch [L,R=301]
 RewriteRule ^feed.atom$ /atom.xml [L,R=301]
 
-# Set PHP version to PHP 8.2
-AddHandler application/x-httpd-php82 .php
+# Set PHP version to PHP 8.4
+AddHandler application/x-httpd-php84 .php
 
 # Send requests to Craft
 RewriteCond %{REQUEST_FILENAME} !-f
