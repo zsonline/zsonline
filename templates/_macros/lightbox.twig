@@ -37,12 +37,12 @@
 
     {% set transform = {
         mode: 'fit',
-        height: 1440,
-        width: 1440
+        height: 1200,
+        width: 1200
     } %}
 
     {% set srcset = [] %}
-    {% for size in [400, 650, 1024, 1440] %}
+    {% for size in [400, 650, 1024, 1200] %}
         {% set srcset = srcset|merge([args.image.getUrl({
             mode: 'fit',
             height: size,

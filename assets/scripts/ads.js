@@ -21,7 +21,7 @@ async function loadAds() {
     const image = document.createElement("img");
     image.height = jsonAd.images["2x"].height;
     image.width = jsonAd.images["2x"].width;
-    image.sizes = "(min-width: 1440px) 600px, 300px";
+    image.sizes = "(min-width: 1200px) 600px, 300px";
     image.srcset = `${jsonAd.images["1x"].url} 300w, ${jsonAd.images["2x"].url} 600w`;
     image.dataset.slug = jsonAd.slug;
     link.appendChild(image);
@@ -75,7 +75,7 @@ async function insertAdsIntoHome(ads, home) {
       "home-section--colored-next",
       "home-section--colored-prev",
       "ad-block",
-      "ad-block--home",
+      "ad-block--home"
     );
     block.appendChild(ad);
 
@@ -83,13 +83,13 @@ async function insertAdsIntoHome(ads, home) {
     const index = indices.shift();
     homeBlocks[index].parentNode.insertBefore(
       block,
-      homeBlocks[index].nextSibling,
+      homeBlocks[index].nextSibling
     );
 
     // Remove margins of the previous and next home blocks
     if (block.previousElementSibling.classList.contains("home-section")) {
       block.previousElementSibling.classList.remove(
-        "home-section--colored-next",
+        "home-section--colored-next"
       );
     }
 

@@ -12,14 +12,14 @@
         {% if image %}
             {% switch args.size %}
                 {% case 'small' %}
-                    {% set transform = { height: 250, width: 400 } %}
-                    {% set srcset = image.getUrl({ height: 250, width: 400 }) ~ ' 400w' %}
-            {% case 'medium' %}
-                    {% set transform = { height: 640, width: 1024 } %}
-                    {% set srcset = image.getUrl({ height: 250, width: 400 }) ~ ' 400w, ' ~ image.getUrl({ height: 406, width: 650 }) ~ ' 650w, ' ~ image.getUrl({ height: 640, width: 1024 }) ~ ' 1024w' %}
+                    {% set transform = { height: 225, width: 400 } %}
+                    {% set srcset = image.getUrl({ height: 225, width: 400 }) ~ ' 400w' %}
+                {% case 'medium' %}
+                    {% set transform = { height: 576, width: 1024 } %}
+                    {% set srcset = image.getUrl({ height: 225, width: 400 }) ~ ' 400w, ' ~ image.getUrl({ height: 366, width: 650 }) ~ ' 650w, ' ~ image.getUrl({ height: 576, width: 1024 }) ~ ' 1024w' %}
                 {% case 'large' %}
-                    {% set transform = { height: 900, width: 1440 } %}
-                    {% set srcset = image.getUrl({ height: 250, width: 400 }) ~ ' 400w, ' ~ image.getUrl({ height: 406, width: 650 }) ~ ' 650w, ' ~ image.getUrl({ height: 640, width: 1024 }) ~ ' 1024w, ' ~ image.getUrl({ height: 900, width: 1440 }) ~ ' 1440w' %}
+                    {% set transform = { height: 675, width: 1200 } %}
+                    {% set srcset = image.getUrl({ height: 225, width: 400 }) ~ ' 400w, ' ~ image.getUrl({ height: 366, width: 650 }) ~ ' 650w, ' ~ image.getUrl({ height: 576, width: 1024 }) ~ ' 1024w, ' ~ image.getUrl({ height: 675, width: 1200 }) ~ ' 1200w' %}
             {% endswitch %}
 
             {{ tag('img', {

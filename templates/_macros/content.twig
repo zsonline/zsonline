@@ -53,7 +53,7 @@
                             { mode: 'fit', height: 400, width: 400 },
                             { mode: 'fit', height: 650, width: 650 },
                             { mode: 'fit', height: 1024, width: 1024 },
-                            { mode: 'fit', height: 1440, width: 1440 }
+                            { mode: 'fit', height: 1200, width: 1200 }
                         ])
                         .collect() %}
 
@@ -75,12 +75,12 @@
                             { width: 400 },
                             { width: 650 },
                             { width: 1024 },
-                            { width: 1440 },
+                            { width: 1200 },
 
                             { mode: 'fit', height: 400, width: 400 },
                             { mode: 'fit', height: 650, width: 650 },
                             { mode: 'fit', height: 1024, width: 1024 },
-                            { mode: 'fit', height: 1440, width: 1440 }
+                            { mode: 'fit', height: 1200, width: 1200 }
                         ])
                         .limit(1)
                         .collect()
@@ -142,7 +142,7 @@
         {% case 'medium' %}
             {% set srcset = [400, 650, 1024] %}
         {% case 'large' %}
-            {% set srcset = [400, 650, 1024, 1440] %}
+            {% set srcset = [400, 650, 1024, 1200] %}
     {% endswitch %}
 
     {% set transform = { width: srcset|last } %}
@@ -187,7 +187,7 @@
                         height: image.getHeight(transform),
                         loading: 'lazy',
                         sizes: '100vw',
-                        srcset: image.getUrl({ height: 300 }) ~ ' 650w, ' ~ image.getUrl({ height: 400 }) ~ ' 1024w, ' ~ image.getUrl({ height: 500 }) ~ ' 1440w',
+                        srcset: image.getUrl({ height: 300 }) ~ ' 650w, ' ~ image.getUrl({ height: 400 }) ~ ' 1024w, ' ~ image.getUrl({ height: 500 }) ~ ' 1200w',
                         width: image.getWidth(transform)
                     }) }}
 

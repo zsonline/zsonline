@@ -12,7 +12,7 @@
         ['timelineImage', {
             withTransforms: [
                 { width: 1024 },
-                { width: 1440 },
+                { width: 1200 },
 
                 { height: 628, width: 1200, format: 'jpeg' }
             ]
@@ -24,7 +24,7 @@
                 { width: 400 },
                 { width: 650 },
                 { width: 1024 },
-                { width: 1440 }
+                { width: 1200 }
             ]
         }],
         'timelineEvents.timelineEvent:timelineEventImage.imageContributions.contribution:contributionUser',
@@ -56,7 +56,7 @@
         'timeline__header--has-image': image
     }) }}">
         {% if image %}
-            {% set srcset = [1024, 1440] %}
+            {% set srcset = [1024, 1200] %}
             {% set transform = { width: srcset|last } %}
 
             {{ tag('img', {
