@@ -1,125 +1,111 @@
 # [zsonline.ch](https://www.zsonline.ch/)
 
-Website of Zürcher Studierendenzeitung, the
-independent student newspaper for the University of Zurich and ETH Zurich.
+Website of Zürcher Studierendenzeitung, the independent student newspaper for the University of Zurich and ETH Zurich.
 
-## Installation
+1. [Installing Locally](#installing-locally)
+2. [Developing Locally](#developing-locally)
+3. [Setting Up Production](#setting-up-production)
+4. [Updating Production](#updating-production)
 
-### Development
+## Installing Locally
 
-It is recommended to use [DDEV](https://ddev.readthedocs.io/en/stable/) for
-local development. These instructions assume that you follow our recommendation.
+We recommend using [DDEV](https://ddev.readthedocs.io/en/stable/) for local development.
 
-Once [DDEV](https://ddev.readthedocs.io/en/stable/) is installed, open a
-terminal in the project directory and start all containers.
+1. Install DDEV and open a terminal in the project directory. Start all containers by running:
 
-```
-ddev start
-```
+   ```bash
+   ddev start
+   ```
 
-Next, install all PHP dependencies.
+2. Install all PHP dependencies with the following command:
 
-```
-ddev composer update
-```
+   ```bash
+   ddev composer install
+   ```
 
-Then, create a `.env` file. You can copy the example file, which contains all
-required variables.
+3. Create a `.env` file by copying the example file:
 
-```
-cp .env.example.dev .env
-```
+   ```bash
+   cp .env.example.dev .env
+   ```
 
-Provision the database and create the administrator account. When asked to
-enter the _Site name_, _Site URL_, and _Site language_, keep the default
-values.
+4. Install Craft CMS. When asked to enter the site name, site URL, and site language, keep the default values:
 
-```
-ddev craft install
-```
+   ```bash
+   ddev craft install
+   ```
 
-So far, you have installed an empty Craft CMS project. You can visit the control
-panel at `https://zs.ddev.site/admin/`.
+   Once installed, you can visit the control panel at [https://zs.ddev.site/admin/](https://zs.ddev.site/admin/).
 
-In order to load our own project configuration, ensure that Craft CMS has not
-overwritten any configuration files. If it has, revert the changes. Then, apply
-our project configuration.
+5. Check that Craft CMS has not overwritten any configuration files. If it has, revert the changes. Then apply the project configuration:
 
-```
-ddev craft project-config/apply
-```
+   ```bash
+   ddev craft project-config/apply
+   ```
 
-### Production
+## Developing Locally
 
-When you are ready to deploy, clone the repository to your production host. It
-is assumed that it runs Apache (or LiteSpeed) server.
+The website is built with [Craft CMS](https://craftcms.com/). You can consult the [Craft documentation](https://craftcms.com/docs/) to learn more about how the CMS works and how the repository is structured.
 
-Next, install all dependencies.
+1. Install the Node.js dependencies in your development environment:
 
-```
-php craft install
-```
+   ```bash
+   ddev npm install
+   ```
 
-Create a `.env` file. You can use the example file as a starting point. The
-licensing information can be found in the
-[Craft Console](https://console.craftcms.com/).
+2. Start the development server, which includes hot module replacement, by running:
 
-```
-cp .env.example.production .env
-```
+   ```bash
+   ddev npm run dev
+   ```
 
-Lastly, import a database snapshot and manually copy all assets into their
-volume directory (e.g. `./web/assets/images/`).
+3. When you are finished developing, build the assets so they can be used in production:
 
-```
-php craft db/restore ./snapshot.zip
-```
+   ```bash
+   ddev npm run build
+   ```
 
-## Development
+## Setting Up Production
 
-The website is built around [Craft CMS](https://craftcms.com/). Please consult
-the [documentation](https://craftcms.com/docs/) to learn about how this
-repository is structured and how the CMS works.
+1. Clone the repository to your production server. The instructions assume the server runs Apache or LiteSpeed.
 
-To simplify development, we have included a development server. To make use of
-it, install the Node.js dependencies in your development environment.
+2. Install all PHP dependencies by running:
 
-```
-ddev npm install
-```
+   ```bash
+   php craft install
+   ```
 
-Then, start the development server, which provides hot module replacement.
+3. Create a `.env` file using the example file as a template:
 
-```
-ddev npm run dev
-```
+   ```bash
+   cp .env.example.production .env
+   ```
 
-Once you are finished developing, you need to build a bundle, which can be
-served in production.
+   Add the license information from the [Craft Console](https://console.craftcms.com/).
 
-```
-ddev npm run build
-```
+4. Import a database snapshot and manually copy all assets into their respective directories (for example, `./web/assets/images/`):
 
-## Update
+   ```bash
+   php craft db/restore ./snapshot.sql
+   ```
 
-Develop everything locally. This also includes updating dependencies or changing
-settings. When everything is ready and has been pushed, pull the changes onto
-the production host.
+## Updating Production
 
-```
-git pull
-```
+1. Pull the latest changes from the repository:
 
-Next, install any new PHP dependencies.
+   ```bash
+   git pull
+   ```
 
-```
-composer install
-```
+2. Install any new PHP dependencies:
 
-Finally, apply any new database migrations and project config changes.
+   ```bash
+   composer install
+   ```
 
-```
-php craft migrate/all
-php craft project-config/apply
-```
+3. Apply new database migrations and project configuration updates:
+
+   ```bash
+   php craft migrate/all
+   php craft project-config/apply
+   ```
