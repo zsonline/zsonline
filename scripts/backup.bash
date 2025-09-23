@@ -12,5 +12,4 @@ else
 fi
 
 # Backup all assets
-rsync -av "$DIR/storage/assets" "$DIR/storage/backups"
-rsync -av "$DIR/web/assets" "$DIR/storage/backups"
+rsync -av --exclude transforms "$DIR/web/assets" "$DIR/storage/backups"
