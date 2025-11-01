@@ -1,7 +1,7 @@
 {
   "require": {
     "craftcms/ckeditor": "4.10.1",
-    "craftcms/cms": "5.8.18",
+    "craftcms/cms": "5.8.19",
     "nystudio107/craft-vite": "5.0.1",
     "putyourlightson/craft-sprig": "3.7.1",
     "twig/html-extra": "^3.0.0",
