@@ -1,6 +1,9 @@
 color: null
 fieldLayouts:
   a9e15408-a77a-45c2-8483-59eb94987ade:
+    cardView:
+      - 'layoutElement:eacda5ea-3957-4b93-85e3-a1622b3a1b1a'
+      - 'layoutElement:8cb24d1c-617b-42f6-a106-01805acd6261'
     tabs:
       -
         elementCondition: null
@@ -13,7 +16,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -22,7 +24,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -38,10 +39,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 683cb842-2907-43f6-a6be-a4a3833c5eb5 # Timeline Event (Article) - Year
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,10 +52,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127 # Timeline Event (Article) - Label
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -68,10 +65,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 6aee99fe-72b2-4d7d-a791-a8b6b15b3118 # Timeline Event (Article) - Image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -83,10 +78,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: b231772f-f289-459a-98aa-4307862a26f1 # Timeline Event (Article) - Publication
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -98,10 +91,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: c529f035-1e02-4af8-a7f0-afe4e24e634c # Timeline Event (Article) - Byline
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -113,10 +104,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 91d8d1f4-db2b-49ba-9de0-187a49dd5276 # Timeline Event (Article) - Description
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -128,10 +117,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 8fc13160-607f-43ed-9ae7-e5b572317317 # Timeline Event (Article) - Content
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -142,6 +129,7 @@ fieldLayouts:
         name: Content
         uid: d0000bc8-9493-4559-bc28-18b88f5a9ba3
         userCondition: null
+    thumbFieldKey: 'layoutElement:295d0f07-cc98-4a1e-9346-b44049b47f30'
 handle: timelineEventArticle
 hasTitleField: true
 icon: newspaper

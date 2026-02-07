@@ -13,7 +13,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -22,7 +21,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -38,10 +36,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 420d0b54-9f18-41a9-b095-de7adfde688d # Ad - Image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: true
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,10 +49,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: bcb6d13b-de66-4331-8d15-bb23ef7a9736 # Ad - Link
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -67,6 +61,7 @@ fieldLayouts:
         name: Content
         uid: 3a24a74e-f8f0-420c-9d92-bb34a59f7a80
         userCondition: null
+    thumbFieldKey: 'layoutElement:31eb0b50-e549-481b-a398-4bfb083f3fdc'
 handle: ad
 hasTitleField: false
 icon: dollar-sign

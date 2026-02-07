@@ -1,6 +1,9 @@
 color: null
 fieldLayouts:
   7d85c1a7-13d0-4bab-add9-cbbab124f4bd:
+    cardView:
+      - 'layoutElement:8340a38c-1da8-493e-ad4e-358296d10491'
+      - 'layoutElement:2a0f1edf-e710-4a28-9b00-3d655d23f0de'
     tabs:
       -
         elementCondition: null
@@ -13,7 +16,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -22,7 +24,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -38,10 +39,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 408c6114-fd69-445a-8240-e8841521181d # Subscription - Address
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,10 +52,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: b7794701-7ea0-40bb-8bba-27df38f94295 # Subscription - Email
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -73,10 +70,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription - Plan
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

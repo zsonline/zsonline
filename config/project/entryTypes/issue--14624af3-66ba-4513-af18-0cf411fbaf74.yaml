@@ -13,7 +13,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -22,7 +21,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -38,10 +36,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 6cdd6eb7-76e7-4ae1-949a-513b1ede029c # Issue - Number
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,10 +49,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: f4cde807-f639-4b1d-bebe-8aa3cd4de160 # Issue - Year
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -73,10 +67,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: ff39e44a-c59b-40f1-9eae-5080bf251c2d # Issue - Cover
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -88,10 +80,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: e173ad9a-9850-43b4-a574-1029011919ef # Issue - File
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -108,10 +98,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 8b097a87-a2ec-4270-8431-a0e733b3fdb3 # Issue - Sections
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -122,6 +110,7 @@ fieldLayouts:
         name: Content
         uid: 3e39f094-1b12-4ca3-be29-2091251f7e62
         userCondition: null
+    thumbFieldKey: 'layoutElement:f4fc0de3-6b2e-44ca-85f5-5b57a3e3c551'
 handle: issue
 hasTitleField: false
 icon: book

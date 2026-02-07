@@ -1,4 +1,4 @@
-dateModified: 1758473734
+dateModified: 1770464897
 elementSources:
   craft\elements\User:
     -
@@ -245,7 +245,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_NAVIGATION_LICENSE
-    schemaVersion: 2.1.1
+    schemaVersion: 2.1.2
   sprig:
     edition: standard
     enabled: true
@@ -259,5 +259,5 @@ system:
   live: true
   name: 'Zürcher Studierendenzeitung'
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: Europe/Zurich

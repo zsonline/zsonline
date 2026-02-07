@@ -23,3 +23,4 @@ permissions:
   - 'viewpeerassets:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
   - 'viewpeerentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
   - 'viewpeerentrydrafts:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'changeauthorforpeerentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads

@@ -1,6 +1,9 @@
 color: null
 fieldLayouts:
   47586d83-a996-45e4-8ec3-11cb420e4a82:
+    cardView:
+      - 'layoutElement:2e4286a3-cace-416e-8e85-c4cd98ad0003'
+      - 'layoutElement:dde297a4-3697-4451-bb83-8c3a9555b694'
     tabs:
       -
         elementCondition: null
@@ -13,7 +16,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -22,7 +24,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -38,10 +39,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: a71cf75d-44bb-4489-ad90-93f218828cd1 # Article - Lead
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,10 +52,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 6aab4182-8fbc-4f80-b6e3-504f5f487ecc # Article - Image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -68,10 +65,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 50b7bb6c-00c3-462d-8d00-1ae343ce044a # Article - Content
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -89,10 +84,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: cb91d72b-d6d9-439e-8e7b-f3f871694967 # Article - Contributions
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -104,10 +97,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 1bf3a5c8-628e-4b3c-b18b-aa384eec608e # Article - Format
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -119,10 +110,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 438d977b-985e-4c1f-9051-8e8e9b279e22 # Article - Topics
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -134,10 +123,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 28f5783a-9790-439d-b079-1bc2b0cc58f9 # Article - Related
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -155,10 +142,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: d5eceb6a-47a0-4c63-aff2-48afcdcf05bc # Article - Image Size
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -170,10 +155,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: b0b838c9-5d25-43de-886a-bdf38b92df07 # Article - Image Position
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -190,10 +173,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed # Article - Ad
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -204,6 +185,7 @@ fieldLayouts:
         name: Appearance
         uid: c549dfaa-e4d0-4450-8690-7999628bd528
         userCondition: null
+    thumbFieldKey: 'layoutElement:058e632d-93af-4879-b174-c042ec3e4ea9'
 handle: article
 hasTitleField: true
 icon: newspaper

@@ -1,6 +1,8 @@
 color: null
 fieldLayouts:
   23ab6e66-b5e4-4bc2-8ca4-96798abadd88:
+    cardView:
+      - 'layoutElement:33bed828-5224-4d4d-a75d-f3c631cc7cfa'
     tabs:
       -
         elementCondition: null
@@ -13,7 +15,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -22,7 +23,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -38,10 +38,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 0cf2962b-f593-4e6b-9ac2-9544710d8aad # Home Section Layout - Appearance
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,10 +51,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: f197e112-2648-4604-852c-cf4171abc6c2 # Home Section Layout - Articles
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

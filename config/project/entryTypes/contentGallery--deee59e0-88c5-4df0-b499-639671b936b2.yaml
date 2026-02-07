@@ -1,6 +1,8 @@
 color: null
 fieldLayouts:
   7da6fd3a-94c3-478f-a674-fab5f634e07d:
+    cardView:
+      - 'layoutElement:15afb77a-b025-40a3-bff2-41c52bc5555b'
     tabs:
       -
         elementCondition: null
@@ -13,7 +15,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -22,7 +23,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -38,10 +38,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 4d2d5d09-2278-47d1-8e63-1b70ad5116b4 # Content Gallery - Images
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

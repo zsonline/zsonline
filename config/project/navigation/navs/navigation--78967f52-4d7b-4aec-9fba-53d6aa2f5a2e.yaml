@@ -13,7 +13,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -22,7 +21,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -36,10 +34,8 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: verbb\navigation\fieldlayoutelements\NodeTypeElements
@@ -50,12 +46,10 @@ fieldLayouts:
             attribute: newWindow
             elementCondition: null
             id: null
-            includeInCards: false
             instructions: null
             label: null
             mandatory: false
             orientation: null
-            providesThumbs: false
             requirable: true
             required: false
             tip: null
