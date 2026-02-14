@@ -1,4 +1,4 @@
-dateModified: 1770464897
+dateModified: 1771084412
 elementSources:
   craft\elements\User:
     -
@@ -38,6 +38,10 @@ elementSources:
 email:
   fromEmail: redaktion@zsonline.ch
   fromName: 'Zürcher Studierendenzeitung'
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    command: '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   public:
@@ -47,10 +51,6 @@ fs:
       path: '@webroot/assets'
     type: craft\fs\Local
     url: '@web/assets'
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 meta:
   __names__:
     0cf2962b-f593-4e6b-9ac2-9544710d8aad: 'Home Section Layout - Appearance' # Home Section Layout - Appearance
@@ -94,6 +94,7 @@ meta:
     50b7bb6c-00c3-462d-8d00-1ae343ce044a: 'Article - Content' # Article - Content
     67a0dda7-852f-4f0d-ae27-228660fce59e: 'Content Note - Title' # Content Note - Title
     74e21a53-79cd-4aa7-85b3-bff442e02c68: 'Timeline Event' # Timeline Event
+    90d0ead4-d526-429d-a4ac-c792194cb6de: 'Public Schema' # Public Schema
     91d8d1f4-db2b-49ba-9de0-187a49dd5276: 'Timeline Event (Article) - Description' # Timeline Event (Article) - Description
     92be950a-0880-49a1-bd9a-dcfdb0745a8a: 'Contribution (External) - Type' # Contribution (External) - Type
     232f0e97-046b-417c-bb0b-d38f41748a3a: 'Content Note' # Content Note
@@ -246,6 +247,8 @@ plugins:
     enabled: true
     licenseKey: $PLUGIN_NAVIGATION_LICENSE
     schemaVersion: 2.1.2
+    settings:
+      pluginName: Navigation
   sprig:
     edition: standard
     enabled: true

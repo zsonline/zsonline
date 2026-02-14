@@ -1,39 +1,18 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   b431525f-7dba-4692-b16c-bbbefc02c3f9:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:46:59+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 163f03e7-0abd-4f86-9ca8-02f9883a401c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: 33d4c786-8ab6-42cf-9aaa-e48f7d18b820 # Home - Sections
             handle: null
             instructions: null
@@ -48,6 +27,7 @@ fieldLayouts:
         name: Content
         uid: 4f9a0ca6-949e-4ed1-90f8-c02dcbaa95f2
         userCondition: null
+    thumbFieldKey: null
 handle: home
 hasTitleField: false
 icon: house
@@ -59,3 +39,4 @@ slugTranslationMethod: site
 titleFormat: '{section.name}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   7d85c1a7-13d0-4bab-add9-cbbab124f4bd:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:8340a38c-1da8-493e-ad4e-358296d10491'
       - 'layoutElement:2a0f1edf-e710-4a28-9b00-3d655d23f0de'
@@ -9,34 +12,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:47:05+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: a51db6c8-c6ff-4c50-959e-0827390f18fc
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: 408c6114-fd69-445a-8240-e8841521181d # Subscription - Address
             handle: null
             instructions: null
@@ -49,7 +28,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:05+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b7794701-7ea0-40bb-8bba-27df38f94295 # Subscription - Email
             handle: null
             instructions: null
@@ -62,12 +44,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:05+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 05e0aa7f-ad17-46bb-92fb-fde337d479b8
             userCondition: null
           -
+            dateAdded: '2026-02-14T15:47:05+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 944c11ef-571f-4e08-a4bb-db2540e4b404 # Subscription - Plan
             handle: null
             instructions: null
@@ -82,6 +68,7 @@ fieldLayouts:
         name: Content
         uid: e2275e8b-2875-46a6-bada-461af233bab8
         userCondition: null
+    thumbFieldKey: null
 handle: subscription
 hasTitleField: false
 icon: mailbox
@@ -93,3 +80,4 @@ slugTranslationMethod: site
 titleFormat: '{subscriptionAddress.one().fullName}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

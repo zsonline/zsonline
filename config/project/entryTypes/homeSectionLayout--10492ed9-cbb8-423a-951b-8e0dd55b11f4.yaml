@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   23ab6e66-b5e4-4bc2-8ca4-96798abadd88:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:33bed828-5224-4d4d-a75d-f3c631cc7cfa'
     tabs:
@@ -8,34 +11,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:47:01+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 9d8033ab-217b-4f19-907f-57c7b2c51df5
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: 0cf2962b-f593-4e6b-9ac2-9544710d8aad # Home Section Layout - Appearance
             handle: null
             instructions: null
@@ -48,7 +27,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:01+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f197e112-2648-4604-852c-cf4171abc6c2 # Home Section Layout - Articles
             handle: null
             instructions: null
@@ -63,6 +45,7 @@ fieldLayouts:
         name: Content
         uid: df3cc6e8-563a-4d60-a438-420c7a256ce2
         userCondition: null
+    thumbFieldKey: null
 handle: homeSectionLayout
 hasTitleField: false
 icon: table-list
@@ -74,3 +57,4 @@ slugTranslationMethod: site
 titleFormat: '{homeSectionLayoutAppearance.label}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

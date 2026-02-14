@@ -1,39 +1,18 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   fefbb581-3eb0-4105-8e02-4eeeb25ff526:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:47:01+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 6b977a03-1507-4076-b345-5af52386bb5e
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: 6cdd6eb7-76e7-4ae1-949a-513b1ede029c # Issue - Number
             handle: null
             instructions: null
@@ -46,7 +25,10 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: '2026-02-14T15:47:01+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f4cde807-f639-4b1d-bebe-8aa3cd4de160 # Issue - Year
             handle: null
             instructions: null
@@ -59,12 +41,16 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: '2026-02-14T15:47:01+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 2a99dd75-c432-4a22-ae67-c3f260158d6c
             userCondition: null
           -
+            dateAdded: '2026-02-14T15:47:01+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ff39e44a-c59b-40f1-9eae-5080bf251c2d # Issue - Cover
             handle: null
             instructions: null
@@ -77,7 +63,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:01+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e173ad9a-9850-43b4-a574-1029011919ef # Issue - File
             handle: null
             instructions: null
@@ -90,12 +79,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:01+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 17ce3466-62fd-4cc9-b878-6c8ee5449519
             userCondition: null
           -
+            dateAdded: '2026-02-14T15:47:01+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8b097a87-a2ec-4270-8431-a0e733b3fdb3 # Issue - Sections
             handle: null
             instructions: null
@@ -122,3 +115,4 @@ slugTranslationMethod: site
 titleFormat: '#{issueNumber}/{issueYear%100}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

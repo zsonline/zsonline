@@ -6,18 +6,20 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
-  localizeRelations: false
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
   targetSiteId: null
   validateRelatedElements: true
   viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Entries

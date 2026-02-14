@@ -6,15 +6,20 @@ searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: ''
+  characterLimit: null
   ckeConfig: b4fa2985-51d4-428c-a10e-130fd6687f7b # Timeline Event (Article) - Content
   createButtonLabel: null
   defaultTransform: null
-  enableSourceEditingForNonAdmins: false
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

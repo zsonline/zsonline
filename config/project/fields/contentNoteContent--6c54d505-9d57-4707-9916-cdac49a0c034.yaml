@@ -6,15 +6,20 @@ searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: ''
+  characterLimit: null
   ckeConfig: 30ad3ecb-e175-42bd-8a93-6b5432ae932f # Content Note - Content
   createButtonLabel: null
   defaultTransform: null
-  enableSourceEditingForNonAdmins: false
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

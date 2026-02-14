@@ -5,8 +5,17 @@ name: 'Issue - Sections'
 searchable: false
 settings:
   createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - b2237231-890f-4253-ab7f-251f41d3598c # Issue Section
+    -
+      __assoc__:
+        -
+          - uid
+          - b2237231-890f-4253-ab7f-251f41d3598c # Issue Section
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

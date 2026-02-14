@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   a9e15408-a77a-45c2-8483-59eb94987ade:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:eacda5ea-3957-4b93-85e3-a1622b3a1b1a'
       - 'layoutElement:8cb24d1c-617b-42f6-a106-01805acd6261'
@@ -13,6 +16,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2026-02-14T15:47:07+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -25,7 +29,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -36,7 +40,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 683cb842-2907-43f6-a6be-a4a3833c5eb5 # Timeline Event (Article) - Year
             handle: null
             instructions: null
@@ -49,7 +56,10 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2026-02-14T15:47:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f2f5a7ef-3fd4-4df1-bbd6-d2969e85c127 # Timeline Event (Article) - Label
             handle: null
             instructions: null
@@ -62,7 +72,10 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2026-02-14T15:47:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6aee99fe-72b2-4d7d-a791-a8b6b15b3118 # Timeline Event (Article) - Image
             handle: null
             instructions: null
@@ -75,7 +88,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b231772f-f289-459a-98aa-4307862a26f1 # Timeline Event (Article) - Publication
             handle: null
             instructions: null
@@ -88,7 +104,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: c529f035-1e02-4af8-a7f0-afe4e24e634c # Timeline Event (Article) - Byline
             handle: null
             instructions: null
@@ -101,7 +120,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 91d8d1f4-db2b-49ba-9de0-187a49dd5276 # Timeline Event (Article) - Description
             handle: null
             instructions: null
@@ -114,7 +136,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8fc13160-607f-43ed-9ae7-e5b572317317 # Timeline Event (Article) - Content
             handle: null
             instructions: null
@@ -141,3 +166,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

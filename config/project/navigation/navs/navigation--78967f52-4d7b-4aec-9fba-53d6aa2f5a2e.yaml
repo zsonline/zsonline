@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   f03d4c54-aa8c-46de-bfee-37141626d839:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -10,6 +11,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2026-02-14T15:51:25+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -33,6 +35,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:51:25+00:00'
             elementCondition: null
             instructions: null
             label: null
@@ -44,6 +47,7 @@ fieldLayouts:
             warning: null
           -
             attribute: newWindow
+            dateAdded: '2026-02-14T15:51:25+00:00'
             elementCondition: null
             id: null
             instructions: null
@@ -62,6 +66,7 @@ fieldLayouts:
         name: Node
         uid: ff76e65b-3848-41a0-85cb-d0f1adaf3f99
         userCondition: null
+    thumbFieldKey: null
 handle: navigation
 instructions: null
 maxNodes: null
@@ -84,6 +89,7 @@ permissions:
   verbb\navigation\nodetypes\PassiveType:
     enabled: ''
 propagationMethod: all
+showSiteMenu: true
 siteSettings:
   cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: # Zürcher Studierendenzeitung
     enabled: true

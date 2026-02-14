@@ -1,39 +1,18 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   43afb4bf-4c84-4db2-8014-42abd79351c0:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:47:06+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 00784f79-d8bd-4125-ab0d-dbb93b37b451
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: 15dca033-1e00-43b6-bcd3-05ca3c07b14f # Timeline - Image
             handle: null
             instructions: null
@@ -46,7 +25,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:06+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4e85c514-8a85-45c7-996a-0824ef8d667b # Timeline - Description
             handle: null
             instructions: null
@@ -59,12 +41,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:06+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: e928f3c4-97fc-4ee1-8edd-e0d4c7a53688
             userCondition: null
           -
+            dateAdded: '2026-02-14T15:47:06+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 950c0af3-396d-40b2-a1ca-bd4f80e037b6 # Timeline - Events
             handle: null
             instructions: null
@@ -79,6 +65,7 @@ fieldLayouts:
         name: Content
         uid: dede4f61-edee-4843-8ef1-048ddb2c9016
         userCondition: null
+    thumbFieldKey: null
 handle: timeline
 hasTitleField: false
 icon: timeline
@@ -90,3 +77,4 @@ slugTranslationMethod: site
 titleFormat: '{section.name}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

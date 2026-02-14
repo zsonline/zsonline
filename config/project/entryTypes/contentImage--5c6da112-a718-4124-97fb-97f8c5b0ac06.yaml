@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   2f2597b8-c11a-4e9c-966b-406e2c7f0662:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:866b0b7b-e6c2-49e7-acad-63eba46f60c8'
       - 'layoutElement:c00b8f40-e23d-4a22-9f0e-0544215e4f7d'
@@ -9,34 +12,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:46:54+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 795849cd-759e-4b9f-a635-d38ef3effa54
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: 21e4a371-781d-4752-b0cd-106498851db5 # Content Image - Image
             handle: null
             instructions: null
@@ -49,7 +28,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:54+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f854dd38-7b4e-4c96-94ae-741cf4593a1e # Content Image - Size
             handle: null
             instructions: null
@@ -76,3 +58,4 @@ slugTranslationMethod: site
 titleFormat: '{contentImageImage.one()}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

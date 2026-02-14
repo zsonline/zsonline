@@ -5,8 +5,17 @@ name: 'Home - Sections'
 searchable: false
 settings:
   createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - d0ba75f4-0ec9-406b-8e28-5a50980147cc # Home Section
+    -
+      __assoc__:
+        -
+          - uid
+          - d0ba75f4-0ec9-406b-8e28-5a50980147cc # Home Section
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

@@ -8,6 +8,13 @@ permissions:
   - administrateusers
   - 'assignusergroup:429e38b0-5490-4b1b-be5e-99adcf0d6c47' # Sales
   - 'assignusergroup:4a5cdf1b-642d-4a37-854f-c3b1168bea2d' # Editors
+  - 'changeauthorforpeerentries:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
+  - 'changeauthorforpeerentries:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
+  - 'changeauthorforpeerentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
+  - 'changeauthorforpeerentries:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics
+  - 'changeauthorforpeerentries:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
+  - 'changeauthorforpeerentries:9695de25-bf17-41a7-b295-68ad5cccc6c8' # Pages
+  - 'changeauthorforpeerentries:c6375497-b7f2-4761-b74b-96fd072a5a6f' # Subscriptions
   - comments-delete
   - comments-edit
   - comments-trash
@@ -127,10 +134,3 @@ permissions:
   - 'viewpeerentrydrafts:c6375497-b7f2-4761-b74b-96fd072a5a6f' # Subscriptions
   - 'viewpeerentrydrafts:d64265d4-5a86-41a5-a68e-c73f8c90123e' # Timeline
   - viewusers
-  - 'changeauthorforpeerentries:4ce497c4-83db-4505-966c-25ac2477e7fb' # Ads
-  - 'changeauthorforpeerentries:7dac239d-784f-4ec9-80fc-46b2c4362060' # Articles
-  - 'changeauthorforpeerentries:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
-  - 'changeauthorforpeerentries:09f3e7d3-dd38-4d06-ac5c-fbff3a017d92' # Issues
-  - 'changeauthorforpeerentries:9695de25-bf17-41a7-b295-68ad5cccc6c8' # Pages
-  - 'changeauthorforpeerentries:c6375497-b7f2-4761-b74b-96fd072a5a6f' # Subscriptions
-  - 'changeauthorforpeerentries:732552e1-9a9c-4c59-b08a-f0b293aaf7d1' # Topics

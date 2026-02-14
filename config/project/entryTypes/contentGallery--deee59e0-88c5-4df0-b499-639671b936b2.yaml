@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   7da6fd3a-94c3-478f-a674-fab5f634e07d:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:15afb77a-b025-40a3-bff2-41c52bc5555b'
     tabs:
@@ -8,34 +11,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:46:53+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 45f8167e-d391-4d56-b476-cd90e0cdabe9
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: 4d2d5d09-2278-47d1-8e63-1b70ad5116b4 # Content Gallery - Images
             handle: null
             instructions: null
@@ -50,6 +29,7 @@ fieldLayouts:
         name: Content
         uid: 7613751e-72da-4d7e-ab9e-7a2e5502883d
         userCondition: null
+    thumbFieldKey: null
 handle: contentGallery
 hasTitleField: false
 icon: images
@@ -61,3 +41,4 @@ slugTranslationMethod: site
 titleFormat: '{contentGalleryImages.one()} (+{contentGalleryImages.count()})'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

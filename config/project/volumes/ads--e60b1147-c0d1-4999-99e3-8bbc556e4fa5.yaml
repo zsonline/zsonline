@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   e49b23e0-af00-4b61-8ed2-b7d92c447eee:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -11,6 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2026-02-14T15:48:33+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -36,6 +38,7 @@ fieldLayouts:
         name: Content
         uid: d2f85228-c63a-4391-8cef-364e4da13d08
         userCondition: null
+    thumbFieldKey: null
 fs: public
 handle: ads
 name: Ads

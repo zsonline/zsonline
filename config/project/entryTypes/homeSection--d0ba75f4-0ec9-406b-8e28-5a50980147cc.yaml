@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   535655a2-dff1-40a4-8a66-8b7da7bfa034:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:b46a056b-2500-429d-9df8-cd226dc7d188'
     tabs:
@@ -8,34 +11,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:47:00+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 860784de-4cd6-49b6-ae84-51a5620b0ef3
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: d6607152-35ab-435a-9c88-53f1e9ab6f5c # Home Section - Title
             handle: null
             instructions: null
@@ -48,7 +27,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:00+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 024d03f4-9614-497a-9274-7340a22f343c # Home Section - Color
             handle: null
             instructions: null
@@ -61,7 +43,10 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: '2026-02-14T15:47:00+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 3458cf19-d496-4a9e-808d-47e0b2323224 # Home Section - Layouts
             handle: null
             instructions: null
@@ -76,6 +61,7 @@ fieldLayouts:
         name: Content
         uid: d54c706c-05c5-43eb-92be-91e0a4e37f8f
         userCondition: null
+    thumbFieldKey: null
 handle: homeSection
 hasTitleField: false
 icon: table-rows
@@ -87,3 +73,4 @@ slugTranslationMethod: site
 titleFormat: "{homeSectionTitle|default('-')}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

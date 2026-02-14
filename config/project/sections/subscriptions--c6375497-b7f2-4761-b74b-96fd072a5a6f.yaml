@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 4225bf4b-ab10-4bf8-8408-2c2280a0a599 # Subscription
+  -
+    uid: 4225bf4b-ab10-4bf8-8408-2c2280a0a599 # Subscription
 handle: subscriptions
 maxAuthors: 1
 name: Subscriptions

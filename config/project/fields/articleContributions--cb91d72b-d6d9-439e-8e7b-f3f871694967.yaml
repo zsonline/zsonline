@@ -5,9 +5,25 @@ name: 'Article - Contributions'
 searchable: true
 settings:
   createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - a3b06153-7a2e-425b-a7f7-61e925da17b9 # Contribution
-    - 36ea09ec-8867-4d74-96ee-d55c21e44104 # Contribution (External)
+    -
+      __assoc__:
+        -
+          - uid
+          - a3b06153-7a2e-425b-a7f7-61e925da17b9 # Contribution
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 36ea09ec-8867-4d74-96ee-d55c21e44104 # Contribution (External)
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

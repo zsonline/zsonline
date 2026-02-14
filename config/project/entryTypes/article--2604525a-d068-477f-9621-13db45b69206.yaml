@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   47586d83-a996-45e4-8ec3-11cb420e4a82:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:2e4286a3-cace-416e-8e85-c4cd98ad0003'
       - 'layoutElement:dde297a4-3697-4451-bb83-8c3a9555b694'
@@ -13,6 +16,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2026-02-14T15:46:51+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -25,7 +29,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -36,7 +40,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a71cf75d-44bb-4489-ad90-93f218828cd1 # Article - Lead
             handle: null
             instructions: null
@@ -49,7 +56,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6aab4182-8fbc-4f80-b6e3-504f5f487ecc # Article - Image
             handle: null
             instructions: null
@@ -62,7 +72,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 50b7bb6c-00c3-462d-8d00-1ae343ce044a # Article - Content
             handle: null
             instructions: null
@@ -81,7 +94,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: cb91d72b-d6d9-439e-8e7b-f3f871694967 # Article - Contributions
             handle: null
             instructions: null
@@ -94,7 +110,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1bf3a5c8-628e-4b3c-b18b-aa384eec608e # Article - Format
             handle: null
             instructions: null
@@ -107,7 +126,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 438d977b-985e-4c1f-9051-8e8e9b279e22 # Article - Topics
             handle: null
             instructions: null
@@ -120,7 +142,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 28f5783a-9790-439d-b079-1bc2b0cc58f9 # Article - Related
             handle: null
             instructions: null
@@ -139,7 +164,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d5eceb6a-47a0-4c63-aff2-48afcdcf05bc # Article - Image Size
             handle: null
             instructions: null
@@ -152,7 +180,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b0b838c9-5d25-43de-886a-bdf38b92df07 # Article - Image Position
             handle: null
             instructions: null
@@ -165,12 +196,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 015864c2-1bb8-4920-9c9d-257d8d49552d
             userCondition: null
           -
+            dateAdded: '2026-02-14T15:46:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9d246c2e-f6f4-4ecb-a3f6-ffbb386cd5ed # Article - Ad
             handle: null
             instructions: null
@@ -197,3 +232,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

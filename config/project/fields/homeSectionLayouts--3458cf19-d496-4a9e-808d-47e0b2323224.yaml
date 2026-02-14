@@ -5,8 +5,17 @@ name: 'Home Section - Layouts'
 searchable: false
 settings:
   createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 10492ed9-cbb8-423a-951b-8e0dd55b11f4 # Home Section Layout
+    -
+      __assoc__:
+        -
+          - uid
+          - 10492ed9-cbb8-423a-951b-8e0dd55b11f4 # Home Section Layout
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: 1

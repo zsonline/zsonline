@@ -10,9 +10,9 @@ settings:
   allowedKinds:
     - pdf
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   defaultUploadLocationSubpath: null
-  localizeRelations: false
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
@@ -23,7 +23,7 @@ settings:
   restrictedLocationSource: 'volume:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   restrictedLocationSubpath: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
@@ -33,5 +33,5 @@ settings:
   validateRelatedElements: true
   viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Assets

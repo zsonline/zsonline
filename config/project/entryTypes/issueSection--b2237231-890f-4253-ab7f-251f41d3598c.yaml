@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   a9096378-ccb8-4131-bb4d-2cf9c6f16615:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:7b075b3a-7acb-4805-a8d8-a2cfcb296bc3'
     tabs:
@@ -12,6 +15,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2026-02-14T15:47:02+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -24,7 +28,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -35,7 +39,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:47:02+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ae3e2976-5a2f-441c-a712-71c849fe2a40 # Issue Section - Articles
             handle: null
             instructions: null
@@ -50,6 +57,7 @@ fieldLayouts:
         name: Content
         uid: dc617b81-152e-4341-b008-7f8b7de6f0a4
         userCondition: null
+    thumbFieldKey: null
 handle: issueSection
 hasTitleField: true
 icon: table-list
@@ -61,3 +69,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

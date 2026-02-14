@@ -6,17 +6,17 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
-  localizeRelations: false
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: 1
   minRelations: 1
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Users

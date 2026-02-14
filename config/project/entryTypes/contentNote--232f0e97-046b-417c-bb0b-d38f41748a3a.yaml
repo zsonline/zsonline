@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   223a2c15-f0c4-4b1d-bc47-89b1ffa750a8:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:74f87fff-9734-4163-a51b-d9c49b0ace94'
     tabs:
@@ -8,34 +11,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:46:54+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 5a7aece0-da4c-4702-b074-cd2847ff0dea
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: 67a0dda7-852f-4f0d-ae27-228660fce59e # Content Note - Title
             handle: null
             instructions: null
@@ -48,7 +27,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:54+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6c54d505-9d57-4707-9916-cdac49a0c034 # Content Note - Content
             handle: null
             instructions: null
@@ -63,6 +45,7 @@ fieldLayouts:
         name: Content
         uid: a9f70d07-42cc-4a11-9d47-b5939de61ba7
         userCondition: null
+    thumbFieldKey: null
 handle: contentNote
 hasTitleField: false
 icon: note
@@ -74,3 +57,4 @@ slugTranslationMethod: site
 titleFormat: "{contentNoteTitle|default('-')}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   dac15720-7b49-4057-a85d-e128b911703e:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:c1e2d30b-a046-4f11-b1c0-877d1dfeaf54'
     tabs:
@@ -8,34 +11,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:46:56+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: c5f731a3-005b-4f54-9cd7-ee2d1cd40d49
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: 37773290-a8f4-4562-bc4f-fb8c41a63584 # Contribution (External) - Contributor
             handle: null
             instructions: null
@@ -48,7 +27,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:56+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 92be950a-0880-49a1-bd9a-dcfdb0745a8a # Contribution (External) - Type
             handle: null
             instructions: null
@@ -63,6 +45,7 @@ fieldLayouts:
         name: Content
         uid: fcb5a079-6051-4d2f-8a98-fd0c7d162112
         userCondition: null
+    thumbFieldKey: null
 handle: contributionExternal
 hasTitleField: false
 icon: address-book
@@ -74,3 +57,4 @@ slugTranslationMethod: site
 titleFormat: '{contributionExternalContributor}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

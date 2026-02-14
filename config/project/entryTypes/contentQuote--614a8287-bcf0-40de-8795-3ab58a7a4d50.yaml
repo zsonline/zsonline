@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   d7048f23-b349-4f2e-b5f6-eb5595255268:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:e0a2878a-e40c-4148-ac04-2f538ffbce86'
     tabs:
@@ -8,34 +11,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2026-02-14T15:46:55+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 227e7752-3d7a-4bd1-8d60-9ef2449c46b3
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
+            elementEditCondition: null
             fieldUid: a91ae399-006d-491c-be06-43159f3523fd # Content Quote - Quote
             handle: null
             instructions: null
@@ -48,7 +27,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-02-14T15:46:55+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a34a04ef-5b2f-4d2a-bd51-83afb13d4337 # Content Quote - Caption
             handle: null
             instructions: null
@@ -63,6 +45,7 @@ fieldLayouts:
         name: Content
         uid: 7c6f70b2-23a8-468c-b020-f5f9d15c17c1
         userCondition: null
+    thumbFieldKey: null
 handle: contentQuote
 hasTitleField: false
 icon: quote-right
@@ -74,3 +57,4 @@ slugTranslationMethod: site
 titleFormat: '«{contentQuoteQuote}»'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

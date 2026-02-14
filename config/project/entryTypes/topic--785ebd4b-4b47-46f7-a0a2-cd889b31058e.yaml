@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   028a14bb-dcfa-4146-8aaf-b672b6fcdc26:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -10,6 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2026-02-14T15:47:07+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -22,7 +26,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -35,6 +39,7 @@ fieldLayouts:
         name: Content
         uid: 10c3d8c4-2d12-4006-b47c-255ff872a9f5
         userCondition: null
+    thumbFieldKey: null
 handle: topic
 hasTitleField: true
 icon: folder-open
@@ -46,3 +51,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'
