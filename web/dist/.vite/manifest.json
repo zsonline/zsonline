@@ -128,15 +128,16 @@
     "src": "assets/fonts/replica/ReplicaLL-RegularItalic.woff2"
   },
   "assets/scripts/main.js": {
-    "file": "assets/scripts-DUV_jOeC.js",
+    "file": "assets/scripts-DZjwTdx0.js",
     "name": "scripts",
     "src": "assets/scripts/main.js",
     "isEntry": true
   },
   "assets/styles/main.scss": {
-    "file": "assets/styles-OSp4tj1u.css",
+    "file": "assets/styles-Yxgr1f_g.css",
     "src": "assets/styles/main.scss",
     "isEntry": true,
+    "name": "styles",
     "names": [
       "styles.css"
     ]
