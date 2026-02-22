@@ -1,7 +1,6 @@
 {% macro header(args) %}
     {% set args = {
         navigations: [],
-        showTopNavigation: true,
         siteName: siteName,
         siteUrl: siteUrl,
         size: 'small',
@@ -28,15 +27,13 @@
             </a>
 
             <nav class="header__navigation-top">
-                {% if args.showTopNavigation %}
-                    {{ link({
-                        href: url('suche'),
-                        icon: 'search',
-                        label: 'Suche',
-                        responsive: true,
-                        style: 'bright'
-                    }) }}
-                {% endif %}
+                {{ link({
+                    href: url('suche'),
+                    icon: 'search',
+                    label: 'Suche',
+                    responsive: true,
+                    style: 'bright'
+                }) }}
                 {{ button({
                     icon: 'menu',
                     label: 'Menü',

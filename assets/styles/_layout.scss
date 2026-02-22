@@ -41,18 +41,6 @@
   }
 }
 
-body {
-  background-color: var(--color-bg-alt);
-
-  &.overflow-hidden {
-    overflow: hidden;
-  }
-
-  @media (min-width: variables.$breakpoint-desktop) {
-    padding: 0 calc(variables.$layout-padding-desktop);
-  }
-}
-
 .wrapper {
   padding: 0;
   margin: 0 auto;
@@ -87,11 +75,6 @@ body {
 
 .layout {
   margin: 0 auto;
-
-  &.small,
-  &.medium {
-    padding: 0 variables.$layout-padding;
-  }
 
   &.small {
     @include layout("small");

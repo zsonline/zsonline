@@ -8,6 +8,15 @@ html {
 body {
   font-family: variables.$font-sans-serif;
   color: var(--color-fg);
+  background-color: var(--color-bg-alt);
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+
+  @media (min-width: variables.$breakpoint-desktop) {
+    padding: 0 calc(variables.$layout-padding-desktop);
+  }
 }
 
 h1,

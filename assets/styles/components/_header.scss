@@ -117,7 +117,6 @@
     visibility: hidden;
     flex-direction: column;
     gap: 2.5rem;
-    align-items: flex-start;
     align-items: flex-end;
     width: min(400px + 2 * variables.$layout-padding, 90vw);
     height: 100vh;
