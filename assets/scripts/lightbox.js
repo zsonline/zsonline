@@ -54,7 +54,7 @@ class Lightbox {
       slide.classList.add("swiper-slide");
       slide.innerHTML = new DOMParser().parseFromString(
         image.dataset.lightbox,
-        "text/html"
+        "text/html",
       ).documentElement.textContent;
 
       wrapper.appendChild(slide);

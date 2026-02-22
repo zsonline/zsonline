@@ -1,5 +1,5 @@
-@use "@styles/variables";
-@use "@styles/layout";
+@use "../../variables.scss";
+@use "../../layout.scss";
 
 .content-block {
   margin-top: 3rem !important;

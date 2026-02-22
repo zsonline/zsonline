@@ -1,11 +1,11 @@
-import "@scripts/ads";
-import "@scripts/comments";
-import "@scripts/gallery";
-import "@scripts/header";
-import "@scripts/images";
-import "@scripts/lightbox";
-import "@scripts/navigation";
-import "@scripts/timeline";
+import "./ads.js";
+import "./comments.js";
+import "./gallery.js";
+import "./header.js";
+import "./images.js";
+import "./lightbox.js";
+import "./navigation.js";
+import "./timeline.js";
 
 // Enable hot module replacement
 if (import.meta.hot) {

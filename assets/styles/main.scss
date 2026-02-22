@@ -1,47 +1,47 @@
-@forward "@node_modules/modern-normalize/modern-normalize.css";
-@forward "@node_modules/swiper/swiper";
+@use "modern-normalize/modern-normalize.css";
+@use "swiper/swiper.css";
 
 // Variables
-@forward "theme";
+@use "./theme.scss";
 
 // Fonts
-@forward "fonts/gaisyr";
-@forward "fonts/replica";
+@use "./fonts/gaisyr.scss";
+@use "./fonts/replica.scss";
 
 // General
-@forward "layout";
-@forward "general";
+@use "./layout.scss";
+@use "./general.scss";
 
 // Components
-@forward "components/ad";
-@forward "components/article_preview";
-@forward "components/button";
-@forward "components/comments";
-@forward "components/feed";
-@forward "components/form";
-@forward "components/footer";
-@forward "components/header";
-@forward "components/hero";
-@forward "components/home";
-@forward "components/issue";
-@forward "components/message";
-@forward "components/navigation";
-@forward "components/pagination";
-@forward "components/search";
-@forward "components/socials";
-@forward "components/subscription";
-@forward "components/timeline";
+@use "./components/ad.scss";
+@use "./components/article_preview.scss";
+@use "./components/button.scss";
+@use "./components/comments.scss";
+@use "./components/feed.scss";
+@use "./components/form.scss";
+@use "./components/footer.scss";
+@use "./components/header.scss";
+@use "./components/hero.scss";
+@use "./components/home.scss";
+@use "./components/issue.scss";
+@use "./components/message.scss";
+@use "./components/navigation.scss";
+@use "./components/pagination.scss";
+@use "./components/search.scss";
+@use "./components/socials.scss";
+@use "./components/subscription.scss";
+@use "./components/timeline.scss";
 
 // Content components
-@forward "components/content/block";
-@forward "components/content/caption";
-@forward "components/content/content";
-@forward "components/content/embed";
-@forward "components/content/file";
-@forward "components/content/footer";
-@forward "components/content/gallery";
-@forward "components/content/header";
-@forward "components/content/image";
-@forward "components/content/lightbox";
-@forward "components/content/note";
-@forward "components/content/quote";
+@use "./components/content/block.scss";
+@use "./components/content/caption.scss";
+@use "./components/content/content.scss";
+@use "./components/content/embed.scss";
+@use "./components/content/file.scss";
+@use "./components/content/footer.scss" as content-footer;
+@use "./components/content/gallery.scss";
+@use "./components/content/header.scss" as content-header;
+@use "./components/content/image.scss";
+@use "./components/content/lightbox.scss";
+@use "./components/content/note.scss";
+@use "./components/content/quote.scss";

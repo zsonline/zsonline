@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "@styles/variables";
+@use "./variables.scss";
 
 @mixin layout($size: "medium", $padding: true) {
   $width: map.get(

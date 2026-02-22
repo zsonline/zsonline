@@ -75,7 +75,7 @@ async function insertAdsIntoHome(ads, home) {
       "home__section--colored-next",
       "home__section--colored-prev",
       "ad-block",
-      "ad-block--home"
+      "ad-block--home",
     );
     block.appendChild(ad);
 
@@ -83,13 +83,13 @@ async function insertAdsIntoHome(ads, home) {
     const index = indices.shift();
     homeBlocks[index].parentNode.insertBefore(
       block,
-      homeBlocks[index].nextSibling
+      homeBlocks[index].nextSibling,
     );
 
     // Remove margins of the previous and next home blocks
     if (block.previousElementSibling.classList.contains("home-section")) {
       block.previousElementSibling.classList.remove(
-        "home-section--colored-next"
+        "home-section--colored-next",
       );
     }
 
