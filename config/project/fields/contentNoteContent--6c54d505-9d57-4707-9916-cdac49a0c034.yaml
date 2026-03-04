@@ -4,14 +4,36 @@ instructions: null
 name: 'Content Note - Content'
 searchable: false
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: ''
   characterLimit: null
-  ckeConfig: 30ad3ecb-e175-42bd-8a93-6b5432ae932f # Content Note - Content
-  createButtonLabel: null
+  css: null
   defaultTransform: null
-  expandEntryButtons: false
-  fullGraphqlData: false
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
+  headingLevels: false
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
+  js: null
+  options:
+    __assoc__:
+      -
+        - list
+        -
+          __assoc__:
+            -
+              - multiBlock
+              - false
+            -
+              - properties
+              -
+                __assoc__:
+                  -
+                    - styles
+                    - false
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -20,6 +42,13 @@ settings:
   showWordCount: false
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - bulletedList
+    - numberedList
+    - '|'
+    - bold
+    - italic
+    - link
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

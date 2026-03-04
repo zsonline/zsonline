@@ -4,14 +4,22 @@ instructions: null
 name: 'Timeline Event (Article) - Content'
 searchable: false
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: ''
   characterLimit: null
-  ckeConfig: b4fa2985-51d4-428c-a10e-130fd6687f7b # Timeline Event (Article) - Content
-  createButtonLabel: null
+  css: null
   defaultTransform: null
-  expandEntryButtons: false
-  fullGraphqlData: false
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
+  headingLevels:
+    - '4'
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
+  js: null
+  options: null
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -20,6 +28,12 @@ settings:
   showWordCount: false
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - heading
+    - '|'
+    - bold
+    - italic
+    - link
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

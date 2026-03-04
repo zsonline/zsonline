@@ -1,4 +1,4 @@
-dateModified: 1771084412
+dateModified: 1772653743
 elementSources:
   craft\elements\User:
     -
@@ -56,7 +56,6 @@ meta:
     0cf2962b-f593-4e6b-9ac2-9544710d8aad: 'Home Section Layout - Appearance' # Home Section Layout - Appearance
     1bf3a5c8-628e-4b3c-b18b-aa384eec608e: 'Article - Format' # Article - Format
     2ef3f3d8-ae1c-480e-a51b-db580170d832: Formats # Formats
-    3a27561f-43cc-469a-a2fa-6920676a2b3a: 'Timeline - Description' # Timeline - Description
     3cc8b7a7-5c00-4889-b691-ca2edc74df61: Ad # Ad
     4a5cdf1b-642d-4a37-854f-c3b1168bea2d: Editors # Editors
     4ce497c4-83db-4505-966c-25ac2477e7fb: Ads # Ads
@@ -87,7 +86,6 @@ meta:
     21e4a371-781d-4752-b0cd-106498851db5: 'Content Image - Image' # Content Image - Image
     024d03f4-9614-497a-9274-7340a22f343c: 'Home Section - Color' # Home Section - Color
     28f5783a-9790-439d-b079-1bc2b0cc58f9: 'Article - Related' # Article - Related
-    30ad3ecb-e175-42bd-8a93-6b5432ae932f: 'Content Note - Content' # Content Note - Content
     33d4c786-8ab6-42cf-9aaa-e48f7d18b820: 'Home - Sections' # Home - Sections
     36ea09ec-8867-4d74-96ee-d55c21e44104: 'Contribution (External)' # Contribution (External)
     49b8a091-c188-4f35-a61b-6162eb8514a9: 'Image - Contributions' # Image - Contributions
@@ -109,7 +107,6 @@ meta:
     683c8764-91e2-4a9e-b0cf-d7bed17d1d5d: 'Timeline Event (Article)' # Timeline Event (Article)
     683cb842-2907-43f6-a6be-a4a3833c5eb5: 'Timeline Event (Article) - Year' # Timeline Event (Article) - Year
     785ebd4b-4b47-46f7-a0a2-cd889b31058e: Topic # Topic
-    905c3d5a-8d0f-4831-9fbb-6f72a050f60b: 'Page - Content' # Page - Content
     944c11ef-571f-4e08-a4bb-db2540e4b404: 'Subscription - Plan' # Subscription - Plan
     950c0af3-396d-40b2-a1ca-bd4f80e037b6: 'Timeline - Events' # Timeline - Events
     3458cf19-d496-4a9e-808d-47e0b2323224: 'Home Section - Layouts' # Home Section - Layouts
@@ -133,19 +130,16 @@ meta:
     ae3e2976-5a2f-441c-a712-71c849fe2a40: 'Issue Section - Articles' # Issue Section - Articles
     b0b838c9-5d25-43de-886a-bdf38b92df07: 'Article - Image Position' # Article - Image Position
     b2c997ba-ecc0-418e-86a8-20c5afd7e1d6: Page # Page
-    b4fa2985-51d4-428c-a10e-130fd6687f7b: 'Timeline Event (Article) - Content' # Timeline Event (Article) - Content
     b231772f-f289-459a-98aa-4307862a26f1: 'Timeline Event (Article) - Publication' # Timeline Event (Article) - Publication
     b2237231-890f-4253-ab7f-251f41d3598c: 'Issue Section' # Issue Section
     b7794701-7ea0-40bb-8bba-27df38f94295: 'Subscription - Email' # Subscription - Email
     bcb6d13b-de66-4331-8d15-bb23ef7a9736: 'Ad - Link' # Ad - Link
     bd3e37bc-785f-4f35-a3ba-42a801ec0e80: Timeline # Timeline
-    c7ddc58d-ce45-4fdd-a7b2-d1318ae1afb1: 'Timeline Event - Description' # Timeline Event - Description
     c529f035-1e02-4af8-a7f0-afe4e24e634c: 'Timeline Event (Article) - Byline' # Timeline Event (Article) - Byline
     c6375497-b7f2-4761-b74b-96fd072a5a6f: Subscriptions # Subscriptions
     cb91d72b-d6d9-439e-8e7b-f3f871694967: 'Article - Contributions' # Article - Contributions
     cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
     d0ba75f4-0ec9-406b-8e28-5a50980147cc: 'Home Section' # Home Section
-    d3dc65f7-7b0a-4ff2-b2e9-54c9ff11d3de: 'Article - Content' # Article - Content
     d5eceb6a-47a0-4c63-aff2-48afcdcf05bc: 'Article - Image Size' # Article - Image Size
     d29e8b36-a8aa-4b2f-9033-2c5e9113427c: 'Zürcher Studierendenzeitung' # Zürcher Studierendenzeitung
     d64265d4-5a86-41a5-a68e-c73f8c90123e: Timeline # Timeline
@@ -163,7 +157,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
+    schemaVersion: 5.0.0.1
   comments:
     edition: standard
     enabled: true

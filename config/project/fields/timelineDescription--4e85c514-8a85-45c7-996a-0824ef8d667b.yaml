@@ -4,14 +4,21 @@ instructions: null
 name: 'Timeline - Description'
 searchable: false
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: ''
   characterLimit: null
-  ckeConfig: 3a27561f-43cc-469a-a2fa-6920676a2b3a # Timeline - Description
-  createButtonLabel: null
+  css: null
   defaultTransform: null
-  expandEntryButtons: false
-  fullGraphqlData: false
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
+  headingLevels: false
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
+  js: null
+  options: null
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -20,6 +27,10 @@ settings:
   showWordCount: false
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - bold
+    - italic
+    - link
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none
