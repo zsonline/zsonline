@@ -4,7 +4,6 @@ name: Editors
 permissions:
   - accesscp
   - accessplugin-comments
-  - accessplugin-navigation
   - administrateusers
   - 'assignusergroup:429e38b0-5490-4b1b-be5e-99adcf0d6c47' # Sales
   - 'assignusergroup:4a5cdf1b-642d-4a37-854f-c3b1168bea2d' # Editors
@@ -63,7 +62,6 @@ permissions:
   - 'editpeerimages:e60b1147-c0d1-4999-99e3-8bbc556e4fa5' # Ads
   - editusers
   - moderateusers
-  - 'navigation-managenav:78967f52-4d7b-4aec-9fba-53d6aa2f5a2e' # Navigation
   - registerusers
   - 'replacefiles:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   - 'replacefiles:5fa65803-cc01-4718-967f-17c1fac740ab' # Files

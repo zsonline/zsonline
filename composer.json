@@ -6,7 +6,6 @@
     "putyourlightson/craft-sprig": "^3.7.2",
     "twig/html-extra": "^3.0.0",
     "verbb/comments": "^3.0.13",
-    "verbb/navigation": "3.0.17",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

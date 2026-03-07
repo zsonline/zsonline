@@ -1,4 +1,4 @@
-dateModified: 1772874865
+dateModified: 1772876037
 elementSources:
   craft\elements\User:
     -
@@ -120,7 +120,6 @@ meta:
     9695de25-bf17-41a7-b295-68ad5cccc6c8: Pages # Pages
     10492ed9-cbb8-423a-951b-8e0dd55b11f4: 'Home Section Layout' # Home Section Layout
     14624af3-66ba-4513-af18-0cf411fbaf74: Issue # Issue
-    78967f52-4d7b-4aec-9fba-53d6aa2f5a2e: Navigation # Navigation
     732552e1-9a9c-4c59-b08a-f0b293aaf7d1: Topics # Topics
     2604525a-d068-477f-9621-13db45b69206: Article # Article
     37773290-a8f4-4562-bc4f-fb8c41a63584: 'Contribution (External) - Contributor' # Contribution (External) - Contributor
@@ -243,13 +242,6 @@ plugins:
       templateEmail: null
       templateFolderOverride: null
       useQueueForNotifications: true
-  navigation:
-    edition: standard
-    enabled: true
-    licenseKey: $PLUGIN_NAVIGATION_LICENSE
-    schemaVersion: 2.1.2
-    settings:
-      pluginName: Navigation
   sprig:
     edition: standard
     enabled: true
