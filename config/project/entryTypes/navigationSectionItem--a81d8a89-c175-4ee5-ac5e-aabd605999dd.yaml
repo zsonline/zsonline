@@ -36,7 +36,7 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: "{navigationLink.label|default('-')}"
+titleFormat: "{navigationSectionItemLink.label|default('-')}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 uiLabelFormat: '{title}'
