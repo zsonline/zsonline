@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  54455570-2dca-46b9-babb-27eb46eee5d5:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-03-04T19:59:12+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 190c9b38-855f-4335-a960-6c8ccf5d8af4 # Navigation - Sections
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0928afa-7082-4537-8f65-097e22efcf95
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0466a732-ae90-4e21-81a0-7a8dcc09bc9d
+        userCondition: null
+    thumbFieldKey: null
+handle: navigation
+hasTitleField: false
+icon: bars
+name: Navigation
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

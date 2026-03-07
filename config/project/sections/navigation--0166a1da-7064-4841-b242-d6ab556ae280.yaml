@@ -1,0 +1,16 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: a42438c2-d0bf-43d6-8dd3-6d0f31316d8c # Navigation
+handle: navigation
+maxAuthors: 0
+name: Navigation
+propagationMethod: all
+siteSettings:
+  cf08c3cd-b41b-4dc3-b956-6c8bf65219b4: # Zürcher Studierendenzeitung
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

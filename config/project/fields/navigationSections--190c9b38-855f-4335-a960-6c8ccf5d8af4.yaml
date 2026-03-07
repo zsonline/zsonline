@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: navigationSections
+instructions: 'These sections appear at the end of the navigation, after Neuste Artikel, Themen, Rubriken, Print-Archiv, and Abonnieren. The first item in each section becomes the section title. Any additional items appear as links below it.'
+name: 'Navigation - Sections'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 69d032c6-48de-4172-9a32-4e221592afe8 # Navigation Section
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

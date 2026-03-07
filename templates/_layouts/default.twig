@@ -19,12 +19,6 @@
     ? meta.image.getUrl({ height: 628, width: 1200, format: 'jpeg' })
     : url("social.jpg") %}
 
-{% set navigation = craft.navigation.nodes()
-    .handle('navigation')
-    .level(1)
-    .with(['children'])
-    .collect() %}
-
 <!DOCTYPE html>
 <html lang="de-CH">
 <head>
@@ -97,11 +91,12 @@
         'wrapper--header-large': headerSize == 'large' and headerStyle == 'solid'
     }) }}">
         {% block content %}
-            {{ header({
-                navigations: [ navigation ],
-                size: headerSize,
-                style: headerStyle
-            }) }}
+            {% cache %}
+                {{ header({
+                    size: headerSize,
+                    style: headerStyle
+                }) }}
+            {% endcache %}
 
             <main class="{{ html_classes('layout', layoutSize) }}">
                 {% block main %}{% endblock %}

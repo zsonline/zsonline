@@ -1,6 +1,5 @@
 {% macro header(args) %}
     {% set args = {
-        navigations: [],
         siteName: siteName,
         siteUrl: siteUrl,
         size: 'small',
@@ -56,16 +55,9 @@
                 style: 'dark'
             }) }}
 
-            {% for navigation in args.navigations %}
-                {% if navigation %}
-                    <div class="header__navigation-main__component">
-                        {{ _self.navigation({
-                            navigation: navigation,
-                            responsive: false
-                        }) }}
-                    </div>
-                {% endif %}
-            {% endfor %}
+            <div class="header__navigation-main__component">
+                {{ _self.navigation() }}
+            </div>
 
             <div class="header__socials">
                 <span>Folge uns:</span>
@@ -109,40 +101,96 @@
     </footer>
 {% endmacro %}
 
-{% macro navigation(args) %}
-    {% set args = {
-        navigation: null,
-        responsive: false
-    } | merge(args) %}
-
+{% macro navigation() %}
     {% from '_macros/icon.twig' import icon %}
 
-    {% if args.navigation %}
-        <ul class="{{ html_classes('navigation', { 'navigation--responsive': args.responsive }) }}">
-            {% for node in args.navigation %}
-                <li class="navigation__section">
-                    <div class="navigation__item navigation__item--primary">
-                        {{ node.link|raw }}
-                        {% if node.children|length > 0 %}
-                            <button onclick="ZS.Navigation.toggleSection(this)">{{ icon({ name: 'chevron-down' }) }}</button>
-                        {% endif %}
-                    </div>
+    {% set recentArticles = craft.entries()
+        .section('articles')
+        .after(now|date_modify("-6 months")|atom)
+        .orderBy('postDate DESC')
+        .collect() %}
 
-                    {% if node.children|length > 0 %}
-                        <ul class="navigation__subsection">
-                            {% for subnode in node.children %}
-                                <li>
-                                    <div class="navigation__item navigation__item--secondary">
-                                        {{ subnode.link }}
-                                    </div>
-                                </li>
-                            {% endfor %}
-                        </ul>
+    {% set topics = craft.entries()
+        .section('topics')
+        .relatedTo({ sourceElement: recentArticles, field: 'articleTopics' })
+        .limit(5)
+        .collect() %}
+
+    {% set formats = craft.entries()
+        .section('formats')
+        .relatedTo({ sourceElement: recentArticles, field: 'articleFormat' })
+        .limit(5)
+        .collect() %}
+
+    {% set issues = craft.entries()
+        .section('issues')
+        .orderBy('issueYear DESC, issueNumber DESC')
+        .limit(3)
+        .collect() %}
+
+    {% set navigation = craft.entries()
+        .section('navigation')
+        .with(['navigationSections.navigationSection:navigationSectionItems'])
+        .limit(1)
+        .collect()
+        .first() %}
+
+    {% set additionalSections = [] %}
+    {% if navigation %}
+        {% for section in navigation.navigationSections.all() %}
+            {% set items = section.navigationSectionItems.all() %}
+            {% set primaryItem = items|first %}
+            {% if primaryItem %}
+                {% set children = [] %}
+                {% for item in items|slice(1) %}
+                    {% if item.navigationSectionItemLink %}
+                        {% set children = children|merge([{
+                            title: item.navigationSectionItemLink.label,
+                            url: item.navigationSectionItemLink.url
+                        }]) %}
                     {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
+                {% endfor %}
+                {% set additionalSections = additionalSections|merge([{
+                    title: primaryItem.navigationSectionItemLink.label,
+                    url: primaryItem.navigationSectionItemLink.url,
+                    children: children
+                }]) %}
+            {% endif %}
+        {% endfor %}
     {% endif %}
+
+    {% set sections = [
+        { title: 'Neuste Artikel', url: url('artikel'), children: [] },
+        { title: 'Themen', url: url('themen'), children: topics },
+        { title: 'Rubriken', url: url('rubriken'), children: formats },
+        { title: 'Print-Archiv', url: url('print'), children: issues },
+        { title: 'Abonnieren', url: url('abonnieren'), children: [] }
+    ]|merge(additionalSections) %}
+
+    <ul class="navigation">
+        {% for section in sections %}
+            <li class="navigation__section">
+                <div class="navigation__item navigation__item--primary">
+                    <a href="{{ section.url }}">{{ section.title }}</a>
+                    {% if section.children|length > 0 %}
+                        <button onclick="ZS.Navigation.toggleSection(this)">{{ icon({ name: 'chevron-down' }) }}</button>
+                    {% endif %}
+                </div>
+
+                {% if section.children|length > 0 %}
+                    <ul class="navigation__subsection">
+                        {% for child in section.children %}
+                            <li>
+                                <div class="navigation__item navigation__item--secondary">
+                                    <a href="{{ child.url }}">{{ child.title }}</a>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
 {% endmacro %}
 
 {% macro socials(args) %}

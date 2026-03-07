@@ -1,4 +1,4 @@
-dateModified: 1772653743
+dateModified: 1772874865
 elementSources:
   craft\elements\User:
     -
@@ -56,6 +56,7 @@ meta:
     0cf2962b-f593-4e6b-9ac2-9544710d8aad: 'Home Section Layout - Appearance' # Home Section Layout - Appearance
     1bf3a5c8-628e-4b3c-b18b-aa384eec608e: 'Article - Format' # Article - Format
     2ef3f3d8-ae1c-480e-a51b-db580170d832: Formats # Formats
+    3a9f183e-4b39-4b84-9dae-199ae537cad4: 'Navigation Section Item - Link' # Navigation Section Item - Link
     3cc8b7a7-5c00-4889-b691-ca2edc74df61: Ad # Ad
     4a5cdf1b-642d-4a37-854f-c3b1168bea2d: Editors # Editors
     4ce497c4-83db-4505-966c-25ac2477e7fb: Ads # Ads
@@ -90,11 +91,15 @@ meta:
     36ea09ec-8867-4d74-96ee-d55c21e44104: 'Contribution (External)' # Contribution (External)
     49b8a091-c188-4f35-a61b-6162eb8514a9: 'Image - Contributions' # Image - Contributions
     50b7bb6c-00c3-462d-8d00-1ae343ce044a: 'Article - Content' # Article - Content
+    66edfea8-31d9-44fd-b7d5-3fcb680d40c4: 'Navigation Section - Items' # Navigation Section - Items
     67a0dda7-852f-4f0d-ae27-228660fce59e: 'Content Note - Title' # Content Note - Title
+    69d032c6-48de-4172-9a32-4e221592afe8: 'Navigation Section' # Navigation Section
     74e21a53-79cd-4aa7-85b3-bff442e02c68: 'Timeline Event' # Timeline Event
     90d0ead4-d526-429d-a4ac-c792194cb6de: 'Public Schema' # Public Schema
     91d8d1f4-db2b-49ba-9de0-187a49dd5276: 'Timeline Event (Article) - Description' # Timeline Event (Article) - Description
     92be950a-0880-49a1-bd9a-dcfdb0745a8a: 'Contribution (External) - Type' # Contribution (External) - Type
+    0166a1da-7064-4841-b242-d6ab556ae280: Navigation # Navigation
+    190c9b38-855f-4335-a960-6c8ccf5d8af4: 'Navigation - Sections' # Navigation - Sections
     232f0e97-046b-417c-bb0b-d38f41748a3a: 'Content Note' # Content Note
     241d2e87-c08f-4847-90e8-4ad1d718f876: Format # Format
     274b5d00-df3a-4b76-861b-ca591e2af249: 'Contribution - User' # Contribution - User
@@ -125,7 +130,9 @@ meta:
     a34a04ef-5b2f-4d2a-bd51-83afb13d4337: 'Content Quote - Caption' # Content Quote - Caption
     a46d69bc-dad9-44b6-9ca0-9ce75f501b7b: 'Contribution - Type' # Contribution - Type
     a71cf75d-44bb-4489-ad90-93f218828cd1: 'Article - Lead' # Article - Lead
+    a81d8a89-c175-4ee5-ac5e-aabd605999dd: 'Navigation Section Item' # Navigation Section Item
     a91ae399-006d-491c-be06-43159f3523fd: 'Content Quote - Quote' # Content Quote - Quote
+    a42438c2-d0bf-43d6-8dd3-6d0f31316d8c: Navigation # Navigation
     ab58e9ac-d8c0-428f-a72a-2132a4976859: Home # Home
     ae3e2976-5a2f-441c-a712-71c849fe2a40: 'Issue Section - Articles' # Issue Section - Articles
     b0b838c9-5d25-43de-886a-bdf38b92df07: 'Article - Image Position' # Article - Image Position
