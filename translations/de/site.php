@@ -61,7 +61,7 @@ return [
     'Issue - Cover' => 'Cover',
     'Issue - File' => 'Datei',
     'Issue - Number' => 'Nummer',
-    'Issue - Sections' => 'Abschnitte',
+    'Issue - Sections' => 'Artikel',
     'Issue - Year' => 'Jahr',
     'Issue Section' => 'Abschnitt',
     'Issue Section - Articles' => 'Artikel',
