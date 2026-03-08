@@ -19,7 +19,7 @@ settings:
     - 'section:2ef3f3d8-ae1c-480e-a51b-db580170d832' # Formats
   targetSiteId: null
   validateRelatedElements: true
-  viewMode: list
+  viewMode: cards
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Entries

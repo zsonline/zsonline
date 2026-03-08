@@ -3,9 +3,7 @@ color: null
 description: null
 fieldLayouts:
   7da6fd3a-94c3-478f-a674-fab5f634e07d:
-    cardThumbAlignment: end
-    cardView:
-      - 'layoutElement:15afb77a-b025-40a3-bff2-41c52bc5555b'
+    cardThumbAlignment: start
     tabs:
       -
         elementCondition: null
@@ -29,7 +27,7 @@ fieldLayouts:
         name: Content
         uid: 7613751e-72da-4d7e-ab9e-7a2e5502883d
         userCondition: null
-    thumbFieldKey: null
+    thumbFieldKey: 'layoutElement:15afb77a-b025-40a3-bff2-41c52bc5555b'
 handle: contentGallery
 hasTitleField: false
 icon: images

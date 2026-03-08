@@ -3,9 +3,7 @@ color: null
 description: null
 fieldLayouts:
   6bf19c47-529b-409f-9459-24aa3459085c:
-    cardThumbAlignment: end
-    cardView:
-      - 'layoutElement:3d1f118b-fd00-4700-914e-21a4bef3051b'
+    cardThumbAlignment: start
     tabs:
       -
         elementCondition: null

@@ -31,7 +31,7 @@ settings:
     - 'volume:5fa65803-cc01-4718-967f-17c1fac740ab' # Files
   targetSiteId: null
   validateRelatedElements: true
-  viewMode: list
+  viewMode: cards
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets

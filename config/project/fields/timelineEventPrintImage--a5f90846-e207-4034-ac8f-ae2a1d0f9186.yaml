@@ -30,7 +30,7 @@ settings:
   sources: '*'
   targetSiteId: null
   validateRelatedElements: true
-  viewMode: thumbs
+  viewMode: cards
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets

@@ -2,7 +2,9 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   f26b37e2-1819-4b59-8a9f-cb4144acc718:
-    cardThumbAlignment: end
+    cardThumbAlignment: start
+    cardView:
+      - 'layoutElement:a6199c88-8e97-4ec4-89d4-32afa5a4c59a'
     tabs:
       -
         elementCondition: null

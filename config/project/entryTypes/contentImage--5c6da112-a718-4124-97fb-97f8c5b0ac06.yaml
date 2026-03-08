@@ -3,10 +3,7 @@ color: null
 description: null
 fieldLayouts:
   2f2597b8-c11a-4e9c-966b-406e2c7f0662:
-    cardThumbAlignment: end
-    cardView:
-      - 'layoutElement:866b0b7b-e6c2-49e7-acad-63eba46f60c8'
-      - 'layoutElement:c00b8f40-e23d-4a22-9f0e-0544215e4f7d'
+    cardThumbAlignment: start
     tabs:
       -
         elementCondition: null

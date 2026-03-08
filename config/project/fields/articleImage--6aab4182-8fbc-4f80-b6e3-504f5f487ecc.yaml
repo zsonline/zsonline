@@ -31,7 +31,7 @@ settings:
     - 'volume:48772033-da04-47e7-ad3b-4d3905ac7a65' # Images
   targetSiteId: null
   validateRelatedElements: true
-  viewMode: thumbs
+  viewMode: cards
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets
