@@ -57,7 +57,6 @@ class SubscriptionsController extends Controller
         $entry = new Entry();
         $entry->sectionId = Section::find()->where(['handle' => 'subscriptions'])->one()->id;
         $entry->typeId = EntryType::find()->where(['handle' => 'subscription'])->one()->id;
-        $entry->authorId = User::find()->email('redaktion@zsonline.ch')->one()->id;
         $entry->expiryDate = DateTime::createFromFormat('Y-m-d', ($subscription->endDate + 1) . '-01-01');
         $entry->setFieldValue('subscriptionEmail', $subscription->email);
         $entry->setFieldValue('subscriptionPlan', $subscription->plan);

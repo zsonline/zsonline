@@ -4,7 +4,7 @@ entryTypes:
   -
     uid: 4225bf4b-ab10-4bf8-8408-2c2280a0a599 # Subscription
 handle: subscriptions
-maxAuthors: 1
+maxAuthors: 0
 name: Subscriptions
 propagationMethod: all
 siteSettings:

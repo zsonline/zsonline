@@ -4,7 +4,7 @@ entryTypes:
   -
     uid: b2c997ba-ecc0-418e-86a8-20c5afd7e1d6 # Page
 handle: pages
-maxAuthors: 1
+maxAuthors: 0
 name: Pages
 previewTargets:
   -

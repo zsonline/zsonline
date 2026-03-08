@@ -4,7 +4,7 @@ entryTypes:
   -
     uid: 14624af3-66ba-4513-af18-0cf411fbaf74 # Issue
 handle: issues
-maxAuthors: 1
+maxAuthors: 0
 name: Issues
 previewTargets:
   -

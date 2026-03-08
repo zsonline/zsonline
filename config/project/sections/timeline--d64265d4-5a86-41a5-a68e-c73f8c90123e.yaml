@@ -4,7 +4,7 @@ entryTypes:
   -
     uid: bd3e37bc-785f-4f35-a3ba-42a801ec0e80 # Timeline
 handle: timeline
-maxAuthors: 1
+maxAuthors: 0
 name: Timeline
 previewTargets:
   -
