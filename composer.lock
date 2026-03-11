@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c488bd7eb08ed3d2e1839256a5673062",
+    "content-hash": "8ed30bbfe3baae49052f905e3991a761",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -511,11 +511,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.9.14",
+            "version": "5.9.15",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/13c50dd550fabe74fe5317aeca090d286f1c7556",
-                "reference": "13c50dd550fabe74fe5317aeca090d286f1c7556",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/84d783586bf0abf619a9d1909d93fdfdcaaf73a4",
+                "reference": "84d783586bf0abf619a9d1909d93fdfdcaaf73a4",
                 "shasum": ""
             },
             "require": {
@@ -561,7 +561,6 @@
                 "symfony/serializer": "^6.4",
                 "symfony/var-dumper": "^5.0|^6.0|^7.0",
                 "symfony/yaml": "^5.2.3|^6.0|^7.0",
-                "thamtech/yii2-ratelimiter-advanced": "^0.5.0",
                 "theiconic/name-parser": "^1.2",
                 "twig/twig": "~3.21.1",
                 "voku/portable-ascii": "^2.0",
@@ -615,7 +614,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2026-02-25T21:48:05+00:00"
+            "time": "2026-03-09T19:10:16+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -1654,16 +1653,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.8.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "21dc724a0583619cd1652f673303492272778051"
+                "reference": "7d0ed42f28e42d61352a7a79de682e5e67fec884"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/21dc724a0583619cd1652f673303492272778051",
-                "reference": "21dc724a0583619cd1652f673303492272778051",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/7d0ed42f28e42d61352a7a79de682e5e67fec884",
+                "reference": "7d0ed42f28e42d61352a7a79de682e5e67fec884",
                 "shasum": ""
             },
             "require": {
@@ -1679,6 +1678,7 @@
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
                 "http-interop/http-factory-tests": "0.9.0",
+                "jshttp/mime-db": "1.54.0.1",
                 "phpunit/phpunit": "^8.5.44 || ^9.6.25"
             },
             "suggest": {
@@ -1750,7 +1750,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.8.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.9.0"
             },
             "funding": [
                 {
@@ -1766,7 +1766,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-23T21:21:41+00:00"
+            "time": "2026-03-10T16:41:02+00:00"
         },
         {
             "name": "illuminate/collections",
@@ -7106,56 +7106,6 @@
             "time": "2026-02-09T09:33:46+00:00"
         },
         {
-            "name": "thamtech/yii2-ratelimiter-advanced",
-            "version": "0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thamtech/yii2-ratelimiter-advanced.git",
-                "reference": "2fde10eaa1ec67e689d06babfc9c68d144d35433"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thamtech/yii2-ratelimiter-advanced/zipball/2fde10eaa1ec67e689d06babfc9c68d144d35433",
-                "reference": "2fde10eaa1ec67e689d06babfc9c68d144d35433",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0",
-                "yiisoft/yii2": ">=2.0.14 <2.1"
-            },
-            "require-dev": {
-                "codeception/codeception": "2.0.*",
-                "codeception/specify": "*",
-                "codeception/verify": "*",
-                "flow/jsonpath": "^0.3",
-                "yiisoft/yii2-codeception": "*",
-                "yiisoft/yii2-debug": "*",
-                "yiisoft/yii2-faker": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "thamtech\\ratelimiter\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Tyler Ham",
-                    "email": "tyler@thamtech.com"
-                }
-            ],
-            "description": "An advanced request rate limiter",
-            "support": {
-                "issues": "https://github.com/thamtech/yii2-ratelimiter-advanced/issues",
-                "source": "https://github.com/thamtech/yii2-ratelimiter-advanced/tree/master"
-            },
-            "time": "2020-08-05T04:29:29+00:00"
-        },
-        {
             "name": "theiconic/name-parser",
             "version": "v1.2.11",
             "dist": {
@@ -8550,16 +8500,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.20",
+            "version": "v0.12.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "19678eb6b952a03b8a1d96ecee9edba518bb0373"
+                "reference": "4821fab5b7cd8c49a673a9fd5754dc9162bb9e97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/19678eb6b952a03b8a1d96ecee9edba518bb0373",
-                "reference": "19678eb6b952a03b8a1d96ecee9edba518bb0373",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4821fab5b7cd8c49a673a9fd5754dc9162bb9e97",
+                "reference": "4821fab5b7cd8c49a673a9fd5754dc9162bb9e97",
                 "shasum": ""
             },
             "require": {
@@ -8623,9 +8573,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.20"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.21"
             },
-            "time": "2026-02-11T15:05:28+00:00"
+            "time": "2026-03-06T21:21:28+00:00"
         },
         {
             "name": "symfony/console",
@@ -8785,13 +8735,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.4"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
