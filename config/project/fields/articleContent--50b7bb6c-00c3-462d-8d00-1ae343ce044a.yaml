@@ -109,7 +109,6 @@ settings:
     - heading
     - bulletedList
     - numberedList
-    - insertImage
     - '|'
     - bold
     - italic
