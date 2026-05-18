@@ -5,6 +5,7 @@ entryTypes:
     uid: 785ebd4b-4b47-46f7-a0a2-cd889b31058e # Topic
 handle: topics
 maxAuthors: 0
+minAuthors: 0
 name: Topics
 previewTargets:
   -

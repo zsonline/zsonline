@@ -5,6 +5,7 @@ entryTypes:
     uid: a42438c2-d0bf-43d6-8dd3-6d0f31316d8c # Navigation
 handle: navigation
 maxAuthors: 0
+minAuthors: 0
 name: Navigation
 propagationMethod: all
 siteSettings:
