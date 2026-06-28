@@ -4,9 +4,9 @@
 DIR="$(dirname "$(dirname -- "$(readlink -f "${BASH_SOURCE}")")")"
 
 # Backup the database
-if command -v php84 &> /dev/null
+if command -v php85 &> /dev/null
 then
-    php84 "$DIR/craft" db/backup
+    php85 "$DIR/craft" db/backup
 else
     php "$DIR/craft" db/backup
 fi
