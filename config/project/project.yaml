@@ -1,4 +1,4 @@
-dateModified: 1779122648
+dateModified: 1782647116
 elementSources:
   craft\elements\User:
     -
@@ -168,7 +168,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_COMMENTS_LICENSE
-    schemaVersion: 1.2.1
+    schemaVersion: 1.2.2
     settings:
       allowFlagging: false
       allowGuest: true
