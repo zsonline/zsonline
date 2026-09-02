@@ -67,7 +67,7 @@ class AdsController extends Controller
                     ],
                 ],
                 'slug' => $ad->slug,
-                'url' => $ad->adLink,
+                'url' => $ad->adLink?->getUrl(),
             ];
         }
 
